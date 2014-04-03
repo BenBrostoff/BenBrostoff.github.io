@@ -7,3 +7,29 @@ p{
   color: black;
   font-family: Arial, sans-serif;
 }
+
+.warning {
+  color: black;
+text-align:center;
+  font-family: Courier, monospace;
+  font-size:25px;
+}
+
+li 
+{
+color: black;
+font-family: Arial, sans-serif;
+}
+
+ul
+{
+list-style-image:url('http://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BostonRedSox_CapLogo.svg/50px-BostonRedSox_CapLogo.svg.png');
+ color: black;
+ font-family: Arial, sans-serif;
+}
+
+#damon {
+color: red;
+font-family: Verdana, sans-serif;
+font-size:35px;
+}
