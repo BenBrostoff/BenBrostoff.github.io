@@ -1,0 +1,73 @@
+   header {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        border: 2px solid black;
+        font-family: Arial, sans-serif;
+    }
+
+    #center{
+      text-align: center;
+    }
+
+ul {
+           float: left;
+           margin-bottom: -5px;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            font-size: 12px;
+       } 
+        
+     img {
+         float: right;
+         clear: both;
+        display: inline-block;
+        margin-top: 20px;
+        height: 100px;
+        width: 100px;
+          }
+
+        img.earth {
+          float: right;
+            margin-top: 10px;
+        }
+        
+        img.cow{
+            margin-top: -50px;
+        }
+        
+        div.what {
+            height: 300px;
+           border: 2px solid black;
+
+        }
+        
+        div.why {
+        margin-top: 15px;
+        border: 2px solid black;
+        height: 300px;
+        }
+        
+        div.why h1 {
+        border: 2px;
+        border-color; solid black;
+        }
+        
+        div.what h1 {
+        border: 2px;
+        border-color: solid black;
+        text-align: left;
+        }
+        
+        div.footer{
+          top-border: 2px dotted black;
+          top-margin: 10px;
+          font-family: Arial, sans-serif;
+
+        }
+        nav{
+            text-align: center;
+           border: 2px solid black;
+            margin-bottom: 15px;
+            font-family: Arial, sans-serif;
+        }
