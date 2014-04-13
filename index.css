@@ -30,6 +30,8 @@ a.white{
  
 div.missionstatement
 {
+margin-left: 12.5%;
+    width: 75%;
 	 font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
 	 font-size: 1.0em;
 	 text-align: center;
@@ -44,17 +46,27 @@ a:hover{
 
 
 
-        div.portfolio {
+        div.portfolio1 {
         	text-align: center;
-            height: 400px;
+            height: 225px;
            margin: 10px 10px 10px 10px;
 
         }
+
+        div.portfolio2 {
+            text-align: center;
+            height: 355px;
+           margin: 10px 10px 10px 10px;
+
+        }
+
+
         div
         { 
         	display: block
         }
 
+        
 
 div.week1{
 	margin-left: 40px;
@@ -86,6 +98,14 @@ float: left;
 
 }
 
+div.footer{
+color: black;
+margin-top: 50px;
+text-align: center;
+    border: 3px dotted black;
+    font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
+
+}
 
 
 p{
@@ -101,7 +121,7 @@ ont-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
 
 h2
 {
-ont-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;		
+font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;		
 	font-color: blue;
 	font-size: 17px;
 
