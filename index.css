@@ -1,17 +1,107 @@
+header {
+        text-align: center;
+        font-size: 2.0em;
+        border: 3px dotted black;
+       font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
+        margin-top: 10px;
+        padding: 10px 10px 10px 10px;
+    }
+
+a{
+	font-color; black;
+}
+a.white{
+	color: white;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+ nav{
+            text-align: center;
+            height: 45px;
+            background-color: #980000;
+            font-size: 1.5em;
+           border: 2px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            padding: 7px 7px 7px 7px;
+           font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
+        } 
+ 
+div.missionstatement
+{
+	 font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
+	 font-size: 1.0em;
+	 text-align: center;
+	 border-bottom: 15px;
+
+}
+
+a:hover{
+ 	font-style: italic;
+ 	color: black;
+ }     
+
+
+
+        div.portfolio {
+        	text-align: center;
+            height: 400px;
+           margin: 10px 10px 10px 10px;
+
+        }
+        div
+        { 
+        	display: block
+        }
+
+
+div.week1{
+	margin-left: 40px;
+display: inline block;
+height: 325px;
+width: 325px;
+float: left;
+}
+
+
+div.week2{
+display: inline block;
+height: 325px;
+width: 325px;
+float: left;
+
+
+
+
+
+}
+
+
+div.week3{
+	display: inline block;
+	height: 325px;
+width: 325px;
+float: left;
+
+}
+
+
+
 p{
-	font-family: Arial;
+font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;	
 	font-size: 15px;
 }
 
 h1{
-	font-family: Arial;
+ont-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;	
 	font-color: blue;
 	font-size: 20px;
 }
 
 h2
 {
-font-family: Arial;
+ont-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;		
 	font-color: blue;
 	font-size: 17px;
 
