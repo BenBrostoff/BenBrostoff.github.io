@@ -16,6 +16,9 @@ a.white{
 	text-decoration: none;
 }
 
+.gist {
+    font-size: 14px;
+}
  nav{
             text-align: center;
             height: 45px;
@@ -41,20 +44,22 @@ margin-left: 12.5%;
 
 div.blogpost
 {
-margin-left: 12.5%;
-    width: 75%;
-     font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
-     font-size: 1.0em;
-     text-align: left;
-     border-bottom: 15px;
+    margin-left: 20.0%;
+    width: 60%;
+    font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
+    font-size: 16px;
+    text-align: left;
+    border-bottom: 15px;
 
 }
 
 #question
 {
+     margin-left: 20.0%;
+     width: 60%;
      font-family: Courier, serif;
-     font-size: 1.0em;
-     text-align: left;
+     font-size: 1.2em;
+     text-align: center;
      border-bottom: 15px;
 
 }
@@ -112,17 +117,12 @@ display: inline block;
 height: 325px;
 width: 325px;
 float: left;
-
-
-
-
-
 }
 
 
 div.week3{
-	display: inline block;
-	height: 325px;
+display: inline block;
+height: 325px;
 width: 325px;
 float: left;
 
@@ -137,6 +137,11 @@ text-align: center;
 
 }
 
+p.blogpost{
+font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;  
+    font-size: 16px;
+}
+
 
 p{
 font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;	
@@ -149,10 +154,11 @@ ont-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;
 	font-size: 20px;
 }
 
-h2
-{
-font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;		
-	font-color: blue;
-	font-size: 17px;
-
+h2.blogheading{
+    font-family: "Harriet Text", Georgia, Times, "Times New Roman", serif;		
+	background-color: beige;
+	font-size: 22px;
+    margin-left: 20%;
+    width: 60%;
+    text-align: center;
 }
