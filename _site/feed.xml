@@ -3,8 +3,8 @@
   <channel>
     <title>Ben Brostoff</title>
     <description></description>
-    <link></link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://benbrostoff.github.io/</link>
+    <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Precursor to a New Journey</title>
@@ -25,8 +25,8 @@
 &lt;p class = &quot;blogpost&quot;&gt;I covered in a previous post the idea of stereotype threat. It seems to me that stereotype threat covers not only groups of people, but ideas. I once believed that we should do what we&amp;rsquo;re &amp;ldquo;good&amp;rdquo; at. It seems logical that what I displayed a talent for should be my vocation. Experience has borne out the idea that motivation is intimately tied to intellectual curiousity and pursuing challenges that push us as thinkers. Computer science and programming has given me an intellectual motivation that economics never did, and I welcome my pending career change.&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 May 2014 12:00:00 +0000</pubDate>
-        <link>/2014/05/18/cultural-week-7/</link>
-        <guid isPermaLink="true">/2014/05/18/cultural-week-7/</guid>
+        <link>http://benbrostoff.github.io//2014/05/18/cultural-week-7/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/18/cultural-week-7/</guid>
       </item>
     
       <item>
@@ -42,8 +42,8 @@
 &lt;p class = &quot;blogpost&quot;&gt;Overall, SQL injection has received its share of attention over time due to some &lt;a href =&quot;http://www.esecurityplanet.com/hackers/how-to-prevent-sql-injection-attacks.html&quot; target=&quot;_blank&quot;&gt;extremely high profile attacks making use of the technique&lt;/a&gt;. Concurrently, defenses against SQL injections have also involved, meaning the cybersecurity experts of the world are making it increasingly difficult for the hackers. All programmers would be well advised to make use of the significant literature on SQL injection defenses. &lt;/p&gt; 
 </description>
         <pubDate>Sun, 18 May 2014 00:00:00 -0400</pubDate>
-        <link>/2014/05/18/technical-week-7/</link>
-        <guid isPermaLink="true">/2014/05/18/technical-week-7/</guid>
+        <link>http://benbrostoff.github.io//2014/05/18/technical-week-7/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/18/technical-week-7/</guid>
       </item>
     
       <item>
@@ -83,8 +83,8 @@
 &lt;p class = &quot;blogpost&quot;&gt;I&amp;rsquo;d venture to guess that both will play a large role in the future of programming styles. &lt;/p&gt;
 </description>
         <pubDate>Wed, 07 May 2014 12:00:00 +0000</pubDate>
-        <link>/2014/05/07/technical-week-6/</link>
-        <guid isPermaLink="true">/2014/05/07/technical-week-6/</guid>
+        <link>http://benbrostoff.github.io//2014/05/07/technical-week-6/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/07/technical-week-6/</guid>
       </item>
     
       <item>
@@ -106,8 +106,8 @@
 &lt;p class = &quot;blogpost&quot;&gt;Indeed, realities change quickly, and so should our assumptions. &lt;/p&gt;
 </description>
         <pubDate>Wed, 07 May 2014 12:00:00 +0000</pubDate>
-        <link>/2014/05/07/cultural-week-6/</link>
-        <guid isPermaLink="true">/2014/05/07/cultural-week-6/</guid>
+        <link>http://benbrostoff.github.io//2014/05/07/cultural-week-6/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/07/cultural-week-6/</guid>
       </item>
     
       <item>
@@ -142,8 +142,8 @@
 &lt;p&gt;One can in part see from this example the inherent usefulness of a class. Classes (which are objects of the class Class, by the way, in Ruby) provide a means of giving objects utility from a programming perspective: the class an object is in determines the methods you can call, the information about that object, etc. Classes are also objects, as previously stated. In future posts, I intend to explore more principles of object oriented programming and the role of classes in OOP. &lt;/p&gt;
 </description>
         <pubDate>Sun, 04 May 2014 00:00:00 -0400</pubDate>
-        <link>/2014/05/04/technical-week-5/</link>
-        <guid isPermaLink="true">/2014/05/04/technical-week-5/</guid>
+        <link>http://benbrostoff.github.io//2014/05/04/technical-week-5/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/04/technical-week-5/</guid>
       </item>
     
       <item>
@@ -179,8 +179,8 @@
 &lt;p&gt;All of the above is really to say that programming and the study of computer science has had a profound impact on my life. I feel excited every day to continue improving as a programmer and learn more about the history and future of computer science. One of the greatest gifts we as adults can pass onto our children is this education. &lt;/p&gt; 
 </description>
         <pubDate>Sun, 04 May 2014 00:00:00 -0400</pubDate>
-        <link>/2014/05/04/cultural-week-5/</link>
-        <guid isPermaLink="true">/2014/05/04/cultural-week-5/</guid>
+        <link>http://benbrostoff.github.io//2014/05/04/cultural-week-5/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/04/cultural-week-5/</guid>
       </item>
     
       <item>
@@ -200,8 +200,8 @@
 &lt;p class = &quot;blogpost&quot;&gt; Others have encountered this issue before in Ruby, and it&amp;rsquo;s covered in some detail via &lt;a href=&quot;http://stackoverflow.com/questions/812541/ruby-change-each-value-in-a-hash-with-something-like-collect-for-arrays&quot; target=&quot;_blank&quot;&gt; this S/O post &lt;/a&gt;. As per usual, there are many ways to do certain tasks in Ruby, and it&amp;rsquo;s largely personal preference how you do them.&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Apr 2014 00:00:00 -0400</pubDate>
-        <link>/2014/04/27/technical-week-4/</link>
-        <guid isPermaLink="true">/2014/04/27/technical-week-4/</guid>
+        <link>http://benbrostoff.github.io//2014/04/27/technical-week-4/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/27/technical-week-4/</guid>
       </item>
     
       <item>
@@ -223,8 +223,8 @@
 &lt;p&gt;I&amp;rsquo;m proud of myself for how I dealt with Ron. I never shit-talked back, and I responded purely with my actions. I gained his respect and am a better basketball player (and person) for deciding to respond with my actions and not my words. I handled myself like a pro (Tim Duncan comes to mind), and I can look back on the memories of working on my jump-shooting with a smile.&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Apr 2014 00:00:00 -0400</pubDate>
-        <link>/2014/04/27/cultural-week-4/</link>
-        <guid isPermaLink="true">/2014/04/27/cultural-week-4/</guid>
+        <link>http://benbrostoff.github.io//2014/04/27/cultural-week-4/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/27/cultural-week-4/</guid>
       </item>
     
       <item>
@@ -252,8 +252,8 @@
 &lt;p&gt; In summary, JavaScript&amp;rsquo;s popularity is one part timing (Netscape success) and one part design. I have not used Javacript enough to speak to the latter, but will formulate my own opinion as I continue to develop as a programmer. &lt;/p&gt;
 </description>
         <pubDate>Sun, 20 Apr 2014 00:00:00 -0400</pubDate>
-        <link>/2014/04/20/technical-week-3/</link>
-        <guid isPermaLink="true">/2014/04/20/technical-week-3/</guid>
+        <link>http://benbrostoff.github.io//2014/04/20/technical-week-3/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/20/technical-week-3/</guid>
       </item>
     
       <item>
@@ -271,8 +271,8 @@
 &lt;p&gt; Pairing should be empowering for both individuals. Both partners should feel uplifted and be able to claim they learned something from eachother.  I enjoy pairing because it&amp;rsquo;s an intellectual exercise that in many respects involves emotionally connecting with people. Emotional connection and intellectual stimulation are goals worth reaching for in all walks of life. &lt;/p&gt;
 </description>
         <pubDate>Sun, 20 Apr 2014 00:00:00 -0400</pubDate>
-        <link>/2014/04/20/cultural-week-3/</link>
-        <guid isPermaLink="true">/2014/04/20/cultural-week-3/</guid>
+        <link>http://benbrostoff.github.io//2014/04/20/cultural-week-3/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/20/cultural-week-3/</guid>
       </item>
     
   </channel>
