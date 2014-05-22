@@ -1,0 +1,28 @@
+title:            Ben Brostoff
+description:      
+url:              # Site url.
+signoff:          # Your name.
+disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
+google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
+
+links:
+  - name:         About
+    url:          /about
+  - name:         Resume 
+    url:          B. Brostoff_Resume_4.2014 Update.pdf
+    external:     true
+  - name:         Email
+    url:          mailto:ben.brostoff@gmail.com
+    external:     true
+  - name:         GitHub
+    url:          http://github.com/BenBrostoff
+    external:     true
+  - name:         Book Recos
+    url:          /books
+pygments:         true
+permalink:        pretty
+markdown:         redcarpet
+redcarpet:
+  extensions:
+    - smart

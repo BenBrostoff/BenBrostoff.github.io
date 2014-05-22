@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ben Brostoff</title>
+    <description></description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Precursor to a New Journey</title>
+        <description>&lt;p class = &quot;blogpost&quot;&gt;June 2nd marks the beginning of my DBC cohort date in New York.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;To be frank, I feel I&amp;rsquo;m not exagerrating when I claim that signing up for DBC was the most difficult decision of my life (which goes to show you the relative lack of events that have occurred in my life thus far). I left a comfortable job in Wells Fargo&amp;rsquo;s asset-backed finance division in Charlotte, where I very much liked my colleagues and was well practiced at the investment banking duties associated with the position.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Yet, computer science and programming I had flirted with for several years, and I found as time progressed it was a flirtation that turned into something far more powerful. I am someone with a natural inclination to take things apart and figure out how they work. I like to draw; I love to build; I live to write.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;I dabbled in a few CS classes at Duke and wish I had done more - the reason I didn&amp;rsquo;t I can purely attribute to already having achieved an Economics degree in my junior year and naturally assuming I would have some type of career in business / finance. Besides, I got A&amp;rsquo;s in all my economics classes and B&amp;rsquo;s in the CS I took (basic Java, discrete mathematics)&amp;hellip; but perhaps this was to be expected due to Duke&amp;rsquo;s massive grade inflation in the former and lack thereof in the latter.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;In reflecting, I&amp;rsquo;ve come to realize that my work in banking convinced me I was &lt;i&gt; good &lt;/i&gt; at something. It was easy to put together slide decks and elementary models and write credit memos once I had done it for a year. The volume of work I did created something like fulfillment in my life.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;I know intimately, though, that work for work&amp;rsquo;s sake is surface fulfillment. Volume is not quality. And having one&amp;rsquo;s work be both challenging and intellectually stimulating in part renders work meaningful. Moreover, work needs to serve a greater purpose - chiefly, the advancement of technology that benefits all.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;I&amp;rsquo;m a firm believer in one&amp;rsquo;s job being tied to one&amp;rsquo;s passion, if not the exact same. I consider computers humanity&amp;rsquo;s most wonderful and incredible invention, and I would be amiss if I did not gain an education in how to use them to their fullest extent: writing useful software. I am proud to undertake the craft of software engineering, and excited for the challenge that lies ahead.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;I covered in a previous post the idea of stereotype threat. It seems to me that stereotype threat covers not only groups of people, but ideas. I once believed that we should do what we&amp;rsquo;re &amp;ldquo;good&amp;rdquo; at. It seems logical that what I displayed a talent for should be my vocation. Experience has borne out the idea that motivation is intimately tied to intellectual curiousity and pursuing challenges that push us as thinkers. Computer science and programming has given me an intellectual motivation that economics never did, and I welcome my pending career change.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 May 2014 12:00:00 +0000</pubDate>
+        <link>/2014/05/18/cultural-week-7/</link>
+        <guid isPermaLink="true">/2014/05/18/cultural-week-7/</guid>
+      </item>
+    
+      <item>
+        <title>SQL Injection</title>
+        <description>&lt;p class = &quot;blogpost&quot;&gt;SQL (Structured Query Language) injection is a common method used by malicious users to query databases via user entry fields. The malicious user more or less &amp;ldquo;tricks&amp;rdquo; the database into revealing sensitive information by entering SQL commands. The &amp;ldquo;trick&amp;rdquo; is a bit of a misnomer, as the code behind the SQL is just functioning properly, and the malicious user (let&amp;rsquo;s call it hacker going forward) is taking advantage of &amp;ldquo;unsanitized&amp;rdquo; code. The hacker may access, alter or delete information through entering simple SQL commands into user fields and guessing field or table names in the database.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;SQL injection is a key concept for any aspiring programmer to gain knowledge of in that (i) it is an easy attack mechanism for potential hackers to implement (apps such as Havji allow for automated injection without knowledge of SQL) and (ii) defenses against SQL injection are similarly easy to implement (although offense and defense both continue to evolve).&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Defense against SQL injection in part involves &amp;ldquo;sanitizing code&amp;rdquo;. One example of sanitization is controlling input into user fields. By only allowing specific characters to be input into user fields, hackers are unable to enter in certain SQL commands into such fields.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Sanitization, however, is by no means fail-safe, and perhaps the optimal solution here is to &lt;a href =&quot;http://www.esecurityplanet.com/hackers/how-to-prevent-sql-injection-attacks.html&quot; target=&quot;_blank&quot;&gt;avoid constructing SQL queries with user input&lt;/a&gt;. Instead, SQL queries would be made via prepared statements or stored procedures as opposed to full queries. Other defenses available to programmers include data encryption, data segregation, permission limitations and firewalls.&lt;/p&gt; 
+
+&lt;p class = &quot;blogpost&quot;&gt;Overall, SQL injection has received its share of attention over time due to some &lt;a href =&quot;http://www.esecurityplanet.com/hackers/how-to-prevent-sql-injection-attacks.html&quot; target=&quot;_blank&quot;&gt;extremely high profile attacks making use of the technique&lt;/a&gt;. Concurrently, defenses against SQL injections have also involved, meaning the cybersecurity experts of the world are making it increasingly difficult for the hackers. All programmers would be well advised to make use of the significant literature on SQL injection defenses. &lt;/p&gt; 
+</description>
+        <pubDate>Sun, 18 May 2014 00:00:00 -0400</pubDate>
+        <link>/2014/05/18/technical-week-7/</link>
+        <guid isPermaLink="true">/2014/05/18/technical-week-7/</guid>
+      </item>
+    
+      <item>
+        <title>OOP v. Functional Programming</title>
+        <description>&lt;p class = &quot;blogpost&quot;&gt;The main difficulty in describing the difference between object oriented and functional programming is that each of the two &amp;ldquo;types&amp;rdquo; of programs are, at best, vaguely defined.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Indeed, it seems to me that anecdotally, the concept of functional programming is significantly misunderstood by the general programming community, and &lt;a href=&quot;https://twitter.com/quackingduck&quot; target=&quot;_blank&quot;&gt; Myles Byrne &lt;/a&gt; in a lecture from late April stressed this point repeatedly. From Byrne&amp;rsquo;s perspective, the two largest misunderstandings of functional programming are that (i) functional programming is about passing functions into other functions and (ii) functional programming is about lambdas (a misconception perhaps created by its &lt;a href=&quot;http://en.wikipedia.org/wiki/Functional_programming&quot; target=&quot;_blank&quot;&gt; Wikipedia page&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Byrne spoke extensively about statelessness and immutability being at the heart of functional programming. The state of a &amp;ldquo;functional&amp;rdquo; program at any given time will not impact its output; &lt;a href=&quot;http://stackoverflow.com/questions/353912/functional-programming-state-vs-reassignment&quot;&gt; objects in functional programming are a sequence of immutable values &lt;/a&gt;. A function&amp;rsquo;s output is only dependent on its input (i.e. calling the function does not affect state), and thus functional code by some commentators is considered easier to read than OOP code or other programming styles&#39; code, since the reader need not keep track of state.&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt; In contrast, programs in the OOP style are not stateless and objects exist as instances of classes rather than a sequence of immutable values. &amp;ldquo;Stateful&amp;rdquo; expressions are part of OOP - functions can change objects. Functions in OOP (can) change the state of the program: this outcome is not acceptable in functional programming.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Additionally, a hallmark of functional programming is that it does not introduce &amp;ldquo;side effects&amp;rdquo;. What is meant here is that passing the same argument into a given function will produce the same output each time. There are no side effects to calling on a function: the same input always leads to the same output. &lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;In the below, I&amp;rsquo;ve tried to demonstrate a &amp;ldquo;pure&amp;rdquo; functional programming function in JavaScript in comparison to &amp;ldquo;non-pure&amp;rdquo; function (I chose JavaScript because the consensus thinking seems to be that this language can be adopted as a &amp;ldquo;part&amp;rdquo; functional programming language - I did not find through my research the same enthusiasm for Ruby as a functional programming language, although this may just be due to the widespread use of JavaScript compared to Ruby to begin with). The major difference is that the pure function does not change the value of any variables.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/3b00f0e3d712a7402765.js&quot;&gt;&lt;/script&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt; My experience in OOP (full disclosure: I have never coded in a functional programming style) is that there are scenarios wherein you want your functions to produce side effects. &lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt; Consider the case of a class that has a method keeping track of objects created within the class. This function (method if we&amp;rsquo;re discussing Ruby) will produce different results each time a new object is created. Additionally, the class variable is being mutated each time the function is called, meaning the method is effectively changing the state of the program. I&amp;rsquo;ve tried to demonstrate this concept in the example below. &lt;/p&gt; 
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/698f0ed90b2e1164a4f7.js&quot;&gt;&lt;/script&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt; I would be amiss without mentioning that functional programming relies on a number of other practices I will not go into detail on here, as this post is meant to be fairly high-level. However, to become a proficient functional programmer, it seems to me one must (and I say must because these are often the only ways of maintaining immutability and statelessness) use first class / higher order functins, recursion over for / while loops and closures. I found Stephen Young&amp;rsquo;s blog post to be an excellent primer on these concepts &lt;a href=&quot;http://stephen-young.me.uk/2013/01/20/functional-programming-with-javascript.html&quot;&gt; and have linked it here &lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt; Finally, just as there are widely heralded OOP languages (Ruby, Python, Java - note that Python and Java also fall into other camps), functional programming has its favored languages for getting the job done. Haskell, Hope, and Lisp are some of the notable ones. &lt;a href = &quot;http://en.wikipedia.org/wiki/List_of_programming_languages_by_type#Object-oriented_class-based_languages&quot;&gt; Although by no means a reliable source, this Wikipedia entry attempts to sort major programming languages by camp.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt; One would think this post should naturally conclude with some &amp;ldquo;which style is better&amp;rdquo; commentary. I profess not to have a good answer here because I have zero experience with functional programming, and even those with significant experience in functional programming are unsure.&lt;p/&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Based on my research, it seems the major drawback of functional programming is that it takes significant displine to write in this style, especially in languages that aren&amp;rsquo;t pure &amp;ldquo;functional&amp;rdquo; languages at heart. Many of the write-ups I read on functional programming in JavaScript showed functional and non-functional code snippets. Functional programming is in most languages a choice, and often it&amp;rsquo;s a harder choice depending on the programmer&amp;rsquo;s tendencies. For instance, the idea of using recursion over loops all the time may simply not be pragmatic for a programmer under time constraints (alternatively, it could be the fastest way to solve a problem).&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;The main advantage functional programming has over OOP in my opinion is that it&amp;rsquo;s easier to read code in this style. Because a functional program is both stateless and its variables immutable, the reader of the code does not face moving targets in the same way he or she would reading code in the OOP mode. In terms of maintainability and testing, it would seem to me that functional code wins over OO code every time. This advantage only widens when one considers how difficult it can be to read OO code if the program contains mutliple class dependencies and is not well structured in the &lt;a href = &quot;http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330&quot;&gt; Sandi Metz / POODR sense.&lt;/a&gt; 
+
+&lt;p class = &quot;blogpost&quot;&gt;Yet, OOP&amp;rsquo;s popularity over functional programming at present means that a coder well trained in OOP principles will have a large group of friends to work with (to be clear, popularity is, of course, largely overrated). Combined with the fact that a functional programming approach to a problem may not be the quickest way to solve the problem, I could foresee many scenarios where OOP is preferable to functional programming.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;I&amp;rsquo;d venture to guess that both will play a large role in the future of programming styles. &lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 May 2014 12:00:00 +0000</pubDate>
+        <link>/2014/05/07/technical-week-6/</link>
+        <guid isPermaLink="true">/2014/05/07/technical-week-6/</guid>
+      </item>
+    
+      <item>
+        <title>Stereotype Threat</title>
+        <description>&lt;p class = &quot;blogpost&quot;&gt;I&amp;rsquo;ll begin by getting the obvious out of the way - I&amp;rsquo;m a white, heterosexual male who would be difficult to pick out of a lineup. I acknowledge fully I have never experienced &lt;a &quot;href http://en.wikipedia.org/wiki/Stereotype_threat&quot; target=&quot;_blank&quot;&gt; stereotype threat&lt;/a&gt; and consequently would be unable to relate to someone who has. &lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;I am comfortable enough to say I am probably someone who has certain expectations upon meeting another person These expectations are one part experience and one part my own media consumption (or some mixture thereof). They are what I think of as &amp;ldquo;generic&amp;rdquo; assumptions, but nonetheless, they are no doubt assumptions that feed into stereotype threat.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;I can remember feelings upon meeting certain people that confirm this suspicion. The first time I played in a morning basketball scrimmage at my local JCC, I assumed the black guy was the best player. He was. When I walked into my multi-variate calculus class in college, I assumed the Asians were math majors and the white kids were economics majors (multi-variate was a required course for economics majors at Duke). That assumption was swiftly proved false. When I discovered my associate at my first job was a muscle-bound, New Jersey native, I thought the only thing we&amp;rsquo;d have in common would be sports. We found common ground on cooking, fiction, travel - and, among other things, sports. I&amp;rsquo;ve found my assumptions turn out to be right, wrong and a mix of both.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;It&amp;rsquo;s not a popular thing to say, but there are times stereotypes can be useful - a super athletic black guy in your morning scrimmage should be guarded closely if you&amp;rsquo;re on defense - a slightly overweight, Jewish guy (like myself), less so. I&amp;rsquo;d like to think I change my assumptions over time as they are proved / disproved. Again, exceptions exist everywhere, but it&amp;rsquo;s nice to have somewhere to start when trying to do business or form friendships with new people. If you have a passion for German history, you would be well advised to tread lightly around a Jewish person. I don&amp;rsquo;t believe this is deliberate stereotyping - it&amp;rsquo;s common courtesy and, to a certain extent, calculated empathy (&lt;e class=&quot;g&quot;&gt;&lt;/e&gt;. as a practicing Jew, I can say most Jewish people, including myself, feel annoyed when we hear car enthusiasts trumpeting the merits of BMW without mentioning the company&amp;rsquo;s role in WWII).&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Yet, assumptions are the basis of stereotype threat - there is no threat without assumptions.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;It seems to me, though, that there is no realistic means of totally eliminating assumptions. Every minority has to deal with stereotype threat. It is an unpleasant fact of life, but a reality. Although I cannot speak from experience on stereotype threat specifically, I find the unpleasant facts of life are best dealt with by facing them head-on and realizing they are unavoidable. &lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;I believe I can do my small part to negate the impact of stereotype threat by keeping my assumptions to myself initially, and changing them accordingly as the facts present themselves (let&amp;rsquo;s recall not all stereotypes lead to negative baseline assumptions - indeed, it seems to be the case that certain minorities are excellent at certain jobs, and the numbers don&amp;rsquo;t deny this argument - consider Jews&#39; overrepresentation in comedy and finance relative to their representation on an absolute basis in the US). The best way to defuse the threat of stereotype is to weigh the (ever-changing) reality against the stereotype itself.&lt;/p&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt;Indeed, realities change quickly, and so should our assumptions. &lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 May 2014 12:00:00 +0000</pubDate>
+        <link>/2014/05/07/cultural-week-6/</link>
+        <guid isPermaLink="true">/2014/05/07/cultural-week-6/</guid>
+      </item>
+    
+      <item>
+        <title>Introduction to Ruby Classes</title>
+        <description>&lt;p&gt;Classes to a degree are hallmarks of object oriented programming. Classes serve as templates for creating objects, and the purpose of classes in Ruby is no exception. I am relatively new to Ruby and this post will serve as a basic introduction to creating classes.&lt;/p&gt;
+
+&lt;p&gt;Below is a short class I wrote for the purpose of tracking information on NBA players. Using the class, entitled NBAPlayer (classes are always capitalized, per Ruby convention) you can create &lt;b&gt;instances&lt;/b&gt; of NBA Players, with the respective information attributes of each instance known as &lt;b&gt;instance variables&lt;/b&gt;. Methods within the class can take arguments or have no arguments; their purpose can be to display information, manipulate instance variables or do any other number of different functions.&lt;/p&gt;
+
+&lt;p&gt;I have provided comments in the code below, but a few initial thoughts: &lt;p/&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The class variable (prefaced by @@) no_players can be accessed by any method in the class and is the same for all instances of the class. Take a look at the dirk and pierce objects that follow in the code - once pierce is created, no_players is 2 for both pierce and dirk.&lt;/li&gt;
+&lt;li&gt;Initialize is an instance method which creates our instance variables, assigning them the values given when the object is created. Initialize also adds one to no_players, which forms the basis of the current_player_count method.&lt;/li&gt;
+&lt;li&gt;The remaining methods are class methods which output values based on (in some cases) arguments that are passed in or manipulation of the instance variables.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/3d6c87563acb45f4bae2.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Running this code outputs the following to the console. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dirk Nowitzki is 36 years old.&lt;/li&gt; 
+&lt;li&gt;Our state of the art program recommends that Dirk Nowitzki start at C.&lt;/li&gt; 
+&lt;li&gt;Dirk Nowitzki is in the right position.&lt;/li&gt;
+&lt;li&gt;Dirk Nowitzki is one of 1 object(s) created using this program.&lt;/li&gt; 
+&lt;li&gt;Paul Pierce is 37 years old.&lt;/li&gt; 
+&lt;li&gt;Our state of the art program recommends that Paul Pierce start at PF.&lt;/li&gt; 
+&lt;li&gt;Paul Pierce is currently out of position.&lt;/li&gt;
+&lt;li&gt;Paul Pierce is one of 2 object(s) created using this program.&lt;/li&gt; 
+&lt;/ul&gt; 
+
+&lt;p&gt;One can in part see from this example the inherent usefulness of a class. Classes (which are objects of the class Class, by the way, in Ruby) provide a means of giving objects utility from a programming perspective: the class an object is in determines the methods you can call, the information about that object, etc. Classes are also objects, as previously stated. In future posts, I intend to explore more principles of object oriented programming and the role of classes in OOP. &lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 May 2014 00:00:00 -0400</pubDate>
+        <link>/2014/05/04/technical-week-5/</link>
+        <guid isPermaLink="true">/2014/05/04/technical-week-5/</guid>
+      </item>
+    
+      <item>
+        <title>Computer Science Education</title>
+        <description>&lt;p&gt;It&amp;rsquo;s an oft-mentioned issue in education, one that is beginning to gain some traction at the local and national levels and even at the White House: the lack of computer science built into the K-12 curriculum. I profess not to know whether &amp;ldquo;we&amp;rdquo; (and I suppose I mean the federal government) are on top of this issue, although Code.org and efforts like it seem like a start. This post is not meant to serve as a normative diagnosis of what we should be doing with regard to computer science education. Rather, it&amp;rsquo;s a relation of my own experience as a now aspiring programmer.&lt;/p&gt;
+
+&lt;p&gt;I had never coded until my sophomore year of college. Until my intro Java class at Duke, I could not tell you a single programming language, how software was written, the difference between desktop and web-based software, etc. My understanding of the internet was more or less limited to the websites I visited and the applications I used. When I received my first smartphone at age 21, the entire transition seemed rather natural. Oh, now I have this piece of superior technology that everyone else has. I am more in awe of mobile apps now than I was in three years ago because I&amp;rsquo;m only just beginning to understand their origins and power. Indeed, I&amp;rsquo;m only just beginning to hear and understand computer science terms that are fundamental to how we conduct our daily lives.&lt;/p&gt;
+
+&lt;p&gt;I look back at my K-12 education and try to piece together exactly why I never looked into or learned about computer science or programming. There are the obvious answers of course: no classes were offered, my parents, siblings and friends had no interest in programming computers, etc. The obvious answers in retrospect do not really hold weight, in that I now wonder why I had no interest in how computers worked.&lt;/p&gt;
+
+&lt;p&gt;I played through some of The Way Things Work (David Macaulay and Neil Ardley) as a child. I asked questions about the seasons, light bulbs, cars, and all the other things a child might be interested in. Fascinatingly, though, it never really occurred to me to ask how pixels formed on a screen (be it TV or computers), or why I could click on At Ease icons on our family&amp;rsquo;s old Mac and be brought to a variety of different places, or how CDs or floppy disks were so small but held so much data (and little did I know that those things would be gargantuan by today’s standards).&lt;/p&gt;
+
+&lt;p&gt;In what I remember of my elementary and middle school years, adults sometimes liked to pose the “how does X work” questions and provide the answers. Most science teachers served this function. But computers rarely came under the line of questioning. Even as massive technological changes (by my standards) happened under my nose, adults never really provided commentary or answers. One day it just so happened that your sister could pick up the phone while you were on the internet and nothing would happen. The next day there was no America Online CD or seven step log-in process - you just clicked on a Microsoft Explorer icon and you were online. You don’t need to page your mother anymore, Benjamin - you can text her on this new phone that fits in your pocket. Thanks, Dad.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not suggesting here it&amp;rsquo;s an adult&amp;rsquo;s responsibility to inform children of why and how certain things are happening in the world. I&amp;rsquo;m an adult now and could not bear this responsibility. But why don&amp;rsquo;t we, the community of adults, feel at all obligated to explain certain elements of technology to our children?&lt;/p&gt;
+
+&lt;p&gt;At a certain level, children interpret this indifference to mean &amp;ldquo;it&amp;rsquo;s not all that important&amp;rdquo; (or at least I did). In part because no one really made me give notice to changes in computers, the internet, AI, mobile phones, etc., I ignored it and moved along. My working assumption was calculus, physics, and even classic novels were &amp;ldquo;more important&amp;rdquo; - here is where my attentions should be focused on. &lt;/p&gt;
+
+&lt;p&gt;I find myself now in a weird state of affairs - a 24 year old adult with a new child like curiosity in computers. I find myself marveling at previous things I held to be normal. The mere fact that every pixel on your screen is controlled by an algorithm elicits wonder. Now that I know the difficult in coding a basic tic-tac-toe bot, I can be floored by alpha-beta pruning in chess algorithms.&lt;/p&gt; 
+
+&lt;p&gt;I wonder often how my views on the world would have been shaped had I learned to code at a yong age. Brian Fitzpatrick, in his interview in Peter Seibel&amp;rsquo;s &lt;i&gt; The Art of Coding&lt;/i&gt;, provides a bit of color here:&lt;/p&gt;
+
+&lt;blockquote class = &quot;blogpost&quot;&gt;This was one of my first programs-it was something like K equals grab the next char. Then I said if K equals &amp;ldquo;a&amp;rdquo;, print &amp;ldquo;a&amp;rdquo;; if K is &amp;ldquo;b&amp;rdquo;, print &amp;ldquo;b&amp;rdquo;. I pretty much did every letter, number, and some punctuation. Then at one point I was like, &amp;ldquo;Wait, I could just say, `Print the variable!&amp;rdquo;&amp;lsquo; and I replaced 40 lines of code with one. I was like, &amp;ldquo;Holy shit, that was awesome!&amp;rdquo; That was some major abstraction for a six year old. &lt;/blockquote&gt;
+
+&lt;p&gt;Although this particular quote seems pretty funny at first glance, it’s also somewhat incredible a six year old can come to an important realization about the world at large through programming. The insight about variables here is one you could easily imagine being important in any discipline: the idea that one thing can stand for many things. Indeed, there&amp;rsquo;s no question such an insight requires a higher level of thinking than most six year olds are capable of. That passage alone is proof many times over that we as an &amp;ldquo;adult society&amp;rdquo; need to introduce children to porogramming as early as possible.&lt;/p&gt;
+
+&lt;p&gt;Coding develops new branches in the mind. Anyone who knows how to program thinks about the world differently. Fundamentally, how one perceives the relationship between humans and machines is largely a function of their experience in programming. Imagine writing a critical review of The Matrix. Your opinion on that movie to a certain extent has to be dictated by your knowledge of computer programming. &lt;/p&gt;
+
+&lt;p&gt;When I see any device reliant on being &amp;ldquo;programmed&amp;rdquo;, I start to think about how. Classes, methods, variables, conditionals, etc. My appreciation for these devices is an infinite order of times larger than before I started to study programming; my interest in them has been inifinitely magnified as well.&lt;/&gt;  
+
+&lt;p&gt;I find new historical figures that in my adulthood are the Michael Jordans and Tom Bradys of my youth. John McCarthy. Donald Knuth. Hal Ableson. Gerald Jay Sussman. Paul Graham. The intelligence of these guys makes them something else in my mind: worthy of being on the same plane as a Franklin, an Edison or a Tesla.&lt;/p&gt;
+
+&lt;p&gt;All of the above is really to say that programming and the study of computer science has had a profound impact on my life. I feel excited every day to continue improving as a programmer and learn more about the history and future of computer science. One of the greatest gifts we as adults can pass onto our children is this education. &lt;/p&gt; 
+</description>
+        <pubDate>Sun, 04 May 2014 00:00:00 -0400</pubDate>
+        <link>/2014/05/04/cultural-week-5/</link>
+        <guid isPermaLink="true">/2014/05/04/cultural-week-5/</guid>
+      </item>
+    
+      <item>
+        <title>Enumerable</title>
+        <description>&lt;p&gt;Enumerables is a Ruby module that contains various methods for use in arrays. I find map particularly useful, as it&amp;rsquo;s the easiest way (in my opinion) to modify all elements of an array with a &amp;ldquo;universal&amp;rdquo; rule. In the example below, I take an array of numbers and add one to each element. I show map in its destructive (map!) and non-destructive forms as well. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/11351284.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt; Predictably, because Enumerables was built for arrays, changing keys or values in a hash is not as easy via the map method. Using the map method on a hash will yield an array. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/11351423.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt; I personally don&amp;rsquo;t have many instances where I need to do that, so I would rather use the each method. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/11351368.js&quot;&gt;&lt;/script&gt;
+
+&lt;p class = &quot;blogpost&quot;&gt; Others have encountered this issue before in Ruby, and it&amp;rsquo;s covered in some detail via &lt;a href=&quot;http://stackoverflow.com/questions/812541/ruby-change-each-value-in-a-hash-with-something-like-collect-for-arrays&quot; target=&quot;_blank&quot;&gt; this S/O post &lt;/a&gt;. As per usual, there are many ways to do certain tasks in Ruby, and it&amp;rsquo;s largely personal preference how you do them.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Apr 2014 00:00:00 -0400</pubDate>
+        <link>/2014/04/27/technical-week-4/</link>
+        <guid isPermaLink="true">/2014/04/27/technical-week-4/</guid>
+      </item>
+    
+      <item>
+        <title>Dealing With Conflict</title>
+        <description>&lt;p&gt;I used to play basketball with a couple guys at the local JCC a few mornings a week before work. The level of play was actually pretty elevated, and there were a couple guys who had played in college. The catch here was that everyone was late thirties and up, and as someone in their early 20s, I was generally quicker and more athletic than most due to my youth. I was a valued commodity because I ran fast breaks well and could beat most people off the dribble.&lt;/p&gt;
+
+&lt;p&gt;However, I was a terrible shooter, and over time the opposition accounted for my strengths and forced me to my weaknesses. For a period of maybe a few weeks, the defense would leave me wide open from 15 feet out and I would be double teamed if I drove into the paint. This strategy effectively forced me to shoot long jumpers.&lt;/p&gt;
+
+&lt;p&gt;Initially, I took the bait only because my teammates screamed at me to shoot, not realizing how much I sucked at shooting. As the realization sunk in that I could not shoot, I stopped getting the ball and one teammate specifically gave me a hard time for being useless - let&amp;rsquo;s call him Ron. For Ron, every game was personal, and he had an unhealthy devotion to winning. I clearly was getting in the way of Ron&amp;rsquo;s love of winning, and he took to some bush-league name calling and other tactics as a result.&lt;/p&gt;
+
+&lt;p&gt;For a while, I hated coming to the gym because Ron would endlessly taunt me and demand I not be on his team. I understood the source of the conflict - Ron thought (correctly for some time) I endangered his team&amp;rsquo;s chances of winning. I grew to hate Ron and swore that I would become an assassin jump shooter to shut him the hell up.&lt;/p&gt;
+
+&lt;p&gt;In my quest to end this emotional conflict, I took to going to the gym every weekend and shooting jumpers for several hours. In pick-up games, I made a concerted effort to only take jumpers and work on the one area of my game that needed major help. Over time, I saw significant improvement.&lt;/p&gt;
+
+&lt;p&gt;One game, in part due to Ron&amp;rsquo;s shenanigans, I ended up on a team with no one who could score, where endless passing was the norm and all were afraid to shoot. It dawned on me I should use this situation as the staging ground for my coming out party as a shooter.&lt;/p&gt;
+
+&lt;p&gt;I began to shoot with impunity, catching and aiming as soon as I received the ball. I think I hit four threes that game and clearly recall Ron&amp;rsquo;s jaw dropping. Most guys (Ron included) dismissed the performance as an aberration, but as I continued to add consistency to my shooting game, I heard Ron&amp;rsquo;s chatter die down. One of my most satisfying experiences at the JCC was Ron coming up to me after a particularly good performance and saying, &amp;ldquo;You&amp;rsquo;ve made yourself into a respectable shooter.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m proud of myself for how I dealt with Ron. I never shit-talked back, and I responded purely with my actions. I gained his respect and am a better basketball player (and person) for deciding to respond with my actions and not my words. I handled myself like a pro (Tim Duncan comes to mind), and I can look back on the memories of working on my jump-shooting with a smile.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Apr 2014 00:00:00 -0400</pubDate>
+        <link>/2014/04/27/cultural-week-4/</link>
+        <guid isPermaLink="true">/2014/04/27/cultural-week-4/</guid>
+      </item>
+    
+      <item>
+        <title>The Rise of Javasript</title>
+        <description>&lt;blockquote class = &quot;blogpost&quot;&gt; JavaScript became the world&amp;#8217s biggest programming language completely independent of its merits. 
+
+&lt;p&gt;&lt;center&gt; -Douglas Crockford, &lt;a href=&quot;https://www.youtube.com/watch?v=hQVTIJBZook&quot; target=&quot;_blank&quot;&gt;Javascript: The Good Parts&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;I want to preface my thoughts on JavaScript by acknowledging many of the criticisms against JavaScript. A common answer to this question may be that JavaScript is a &amp;ldquo;lowest common denominator&amp;rdquo; type programming language that a lot of programmers just by convention learn and become comfortable using for web development.  &lt;/p&gt;
+
+&lt;p&gt; As of the writing of this post, my coding experience was limited to a few CS classes at college and my time at DBC (about a month). I coded in Java at Duke and at DBC have used Ruby and JavaScript. I must admit I like Ruby far more than JavaScript. There are a couple things specifically that bother me about JavaScript: &lt;/p&gt;
+
+&lt;ul&gt; &lt;b&gt; Local and global variable consequences. &lt;/b&gt; It often feels in JavaScript that the placement of variables and assignment of values has enormous consequences when creating objects. When debugging my own code, I&amp;rsquo;ve found moving things around often solves problems. In Ruby, placement is not as integral (and I make these statements as someone new to programming who is prone to make sweeping and unfounded statements). Placing variables within functions &amp;ldquo;feels&amp;rdquo; less consequential in Ruby than in JavaScript. &lt;/ul&gt;
+
+&lt;ul&gt; &lt;b&gt; Line termination and semi-colons. &lt;/b&gt;  I&amp;rsquo;m still adjusting to semi-colon placement in JavaScript and the consequences of semi-colons. Why in for loops are the parameters separated by semi-colons, but object properties are separated by commas? A few google searches reveal some frustration with semi-colon treatment in JavaScript, specifically automatic parsing of semi-colons. Due to the lack of semi-colon equivalent in Ruby, JavaScript has thrown me for a bit of a (proverbial) loop here (although I did encounter semi-colons back in my Java days). Crockford (see earlier quote) notes,&lt;a href=&quot;http://www.crockford.com/javascript/javascript.html&quot; target=&quot;_blank&quot;&gt; &amp;ldquo;Semi-colon insertion was a huge mistake.&amp;rdquo;&lt;/a&gt;&lt;/ul&gt;
+
+&lt;p&gt; So why is JavaScript popular? Let&amp;rsquo;s cover the historical element before praising the positive attributes of the language (which the aforementioned Douglas Crockford has also done in the video linked above). Javascript is the product of the Netscape team that developed Netscape Navigator and designed the language to run on Netscape. The success of Netscape was a boon for Javascript. Netscape was the go-to broweser for early web users, and thus, Javascript was the earliest web language. First to market appears to have been a signicant win for JavaScript that buoyed it. &lt;/p&gt;
+
+&lt;p&gt;This is not to say JavaScript&amp;rsquo;s success is purely right place right time, &lt;a href=&quot;http://programmers.stackexchange.com/questions/28947/how-did-javascript-become-popular&quot; target=&quot;_blank&quot;&gt; and this online thread relays this message home quite well.&lt;/a&gt; JavaScript has numerous technical attributes that make it a powerful language. Many of these I admit I can&amp;rsquo;t appreciate because my programming career is in its relative infancy. Indeed, the entire programming language debate I find simultaneously fascinating and confusing: &lt;a href=&quot;http://www.paulgraham.com/icad.html&quot; target=&quot;_blank&quot;&gt; check out this Paul Graham essay for a full overview of what makes a strong programming language.&lt;/a&gt; 
+
+&lt;p&gt;One example of a strong technical attribute JavaScript has in its favor: first-class functions. A first-class function can be treated / passed as an argument (in math, consider (f(f(x)) - this is called a higher order function, or a function that takes a function as an argument). First-class functions are not supported by Java and C. Other strong language attributes Crockford cites in his talk include dynamic objects and object literals. Importantly, other languages have many of these aforementioned strengths, but are perhaps not as popular as JavaScript because they lack the first-to-market advantages it gained early on.&lt;/p&gt;
+
+&lt;p&gt; In summary, JavaScript&amp;rsquo;s popularity is one part timing (Netscape success) and one part design. I have not used Javacript enough to speak to the latter, but will formulate my own opinion as I continue to develop as a programmer. &lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 Apr 2014 00:00:00 -0400</pubDate>
+        <link>/2014/04/20/technical-week-3/</link>
+        <guid isPermaLink="true">/2014/04/20/technical-week-3/</guid>
+      </item>
+    
+      <item>
+        <title>Pair Programming</title>
+        <description>&lt;p&gt;I think pairing is largely about chemistry and rapport with you partner. There are times I&amp;rsquo;ve loved pairing and other times I&amp;rsquo;ve felt less than enthusiastic about it. When pairing has been a positive experience, it&amp;rsquo;s because me and my team members have worked well together. I recall on one challenge with two other DBC students, we had skill sets that did not overlap that much (i.e. I knew Javascript syntax well; the other student knew for loops well; the other student was great at debugging) and thus did not step on each other&amp;rsquo;s toes. That experience was rewarding since I felt a whole greater than the sum of parts connection. &lt;/p&gt;
+
+&lt;p&gt; Pairing is difficult when the partners have (i) overlapping skill sets and (ii) when the partners may have differing visions of the objective of a particular assignment. The implications of (i) are obvious. With (ii), which I encountered this week, the partners meander about and do not communicate well because they have different objectives. &lt;/p&gt;
+
+&lt;p&gt; I like feedback because it is the driving force in me developing as an individual (assuming it&amp;rsquo;s authentic and sincere). I have only received feedback from one DBC instructor, and it felt good to hear both praise and criticism. Praise makes you want to accentuate your strengths (I was told I was a goo leader); criticism drives you to resolve and eliminate your weaknesses (I was told my HTML / CSS skilss could be improved). 
+
+&lt;p&gt; Next time I pair, I want to come in with the technical grasp to be an immediate value add. Technical expertise is the easiest way in my opinion to make your partner respect you. We are, after all, software engineers.&lt;/p&gt;
+
+&lt;p&gt; Writing feedback can be difficult because I have high regard for others&#39; feelings. I know what it&amp;rsquo;s like to be emotionally hurt, and I would never inflict that on someone else. However, honesty is key for growth, and I need to strike a balance between the two, which is inherently difficult. &lt;/p&gt;
+
+&lt;p&gt; Pairing should be empowering for both individuals. Both partners should feel uplifted and be able to claim they learned something from eachother.  I enjoy pairing because it&amp;rsquo;s an intellectual exercise that in many respects involves emotionally connecting with people. Emotional connection and intellectual stimulation are goals worth reaching for in all walks of life. &lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 Apr 2014 00:00:00 -0400</pubDate>
+        <link>/2014/04/20/cultural-week-3/</link>
+        <guid isPermaLink="true">/2014/04/20/cultural-week-3/</guid>
+      </item>
+    
+  </channel>
+</rss>

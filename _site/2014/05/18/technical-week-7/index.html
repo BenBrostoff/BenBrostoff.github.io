@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <meta content='SQL Injection - Ben Brostoff' property='og:title' />
+    <title>SQL Injection - Ben Brostoff</title>
+    <link href='/images/fav.png' rel='shortcut icon'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/syntax.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/responsive.css' rel='stylesheet' type='text/css' />
+<!-- - -->
+<script src='/javascripts/jquery.js' type='text/javascript'></script>
+<script src='/javascripts/pd.js' type='text/javascript'></script>
+<script src='/javascripts/basics.js' type='text/javascript'></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!-- - -->
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+<meta content='text/html; charset=utf-8' http-equiv='content-type' />
+<meta content="http://muan.co/images/og.png" property="og:image" />
+<meta content="" property="fb:app_id" />
+
+  <meta content='/2014/05/18/technical-week-7/' property='og:url' />
+  <meta content="SQL (Structured Query Language) injection is a common method used by malicious users to query databases via user entr..." property='og:description' />
+  <meta content="article" property="og:type" />
+
+<!-- - -->
+<script type='text/javascript'>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=604714799556697";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  </head>
+  <body>
+    <header>
+<a id="go-back-home" href="/"><img src="/images/scribble.png" alt="scribble" width="53" height="59"></a>
+<p>Ben Brostoff</p>
+</header>
+    <div id='container'>
+      <div class="block">
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="B. Brostoff_Resume_4.2014 Update.pdf">Resume</a>
+  
+    <a target="_blank" class="main" href="mailto:ben.brostoff@gmail.com">Email</a>
+  
+    <a target="_blank" class="main" href="http://github.com/BenBrostoff">GitHub</a>
+  
+    <a target="_top" class="main" href="/books">Book Recos</a>
+  
+</div>
+      <section class="paging">
+  
+    <div class="left">
+      <a href="/2014/05/07/technical-week-6/">
+        ‹
+      </a>
+    </div>
+  
+  
+    <div class="right">
+      <a href="/2014/05/18/cultural-week-7/">
+        ›
+      </a>
+    </div>
+  
+</section>
+      <div class="content">
+        <section class='post'>
+          <h1 class="upcase">
+            <div class='date'>18 May 2014</div>
+            SQL Injection
+          </h1>
+          <p class = "blogpost">SQL (Structured Query Language) injection is a common method used by malicious users to query databases via user entry fields. The malicious user more or less &ldquo;tricks&rdquo; the database into revealing sensitive information by entering SQL commands. The &ldquo;trick&rdquo; is a bit of a misnomer, as the code behind the SQL is just functioning properly, and the malicious user (let&rsquo;s call it hacker going forward) is taking advantage of &ldquo;unsanitized&rdquo; code. The hacker may access, alter or delete information through entering simple SQL commands into user fields and guessing field or table names in the database.</p>
+
+<p class = "blogpost">SQL injection is a key concept for any aspiring programmer to gain knowledge of in that (i) it is an easy attack mechanism for potential hackers to implement (apps such as Havji allow for automated injection without knowledge of SQL) and (ii) defenses against SQL injection are similarly easy to implement (although offense and defense both continue to evolve).</p>
+
+<p class = "blogpost">Defense against SQL injection in part involves &ldquo;sanitizing code&rdquo;. One example of sanitization is controlling input into user fields. By only allowing specific characters to be input into user fields, hackers are unable to enter in certain SQL commands into such fields.</p>
+
+<p class = "blogpost">Sanitization, however, is by no means fail-safe, and perhaps the optimal solution here is to <a href ="http://www.esecurityplanet.com/hackers/how-to-prevent-sql-injection-attacks.html" target="_blank">avoid constructing SQL queries with user input</a>. Instead, SQL queries would be made via prepared statements or stored procedures as opposed to full queries. Other defenses available to programmers include data encryption, data segregation, permission limitations and firewalls.</p> 
+
+<p class = "blogpost">Overall, SQL injection has received its share of attention over time due to some <a href ="http://www.esecurityplanet.com/hackers/how-to-prevent-sql-injection-attacks.html" target="_blank">extremely high profile attacks making use of the technique</a>. Concurrently, defenses against SQL injections have also involved, meaning the cybersecurity experts of the world are making it increasingly difficult for the hackers. All programmers would be well advised to make use of the significant literature on SQL injection defenses. </p> 
+
+          <br />
+<p>
+
+</p>
+<p>
+  <img src="/images/scribble3.png" alt="scribble" style= "text-align:center;" /> 
+</p>
+
+
+        </section>
+      </div>
+      
+
+      
+      <div class="block">
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="B. Brostoff_Resume_4.2014 Update.pdf">Resume</a>
+  
+    <a target="_blank" class="main" href="mailto:ben.brostoff@gmail.com">Email</a>
+  
+    <a target="_blank" class="main" href="http://github.com/BenBrostoff">GitHub</a>
+  
+    <a target="_top" class="main" href="/books">Book Recos</a>
+  
+</div>
+    </div>
+    <footer>
+  <a href="http://github.com/muan/scribble" class="muted">built with Jekyll using Scribble theme</a>
+  <br />
+  <br />
+  <img src="/images/scribble2.png" alt="scribble" /> 
+</footer>
+  </body>
+</html>
