@@ -9,17 +9,18 @@ google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 links:
   - name:         About
     url:          /about
-  - name:         Resume 
-    url:          B. Brostoff_Resume_4.2014 Update.pdf
-    external:     true
+  - name:         Book Recos
+    url:          /books
   - name:         Email
     url:          mailto:ben.brostoff@gmail.com
+    external:     true
+  - name:         LinkedIn
+    url:          https://www.linkedin.com/pub/ben-brostoff/34/50a/91
     external:     true
   - name:         GitHub
     url:          http://github.com/BenBrostoff
     external:     true
-  - name:         Book Recos
-    url:          /books
+ 
 pygments:         true
 permalink:        pretty
 markdown:         redcarpet
