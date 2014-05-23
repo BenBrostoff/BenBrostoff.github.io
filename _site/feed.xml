@@ -7,6 +7,63 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Bootcamps v. CS Degree</title>
+        <description>&lt;p&gt;My experience discussing software engineering bootcamps with friends and family has nearly always led to a misunderstanding wherein people assume I&amp;rsquo;m attending a multi-year CS program at an accredited university. I understand this assumption - I received a BS from Duke University in Economics in 2012 and understand universities from a signaling theory perspective in most cases carry more weight than a bootcamp &amp;ldquo;degree&amp;rdquo;. &lt;/p&gt;
+
+&lt;p&gt;I also know well the things that universities teach that Dev Bootcamp (DBC) - my bootcamp of choice for the next three months - does not teach. I took a number of computer science classes at Duke and have two close friends who graduated with a BS in Computer Science, both of whom I have spoken to at length regarding this very subject. Bootcamps in general are pragmatic - similar to vocational school, they&amp;rsquo;re more than willing to offer a &amp;ldquo;how&amp;rdquo; without a &amp;ldquo;why&amp;rdquo;. From my experience, DBC has actually been quite good at &amp;ldquo;why&amp;rdquo;, but probably not anywhere close to a university. From speaking to my two aforementioned friends, a university CS degree should give you background in:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;How computers work at the most granular level - assembly language, gateways, interpreters, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Algorithms and data structures&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Discrete mathematics (I took this course    at Duke and found it extremely useful in    a &amp;ldquo;how to think about a problem&amp;rdquo; sense)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Key concepts like recursion, memory usage, trees, etc.(DBC does offer to a degree from my experience)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Comfort in one or more programming languages, with Java generally being the language most schools teach&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I&amp;rsquo;m sure I&amp;rsquo;m forgetting a host of other things - I also acknowledge the electives you take have a huge impact - schools offer courses in all varieties of languages and subject matter&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In contrast, most bootcamps from my research get you the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Comfort in one or more programming languages&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Comfort in web development&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Understanding of concepts front-end and back-end developers need to know: the stack, version control (using Git and GitHub), the DOM, databases, etc. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Again, I haven&amp;rsquo;t been through the nine weeks of in-person course work DBC offers (my start date is June 2nd), so please comment as you see fit&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, the learning styles / cultures of each institution are markedly different.&lt;/p&gt;
+
+&lt;p&gt;Universities give you individual classes with a midterm and final to match. You can devote as much or as little time to them as you please.&lt;/p&gt;
+
+&lt;p&gt;DBC in effect forces all students to devote all their time to learning (hence the boot in bootcamp). Most students I&amp;rsquo;ve spoken to claim they are in the classroom 8 am - 8 pm M - F for nine weeks, and usually devote a large chunk of their weekends to working. &lt;/p&gt;
+
+&lt;p&gt;DBC is huge on students collaborating with eachother and requires students to pair program on a near daily basis - from my experience, universities generally do not have this requirement (perhaps there&amp;rsquo;s one or two group projects throughout the semester). There&amp;rsquo;s also no tests or review sessions; learning is rapid fire and students who do not understand need seek counsel elsewhere (and to be clear, elsewhere could mean an instructor - what it does not mean is that the class will slow down to accomodate students who learn at a &amp;ldquo;slower&amp;rdquo; pace). &lt;/p&gt;
+
+&lt;p&gt;DBC and other bootcamps as a result probably produce many different types of graduates. Some have tapped the program for all its worth - done all the exercises, asked the instructors myriad questions, attended all the lectures and classes, etc. I know I&amp;rsquo;ve also studied in excess of a hundred hours in preparation for DBC. Many students prior to attending DBC already have web development, data science, or other useful experience.&lt;/p&gt;
+
+&lt;p&gt;While college also produces many different types of graduates, the preponderance of tests and evaluations makes it such that students spend a lot of time on review. After four years, students probably are more similar in their knowledge base. They&amp;rsquo;re also probably more secure in what they know having been tested on it multiple times. While DBC does evaluate students periodically, it&amp;rsquo;s difficult to &amp;ldquo;fail&amp;rdquo; for lack of a better word (although a handful of students drop out every cohort or are asked to repeat units). As such, the signaling power from graduating from DBC is no doubt weaker than a CS degree. &lt;/p&gt;
+
+&lt;p&gt;Yet, I fully believe there are instances where bootcamp students come out of bootcamps more prepared to be value-add to companies than university students, and vice versa. As are so many things in life, it largely depends on the individual. &lt;/p&gt;
+
+&lt;p&gt;What follows are some of the reasons I believe DBC is a better fit for me than a university:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;I like focusing on one thing for long periods of time.&lt;/strong&gt; I never really enjoyed balancing 5-7 classes throughout high school and college. I think the Colorado College model of &amp;ldquo;one class at a time&amp;rdquo; is interesting in this respect - ask students to focus on one thing and they&amp;rsquo;ll probably do it. Ask them to focus on multiple things and certain things are inevitably sacrificed.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;I think learning any language largely depends on getting a huge volume of reps over several or more months.&lt;/strong&gt; My attempts to learn Java in Duke CS classes did not benefit from (i) only having two classes a week and (ii) only coding maybe three times a week - during class and when doing homework. Bootcamps force me to code 12 hours a day for nine weeks - I&amp;rsquo;ve also coded over 100 hours in preparation for DBC. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DBC / bootcamp instructors have worked for large and small companies in front-end and back-end capacities.&lt;/strong&gt; Professors and TAs usually want to be in academia for life (again, I acknowledge this is a generalization). DBC is good in relaying the latest developer tools, debuggers, libraries, etc. In college, you generally would have to find this out yourself.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;There is something to be said for vocational training v. academic training.&lt;/strong&gt; I&amp;rsquo;m at a point in my life where I have worked   for two years and understand well how difficult it can be to value-add without the proper training. As a new software engineer, I want to have skills that matter - I also want to have a way of thinking that matters, which is one area a university is likely superior to a bootcamp, but I&amp;rsquo;ve also come to believe skills and ways of thinking are highly interrelated. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;The bootcamp / DBC curriculum is updated every single month to accomodate industry changes - universities have been teaching the same classes for decades.&lt;/strong&gt; Curriculum changes occur extremely slowly in universities. Changes are decided by large committees and debated ad nauseum. Students are the victims here as the curriculum becomes further and further divorced from current work in the respective discipline. Because bootcamps are so small and have a better central model of decision making, they are quick to respond to input from companies who have hired graduates and change curriculums accordingly. I&amp;rsquo;m not saying here that the workplace should dictate what people learn - I&amp;rsquo;m merely saying that if one&amp;rsquo;s goal is to be a value-add in the workplace, company feedback is a good place to start.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Importantly, I want to revisit this post after I graduate from DBC. It is difficult to evaluate a bootcamp without having attended one or a university CS program when I have a BS in Economics (although I took CS classes). &lt;/p&gt;
+
+&lt;p&gt;Finally, I believe more writing on this subject is highly necessary to help future students decide how to invest in themselves. Bootcamps are such a new educational model in  software engineering that they deserve more attention from writers / programmers who can objectively evaluate their offerings.  &lt;/p&gt;
+</description>
+        <pubDate>Fri, 23 May 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/05/23/cultural-week-8/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/23/cultural-week-8/</guid>
+      </item>
+    
+      <item>
         <title>Precursor to a New Journey</title>
         <description>&lt;p class = &quot;blogpost&quot;&gt;June 2nd marks the beginning of my DBC cohort date in New York.&lt;/p&gt;
 
@@ -42,8 +99,8 @@
 &lt;p class = &quot;blogpost&quot;&gt;Overall, SQL injection has received its share of attention over time due to some &lt;a href =&quot;http://www.esecurityplanet.com/hackers/how-to-prevent-sql-injection-attacks.html&quot; target=&quot;_blank&quot;&gt;extremely high profile attacks making use of the technique&lt;/a&gt;. Concurrently, defenses against SQL injections have also involved, meaning the cybersecurity experts of the world are making it increasingly difficult for the hackers. All programmers would be well advised to make use of the significant literature on SQL injection defenses. &lt;/p&gt; 
 </description>
         <pubDate>Sun, 18 May 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/05/18/technical-week-7/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/18/technical-week-7/</guid>
+        <link>http://benbrostoff.github.io//2014/05/18/technical-week-7+copy/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/18/technical-week-7+copy/</guid>
       </item>
     
       <item>
@@ -254,25 +311,6 @@
         <pubDate>Sun, 20 Apr 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/04/20/technical-week-3/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/20/technical-week-3/</guid>
-      </item>
-    
-      <item>
-        <title>Pair Programming</title>
-        <description>&lt;p&gt;I think pairing is largely about chemistry and rapport with you partner. There are times I&amp;rsquo;ve loved pairing and other times I&amp;rsquo;ve felt less than enthusiastic about it. When pairing has been a positive experience, it&amp;rsquo;s because me and my team members have worked well together. I recall on one challenge with two other DBC students, we had skill sets that did not overlap that much (i.e. I knew Javascript syntax well; the other student knew for loops well; the other student was great at debugging) and thus did not step on each other&amp;rsquo;s toes. That experience was rewarding since I felt a whole greater than the sum of parts connection. &lt;/p&gt;
-
-&lt;p&gt; Pairing is difficult when the partners have (i) overlapping skill sets and (ii) when the partners may have differing visions of the objective of a particular assignment. The implications of (i) are obvious. With (ii), which I encountered this week, the partners meander about and do not communicate well because they have different objectives. &lt;/p&gt;
-
-&lt;p&gt; I like feedback because it is the driving force in me developing as an individual (assuming it&amp;rsquo;s authentic and sincere). I have only received feedback from one DBC instructor, and it felt good to hear both praise and criticism. Praise makes you want to accentuate your strengths (I was told I was a goo leader); criticism drives you to resolve and eliminate your weaknesses (I was told my HTML / CSS skilss could be improved). 
-
-&lt;p&gt; Next time I pair, I want to come in with the technical grasp to be an immediate value add. Technical expertise is the easiest way in my opinion to make your partner respect you. We are, after all, software engineers.&lt;/p&gt;
-
-&lt;p&gt; Writing feedback can be difficult because I have high regard for others&#39; feelings. I know what it&amp;rsquo;s like to be emotionally hurt, and I would never inflict that on someone else. However, honesty is key for growth, and I need to strike a balance between the two, which is inherently difficult. &lt;/p&gt;
-
-&lt;p&gt; Pairing should be empowering for both individuals. Both partners should feel uplifted and be able to claim they learned something from eachother.  I enjoy pairing because it&amp;rsquo;s an intellectual exercise that in many respects involves emotionally connecting with people. Emotional connection and intellectual stimulation are goals worth reaching for in all walks of life. &lt;/p&gt;
-</description>
-        <pubDate>Sun, 20 Apr 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/04/20/cultural-week-3/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/20/cultural-week-3/</guid>
       </item>
     
   </channel>
