@@ -6,7 +6,7 @@ date: 2014-04-13 12:00:00
 
 I found the diagram below (linked <a href= "http://www.w3.org/TR/CSS2/box.html" target="_blank">here</a>) to be extremely helpful in thinking about the differences between margins, borders and padding: 
 
-->![](http://www.w3.org/TR/CSS2/images/boxdim.png)<-
+<center><img src = "http://www.w3.org/TR/CSS2/images/boxdim.png" alt= "jekyll"></center>
 
 This diagram speaks to the CSS Box Model that (arguably) forms the core of understanding CSS positioning. I find it useful to work from the outside and in when discussing the box model.
 

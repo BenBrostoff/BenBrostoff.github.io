@@ -261,8 +261,8 @@ section.post {
     padding: 0;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 3px;} 
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;}
 
 section.post, section > p {
   font-size: 14px;
