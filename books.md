@@ -3,7 +3,7 @@ layout: page
 title: Favorite Books
 ---
 
-I always appreciate when people share their favorite books with me - [Ryan Holiday's blog](www.ryanholiday.net) and e-mails in particular have provided some fantastic book recommendations. I figured I'd do the same here. In no particular order... (because trying to rate a book is akin to trying to rate a poem, [per Dead Poets Society](https://www.youtube.com/watch?v=tpeLSMKNFO4))
+I always appreciate when people share their favorite books with me - [Ryan Holiday's blog](http://www.ryanholiday.net) and e-mails in particular have provided some fantastic book recommendations. I figured I'd do the same here. In no particular order... (because trying to rate a book is akin to trying to rate a poem, [per Dead Poets Society](https://www.youtube.com/watch?v=tpeLSMKNFO4))
 
 * [*The Soul of a New Machine*, Tracy Kidder](http://www.amazon.com/The-Soul-A-New-Machine/dp/0316491977) - Kidder won the Pulitzer in 1981 for this book and it's a truly incredible story. Kidder has more or less full access to all members of a team of engineers and managers at Data General as they develop a new computer. The sheer complexity of the task at hand is both overwhelming and beautiful. Kidder has written a long-lasting testament to engineers' ability to cope with unique problems. 
 
