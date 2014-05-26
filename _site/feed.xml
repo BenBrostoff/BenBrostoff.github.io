@@ -7,6 +7,39 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Static v. Dynamic Typing</title>
+        <description>&lt;p&gt;This quote from Brendan Eich (creator of JavaScript) caught my eye while reading Peter Seibel&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483&quot;&gt;&lt;em&gt;Coders at Work&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dynamic languages became popular because people can actually rapidly prototype&amp;hellip; Then maybe ater on, if they have a language that can support it, or if they&amp;rsquo;re recoding in a static language, they can write down the types. That was one of the reasons why in JavaScript we were intereted in optional typing, and we still are, though it&amp;rsquo;s controversial in the committee. There&amp;rsquo;s still a strong chance we&amp;rsquo;ll get some kind of hybrid type system into a future version of JavaScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I neglected to note &lt;a href=&quot;http://benbrostoff.github.io/2014/04/20/technical-week-3/&quot;&gt;in an earlier post on criticisms of JavaScript&lt;/a&gt; that many programmers object to the language only catching type errors at runtime as opposed to compile time. In JavaScript, as in Ruby, Python, and other dynamically typed languages, variables are interpreted at runtime and can be changed (e.g. reassigned) as the program runs sequentially. &lt;/p&gt;
+
+&lt;p&gt;Consequently, &lt;strong&gt;dynamic languages&lt;/strong&gt; make no demands of the programmer at compilation time and use inference to define types at runtime. This inference is also referred to as &lt;strong&gt;duck typing&lt;/strong&gt; - objects that look like and act like type &amp;ldquo;duck&amp;rdquo; are assumed to be of type &amp;ldquo;duck&amp;rdquo; at runtime. As Eich notes in the quote above, such languages allow for faster prototyping. &lt;/p&gt;
+
+&lt;p&gt;In contrast, &lt;strong&gt;static languages&lt;/strong&gt; force the programmer to define types at compilation time and are simultaneously restrictive to productivity and a boon to error-free code. Java is the posterchild of static languages, and, to a lesser extent, C and C++ are known for being statically typed (unlike Java, though, types are not as rigidly enforced throughout the program in runtime). &lt;/p&gt;
+
+&lt;p&gt;The debate around different different types of typing interestingly really seems to be about different types of programmers. &amp;ldquo;Good&amp;rdquo; progammers can be trusted with dynamically typed languages because they pay attention to types in the first place and write good tests. Conversely, &amp;ldquo;bad&amp;rdquo; programmers cannot be trusted to to not make type errors and need static typing to keep them in check. &lt;/p&gt;
+
+&lt;p&gt;To a proponent of statically typed languages, any efficiency advantage to be had from dynamically typed languages is more than negated by the silly type errors that result from the lack of checks native to dynamic languages at compile time.&lt;/p&gt;
+
+&lt;p&gt;To a proponent of dynamically typed languages, statically typed languages are unnecessarily slow and take x + y lines of code to accomplish what could be done in x lines of code in a dynamically typed language.&lt;/p&gt;
+
+&lt;p&gt;This last point registers significantly with me, as during my brief time in an intro Java class, I remember being extremely annoyed with the class hierachies and the inability to code &amp;ldquo;outside&amp;rdquo; of a class. Just the build up to writing something useful - &lt;strong&gt;public static Main&lt;/strong&gt; and &lt;strong&gt;public static void Main (String args[])&lt;/strong&gt; and what not - was a constant thorn in my side. In contrast, Ruby gives the programmer freedom to call whatever method on whatever object and deal with the consequences (if any) at runtime. &lt;/p&gt;
+
+&lt;p&gt;I understand any programmer over the age of 30 is probably reading this and shaking their head. Older languages no doubt were less lenient on type definition and built better programmers as a result. Anyone who argues that today&amp;rsquo;s programmers are building bad habits as a result of new dynamically typed languages is likely correct. &lt;/p&gt;
+
+&lt;p&gt;However, the solution to the new generation of programmers having bad habits is not to have them stop using dynamic languages entirely - it&amp;rsquo;s to change the education system. Even if a language is dynamically typed, programmers can learn to keep track of their types by explicity defining them in the code (if the language allows it), using well written tests and &lt;a href=&quot;http://harrypotter.wikia.com/wiki/Alastor_Moody&quot;&gt;constant vigilance&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Now, if you&amp;rsquo;ll excuse me, I have to go bang out some Ruby code with no regard for type errors. &lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 May 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/05/25/technical-week-8/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/25/technical-week-8/</guid>
+      </item>
+    
+      <item>
         <title>Bootcamps v. CS Degree</title>
         <description>&lt;p&gt;My experience discussing software engineering bootcamps with friends and family has nearly always led to a misunderstanding wherein people assume I&amp;rsquo;m attending a multi-year CS program at an accredited university. I understand this assumption - I received a BS from Duke University in Economics in 2012 and understand universities from a signaling theory perspective in most cases carry more weight than a bootcamp &amp;ldquo;degree&amp;rdquo;. &lt;/p&gt;
 
@@ -99,8 +132,8 @@
 &lt;p class = &quot;blogpost&quot;&gt;Overall, SQL injection has received its share of attention over time due to some &lt;a href =&quot;http://www.esecurityplanet.com/hackers/how-to-prevent-sql-injection-attacks.html&quot; target=&quot;_blank&quot;&gt;extremely high profile attacks making use of the technique&lt;/a&gt;. Concurrently, defenses against SQL injections have also involved, meaning the cybersecurity experts of the world are making it increasingly difficult for the hackers. All programmers would be well advised to make use of the significant literature on SQL injection defenses. &lt;/p&gt; 
 </description>
         <pubDate>Sun, 18 May 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/05/18/technical-week-7+copy/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/18/technical-week-7+copy/</guid>
+        <link>http://benbrostoff.github.io//2014/05/18/technical-week-7/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/18/technical-week-7/</guid>
       </item>
     
       <item>
@@ -282,35 +315,6 @@
         <pubDate>Sun, 27 Apr 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/04/27/cultural-week-4/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/27/cultural-week-4/</guid>
-      </item>
-    
-      <item>
-        <title>The Rise of Javasript</title>
-        <description>&lt;blockquote class = &quot;blogpost&quot;&gt; JavaScript became the world&amp;#8217s biggest programming language completely independent of its merits. 
-
-&lt;p&gt;&lt;center&gt; -Douglas Crockford, &lt;a href=&quot;https://www.youtube.com/watch?v=hQVTIJBZook&quot; target=&quot;_blank&quot;&gt;Javascript: The Good Parts&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;I want to preface my thoughts on JavaScript by acknowledging many of the criticisms against JavaScript. A common answer to this question may be that JavaScript is a &amp;ldquo;lowest common denominator&amp;rdquo; type programming language that a lot of programmers just by convention learn and become comfortable using for web development.  &lt;/p&gt;
-
-&lt;p&gt; As of the writing of this post, my coding experience was limited to a few CS classes at college and my time at DBC (about a month). I coded in Java at Duke and at DBC have used Ruby and JavaScript. I must admit I like Ruby far more than JavaScript. There are a couple things specifically that bother me about JavaScript: &lt;/p&gt;
-
-&lt;ul&gt; &lt;b&gt; Local and global variable consequences. &lt;/b&gt; It often feels in JavaScript that the placement of variables and assignment of values has enormous consequences when creating objects. When debugging my own code, I&amp;rsquo;ve found moving things around often solves problems. In Ruby, placement is not as integral (and I make these statements as someone new to programming who is prone to make sweeping and unfounded statements). Placing variables within functions &amp;ldquo;feels&amp;rdquo; less consequential in Ruby than in JavaScript. &lt;/ul&gt;
-
-&lt;ul&gt; &lt;b&gt; Line termination and semi-colons. &lt;/b&gt;  I&amp;rsquo;m still adjusting to semi-colon placement in JavaScript and the consequences of semi-colons. Why in for loops are the parameters separated by semi-colons, but object properties are separated by commas? A few google searches reveal some frustration with semi-colon treatment in JavaScript, specifically automatic parsing of semi-colons. Due to the lack of semi-colon equivalent in Ruby, JavaScript has thrown me for a bit of a (proverbial) loop here (although I did encounter semi-colons back in my Java days). Crockford (see earlier quote) notes,&lt;a href=&quot;http://www.crockford.com/javascript/javascript.html&quot; target=&quot;_blank&quot;&gt; &amp;ldquo;Semi-colon insertion was a huge mistake.&amp;rdquo;&lt;/a&gt;&lt;/ul&gt;
-
-&lt;p&gt; So why is JavaScript popular? Let&amp;rsquo;s cover the historical element before praising the positive attributes of the language (which the aforementioned Douglas Crockford has also done in the video linked above). Javascript is the product of the Netscape team that developed Netscape Navigator and designed the language to run on Netscape. The success of Netscape was a boon for Javascript. Netscape was the go-to broweser for early web users, and thus, Javascript was the earliest web language. First to market appears to have been a signicant win for JavaScript that buoyed it. &lt;/p&gt;
-
-&lt;p&gt;This is not to say JavaScript&amp;rsquo;s success is purely right place right time, &lt;a href=&quot;http://programmers.stackexchange.com/questions/28947/how-did-javascript-become-popular&quot; target=&quot;_blank&quot;&gt; and this online thread relays this message home quite well.&lt;/a&gt; JavaScript has numerous technical attributes that make it a powerful language. Many of these I admit I can&amp;rsquo;t appreciate because my programming career is in its relative infancy. Indeed, the entire programming language debate I find simultaneously fascinating and confusing: &lt;a href=&quot;http://www.paulgraham.com/icad.html&quot; target=&quot;_blank&quot;&gt; check out this Paul Graham essay for a full overview of what makes a strong programming language.&lt;/a&gt; 
-
-&lt;p&gt;One example of a strong technical attribute JavaScript has in its favor: first-class functions. A first-class function can be treated / passed as an argument (in math, consider (f(f(x)) - this is called a higher order function, or a function that takes a function as an argument). First-class functions are not supported by Java and C. Other strong language attributes Crockford cites in his talk include dynamic objects and object literals. Importantly, other languages have many of these aforementioned strengths, but are perhaps not as popular as JavaScript because they lack the first-to-market advantages it gained early on.&lt;/p&gt;
-
-&lt;p&gt; In summary, JavaScript&amp;rsquo;s popularity is one part timing (Netscape success) and one part design. I have not used Javacript enough to speak to the latter, but will formulate my own opinion as I continue to develop as a programmer. &lt;/p&gt;
-</description>
-        <pubDate>Sun, 20 Apr 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/04/20/technical-week-3/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/20/technical-week-3/</guid>
       </item>
     
   </channel>
