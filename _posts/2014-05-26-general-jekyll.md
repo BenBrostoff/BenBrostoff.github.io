@@ -19,7 +19,7 @@ Enter [Jekyll](http://jekyllrb.com/). Jekyll is a simple Ruby gem you install vi
 
 <center><img src = "https://lh3.googleusercontent.com/-JP5YbBMsNQg/U4NVliccwQI/AAAAAAAAALs/nEwpt9NXTaE/w215-h152-no/jekconfig.png" alt= "jekyll"></center>
 
-From there, it's easy to fool around with config.yml, layouts and css to change your blog as you please. A massive amount of Jekyll work is posted on Github, so it's also easy to leverage off the work of your Jekyll predecessors. I cloned the [Scribble theme](https://github.com/muan/scribble) created by [Mu-an Chiou](https://github.com/muan) from GitHub and customized it a bit - thanks again Mu-an. 
+From there, it's easy to fool around with config.yml, layouts and css to change your blog as you please. A massive amount of Jekyll work is posted on Github, so it's also easy to leverage off the work of your Jekyll predecessors. I cloned the [Scribble theme](https://github.com/muan/scribble) created by [Mu-An Chiou](https://github.com/muan) from GitHub and customized it a bit - thanks again Mu-An. 
 
 Since I migrated to Jekyll, I've found myself spending considerably less time on blog design and layout and considerably more time on writing. I'm biased, but I feel the quality of my writing on this blog has in part improved because of Jekyll.
 
