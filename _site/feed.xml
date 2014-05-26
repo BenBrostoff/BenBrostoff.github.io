@@ -7,6 +7,34 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Migration to Jekyll</title>
+        <description>&lt;p&gt;There are few things in life I dislike more than repetitive processes that could be automated where I learn very little (recall I&amp;rsquo;m a former investment banking analyst). My initial construction of a person blog met this criteria. &lt;/p&gt;
+
+&lt;p&gt;I was working with a bunch of HTML and CSS files I had coded myself. Every blog post was an individual HTML page - if I wanted to make a change to the header, footer or general layout of my site, I had no choice but to change every single page. One can imagine how annoying this process became as my blog expanded. There were also a host of smaller issues that bothered me: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I had to manually type in the dates and times of my posts&lt;/li&gt;
+&lt;li&gt;My site looked terrible on mobile and tablet devices&lt;/li&gt;
+&lt;li&gt;I was not pleased with the hierarchy of folders and each file&amp;rsquo;s place in the hierarchy I made up. Yet, if I wanted to change the set-up, I would have to relink every HTML page accordingly.&lt;/li&gt;
+&lt;li&gt;I was spending more time on layout decisions (the classic border, padding, margin debacle) and CSS shenanigans (color schemes, hover links, shapes, etc.) than I was on writing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Constructing quality blog posts (mini-essays in some cases) is a labor of love for me and something I&amp;rsquo;ve done since I learned to write. Pre-internet, I was journaling obsessively and documenting all the inane events interesting to a sports-obsessed grade schooler (if you want to hear about Antoine Walker&amp;rsquo;s second go-around with the Celtics wherein he changed his number to 88 to accomodate Big Al Jefferson, by all means, swing by). I have experience in writing and editing my own writing (as well as others&amp;#39; writing) - I wrote for my local newspaper in highschool and was the Editorial Pages Editor and a &lt;a href=&quot;https://www.dukechronicle.com/staff/ben-brostoff/articles&quot;&gt;columnist for three years for the Duke Chronicle&lt;/a&gt;. I&amp;rsquo;m very comfortable writing - I&amp;rsquo;m less comfortable managing an entire website.&lt;/p&gt;
+
+&lt;p&gt;Enter &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. Jekyll is a simple Ruby gem you install via your Terminal. By creating a new project through Jekyll, you get a working template with a ready-to-go setup that&amp;rsquo;s easily customizable. The Jekyll new project folder reminds me a bit of a new Ruby on the Rails project in that you have a nicely organized hierarchy that lends itself to easy changes. Below is a screenshot of a new Jekyll project on my desktop: &lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src = &quot;https://lh3.googleusercontent.com/-JP5YbBMsNQg/U4NVliccwQI/AAAAAAAAALs/nEwpt9NXTaE/w215-h152-no/jekconfig.png&quot; alt= &quot;jekyll&quot;&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;From there, it&amp;rsquo;s easy to fool around with config.yml, layouts and css to change your blog as you please. A massive amount of Jekyll work is posted on Github, so it&amp;rsquo;s also easy to leverage off the work of your Jekyll predecessors. I actually cloned the &lt;a href=&quot;https://github.com/muan/scribble&quot;&gt;Scribble theme created by Mu-an Chiou from GitHub&lt;/a&gt; and customized it a bit - thanks again Mu-an. &lt;/p&gt;
+
+&lt;p&gt;Since I migrated to Jekyll, I&amp;rsquo;ve found myself spending considerably less time on blog design and layout and considerably more time on writing. I&amp;rsquo;m biased, but I feel the quality of my writing on this blog has in part improved because of Jekyll.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 May 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/05/26/general-jekyll/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/26/general-jekyll/</guid>
+      </item>
+    
+      <item>
         <title>Static v. Dynamic Typing</title>
         <description>&lt;p&gt;This quote from Brendan Eich (creator of JavaScript) caught my eye while reading Peter Seibel&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483&quot;&gt;&lt;em&gt;Coders at Work&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
 
@@ -292,29 +320,6 @@
         <pubDate>Sun, 27 Apr 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/04/27/technical-week-4/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/27/technical-week-4/</guid>
-      </item>
-    
-      <item>
-        <title>Dealing With Conflict</title>
-        <description>&lt;p&gt;I used to play basketball with a couple guys at the local JCC a few mornings a week before work. The level of play was actually pretty elevated, and there were a couple guys who had played in college. The catch here was that everyone was late thirties and up, and as someone in their early 20s, I was generally quicker and more athletic than most due to my youth. I was a valued commodity because I ran fast breaks well and could beat most people off the dribble.&lt;/p&gt;
-
-&lt;p&gt;However, I was a terrible shooter, and over time the opposition accounted for my strengths and forced me to my weaknesses. For a period of maybe a few weeks, the defense would leave me wide open from 15 feet out and I would be double teamed if I drove into the paint. This strategy effectively forced me to shoot long jumpers.&lt;/p&gt;
-
-&lt;p&gt;Initially, I took the bait only because my teammates screamed at me to shoot, not realizing how much I sucked at shooting. As the realization sunk in that I could not shoot, I stopped getting the ball and one teammate specifically gave me a hard time for being useless - let&amp;rsquo;s call him Ron. For Ron, every game was personal, and he had an unhealthy devotion to winning. I clearly was getting in the way of Ron&amp;rsquo;s love of winning, and he took to some bush-league name calling and other tactics as a result.&lt;/p&gt;
-
-&lt;p&gt;For a while, I hated coming to the gym because Ron would endlessly taunt me and demand I not be on his team. I understood the source of the conflict - Ron thought (correctly for some time) I endangered his team&amp;rsquo;s chances of winning. I grew to hate Ron and swore that I would become an assassin jump shooter to shut him the hell up.&lt;/p&gt;
-
-&lt;p&gt;In my quest to end this emotional conflict, I took to going to the gym every weekend and shooting jumpers for several hours. In pick-up games, I made a concerted effort to only take jumpers and work on the one area of my game that needed major help. Over time, I saw significant improvement.&lt;/p&gt;
-
-&lt;p&gt;One game, in part due to Ron&amp;rsquo;s shenanigans, I ended up on a team with no one who could score, where endless passing was the norm and all were afraid to shoot. It dawned on me I should use this situation as the staging ground for my coming out party as a shooter.&lt;/p&gt;
-
-&lt;p&gt;I began to shoot with impunity, catching and aiming as soon as I received the ball. I think I hit four threes that game and clearly recall Ron&amp;rsquo;s jaw dropping. Most guys (Ron included) dismissed the performance as an aberration, but as I continued to add consistency to my shooting game, I heard Ron&amp;rsquo;s chatter die down. One of my most satisfying experiences at the JCC was Ron coming up to me after a particularly good performance and saying, &amp;ldquo;You&amp;rsquo;ve made yourself into a respectable shooter.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m proud of myself for how I dealt with Ron. I never shit-talked back, and I responded purely with my actions. I gained his respect and am a better basketball player (and person) for deciding to respond with my actions and not my words. I handled myself like a pro (Tim Duncan comes to mind), and I can look back on the memories of working on my jump-shooting with a smile.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 27 Apr 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/04/27/cultural-week-4/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/27/cultural-week-4/</guid>
       </item>
     
   </channel>

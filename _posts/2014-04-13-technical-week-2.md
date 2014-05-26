@@ -4,12 +4,11 @@ title: Margin, Border and Padding
 date: 2014-04-13 12:00:00
 ---
 
-I found the diagram below (linked <a href= "http://www.w3.org/TR/CSS2/box.html" target="_blank">here</a>) to be extremely helpful in thinking about the differences between margins, borders and padding: </p>
+I found the diagram below (linked <a href= "http://www.w3.org/TR/CSS2/box.html" target="_blank">here</a>) to be extremely helpful in thinking about the differences between margins, borders and padding: 
 
+->![](http://www.w3.org/TR/CSS2/images/boxdim.png)<-
 
- <img style = "margin-left: 12%" src="http://www.w3.org/TR/CSS2/images/boxdim.png">
-
-<p>This diagram speaks to the CSS Box Model that (arguably) forms the core of understanding CSS positioning. I find it useful to work from the outside and in when discussing the box model. </p>
+This diagram speaks to the CSS Box Model that (arguably) forms the core of understanding CSS positioning. I find it useful to work from the outside and in when discussing the box model.
 
 <p> <b> Margin - </b> Margins refer to space between the outer perimeter of an element (beginning at the end of the border) and the outer perimeter of another element (beginning at its respective margin). I generally will adjust margins when I am not comfortable with how far one element is from another. Margins are largely invisible (no color) and forcefield like in that you don't see them, but they are your guard against other elements. </p>
 
