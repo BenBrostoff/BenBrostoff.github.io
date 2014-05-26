@@ -4,7 +4,7 @@ title: Migration to Jekyll
 date: 2014-05-26 
 ---
 
-There are few things in life I dislike more than repetitive processes that could be automated where I learn very little (recall I'm a former investment banking analyst). My initial construction of a person blog met this criteria. 
+There are few things in life I dislike more than repetitive processes that could be automated where I learn very little (recall I'm a former investment banking analyst). My initial construction of a personal blog met this criteria. 
 
 I was working with a bunch of HTML and CSS files I had coded myself. Every blog post was an individual HTML page - if I wanted to make a change to the header, footer or general layout of my site, I had no choice but to change every single page. One can imagine how annoying this process became as my blog expanded. There were also a host of smaller issues that bothered me: 
 
