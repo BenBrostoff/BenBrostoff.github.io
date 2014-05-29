@@ -4,7 +4,11 @@ url:              http://benbrostoff.github.io/
 signoff:          # Your name.
 disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
+#google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
+analytics :
+  provider : google
+  google : 
+      tracking_id : 'UA-51453428-1'
 
 links:
   - name:         About
@@ -20,7 +24,7 @@ links:
   - name:         GitHub
     url:          http://github.com/BenBrostoff
     external:     true
- 
+
 pygments:         true
 permalink:        pretty
 markdown:         redcarpet
