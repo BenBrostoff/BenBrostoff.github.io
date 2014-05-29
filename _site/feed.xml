@@ -7,6 +7,43 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Behind the Magic Curtain</title>
+        <description>&lt;p&gt;My Gregorc thinking style is concrete sequential, according to this &lt;a href=&quot;http://www.thelearningweb.net/personalthink.html&quot;&gt;online test&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Quite honestly, I&amp;rsquo;ve never put stock in tests of this nature and view them in some respects the same way Donnie Darko views &lt;a href=&quot;https://www.youtube.com/watch?v=MqAJ5W2wQH4&quot;&gt;spectrums&lt;/a&gt;. However, I have over the years come to realize things about myself as a learner that seem to align with concrete sequential types &lt;a href=&quot;http://web.cortland.edu/andersmd/learning/gregorc.htm&quot;&gt;as outlined by Gregorc&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;For instance, I learn best when the subject material is complete and coherent - limitless complexity keeps me up at night. Computer science is simultaneously wonderful and frustrating for me in that if you keep looking down the rabbit hole, what you find generally makes sense - unfortunately, the rabbit hole is infinitely deep (and usually disseminates into electrical engineering jargon). &lt;/p&gt;
+
+&lt;p&gt;My main challenge over the last month has been accepting the fact that I can&amp;rsquo;t understand everything all at once - certain aspects of Ruby and Rails I have been forced (to a degree) to accept as &lt;a href=&quot;http://catb.org/jargon/html/A/automagically.html&quot;&gt;automagic&lt;/a&gt; (thank you Michael Hartl for introducing me to this term). In order to conform to the bootcamp model (become a programmer in three months!), it&amp;rsquo;s necessary to learn a lot of &amp;ldquo;how&amp;rdquo; without the &amp;ldquo;why&amp;rdquo; to support it. &lt;/p&gt;
+
+&lt;p&gt;I suppose in our age of incredible complexity we have to make this sacrifice. Lest we forget Clarke&amp;rsquo;s Third Law:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Any sufficiently advanced technology is indistinguishable from magic. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I&amp;rsquo;ve thought about this quote all through the last several months. Ruby has a lovely library of documentation and some truly incredible mixins, modules, gems, etc. Too often, I find myself using certain tools without viewing the source code. By doing so, I always feel a bit queasy - I know I&amp;rsquo;m leveraging off someone else&amp;rsquo;s work without completely understanding it. &lt;/p&gt;
+
+&lt;p&gt;This queasy feeling is something I know I need to better come to terms with if I&amp;rsquo;m ever to be a value-add programmer. I&amp;rsquo;ll always go out of my way to understand &amp;ldquo;why&amp;rdquo;, but realize technology moves quickly, and a bootcamp&amp;rsquo;s &lt;a href=&quot;http://benbrostoff.github.io/2014/05/23/cultural-week-8/&quot;&gt;advantage&lt;/a&gt; over a university program in part is its focus on pragmatism. Again, &amp;ldquo;how&amp;rdquo; and &amp;ldquo;why&amp;rdquo; aren&amp;rsquo;t mutually exclusive, but trying to understand every aspect of software and hardware is beyond even the greatest minds of our generation (or any previous generation at that). &lt;/p&gt;
+
+&lt;p&gt;Adding to the difficulty of balancing between &amp;ldquo;how&amp;rdquo; and &amp;ldquo;why&amp;rdquo; is the fact that my previous career - banking - was relatively easy to decipher re: &amp;ldquo;why&amp;rdquo;. We pitched our clients fee-generating products: our clients used these products to the extent that they offered a  sufficiently low cost of capital. &lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;How&amp;rdquo; was also a known commodity - secured and unsecured bonds, ABS deals and equity raises are known processes that can be accomplished in easy to understand steps. We even made T&amp;amp;Rs - timing and responsibility sheets - to show clients exactly what we&amp;rsquo;re doing at any exact moment in time.  &lt;/p&gt;
+
+&lt;p&gt;Imagine a T&amp;amp;R in the software world (or really, any part of the tech world) - no self-respecting engineer can claim to be able to tell a client exactly what they&amp;rsquo;ll be doing every week for 8+ weeks. In software development, multiple processes run concurrently, and unforeseen bugs and a host of other issues have the potential to destroy the most well-crafted timeline (I highly recommend Tracy Kidder&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/The-Soul-A-New-Machine/dp/0316491977&quot;&gt;The Soul of a New Machine&lt;/a&gt; as evidence here).&lt;/p&gt;
+
+&lt;p&gt;For a concrete sequential thinker, the endless extended metaphors and abstractions in computer science can be a lot to handle at once. I have come to appreciate activities like exercising and driving because the path from A to B is so clear and well-defined. Indeed, my profession for two years was getting from A to B using an easy-to-follow roadmap (albeit a roadmap that had some long and winding roads). &lt;/p&gt;
+
+&lt;p&gt;Programming is never a straight shot from A to B, and this part of the field is what makes it such a challenge. One cannot distill the production of useful software into a step-by-step process. Precisely because of the complexity underlying software development, it &lt;em&gt;feels&lt;/em&gt; like magic in the Clarke&amp;rsquo;s third law sense. &lt;/p&gt;
+
+&lt;p&gt;Yet, concrete sequential learner or otherwise, I&amp;rsquo;m not averse to seeing what&amp;rsquo;s behind the magic curtain.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 May 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/05/28/magiccurtain/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/28/magiccurtain/</guid>
+      </item>
+    
+      <item>
         <title>Migration to Jekyll</title>
         <description>&lt;p&gt;There are few things in life I dislike more than repetitive processes that could be automated where I learn very little (recall I&amp;rsquo;m a former investment banking analyst). My initial construction of a personal blog met this criteria. &lt;/p&gt;
 
@@ -30,8 +67,8 @@
 &lt;p&gt;Since I migrated to Jekyll, I&amp;rsquo;ve found myself spending considerably less time on blog design and layout and considerably more time on writing. I&amp;rsquo;m biased, but I feel the quality of my writing on this blog has in part improved because of Jekyll.&lt;/p&gt;
 </description>
         <pubDate>Mon, 26 May 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/05/26/general-jekyll/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/26/general-jekyll/</guid>
+        <link>http://benbrostoff.github.io//2014/05/26/general-jekyll+copy/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/26/general-jekyll+copy/</guid>
       </item>
     
       <item>
@@ -299,27 +336,6 @@
         <pubDate>Sun, 04 May 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/05/04/cultural-week-5/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/04/cultural-week-5/</guid>
-      </item>
-    
-      <item>
-        <title>Enumerable</title>
-        <description>&lt;p&gt;Enumerables is a Ruby module that contains various methods for use in arrays. I find map particularly useful, as it&amp;rsquo;s the easiest way (in my opinion) to modify all elements of an array with a &amp;ldquo;universal&amp;rdquo; rule. In the example below, I take an array of numbers and add one to each element. I show map in its destructive (map!) and non-destructive forms as well. &lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/11351284.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt; Predictably, because Enumerables was built for arrays, changing keys or values in a hash is not as easy via the map method. Using the map method on a hash will yield an array. &lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/11351423.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt; I personally don&amp;rsquo;t have many instances where I need to do that, so I would rather use the each method. &lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/11351368.js&quot;&gt;&lt;/script&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt; Others have encountered this issue before in Ruby, and it&amp;rsquo;s covered in some detail via &lt;a href=&quot;http://stackoverflow.com/questions/812541/ruby-change-each-value-in-a-hash-with-something-like-collect-for-arrays&quot; target=&quot;_blank&quot;&gt; this S/O post &lt;/a&gt;. As per usual, there are many ways to do certain tasks in Ruby, and it&amp;rsquo;s largely personal preference how you do them.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 27 Apr 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/04/27/technical-week-4/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/04/27/technical-week-4/</guid>
       </item>
     
   </channel>
