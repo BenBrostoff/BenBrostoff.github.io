@@ -7,6 +7,35 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>DBC Week 2 Wrap - From CSV to SQL</title>
+        <description>&lt;p&gt;I&amp;rsquo;m a sports nerd and regular attendee of the &lt;a href=&quot;http://www.sloansportsconference.com/&quot;&gt;Sloan Sports Conference&lt;/a&gt;, so DBC&amp;rsquo;s focus on parsing data in Week 2 of camp was right up my alley. It also gave me an excuse to delve deeply into my favorite baseball team&amp;rsquo;s last 100+ years of team stats, which culminated in the creation of a Boston Red Sox terminal applicaton. This post will discuss the creation of this little app, the repository of which can be found &lt;a href=&quot;https://github.com/BenBrostoff/red_sox_stat_finder&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Among other things, Week 2 of DBC was heavy on using Ruby&amp;rsquo;s &lt;a href=&quot;http://ruby-doc.org/stdlib-1.9.2/libdoc/csv/rdoc/CSV.html&quot;&gt;CSV class&lt;/a&gt; and the &lt;a href=&quot;http://rubydoc.info/gems/sqlite3/1.3.9/frames&quot;&gt;SQLite3 gem&lt;/a&gt;. The former is a means of parsing CSV data and the latter allows for execution of SQL commands from external databases within Ruby programs. &lt;/p&gt;
+
+&lt;p&gt;These two tools got me thinking a lot about filtering data. The CSV class in Ruby can be used to convert rows of CSV data into an array of arrays, while SQLite3 gives you the full force of SQL querying functionality. As someone who enjoys looking at random baseball stats, I knew I had to put these tools to use in a baseball capacity. &lt;/p&gt;
+
+&lt;p&gt;The folks over at &lt;a href=&quot;http://www.baseball-reference.com/&quot;&gt;baseball-reference&lt;/a&gt; have tables of tables of every baseball stat imaginable in CSV format. I decided to grab the Red Sox team history &lt;a href=&quot;http://www.baseball-reference.com/teams/BOS/&quot;&gt;page&lt;/a&gt;, and parse the whole thing using &lt;code&gt;CSV#read&lt;/code&gt;, which returns an array of arrays, wherein each array is a row of data. From there, I iterated through the array and loaded the data into a database using SQLite3. &lt;/p&gt;
+
+&lt;p&gt;Once the data was in the database, it was easy to write methods that used database queries to filter information. Consider the method below, which takes four arguments to determine what type of data a user wants to see, the range of years over which the data spans and whether the data is sorted in chronological order, ascending by category or descending by category:    &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/08f31330002bf2b0f150.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;As an avid Red Sox, I was pleased to find this app was nice for discovering some interesting info about our wonderful franchise. The best Red Sox team of the three recent WS teams by &lt;a href=&quot;http://en.wikipedia.org/wiki/Pythagorean_expectation&quot;&gt;Pythagorean Winning Percentage&lt;/a&gt; was the 2007 team (.624). I fully expected those teams to be followed by the 2013 and 2004 teams since, say, 2000, but the 2002 team was actually better than the 2004 team on this basis. Note that the 2002 team did not make the playoffs despite posting 93 wins and sending 7 guys to the All-Star Game. Thus, the stats bear out that fortune did not favor this team:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://lh6.googleusercontent.com/-ESbN4LdAlr8/U5xiRronReI/AAAAAAAAAMc/hnBCHj9IUUs/w342-h451-no/Screen+Shot+2014-06-14+at+10.50.48+AM.png&quot; alt=&quot;some_text&quot;&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Also, did you know the Red Sox team with the oldest pitching staff ever (clocking in at an average age of 33.6 years) was the 2005 Red Sox? Credit David Wells (42 at the time), Tim Wakefield (38), Mike Timlin (39) and Mike Myers (36) for that one. Youngest? The 1916 team, at 24.4 years (a trend I noticed here is that baseball teams in the early 1900s were much, much younger than &amp;ldquo;modern era teams&amp;rdquo; - in fact, the top 12 youngest Sox teams are all from 1930 or earlier).  &lt;/p&gt;
+
+&lt;p&gt;The process of building this little application only continued to reaffirm to me the value of programming skills as they apply to statistical analysis. I&amp;rsquo;m excited to continue learning in this and many other respects. &lt;/p&gt;
+</description>
+        <pubDate>Sat, 14 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/06/14/dbcweek2wrap/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/14/dbcweek2wrap/</guid>
+      </item>
+    
+      <item>
         <title>DBC Week 1 Wrap - Think Like a Programmer</title>
         <description>&lt;p&gt;Last week marked my first at &lt;a href=&quot;http://devbootcamp.com/&quot;&gt;Dev Bootcamp&lt;/a&gt;, and my main takeaway from Week 1 is that I need to change the approach I have to solving programming problems.&lt;/p&gt;
 
@@ -304,47 +333,6 @@
         <pubDate>Sun, 18 May 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/05/18/technical-week-7/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/18/technical-week-7/</guid>
-      </item>
-    
-      <item>
-        <title>OOP v. Functional Programming</title>
-        <description>&lt;p class = &quot;blogpost&quot;&gt;The main difficulty in describing the difference between object oriented and functional programming is that each of the two &amp;ldquo;types&amp;rdquo; of programs are, at best, vaguely defined.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;Indeed, it seems to me that anecdotally, the concept of functional programming is significantly misunderstood by the general programming community, and &lt;a href=&quot;https://twitter.com/quackingduck&quot; target=&quot;_blank&quot;&gt; Myles Byrne &lt;/a&gt; in a lecture from late April stressed this point repeatedly. From Byrne&amp;rsquo;s perspective, the two largest misunderstandings of functional programming are that (i) functional programming is about passing functions into other functions and (ii) functional programming is about lambdas (a misconception perhaps created by its &lt;a href=&quot;http://en.wikipedia.org/wiki/Functional_programming&quot; target=&quot;_blank&quot;&gt; Wikipedia page&lt;/a&gt;.)&lt;/p&gt;
-
-&lt;p&gt;Byrne spoke extensively about statelessness and immutability being at the heart of functional programming. The state of a &amp;ldquo;functional&amp;rdquo; program at any given time will not impact its output; objects in functional programming are a &lt;a href=&quot;http://stackoverflow.com/questions/353912/functional-programming-state-vs-reassignment&quot;&gt;sequence of immutable values&lt;/a&gt;. A function&amp;rsquo;s output is only dependent on its input (i.e. calling the function does not affect state), and thus functional code by some commentators is considered easier to read than OOP code or other programming styles&amp;#39; code, since the reader need not keep track of state.&lt;/p&gt;
-
-&lt;p&gt;In contrast, programs in the OOP style are not stateless and objects exist as instances of classes rather than a sequence of immutable values. &amp;ldquo;Stateful&amp;rdquo; expressions are part of OOP - functions can change objects. Functions in OOP (can) change the state of the program: this outcome is not acceptable in functional programming.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;Additionally, a hallmark of functional programming is that it does not introduce &amp;ldquo;side effects&amp;rdquo;. What is meant here is that passing the same argument into a given function will produce the same output each time. There are no side effects to calling on a function: the same input always leads to the same output. &lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;In the below, I&amp;rsquo;ve tried to demonstrate a &amp;ldquo;pure&amp;rdquo; functional programming function in JavaScript in comparison to &amp;ldquo;non-pure&amp;rdquo; function (I chose JavaScript because the consensus thinking seems to be that this language can be adopted as a &amp;ldquo;part&amp;rdquo; functional programming language - I did not find through my research the same enthusiasm for Ruby as a functional programming language, although this may just be due to the widespread use of JavaScript compared to Ruby to begin with). The major difference is that the pure function does not change the value of any variables.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/3b00f0e3d712a7402765.js&quot;&gt;&lt;/script&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt; My experience in OOP (full disclosure: I have never coded in a functional programming style) is that there are scenarios wherein you want your functions to produce side effects. &lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt; Consider the case of a class that has a method keeping track of objects created within the class. This function (method if we&amp;rsquo;re discussing Ruby) will produce different results each time a new object is created. Additionally, the class variable is being mutated each time the function is called, meaning the method is effectively changing the state of the program. I&amp;rsquo;ve tried to demonstrate this concept in the example below. &lt;/p&gt; 
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/698f0ed90b2e1164a4f7.js&quot;&gt;&lt;/script&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt; I would be amiss without mentioning that functional programming relies on a number of other practices I will not go into detail on here, as this post is meant to be fairly high-level. However, to become a proficient functional programmer, it seems to me one must (and I say must because these are often the only ways of maintaining immutability and statelessness) use first class / higher order functins, recursion over for / while loops and closures. I found Stephen Young&amp;rsquo;s blog post to be an excellent primer on these concepts &lt;a href=&quot;http://stephen-young.me.uk/2013/01/20/functional-programming-with-javascript.html&quot;&gt; and have linked it here &lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Finally, just as there are widely heralded OOP languages (Ruby, Python, Java - note that Python and Java also fall into other camps), functional programming has its favored languages for getting the job done. Haskell, Hope, and Lisp are some of the notable ones. Although by no means a reliable source, &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_programming_languages_by_type#%20Object-oriented_class-based_languages&quot;&gt;this Wikipedia entry&lt;/a&gt; attempts to sort major programming languages by camp.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt; One would think this post should naturally conclude with some &amp;ldquo;which style is better&amp;rdquo; commentary. I profess not to have a good answer here because I have zero experience with functional programming, and even those with significant experience in functional programming are unsure.&lt;p/&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;Based on my research, it seems the major drawback of functional programming is that it takes significant displine to write in this style, especially in languages that aren&amp;rsquo;t pure &amp;ldquo;functional&amp;rdquo; languages at heart. Many of the write-ups I read on functional programming in JavaScript showed functional and non-functional code snippets. Functional programming is in most languages a choice, and often it&amp;rsquo;s a harder choice depending on the programmer&amp;rsquo;s tendencies. For instance, the idea of using recursion over loops all the time may simply not be pragmatic for a programmer under time constraints (alternatively, it could be the fastest way to solve a problem).&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;The main advantage functional programming has over OOP in my opinion is that it&amp;rsquo;s easier to read code in this style. Because a functional program is both stateless and its variables immutable, the reader of the code does not face moving targets in the same way he or she would reading code in the OOP mode. In terms of maintainability and testing, it would seem to me that functional code wins over OO code every time. This advantage only widens when one considers how difficult it can be to read OO code if the program contains mutliple class dependencies and is not well structured in the &lt;a href = &quot;http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330&quot;&gt; Sandi Metz / POODR sense.&lt;/a&gt; 
-
-&lt;p class = &quot;blogpost&quot;&gt;Yet, OOP&amp;rsquo;s popularity over functional programming at present means that a coder well trained in OOP principles will have a large group of friends to work with (to be clear, popularity is, of course, largely overrated). Combined with the fact that a functional programming approach to a problem may not be the quickest way to solve the problem, I could foresee many scenarios where OOP is preferable to functional programming.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;I&amp;rsquo;d venture to guess that both will play a large role in the future of programming styles. &lt;/p&gt;
-</description>
-        <pubDate>Wed, 07 May 2014 12:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2014/05/07/technical-week-6/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/07/technical-week-6/</guid>
       </item>
     
   </channel>
