@@ -7,6 +7,25 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Chris Hunt at GORUCU</title>
+        <description>&lt;p&gt;Chris Hunt gave an excellent talk on improving working memory at yesterday&amp;rsquo;s &lt;a href=&quot;http://goruco.com/&quot;&gt;GORUCU&lt;/a&gt; conference. I&amp;rsquo;ve read part of Harry Lorayne&amp;rsquo;s and Jerry Lucas&amp;#39; classic book on improving &lt;a href=&quot;http://www.amazon.com/The-Memory-Book-Classic-Improving/dp/0345337581&quot;&gt;memory&lt;/a&gt;, so some of the techniques Chris promoted were familiar to me. However, his real-world examples of using the locus method and mnemonics demonstrated implementation of these methods in an easy-to-understand way. I find it interesting and not at all coincidental that Chris is a world-class &lt;a href=&quot;https://github.com/chrishunt&quot;&gt;programmer&lt;/a&gt; at GitHub and a memory enthusiast.&lt;/p&gt;
+
+&lt;p&gt;My admittedly limited programming experience has hammered home the value of working memory in a programming context. Although Sublime or your text editor of choice will provide suggested variables / methods / classes / etc. given the first letter you type, it can&amp;rsquo;t be stressed enough how easy it is to forget names you wrote in a large program. Popping open another file or scrolling up or down to figure out what I named method X has destroyed my &lt;a href=&quot;http://en.wikipedia.org/wiki/Flow_(psychology&quot;&gt;flow state&lt;/a&gt; on numerous occasions. &lt;/p&gt;
+
+&lt;p&gt;What benefits could 10 minutes a day of working memory exercises deliver to my programming productivity? I certainly believe it&amp;rsquo;s worth finding out. Chris recommended this week by week memory &lt;a href=&quot;http://www.amazon.com/How-Develop-Brilliant-Memory-Week/dp/1780287909&quot;&gt;improvement guide&lt;/a&gt; by multi-time world memory champion &lt;a href=&quot;http://en.wikipedia.org/wiki/Dominic_O&amp;#x27;Brien&quot;&gt;Dominic O&amp;#39;Brien&lt;/a&gt;, as well as &lt;i&gt;&lt;a href=&quot;http://www.amazon.com/Moonwalking-Einstein-Science-Remembering-Everything/dp/0143120530&quot;&gt;Moonwalking with Einstein&lt;/a&gt;&lt;/i&gt; by Josh Foer. The latter book details Foer&amp;rsquo;s journey from a science journalist studying memory to 2006 USA World Memory Champion. The time investment here is relatively small (reading two books and putting aside 10 minutes a day) and the payoffs are potentially enormous.  &lt;/p&gt;
+
+&lt;p&gt;Funnily enough, Chris&amp;#39; talk itself served as an incredible example of the benefits to be had from working on your working memory. He was the only speaker at the entire conference who never looked behind him to refer to the big screen and spoke in coherent, complete, polished sentences that in retrospect seemed pre-written (but his delivery was such that it sounded anything but canned - the guy is also a grade A public speaker). The talk was filled with lists of multiple items and heavy on specific references (e.g. several cards in a playing deck and numerous names were referenced throughout). The strength of Chris Hunt&amp;rsquo;s own working memory could not have been more apparent than in this talk.  &lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m still in awe of how bad-ass those fifteen minutes were. Here&amp;rsquo;s to you, Chris Hunt. &lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;**Another unabashed Chris Hunt plug - install his &lt;a href=&quot;https://github.com/chrishunt/desktop&quot;&gt;desktop Ruby gem&lt;/a&gt;. I change my desktop background all the time and love the fact that, thanks to Chris, I can now do it from my command line.&lt;/i&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/06/22/chris-hunt-at-gorucu/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/22/chris-hunt-at-gorucu/</guid>
+      </item>
+    
+      <item>
         <title>On the Spurs</title>
         <description>&lt;p&gt;I recall the post-lockout 1999 season well, only because it was, in NBA time, the first post-Jordan year. I was facing a dilemma at the time I&amp;rsquo;m sure many 9 year olds also had - what does the NBA have in store for &lt;i&gt;me&lt;/i&gt; now that Jordan is gone? My first several years watching the NBA were really just years watching Jordan. Eyes on 23 on literally every possession. Jordan spoiled a lot of people, me included, because everyone became accustomed to that level of dominance - we expected it of future superstars.&lt;/p&gt;
 
@@ -327,29 +346,6 @@
         <pubDate>Fri, 23 May 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/05/23/cultural-week-8/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/23/cultural-week-8/</guid>
-      </item>
-    
-      <item>
-        <title>Precursor to a New Journey</title>
-        <description>&lt;p class = &quot;blogpost&quot;&gt;June 2nd marks the beginning of my DBC cohort date in New York.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;To be frank, I feel I&amp;rsquo;m not exagerrating when I claim that signing up for DBC was the most difficult decision of my life (which goes to show you the relative lack of events that have occurred in my life thus far). I left a comfortable job in Wells Fargo&amp;rsquo;s asset-backed finance division in Charlotte, where I very much liked my colleagues and was well practiced at the investment banking duties associated with the position.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;Yet, computer science and programming I had flirted with for several years, and I found as time progressed it was a flirtation that turned into something far more powerful. I am someone with a natural inclination to take things apart and figure out how they work. I like to draw; I love to build; I live to write.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;I dabbled in a few CS classes at Duke and wish I had done more - the reason I didn&amp;rsquo;t I can purely attribute to already having achieved an Economics degree in my junior year and naturally assuming I would have some type of career in business / finance. Besides, I got A&amp;rsquo;s in all my economics classes and B&amp;rsquo;s in the CS I took (basic Java, discrete mathematics)&amp;hellip; but perhaps this was to be expected due to Duke&amp;rsquo;s massive grade inflation in the former and lack thereof in the latter.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;In reflecting, I&amp;rsquo;ve come to realize that my work in banking convinced me I was &lt;i&gt; good &lt;/i&gt; at something. It was easy to put together slide decks and elementary models and write credit memos once I had done it for a year. The volume of work I did created something like fulfillment in my life.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;I know intimately, though, that work for work&amp;rsquo;s sake is surface fulfillment. Volume is not quality. And having one&amp;rsquo;s work be both challenging and intellectually stimulating in part renders work meaningful. Moreover, work needs to serve a greater purpose - chiefly, the advancement of technology that benefits all.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;I&amp;rsquo;m a firm believer in one&amp;rsquo;s job being tied to one&amp;rsquo;s passion, if not the exact same. I consider computers humanity&amp;rsquo;s most wonderful and incredible invention, and I would be amiss if I did not gain an education in how to use them to their fullest extent: writing useful software. I am proud to undertake the craft of software engineering, and excited for the challenge that lies ahead.&lt;/p&gt;
-
-&lt;p class = &quot;blogpost&quot;&gt;I covered in a previous post the idea of stereotype threat. It seems to me that stereotype threat covers not only groups of people, but ideas. I once believed that we should do what we&amp;rsquo;re &amp;ldquo;good&amp;rdquo; at. It seems logical that what I displayed a talent for should be my vocation. Experience has borne out the idea that motivation is intimately tied to intellectual curiousity and pursuing challenges that push us as thinkers. Computer science and programming has given me an intellectual motivation that economics never did, and I welcome my pending career change.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 18 May 2014 12:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2014/05/18/cultural-week-7/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/18/cultural-week-7/</guid>
       </item>
     
   </channel>
