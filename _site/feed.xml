@@ -7,6 +7,23 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>TDD's Value Proposition</title>
+        <description>&lt;p&gt;I begin my final three weeks of Dev Bootcamp tomorrow, and am most looking forward to taking a deep dive into test-driven development in the context of Rails starting Monday. The reason for my interest is that I have come to believe junior programmers with strong TDD fundamentals can be significantly larger value-adds out of the box than their non TDD-inclined counterparts.&lt;/p&gt;
+
+&lt;p&gt;Evan Dorn of Logical Reality Design has an excellent thirty minute video on &lt;a href=&quot;https://www.youtube.com/watch?v=HhwElTL-mdI&quot;&gt;this very theme&lt;/a&gt;. Dorn contends that the difference between programming and software engineering lies in tests. Modular and concise code springs from the test driven framework because programmers write small snippets at a time to make failing tests pass. Tests are short and to the point; the code to make tests pass is correspondingly short and sweet. If programmers operate under the TDD paradigm from a program&amp;rsquo;s inception, they significantly lessen the risk of needing to pony up capital for a code rescue later down the line.&lt;/p&gt;
+
+&lt;p&gt;Admittedly, there are some strong counterpoints to this school of thought. One I constantly hear is that getting your product out the door in X amount of time is worth the Y hours of refactoring that can be done at a later point in time. Refactoring by definition will not improve the basic functionality of your program, so one has to consider carefully the costs of delaying a product release when the delay will not materially improve the user experience. A second argument against TDD (and yes, there obviously are far more I&amp;rsquo;m not covering here) is that certain tests really test nothing and / or encourage tunnel vision on passing the tests at the expense of more important architectural decisions. Rails creator David Heinemeir Hansson in part championed this argument in April on his &lt;a href=&quot;http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html&quot;&gt;blog&lt;/a&gt;, decrying unit tests specifically. Both arguments hold water and present complex-enough issues to warrant more attention in future writings. &lt;/p&gt;
+
+&lt;p&gt;Rather than focus on these arguments, I want to argue that TDD is a valuable skill in particular for junior developers (such as myself), because TDD (i) introduces scientific rigor to the coding process, (ii) acts as a strong defense against poorly written code and (iii) doubles as a superior communication tool to make the intent of code clear. I would presume the number one concern most employers have in hiring junior developers is their potential to detract value from companies by writing dependency-laden, dysfunctional code with hard-to-trace errors capable of driving away clients. TDD demands an approach that goes a long way towards eradicating this potential.  &lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve had a chance to look at some of the code from previous DBC final projects (&lt;a href=&quot;https://github.com/cicadas-2014/quotemunk&quot;&gt;this app&lt;/a&gt; for managing Kindle quotes is among my favorites), and have been struck by the test-driven approach evident in all of them. DBC students write unit-based, controller-based and feature-based tests in Rails that comprehensively test the entire application. In the coming weeks, I intend to post on testing techniques  in Rails and the advantages to be had from a TDD-oriented approach. &lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/07/13/TDD/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/07/13/TDD/</guid>
+      </item>
+    
+      <item>
         <title>Chris Hunt at GORUCU</title>
         <description>&lt;p&gt;Chris Hunt gave an excellent talk on improving working memory at yesterday&amp;rsquo;s &lt;a href=&quot;http://goruco.com/&quot;&gt;GORUCU&lt;/a&gt; conference. I&amp;rsquo;ve read part of Harry Lorayne&amp;rsquo;s and Jerry Lucas&amp;#39; classic book on improving &lt;a href=&quot;http://www.amazon.com/The-Memory-Book-Classic-Improving/dp/0345337581&quot;&gt;memory&lt;/a&gt;, so some of the techniques Chris promoted were familiar to me. However, his real-world examples of using the locus method and mnemonics demonstrated implementation of these methods in an easy-to-understand way. I find it interesting and not at all coincidental that Chris is a world-class &lt;a href=&quot;https://github.com/chrishunt&quot;&gt;programmer&lt;/a&gt; at GitHub and a memory enthusiast.&lt;/p&gt;
 
@@ -289,63 +306,6 @@
         <pubDate>Sun, 25 May 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/05/25/technical-week-8/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/25/technical-week-8/</guid>
-      </item>
-    
-      <item>
-        <title>Bootcamps v. CS Degree</title>
-        <description>&lt;p&gt;My experience discussing software engineering bootcamps with friends and family has nearly always led to a misunderstanding wherein people assume I&amp;rsquo;m attending a multi-year CS program at an accredited university. I understand this assumption - I received a BS from Duke University in Economics in 2012 and understand universities from a signaling theory perspective in most cases carry more weight than a bootcamp &amp;ldquo;degree&amp;rdquo;. &lt;/p&gt;
-
-&lt;p&gt;I also know well the things that universities teach that Dev Bootcamp (DBC) - my bootcamp of choice for the next three months - does not teach. I took a number of computer science classes at Duke and have two close friends who graduated with a BS in Computer Science, both of whom I have spoken to at length regarding this very subject. Bootcamps in general are pragmatic - similar to vocational school, they&amp;rsquo;re more than willing to offer a &amp;ldquo;how&amp;rdquo; without a &amp;ldquo;why&amp;rdquo;. From my experience, DBC has actually been quite good at &amp;ldquo;why&amp;rdquo;, but probably not anywhere close to a university. From speaking to my two aforementioned friends, a university CS degree should give you background in:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;How computers work at the most granular level - assembly language, gateways, interpreters, etc.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Algorithms and data structures&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Discrete mathematics (I took this course    at Duke and found it extremely useful in    a &amp;ldquo;how to think about a problem&amp;rdquo; sense)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Key concepts like recursion, memory usage, trees, etc.(DBC does offer to a degree from my experience)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Comfort in one or more programming languages, with Java generally being the language most schools teach&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I&amp;rsquo;m sure I&amp;rsquo;m forgetting a host of other things - I also acknowledge the electives you take have a huge impact - schools offer courses in all varieties of languages and subject matter&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In contrast, most bootcamps from my research get you the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Comfort in one or more programming languages&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Comfort in web development&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Understanding of concepts front-end and back-end developers need to know: the stack, version control (using Git and GitHub), the DOM, databases, etc. &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Again, I haven&amp;rsquo;t been through the nine weeks of in-person course work DBC offers (my start date is June 2nd), so please comment as you see fit&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Additionally, the learning styles / cultures of each institution are markedly different.&lt;/p&gt;
-
-&lt;p&gt;Universities give you individual classes with a midterm and final to match. You can devote as much or as little time to them as you please.&lt;/p&gt;
-
-&lt;p&gt;DBC in effect forces all students to devote all their time to learning (hence the boot in bootcamp). Most students I&amp;rsquo;ve spoken to claim they are in the classroom 8 am - 8 pm M - F for nine weeks, and usually devote a large chunk of their weekends to working. &lt;/p&gt;
-
-&lt;p&gt;DBC is huge on students collaborating with eachother and requires students to pair program on a near daily basis - from my experience, universities generally do not have this requirement (perhaps there&amp;rsquo;s one or two group projects throughout the semester). There&amp;rsquo;s also no tests or review sessions; learning is rapid fire and students who do not understand need seek counsel elsewhere (and to be clear, elsewhere could mean an instructor - what it does not mean is that the class will slow down to accomodate students who learn at a &amp;ldquo;slower&amp;rdquo; pace). &lt;/p&gt;
-
-&lt;p&gt;DBC and other bootcamps as a result probably produce many different types of graduates. Some have tapped the program for all its worth - done all the exercises, asked the instructors myriad questions, attended all the lectures and classes, etc. I know I&amp;rsquo;ve also studied in excess of a hundred hours in preparation for DBC. Many students prior to attending DBC already have web development, data science, or other useful experience.&lt;/p&gt;
-
-&lt;p&gt;While college also produces many different types of graduates, the preponderance of tests and evaluations makes it such that students spend a lot of time on review. After four years, students probably are more similar in their knowledge base. They&amp;rsquo;re also probably more secure in what they know having been tested on it multiple times. While DBC does evaluate students periodically, it&amp;rsquo;s difficult to &amp;ldquo;fail&amp;rdquo; for lack of a better word (although a handful of students drop out every cohort or are asked to repeat units). As such, the signaling power from graduating from DBC is no doubt weaker than a CS degree. &lt;/p&gt;
-
-&lt;p&gt;Yet, I fully believe there are instances where bootcamp students come out of bootcamps more prepared to be value-add to companies than university students, and vice versa. As are so many things in life, it largely depends on the individual. &lt;/p&gt;
-
-&lt;p&gt;What follows are some of the reasons I believe DBC is a better fit for me than a university:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;I like focusing on one thing for long periods of time.&lt;/strong&gt; I never really enjoyed balancing 5-7 classes throughout high school and college. I think the Colorado College model of &amp;ldquo;one class at a time&amp;rdquo; is interesting in this respect - ask students to focus on one thing and they&amp;rsquo;ll probably do it. Ask them to focus on multiple things and certain things are inevitably sacrificed.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;I think learning any language largely depends on getting a huge volume of reps over several or more months.&lt;/strong&gt; My attempts to learn Java in Duke CS classes did not benefit from (i) only having two classes a week and (ii) only coding maybe three times a week - during class and when doing homework. Bootcamps force me to code 12 hours a day for nine weeks - I&amp;rsquo;ve also coded over 100 hours in preparation for DBC. &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;DBC / bootcamp instructors have worked for large and small companies in front-end and back-end capacities.&lt;/strong&gt; Professors and TAs usually want to be in academia for life (again, I acknowledge this is a generalization). DBC is good in relaying the latest developer tools, debuggers, libraries, etc. In college, you generally would have to find this out yourself.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;There is something to be said for vocational training v. academic training.&lt;/strong&gt; I&amp;rsquo;m at a point in my life where I have worked   for two years and understand well how difficult it can be to value-add without the proper training. As a new software engineer, I want to have skills that matter - I also want to have a way of thinking that matters, which is one area a university is likely superior to a bootcamp, but I&amp;rsquo;ve also come to believe skills and ways of thinking are highly interrelated. &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;The bootcamp / DBC curriculum is updated every single month to accomodate industry changes - universities have been teaching the same classes for decades.&lt;/strong&gt; Curriculum changes occur extremely slowly in universities. Changes are decided by large committees and debated ad nauseum. Students are the victims here as the curriculum becomes further and further divorced from current work in the respective discipline. Because bootcamps are so small and have a better central model of decision making, they are quick to respond to input from companies who have hired graduates and change curriculums accordingly. I&amp;rsquo;m not saying here that the workplace should dictate what people learn - I&amp;rsquo;m merely saying that if one&amp;rsquo;s goal is to be a value-add in the workplace, company feedback is a good place to start.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Importantly, I want to revisit this post after I graduate from DBC. It is difficult to evaluate a bootcamp without having attended one or a university CS program when I have a BS in Economics (although I took CS classes). &lt;/p&gt;
-
-&lt;p&gt;Finally, I believe more writing on this subject is highly necessary to help future students decide how to invest in themselves. Bootcamps are such a new educational model in  software engineering that they deserve more attention from writers / programmers who can objectively evaluate their offerings.  &lt;/p&gt;
-</description>
-        <pubDate>Fri, 23 May 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/05/23/cultural-week-8/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/23/cultural-week-8/</guid>
       </item>
     
   </channel>
