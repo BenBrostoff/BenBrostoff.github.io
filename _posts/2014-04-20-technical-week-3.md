@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Rise of Javasript
+title: The Rise of JavaScript
 date: 2014-04-20 
 ---
 
