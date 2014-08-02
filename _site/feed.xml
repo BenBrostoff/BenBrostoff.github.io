@@ -7,6 +7,42 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Graduation</title>
+        <description>&lt;blockquote&gt;In a curious way, they show more spontaneity and more pleasure, and seem far less relentlessly organized, than many students now attending the better colleges and universities. Is it the absence of hand-holding — the sense that they are on their own — that has given them something of the freedom of college forty or fifty years ago?&lt;/blockquote&gt;
+
+&lt;p&gt;The above quote is from a NYT Review of Books article by David Bromwich, &lt;a href=&quot;http://www.nybooks.com/articles/archives/2014/aug/14/hi-tech-mess-higher-education/&quot;&gt;which can be found here.&lt;/a&gt; &amp;ldquo;They&amp;rdquo; is in reference to &amp;ldquo;persons of college age&amp;rdquo; on scholarships awarded by Peter Thiel. Recipients of such scholarships educate themselves.&lt;/p&gt;
+
+&lt;p&gt;I graduated from Duke University with a B.S. in Economics two years ago; I graduated from Dev Bootcamp yesterday. I do not have, nor do I expect to receive, a &lt;a href=&quot;http://www.thielfellowship.org/&quot;&gt;Thiel Fellowship&lt;/a&gt;. I can say with complete honesty, however, that I feel more spontaneous, satisfied and organized in the aftermath of this graduation than the one before it.&lt;/p&gt;
+
+&lt;p&gt;I do not intend for this post to be a commentary on the current state of higher education, or even the state of bootcamp education. Rather, I want to talk broadly about (i) learning and (ii) motivation, and the connection I see between the two based on my experiences at Duke and at DBC.&lt;/p&gt;
+
+&lt;p&gt;I believe learning to be very much intertwined with what people find personally meaningful. This opinion has some scientific basis, as there is research to support that memory persists longer depending on the associations one makes with the memory. For example, if I were to tell you that a certain number will unlock a safe containing a life-saving antidote to a life-threating virus, and you believed me to be credible, you would likely remember that number. However, if I just spit out a random number, I doubt you would remember it five minutes later.&lt;/p&gt;
+
+&lt;p&gt;In a classroom setting, this idea is especially relevant. I can recall dozens of instances in college of a student asking, &amp;ldquo;Will this be on the test?&amp;rdquo; Memory (and, by extension, learning, although the two are not synonymous) in higher education is all too often dependent on artbitrary incentives. GPA is the vehicle by which students signal to employers their worth; GPA is founded on correct answers to tests; correct answers to tests derive from learning and memorization. Thus, students are highly incentivized to learn what the test will &amp;ldquo;look like&amp;rdquo;, and prepare accordingly.&lt;/p&gt;
+
+&lt;p&gt;Learning and motivation are completely different in the context of the bootcamp model (and, to be clear, I can only speak to DBC here). Most students in my DBC cohort felt compelled to learn what would help them achieve their goals or satisfy their curiousity. Yes, DBC has a large and well planned curriculum, as well as tri-weekly assessments, but the curriculum and asessments (in my opinion) seem to supplement learning rather than direct it. I would deep dive into parts of the DBC curriculum if they were useful for a project I happened to be working on.&lt;/p&gt;
+
+&lt;p&gt;A pertinent example: my final group project for DBC was a mobile responsive e-reading platform called ReadyReader (here&amp;rsquo;s the &lt;a href=&quot;http://ready-reader.herokuapp.com/&quot;&gt;live site&lt;/a&gt; if you&amp;rsquo;re interested). One of the biggest problems our group encountered was slow performance and a frozen UX during book uploads. We mined the DBC curriculum and our instructors for knowledge on performance optimization, background jobs and relevant tools in order to solve our performance issues. Our studies eventually led us to &lt;a href=&quot;http://redis.io/&quot;&gt;Redis&lt;/a&gt; and &lt;a href=&quot;https://github.com/resque/resque&quot;&gt;Resque&lt;/a&gt;, which performed the background database work we needed without interrupting the user experience. In short, the mechanism that directed our learning was solving a problem rather than preparing for a test or optimizing GPA.&lt;/p&gt;
+
+&lt;p&gt;Moreover, our group created the problem that led to our learning. We all wanted to work on an e-reader, and the project was personally meaningful to us. We also all made the conscious choice to pay a good chunk of change to be at DBC and pursue software engineering. Therein lies the crucial difference between colleges / universities and bootcamps (and yes, I realize these are general statements that do not apply to all students): &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In a college / university setting, learning and motivation are founded upon test structure and GPA optimization&lt;/li&gt;
+&lt;li&gt;In a bootcamp setting, learning and motivation are founded upon solving personally meaningful problems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I think this discrepancy is the reason why Thiel Fellowship recipients seem so much more motivated than college students. When an individual makes a conscious choice to tackle a problem, he or she is infinitely more motivated to find a solution than when the problem is created by another individual. &lt;/p&gt;
+
+&lt;p&gt;Were I to offer one reform for higher education, it would be to recognize this principle and factor it into decision-making processes. Students will work hard for themselves. They will work less hard for others. &lt;/p&gt;
+
+&lt;p&gt;Learning is inseparable from motivation.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/08/02/graduation/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/02/graduation/</guid>
+      </item>
+    
+      <item>
         <title>TDD's Value Proposition</title>
         <description>&lt;p&gt;I begin my final three weeks of Dev Bootcamp tomorrow, and am most looking forward to taking a deep dive into test-driven development in the context of Rails starting Monday. The reason for my interest is that I have come to believe junior programmers with strong TDD fundamentals can be significantly larger value-adds out of the box than their non TDD-inclined counterparts.&lt;/p&gt;
 
@@ -273,39 +309,6 @@
         <pubDate>Mon, 26 May 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/05/26/technical-week-8/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/26/technical-week-8/</guid>
-      </item>
-    
-      <item>
-        <title>Static v. Dynamic Typing</title>
-        <description>&lt;p&gt;This quote from Brendan Eich (creator of JavaScript) caught my eye while reading Peter Seibel&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483&quot;&gt;&lt;em&gt;Coders at Work&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Dynamic languages became popular because people can actually rapidly prototype&amp;hellip; Then maybe ater on, if they have a language that can support it, or if they&amp;rsquo;re recoding in a static language, they can write down the types. That was one of the reasons why in JavaScript we were intereted in optional typing, and we still are, though it&amp;rsquo;s controversial in the committee. There&amp;rsquo;s still a strong chance we&amp;rsquo;ll get some kind of hybrid type system into a future version of JavaScript.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I neglected to note &lt;a href=&quot;http://benbrostoff.github.io/2014/04/20/technical-week-3/&quot;&gt;in an earlier post on criticisms of JavaScript&lt;/a&gt; that many programmers object to the language only catching type errors at runtime as opposed to compile time. In JavaScript, as in Ruby, Python, and other dynamically typed languages, variables are interpreted at runtime and can be changed (e.g. reassigned) as the program runs sequentially. &lt;/p&gt;
-
-&lt;p&gt;Consequently, &lt;strong&gt;dynamic languages&lt;/strong&gt; make no demands of the programmer at compilation time and use inference to define types at runtime. This inference is also referred to as &lt;strong&gt;duck typing&lt;/strong&gt; - objects that look like and act like type &amp;ldquo;duck&amp;rdquo; are assumed to be of type &amp;ldquo;duck&amp;rdquo; at runtime. As Eich notes in the quote above, such languages allow for faster prototyping. &lt;/p&gt;
-
-&lt;p&gt;In contrast, &lt;strong&gt;static languages&lt;/strong&gt; force the programmer to define types at compilation time and are simultaneously restrictive to productivity and a boon to error-free code. Java is the posterchild of static languages, and, to a lesser extent, C and C++ are known for being statically typed (unlike Java, though, types are not as rigidly enforced throughout the program in runtime). &lt;/p&gt;
-
-&lt;p&gt;The debate around different different types of typing interestingly really seems to be about different types of programmers. &amp;ldquo;Good&amp;rdquo; progammers can be trusted with dynamically typed languages because they pay attention to types in the first place and write good tests. Conversely, &amp;ldquo;bad&amp;rdquo; programmers cannot be trusted to to not make type errors and need static typing to keep them in check. &lt;/p&gt;
-
-&lt;p&gt;To a proponent of statically typed languages, any efficiency advantage to be had from dynamically typed languages is more than negated by the silly type errors that result from the lack of checks native to dynamic languages at compile time.&lt;/p&gt;
-
-&lt;p&gt;To a proponent of dynamically typed languages, statically typed languages are unnecessarily slow and take x + y lines of code to accomplish what could be done in x lines of code in a dynamically typed language.&lt;/p&gt;
-
-&lt;p&gt;This last point registers significantly with me, as during my brief time in an intro Java class, I remember being extremely annoyed with the class hierachies and the inability to code &amp;ldquo;outside&amp;rdquo; of a class. Just the build up to writing something useful - &lt;strong&gt;public static Main&lt;/strong&gt; and &lt;strong&gt;public static void Main (String args[])&lt;/strong&gt; and what not - was a constant thorn in my side. In contrast, Ruby gives the programmer freedom to call whatever method on whatever object and deal with the consequences (if any) at runtime. &lt;/p&gt;
-
-&lt;p&gt;I understand any programmer over the age of 30 is probably reading this and shaking their head. Older languages no doubt were less lenient on type definition and built better programmers as a result. Anyone who argues that today&amp;rsquo;s programmers are building bad habits as a result of new dynamically typed languages is likely correct. &lt;/p&gt;
-
-&lt;p&gt;However, the solution to the new generation of programmers having bad habits is not to have them stop using dynamic languages entirely - it&amp;rsquo;s to change the education system. Even if a language is dynamically typed, programmers can learn to keep track of their types by explicity defining them in the code (if the language allows it), using well written tests and &lt;a href=&quot;http://harrypotter.wikia.com/wiki/Alastor_Moody&quot;&gt;constant vigilance&lt;/a&gt;. &lt;/p&gt;
-
-&lt;p&gt;Now, if you&amp;rsquo;ll excuse me, I have to go bang out some Ruby code with no regard for type errors. &lt;/p&gt;
-</description>
-        <pubDate>Sun, 25 May 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/05/25/technical-week-8/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/05/25/technical-week-8/</guid>
       </item>
     
   </channel>
