@@ -57,5 +57,5 @@ Just as most people view social media as an inordinate proportion of the tech sp
 
 Banks are under significantly stricter reporting, acccounting and capital standards - both from an S&T and i-banking perspecting - than pre-crisis, and cannot take outsize risks as a result. Even if banks are incentivized to take larger risks, Dodd-Frank and a slew of other types of legislation prevents them from doing so - I feel as though @pmarca should have acknowledged this in the tweet essay above. The banking sector is not growing nearly as fast as the tech sector in part because bankers have more hurdles in taking on risk, and therefore cannot realize as large rewards. 
 
-What I'm really getting at here is that the @pmarca - @EpicureanDeal spat is borne out of misunderstanding of the other's craft. To my idols - Marc Andreessen and the man behind the Epicurean Dealmaker mask - I propose an end your war. I think you have far more in common than you realize. 
+What I'm really getting at here is that the @pmarca - @EpicureanDeal spat is borne out of misunderstanding of the other's craft. To my idols - Marc Andreessen and the man behind the Epicurean Dealmaker mask - I propose an end to your war. I think you have far more in common than you realize. 
 
