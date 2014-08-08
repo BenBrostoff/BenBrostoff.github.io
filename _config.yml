@@ -11,16 +11,16 @@ links:
     url:          /about
   - name:         Book Recos
     url:          /books
+  - name:         Things That Inspire Me
+    url:          http://benbrostoff.herokuapp.com/
+    external:     true
   - name:         Email
     url:          mailto:ben.brostoff@gmail.com
-    external:     true
-  - name:         LinkedIn
-    url:          https://www.linkedin.com/pub/ben-brostoff/34/50a/91
     external:     true
   - name:         GitHub
     url:          http://github.com/BenBrostoff
     external:     true
- 
+
 pygments:         true
 permalink:        pretty
 markdown:         redcarpet
