@@ -271,7 +271,7 @@ Now I understand that the technology world operates in its own reality distortio
       </item>
     
       <item>
-        <title>DBC Week 2 Wrap - From CSV to SQL</title>
+        <title>From CSV to SQL</title>
         <description>&lt;p&gt;I&amp;rsquo;m a sports nerd and regular attendee of the &lt;a href=&quot;http://www.sloansportsconference.com/&quot;&gt;Sloan Sports Conference&lt;/a&gt;, so DBC&amp;rsquo;s focus on parsing data in Week 2 of camp was right up my alley. It also gave me an excuse to delve deeply into my favorite baseball team&amp;rsquo;s last 100+ years of team stats, which culminated in the creation of a Boston Red Sox terminal applicaton. This post will discuss the creation of this little app, the repository of which can be found &lt;a href=&quot;https://github.com/BenBrostoff/red_sox_stat_finder&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
 
 &lt;p&gt;Among other things, Week 2 of DBC was heavy on using Ruby&amp;rsquo;s &lt;a href=&quot;http://ruby-doc.org/stdlib-1.9.2/libdoc/csv/rdoc/CSV.html&quot;&gt;CSV class&lt;/a&gt; and the &lt;a href=&quot;http://rubydoc.info/gems/sqlite3/1.3.9/frames&quot;&gt;SQLite3 gem&lt;/a&gt;. The former is a means of parsing CSV data and the latter allows for execution of SQL commands from external databases within Ruby programs. &lt;/p&gt;
@@ -295,12 +295,12 @@ Now I understand that the technology world operates in its own reality distortio
 &lt;p&gt;The process of building this little application only continued to reaffirm to me the value of programming skills as they apply to statistical analysis. I&amp;rsquo;m excited to continue learning in this and many other respects. &lt;/p&gt;
 </description>
         <pubDate>Sat, 14 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/06/14/dbcweek2wrap/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/14/dbcweek2wrap/</guid>
+        <link>http://benbrostoff.github.io//2014/06/14/csv-sql/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/14/csv-sql/</guid>
       </item>
     
       <item>
-        <title>DBC Week 1 Wrap - Think Like a Programmer</title>
+        <title>Think Like a Programmer</title>
         <description>&lt;p&gt;Last week marked my first at &lt;a href=&quot;http://devbootcamp.com/&quot;&gt;Dev Bootcamp&lt;/a&gt;, and my main takeaway from Week 1 is that I need to change the approach I have to solving programming problems.&lt;/p&gt;
 
 &lt;p&gt;Our Week 1 challenges consisted largely of building functions that could take any argument of a certain type (e.g. unsolved Sudoku board) and convert them to a specific format with specific constraints (e.g. solved Sudoku board). Such challenges included:&lt;/p&gt;
@@ -321,8 +321,8 @@ Now I understand that the technology world operates in its own reality distortio
 &lt;p&gt;Moreover, I want to make it a priority to not even write these lines of code in the first place by writing better pseudocode (although to be fair, sometimes writing initial hacky solutions helps me see the more concise solution). The mindset of good programmers it seems to me is to understand at all points in time the logical consequences of each line of code, as well as the &amp;ldquo;work&amp;rdquo; each line is doing (e.g. a recursive call does significant work - each nested for loop less so). I hope to think more like a good programmer as I progress through the next eight weeks of camp.  &lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/06/08/dbcweek1wrap/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/08/dbcweek1wrap/</guid>
+        <link>http://benbrostoff.github.io//2014/06/08/think-like-a-programmer/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/08/think-like-a-programmer/</guid>
       </item>
     
       <item>

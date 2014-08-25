@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DBC Week 1 Wrap - Think Like a Programmer
+title: Think Like a Programmer
 date: 2014-06-08 
 ---
 
