@@ -7,6 +7,77 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Querying in Mongo with Node</title>
+        <description>&lt;p&gt;I&amp;rsquo;m in the midst of taking an online course through &lt;a href=&quot;http://www.mongodb.org/&quot; target=&quot;_blank&quot;&gt; MongoDB&lt;/a&gt; through Mongo&amp;rsquo;s online university entitled &lt;a href=&quot;https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus&quot; target=&quot;_blank&quot;&gt; MongoDB for Node.js Developers&lt;/a&gt; and thought I&amp;rsquo;d share a few insights here. &lt;/p&gt;
+
+&lt;p&gt;As background, MongoDB is a NoSQL database that is open-source and used by the likes of BuzzFeed, BusinessInsider, Disqus, Expedia, LinkedIn, Sailthru, Electronic Arts, Under Armour, CERN and a growing list of &lt;a href=&quot;https://www.mongodb.org/about/production-deployments/&quot; target=&quot;_blank&quot;&gt; others&lt;/a&gt;. The advantages of NoSQL over SQL frameworks are largely scalabity and performance related. As the name implies, NoSQL databases are schemaless and do not have to work over numerous tables - instead, they generally use documents (similar to a JSON object in Mongo&amp;rsquo;s case) in place of rows and deep embedding inside documents in place of joins. Notably, the aforementioned companies in many cases still use relational databases, as SQL is still thought to be more usable as database complexity ramps up. &lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t profess to have a view on either (Ian White in 2009 laid out the case for Mongo / NoSQL quite nicely &lt;a href=&quot;http://www.businessinsider.com/how-we-use-mongodb-2009-11&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;), but believe it&amp;rsquo;s important to learn more about both paradigms and form a view over time. In the words of John Carmack: &lt;/p&gt;
+
+&lt;blockquote&gt;If you aren&amp;rsquo;t sure which way to do something, do it both ways and see which works better.&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nodejs.org/&quot; target=&quot;_blank&quot;&gt; Node.js &lt;/a&gt; is a JavaScript-based platform that, among other things, facilitates building of web applications. Node is built on V8 (Google&amp;rsquo;s open source JavaScript framework) and part of the ever-increasing body of tools and frameworks that utilize JavaScript. &lt;/p&gt;
+
+&lt;p&gt;I want to cover a basic querying exercise here included in the aforementioned MongoDB course (if you feel so inclined to follow along from here, the below assumes you have Mongo and Node installed). &lt;/p&gt;
+
+&lt;p&gt;In short, I want to provide some possible answers to the following question:&lt;/p&gt;
+
+&lt;blockquote&gt;Given a large CSV file, how would you use MongoDB and Node to import the CSV into Mongo and query it using Mongo in combination with Node?&lt;/blockquote&gt;
+
+&lt;p&gt;Mongo asks you to do exactly that in their online course, where they&amp;rsquo;ve provided a CSV file full of state-based weather and wind data for one month for Vermont, California, Florida and New Mexico. The CSV contains the temperature, wind speed and various other facts for every single hour for each state over the course of one month. &lt;b&gt;The ask here is to add a boolean field to the database showing whether the temperature recorded in the state was a month high.&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Before we can begin narrowing down the data based on state and temperature, we have to import it into Mongo in full. The Mongo docs are an excellent place to start and have step-by-step instructions &lt;a href=&quot;http://docs.mongodb.org/manual/reference/program/mongoimport/&quot; target=&quot;_blank&quot;&gt;for importing CSV files &lt;/a&gt; using the Mongo shell (which can be accessed from the command line via the command &lt;code&gt;mongo&lt;/code&gt;). Here&amp;rsquo;s how I imported the weather data Mongo provided:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://lh6.googleusercontent.com/-5IPDMkSr1Ys/U_yzY0KzWzI/AAAAAAAAAUI/JkoTYXE8JY4/w607-h92-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.18.21%2BPM.png&quot; alt=&quot;mongo_data&quot; &gt;
+&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;mongoimport&lt;/code&gt; command and relevant arguments here tell Mongo to construct a database called &lt;code&gt;state_weather&lt;/code&gt; with a collection named &lt;code&gt;data&lt;/code&gt; that has the attributes in the CSV header (Day, Time, State, etc.). The two lines below the command confirm the import was successful and that I know have a database with 2,963 &amp;ldquo;rows&amp;rdquo; (recall, these are documents / objects in Mongo). &lt;/p&gt;
+
+&lt;p&gt;You can fool around with the data in the shell by using the relevant database and running queries in the shell. For those familiar with Rails, this achieves the same purpose as running &lt;code&gt;rails c&lt;/code&gt; in a Rails project and is useful for exploring your database. If I wanted to see the first entry imported, I&amp;rsquo;d do the following:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://lh4.googleusercontent.com/-uXIWtoF6Kfo/U_y0qfhh01I/AAAAAAAAAU0/fjcwYmH6jfk/w435-h343-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.23.23%2BPM.png&quot; alt=&quot;mongo_query&quot;&gt;
+&lt;/p&gt;
+
+&lt;p&gt;With the database populated, we can begin writing a Node program that will log our desired results to the terminal (better yet, you could log them to your browser, but I&amp;rsquo;ll save that for another time). &lt;/p&gt;
+
+&lt;p&gt;Importantly, you can create variables holding documents in Mongo referred to as cursors. Cursors are easy to iterate through and make code more readable when in Node. In the below example, I create a cursor which has the database data imported previously sorted first by state name and then by temperature. &lt;/p&gt;
+
+&lt;p&gt;Sorting data in Mongo can be achieved through the use of a cursor and the use of the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/cursor.sort/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;sort&lt;/code&gt; method &lt;/a&gt;, which can be called on a cursor (note that I&amp;rsquo;m now out of the Mongo shell and working in Node - if you want to follow along with all the code, see my &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;blank&quot;&gt; GitHub repo&lt;/a&gt;, also linked at the bottom of this post).:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/1dc63a0d77649f73a02e.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;What&amp;rsquo;s nice about Mongo is that passing in an array to sort will sort based on the order of the array - in this case, we sort first by alphabetical order and then by temperature. Now that all 2,963 documents are sorted, I can iterate through the cursor and pull out the first entry for each state. I know that this entry represents the month high because of how the cursor was sorted. Every time the state chages, we&amp;rsquo;ll arrive at the new month high and can add a key value pair to each document accordingly. This addition of the key-value pairs occurs in the database using the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/db.collection.update/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;update&lt;/code&gt; method &lt;/a&gt; in Mongo. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/3c723f970997a707c5a0.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;As you&amp;rsquo;ll see above, a number of Mongo database methods as they appear in Node take callbacks wherein the parameters you pass in are errors, documents and other related arguments. This in part allows for useful logging of error messages and other information. Further, when executing Mongo functions in Node, it&amp;rsquo;s necessary to close out of the database to avoid iterating over empty entries; that&amp;rsquo;s the purpose of lines 3-5 above. &lt;/p&gt;
+
+&lt;p&gt;Finally, with the data modified as desired, we can revise the cursor to only include entries that were month-highs and then iterate and log to the console:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/513873bb0ac012145385.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The resulting output is below:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://lh6.googleusercontent.com/-ykdOSUGFR74/U_zZsKjOemI/AAAAAAAAAVw/RXrxYxQoxWY/w558-h82-no/Screen%2BShot%2B2014-08-26%2Bat%2B3.00.52%2BPM.png&quot; alt=&quot;output&quot; &gt;
+&lt;/p&gt;
+
+&lt;p&gt;I found the experience of doing this exercise significantly different from my work in a relational database (where I mostly have used Postgres and ActiveRecord as an ORM). As Ian White notes in the previously linked post, it&amp;rsquo;s nice to write less abstracted code using Mongo than you would in an ORM. Additionally, the process of writing raw SQL (in the few scenarios you might do so) is often drawn out and frustrating; the &lt;code&gt;find&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt; and other methods Mongo gives you make querying and altering documents relatively easy compared to &lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;WHERE&lt;/code&gt;, &lt;code&gt;HAVING&lt;/code&gt;, etc. in SQL. &lt;/p&gt;
+
+&lt;p&gt;Yet, the relative simplicity of this exercise makes it hard to reason about Mongo&amp;rsquo;s limitations. For instance, how would Mongo deal with &lt;a href=&quot;http://guides.rubyonrails.org/association_basics.html#polymorphic-associations&quot; target=&quot;_blank&quot;&gt; polymorphic relationships &lt;/a&gt;? I am very much interested in using Mongo on a large-scale project that would have a complex schema in SQL land. &lt;/p&gt;
+
+&lt;p&gt;Once I&amp;rsquo;ve given that a try, maybe I&amp;rsquo;ll have a better idea on which works better.&lt;/p&gt;
+
+&lt;p&gt;** &lt;i&gt;B.N. I posted a &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;_blank&quot;&gt; small GitHub repo &lt;/a&gt; for those interested in fooling around with the data and seeing my solution in full.&lt;/i&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 26 Aug 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</guid>
+      </item>
+    
+      <item>
         <title>Isolation v. Collaboration</title>
         <description>&lt;p&gt;Amidst the great literature of work productivity and self-help books and &lt;a href=&quot;https://twitter.com/HarvardHBS&quot; target=&quot;_blank&quot;&gt;HBS informational nuggets &lt;/a&gt;, I&amp;rsquo;ve found myself at a loss recently to answer a very basic question:&lt;/p&gt;
 
@@ -323,42 +394,6 @@ Now I understand that the technology world operates in its own reality distortio
         <pubDate>Sun, 08 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/06/08/think-like-a-programmer/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/08/think-like-a-programmer/</guid>
-      </item>
-    
-      <item>
-        <title>Recursion and Combination Sums</title>
-        <description>&lt;p&gt;Developer, fellow Duke alum, Flatiron School graduate and good friend Sam Schlinkert recently posted a &lt;a href=&quot;http://sts10.github.io/blog/2014/05/30/strike-9-game/&quot;&gt;great piece&lt;/a&gt; on his blog about developing the old game Strike 9 in JavaScript. I highly recommend reading it before this post. Additionally, Sam&amp;rsquo;s blog in general has been one of my most helpful learning resources as I develop as a programmer.&lt;/p&gt;
-
-&lt;p&gt;One of the issues Sam encountered in developing Strike 9 was writing a function that returned all possible combinations of numbers summing to any given number below 12 inclusive (e.g. passing in 5 as an argument should return [1,4], [2,3],and [5] - note that in the game the player only gets one of each digit 1-12 to work with, so [1,2,2] is not possible, while [4,1] and [3,2] are irrelevant as order matters not in this game). As detailed in his blog post, he eventually developed several separate functions, one of which was recursive, in order to deal with the issue. &lt;/p&gt;
-
-&lt;p&gt;I thought it would be instructive to try to solve the problem in one function without recursion (technically, I solved in two but one is just to bypass JS&amp;#39; inability to deal with checking for array equality). You can see &lt;a href=&quot;https://gist.github.com/BenBrostoff/15e9c1f20bade7bfebea&quot;&gt;my full solution&lt;/a&gt; here and the gist (no pun intended) of the solution below:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/c53c0a6b8113f45e6961.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;It was apparent to me upon writing this code how repetitive it was. The two nested if / for loops after line 5 are nearly identical. Additionally, I stop nesting loops when a combination is four digits long, so my function won&amp;rsquo;t list all combinations for a number larger than or equal to 15 (1+2+3+4+5).&lt;/p&gt;
-
-&lt;p&gt;In situations like these, recursion would seem to be the best option, and that&amp;rsquo;s exactly what Sam used to write his solution.&lt;/p&gt;
-
-&lt;p&gt;Sam replaced everything after line 5 with a recursive function called &lt;code&gt;addAllSubSums&lt;/code&gt; (note the function calls on several other &amp;ldquo;helper&amp;rdquo; functions which I won&amp;rsquo;t cover in detail here). The function takes two integer arguments - &lt;code&gt;baggage&lt;/code&gt; and &lt;code&gt;sum&lt;/code&gt; - that sum up to the &lt;code&gt;sum&lt;/code&gt; argument in &lt;code&gt;getPossSums&lt;/code&gt;. Among other things, the brilliance of Sam&amp;rsquo;s method is that it works for any argument (although one of the drawbacks of recursion is that it solves in an exponentially large amount of time as you continue to recurse, meaning &lt;code&gt;getPossSums(100)&lt;/code&gt; will crash your machine). Because &lt;code&gt;addAllSubSums&lt;/code&gt; recurses to a base case wherein a sum has been broken down into its smallest single digit integer components, the method works on any number irrespective of size. &lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve shown Sam&amp;rsquo;s methods below (again, full credit to him, and this code is purely his work product) and commented out relevant sections with an example:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/1fa29a98162dab61937a.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Only experience can really bear out some of the advantages to be had from using certain concepts in computer science, and I found recursion here woke me up to the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The use of a base case to end recursive calls is the heart and soul of recursion. In this example, we stopped recursing only when &lt;code&gt;baggage&lt;/code&gt; in &lt;code&gt;addAllSubSums&lt;/code&gt; contained specific elements, which in turn allowed us to break out of a for loop&lt;/li&gt;
-&lt;li&gt;The best way to understand recursion (at least for me) is to visually write out examples - I found assuming 10 as the argument for sum and then commenting out the rest of the code gave me a significantly better understanding of the code&lt;/li&gt;
-&lt;li&gt;Recursion allows one to write significantly shorter code (compare my initial solution to Sam&amp;rsquo;s)&lt;/li&gt;
-&lt;li&gt;Recursion takes up an exponentially increasing amount of memory as you recurse within a function (again, try &lt;code&gt;getPossSums(100)&lt;/code&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As a side note, it&amp;rsquo;s fun / a bit weird to play &lt;a href=&quot;http://samschlinkert.com/strike9/&quot;&gt;Sam&amp;rsquo;s demo of Strike 9&lt;/a&gt; now that I understand a bit more of the code behind it. We rarely take the time to appreciate the hard work and cleverness of game designers.  &lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/06/01/combosums/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/01/combosums/</guid>
       </item>
     
   </channel>
