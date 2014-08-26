@@ -4,7 +4,7 @@ title: Querying in Mongo with Node
 
 date: 2014-08-26
 ---
-I'm in the midst of taking an online course through <a href="http://www.mongodb.org/" target="_blank"> MongoDB</a> through Mongo's online university entitled <a href="https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus" target="_blank"> MongoDB for Node.js Developers</a> and thought I'd share a few insights here. 
+I'm in the midst of taking an online course using <a href="http://www.mongodb.org/" target="_blank"> MongoDB</a> through Mongo's online university entitled <a href="https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus" target="_blank"> MongoDB for Node.js Developers</a> and thought I'd share a few insights here. 
 
 As background, MongoDB is a NoSQL database that is open-source and used by the likes of BuzzFeed, BusinessInsider, Disqus, Expedia, LinkedIn, Sailthru, Electronic Arts, Under Armour, CERN and a growing list of <a href="https://www.mongodb.org/about/production-deployments/" target="_blank"> others</a>. The advantages of NoSQL over SQL frameworks are largely scalabity and performance related. As the name implies, NoSQL databases are schemaless and do not have to work over numerous tables - instead, they generally use documents (similar to a JSON object in Mongo's case) in place of rows and deep embedding inside documents in place of joins. Notably, the aforementioned companies in many cases still use relational databases, as SQL is still thought to be more usable as database complexity ramps up. 
 
@@ -28,9 +28,9 @@ Before we can begin narrowing down the data based on state and temperature, we h
 <img src="https://lh6.googleusercontent.com/-5IPDMkSr1Ys/U_yzY0KzWzI/AAAAAAAAAUI/JkoTYXE8JY4/w607-h92-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.18.21%2BPM.png" alt="mongo_data" >
 </p>
 
-The `mongoimport` command and relevant arguments here tell Mongo to construct a database called `state_weather` with a collection named `data` that has the attributes in the CSV header (Day, Time, State, etc.). The two lines below the command confirm the import was successful and that I know have a database with 2,963 "rows" (recall, these are documents / objects in Mongo). 
+The `mongoimport` command and relevant arguments here tell Mongo to construct a database called `state_weather` with a collection named `data` that has the attributes in the CSV header (Day, Time, State, etc.). The two lines below the command confirm the import was successful and that I now have a database with 2,963 "rows" (recall, these are documents / objects in Mongo). 
 
-You can fool around with the data in the shell by using the relevant database and running queries in the shell. For those familiar with Rails, this achieves the same purpose as running `rails c` in a Rails project and is useful for exploring your database. If I wanted to see the first entry imported, I'd do the following:
+You can fool around with the data by using the relevant database and running queries in the shell. For those familiar with Rails, this achieves the same purpose as running `rails c` in a Rails project and is useful for exploring your database. If I wanted to see the first entry imported, I'd do the following:
 
 <p align="center">
 <img src="https://lh4.googleusercontent.com/-uXIWtoF6Kfo/U_y0qfhh01I/AAAAAAAAAU0/fjcwYmH6jfk/w435-h343-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.23.23%2BPM.png" alt="mongo_query">
@@ -45,7 +45,7 @@ Sorting data in Mongo can be achieved through the use of a cursor and the use of
 
 <script src="https://gist.github.com/BenBrostoff/1dc63a0d77649f73a02e.js"></script>
 
-What's nice about Mongo is that passing in an array to sort will sort based on the order of the array - in this case, we sort first by alphabetical order and then by temperature. Now that all 2,963 documents are sorted, I can iterate through the cursor and pull out the first entry for each state. I know that this entry represents the month high because of how the cursor was sorted. Every time the state chages, we'll arrive at the new month high and can add a key value pair to each document accordingly. This addition of the key-value pairs occurs in the database using the <a href="http://docs.mongodb.org/manual/reference/method/db.collection.update/" target="_blank"> `update` method </a> in Mongo. 
+What's nice about Mongo is that passing in an array to sort will sort based on the order of the array - in this case, we sort first by alphabetical order and then by temperature. Now that all 2,963 documents are sorted, I can iterate through the cursor and pull out the first entry for each state. I know that this entry represents the month high because of how the cursor was sorted. Every time the state chages, we'll arrive at the new month high and can add a key-value pair to each document accordingly. This addition of the key-value pairs occurs in the database using the <a href="http://docs.mongodb.org/manual/reference/method/db.collection.update/" target="_blank"> `update` method </a> in Mongo. 
 
 <script src="https://gist.github.com/BenBrostoff/3c723f970997a707c5a0.js"></script>
 
