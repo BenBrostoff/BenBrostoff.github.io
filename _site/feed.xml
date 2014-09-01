@@ -8,7 +8,7 @@
     
       <item>
         <title>Querying in Mongo with Node</title>
-        <description>&lt;p&gt;I&amp;rsquo;m in the midst of taking an online course through &lt;a href=&quot;http://www.mongodb.org/&quot; target=&quot;_blank&quot;&gt; MongoDB&lt;/a&gt; through Mongo&amp;rsquo;s online university entitled &lt;a href=&quot;https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus&quot; target=&quot;_blank&quot;&gt; MongoDB for Node.js Developers&lt;/a&gt; and thought I&amp;rsquo;d share a few insights here. &lt;/p&gt;
+        <description>&lt;p&gt;I&amp;rsquo;m in the midst of taking an online course using &lt;a href=&quot;http://www.mongodb.org/&quot; target=&quot;_blank&quot;&gt; MongoDB&lt;/a&gt; through Mongo&amp;rsquo;s online university entitled &lt;a href=&quot;https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus&quot; target=&quot;_blank&quot;&gt; MongoDB for Node.js Developers&lt;/a&gt; and thought I&amp;rsquo;d share a few insights here. &lt;/p&gt;
 
 &lt;p&gt;As background, MongoDB is a NoSQL database that is open-source and used by the likes of BuzzFeed, BusinessInsider, Disqus, Expedia, LinkedIn, Sailthru, Electronic Arts, Under Armour, CERN and a growing list of &lt;a href=&quot;https://www.mongodb.org/about/production-deployments/&quot; target=&quot;_blank&quot;&gt; others&lt;/a&gt;. The advantages of NoSQL over SQL frameworks are largely scalabity and performance related. As the name implies, NoSQL databases are schemaless and do not have to work over numerous tables - instead, they generally use documents (similar to a JSON object in Mongo&amp;rsquo;s case) in place of rows and deep embedding inside documents in place of joins. Notably, the aforementioned companies in many cases still use relational databases, as SQL is still thought to be more usable as database complexity ramps up. &lt;/p&gt;
 
@@ -32,9 +32,9 @@
 &lt;img src=&quot;https://lh6.googleusercontent.com/-5IPDMkSr1Ys/U_yzY0KzWzI/AAAAAAAAAUI/JkoTYXE8JY4/w607-h92-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.18.21%2BPM.png&quot; alt=&quot;mongo_data&quot; &gt;
 &lt;/p&gt;
 
-&lt;p&gt;The &lt;code&gt;mongoimport&lt;/code&gt; command and relevant arguments here tell Mongo to construct a database called &lt;code&gt;state_weather&lt;/code&gt; with a collection named &lt;code&gt;data&lt;/code&gt; that has the attributes in the CSV header (Day, Time, State, etc.). The two lines below the command confirm the import was successful and that I know have a database with 2,963 &amp;ldquo;rows&amp;rdquo; (recall, these are documents / objects in Mongo). &lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;mongoimport&lt;/code&gt; command and relevant arguments here tell Mongo to construct a database called &lt;code&gt;state_weather&lt;/code&gt; with a collection named &lt;code&gt;data&lt;/code&gt; that has the attributes in the CSV header (Day, Time, State, etc.). The two lines below the command confirm the import was successful and that I now have a database with 2,963 &amp;ldquo;rows&amp;rdquo; (recall, these are documents / objects in Mongo). &lt;/p&gt;
 
-&lt;p&gt;You can fool around with the data in the shell by using the relevant database and running queries in the shell. For those familiar with Rails, this achieves the same purpose as running &lt;code&gt;rails c&lt;/code&gt; in a Rails project and is useful for exploring your database. If I wanted to see the first entry imported, I&amp;rsquo;d do the following:&lt;/p&gt;
+&lt;p&gt;You can fool around with the data by using the relevant database and running queries in the shell. For those familiar with Rails, this achieves the same purpose as running &lt;code&gt;rails c&lt;/code&gt; in a Rails project and is useful for exploring your database. If I wanted to see the first entry imported, I&amp;rsquo;d do the following:&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;https://lh4.googleusercontent.com/-uXIWtoF6Kfo/U_y0qfhh01I/AAAAAAAAAU0/fjcwYmH6jfk/w435-h343-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.23.23%2BPM.png&quot; alt=&quot;mongo_query&quot;&gt;
@@ -48,7 +48,7 @@
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/1dc63a0d77649f73a02e.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;What&amp;rsquo;s nice about Mongo is that passing in an array to sort will sort based on the order of the array - in this case, we sort first by alphabetical order and then by temperature. Now that all 2,963 documents are sorted, I can iterate through the cursor and pull out the first entry for each state. I know that this entry represents the month high because of how the cursor was sorted. Every time the state chages, we&amp;rsquo;ll arrive at the new month high and can add a key value pair to each document accordingly. This addition of the key-value pairs occurs in the database using the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/db.collection.update/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;update&lt;/code&gt; method &lt;/a&gt; in Mongo. &lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s nice about Mongo is that passing in an array to sort will sort based on the order of the array - in this case, we sort first by alphabetical order and then by temperature. Now that all 2,963 documents are sorted, I can iterate through the cursor and pull out the first entry for each state. I know that this entry represents the month high because of how the cursor was sorted. Every time the state chages, we&amp;rsquo;ll arrive at the new month high and can add a key-value pair to each document accordingly. This addition of the key-value pairs occurs in the database using the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/db.collection.update/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;update&lt;/code&gt; method &lt;/a&gt; in Mongo. &lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/3c723f970997a707c5a0.js&quot;&gt;&lt;/script&gt;
 
