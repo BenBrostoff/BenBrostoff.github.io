@@ -3,7 +3,9 @@ layout: page
 title: Favorite Books
 ---
 
-I always appreciate when people share their favorite books with me - [Ryan Holiday's blog](http://www.ryanholiday.net) and e-mails in particular have provided some fantastic book recommendations. I figured I'd do the same here. In no particular order... (because trying to rate a book is akin to trying to rate a poem, [per Dead Poets Society](https://www.youtube.com/watch?v=tpeLSMKNFO4))
+I always appreciate when people share their favorite books with me - [Ryan Holiday's blog](http://www.ryanholiday.net) and e-mails in particular have provided some fantastic book recommendations. I figured I'd do the same here. In no particular order... (because trying to rate a book is akin to trying to rate a poem, [per Dead Poets Society](https://www.youtube.com/watch?v=tpeLSMKNFO4)). 
+
+<i> I've also included a list of books I've been meaning to read, which you can skip to <a href=#to_read>here</a></i>.
 
 * [*The Art of Learning*, Josh Waitzkin](http://www.amazon.com/The-Art-Learning-Journey-Performance/dp/0743277465) - No book has shook my reality more and encouraged me to make changes in my own life. Waitzkin is the rare dual-sport athlete who, after winning nearly every conceivable junior chess award and rising to International Master, retired and became world champion in an entirely different sport which he had no previous experience in (Tai Chi Push Hands). This book is not so much <i>how</i> as it is an exploration of <i>why</i> reaching optimal performance states and deep learning matter. A wonderful nugget from this one: Jim Harbaugh is a huge Waitzkin fan and slips chess <a href="http://www.49ers.com/news/article-2/Morning-Tailgate-Jim-Harbaugh-Quiets-Play-Clock-Concerns/786e1113-b60f-4c38-aa53-d8e07101f789" target="_blank"> every once in a while</a> into NFL banter. 
 
@@ -21,3 +23,12 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 	Indeed, it's really a weird wrinkle of history that one of history's greatest scientists was called upon to play an integral role during the American Revolution. The question of American independence was one Franklin initially did not see as pressing, and his ability to shift gears accordingly and play the most crucial of parts in 1776 is intimately detailed by Isaacson.  
 
 * [*The Education of a Coach*, David Halberstam](http://www.amazon.com/Education-Coach-David-Halberstam/dp/1401308791) Yes, yes, I know. Spygate. It's difficult for most NFL fans to warm up to Belichick unless, like me, you hail from Boston, MA. Know, however, that this biography was authored by the late David Halberstam, who is undoubtedly the greatest sports journalist of all time. Moreover, Belichick is a fascinating character whose work ethic (as shown in this biography) is incredible. I highly recommend in combination with [*A Football Life*](http://www.amazon.com/NFL-Football-Life-Bill-Belichick/dp/B00DBPBQAE), the NFL Films documentary on him.  
+
+<div id="to_read"></div>
+##<center><b>ON DECK</b></center>
+
+* [*Mythical Man Month*, Fred Brooks](http://www.amazon.com/The-Mythical-Man-Month-Engineering-Anniversary/dp/0201835959), added 9/7/2014
+* [*A Guide to the Good Life: The Ancient Art of Stoic Joy*, William Irvine](http://www.amazon.com/dp/0195374614?tag=sivers-20), added 9/7/2014
+* [*Zen and the Art of Motorcycle Maintenance*, Robert Pirsig](http://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0060589469), added 9/7/2014
+
+
