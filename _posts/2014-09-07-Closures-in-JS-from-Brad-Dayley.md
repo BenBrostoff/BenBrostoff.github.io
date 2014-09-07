@@ -2,7 +2,7 @@
 layout: post
 title: Callbacks & Closures in JS with Brad Dayley
 
-date: 2014-09-06
+date: 2014-09-07
 ---
 I recently purchased Brad Dayley's book on the MEAN stack entitled <a href="http://www.amazon.com/Node-js-MongoDB-AngularJS-Development-Developers/dp/0321995783" target="_blank"> Node.js, MongoDB and AngularJS Web Development </a> (there's also a section on Express, for those wondering about the E).The book is fantastic and Dayley provides a <a href="https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development" target="_blank"> GitHub repo </a> with the code for all the exercises covered in the book.
 
