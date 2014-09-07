@@ -7,6 +7,41 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Callbacks & Closures in JS with Brad Dayley</title>
+        <description>&lt;p&gt;I recently purchased Brad Dayley&amp;rsquo;s book on the MEAN stack entitled &lt;a href=&quot;http://www.amazon.com/Node-js-MongoDB-AngularJS-Development-Developers/dp/0321995783&quot; target=&quot;_blank&quot;&gt; Node.js, MongoDB and AngularJS Web Development &lt;/a&gt; (there&amp;rsquo;s also a section on Express, for those wondering about the E).The book is fantastic and Dayley provides a &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development&quot; target=&quot;_blank&quot;&gt; GitHub repo &lt;/a&gt; with the code for all the exercises covered in the book.&lt;/p&gt;
+
+&lt;p&gt;I have always struggled with the idea of callbacks and closures in JavaScript, and fortunately, Dayley is up to the task of walking through them. Callbacks and closures are especially important in Node.js, which, unlike most web-servers (when Node is used as a web-server), is single-threaded and event driven. To use an extended analogy provided in the book, if Node were the host of a party, it would speak to all guests individually and remember to come back to certain conversations after it had attended to other conversations, whereas most web-servers would just chat with everyone at one time. Node&amp;rsquo;s ability to push events into the background and return to them can act as a powerful advantage.   &lt;/p&gt;
+
+&lt;p&gt;The exercise Dayley uses to demonstrate is one that relies on the &lt;a href=&quot;http://nodejs.org/api/process.html#process_process_nexttick_callback&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;process.nextTick()&lt;/code&gt; &lt;/a&gt; function native to Node. The function takes a callback and tells Node to execute the function on the next event loop. To return to the party analogy, &lt;code&gt;process.nextTick()&lt;/code&gt; schedules conversations with guests only after &amp;ldquo;earlier&amp;rdquo;&amp;ldquo; scheduled conversations have been attended to. I have tried to visually depict these loops in the console in the code below (which is almost wholly copied from Dayley&amp;rsquo;s &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development/blob/master/ch04/callback_closure.js&quot; target=&quot;_blank&quot;&gt; exercise &lt;/a&gt;, with some minor alterations):&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/e4e619df6d4ecbb2f436.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The code above iterates twice through an array of three cars and logs the cars to the console. The key difference here is &lt;i&gt; when &lt;/i&gt; the execution of the function &lt;code&gt;logCar()&lt;/code&gt; nested in the loop in 11-17 occurs, versus the function &lt;code&gt;wrapperFn()&lt;/code&gt; nested in the loop in 19-28. &lt;code&gt;wrapperFn()&lt;/code&gt; calls &lt;code&gt;logCar()&lt;/code&gt; and &amp;quot;wraps&amp;rdquo; around it - hence the name. &lt;/p&gt;
+
+&lt;p&gt;The wrapper function here makes all the difference. The callback in &lt;code&gt;logCar()&lt;/code&gt; is destined not to execute until the second event loop in the program because it is wrapped in the aforementioned &lt;code&gt;process.nextTick()&lt;/code&gt;. Thus, &amp;ldquo;first loop&amp;rdquo; events, like the for loops that begin in 11 and 19,  will occur prior to the callback. &lt;/p&gt;
+
+&lt;p&gt;Because the execution of the callback must occur after the for loops are complete, the only way all the cars can get logged to the console is if the variables passed in as parameters each uniquely represent the three cars. &lt;/p&gt;
+
+&lt;p&gt;In 11-17, the &lt;code&gt;message&lt;/code&gt; parameter &lt;code&gt;logCar()&lt;/code&gt; takes on 13 will appear in the anonymous function always as the final element in the car array: Bugatti. The variable &lt;code&gt;message&lt;/code&gt; serving as the parameter in &lt;code&gt;logCar()&lt;/code&gt; is changing each time through the loop, and by the time the anonymous function uses it on the second event loop, the variable is equal to the final element in the array. In closure terms, &lt;code&gt;logCar()&lt;/code&gt; is the parent function of the anonymous function, and the parameter it passes to the anonymous function changes twice; however, since the callback executes on the second event loop, it is doomed to grab the parameter after the final iteration.&lt;/p&gt;
+
+&lt;p&gt;In contrast, the function &lt;code&gt;wrapperFn()&lt;/code&gt; in 21 does not let cars race by (excuse the pun), instead grabbing them and passing them along to its child functions in 27 when &lt;code&gt;wrapperFn()&lt;/code&gt; is called. As you can see visually via &amp;ldquo;PARAMETER PASSED 2: &amp;rdquo;, the message variable is being caught on the first event loop and saved in memory for the second event loop. &lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://lh5.googleusercontent.com/-VQSw0iVAE1w/VAyfjUURN5I/AAAAAAAAAXY/0OA4CB01Q_8/w282-h458-no/Screen%2BShot%2B2014-09-07%2Bat%2B2.09.07%2BPM.png&quot; alt=&quot;callback_clos_output&quot; &gt;
+&lt;/p&gt;
+
+&lt;p&gt;The value of closures in this exercise was to close off certain variables from change and give the callback function the information it needed. Because Node (and JavaScript in general) relies heavily on events occurring at different points in time, closures are key to making sure the passage of time will not get in the way of what the programmer intended (at least the way I see it).&lt;/p&gt;
+
+&lt;p&gt;Additionally, I realized while doing this exercise the importance of using closures in conjunction with callbacks to grab information from AJAX requests to bring such information to the client-side. As AJAX requests by definition occur asynchronously, they represent a perfect situation for implementing closures and callbacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/bsusensjackson/&quot; target=&quot;_blank&quot;&gt; Brendan Susens-Jackson&lt;/a&gt;, who I worked with on a side project called &lt;a href=&quot;http://ready-reader.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;ReadyReader&lt;/a&gt;, originally explained this idea to me and put it to work on our application. The source code can be found &lt;a href=&quot;https://github.com/woodchucks-2014/ReadyReader&quot;&gt; here&lt;/a&gt;. Brendan helped edit this post, so hats off to him :-).  &lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Sep 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/09/06/Closures-in-JS-from-Brad-Dayley/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/09/06/Closures-in-JS-from-Brad-Dayley/</guid>
+      </item>
+    
+      <item>
         <title>Querying in Mongo with Node</title>
         <description>&lt;p&gt;I&amp;rsquo;m in the midst of taking an online course using &lt;a href=&quot;http://www.mongodb.org/&quot; target=&quot;_blank&quot;&gt; MongoDB&lt;/a&gt; through Mongo&amp;rsquo;s online university entitled &lt;a href=&quot;https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus&quot; target=&quot;_blank&quot;&gt; MongoDB for Node.js Developers&lt;/a&gt; and thought I&amp;rsquo;d share a few insights here. &lt;/p&gt;
 
@@ -73,8 +108,8 @@
 &lt;p&gt;** &lt;i&gt;B.N. I posted a &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;_blank&quot;&gt; small GitHub repo &lt;/a&gt; for those interested in fooling around with the data and seeing my solution in full.&lt;/i&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 Aug 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</guid>
+        <link>http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node+copy/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node+copy/</guid>
       </item>
     
       <item>
@@ -368,32 +403,6 @@ Now I understand that the technology world operates in its own reality distortio
         <pubDate>Sat, 14 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/06/14/csv-sql/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/14/csv-sql/</guid>
-      </item>
-    
-      <item>
-        <title>Think Like a Programmer</title>
-        <description>&lt;p&gt;Last week marked my first at &lt;a href=&quot;http://devbootcamp.com/&quot;&gt;Dev Bootcamp&lt;/a&gt;, and my main takeaway from Week 1 is that I need to change the approach I have to solving programming problems.&lt;/p&gt;
-
-&lt;p&gt;Our Week 1 challenges consisted largely of building functions that could take any argument of a certain type (e.g. unsolved Sudoku board) and convert them to a specific format with specific constraints (e.g. solved Sudoku board). Such challenges included:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Converting any Arabic number to a Roman numeral format&lt;/li&gt;
-&lt;li&gt;Converting any Arabic number to English words&lt;/li&gt;
-&lt;li&gt;Converting a given Boggle board and a word to a true / false output depending on whether the board contained the word&lt;/li&gt;
-&lt;li&gt;And, of course, the aforementioned Sudoku challenge&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I found all these problems required a certain cognitive discipline. One must be able to look at several instances, find relationships among the instances, find the exceptions to the relationships and then code the findings. &lt;/p&gt;
-
-&lt;p&gt;Interestingly (and not coincidentally, of course), all of the solutions to the challenges could be implemented recursively. I tried to solve all of them iteratively before seeing the light. &lt;/p&gt;
-
-&lt;p&gt;As time has progressed and I&amp;rsquo;ve read more code, I&amp;rsquo;ve started to begin to understand the &amp;ldquo;hackiness&amp;rdquo; of certain solutions to problems. Any time I find myself writing a line that looks similar to the line above it, or a loop with nearly the exact same characteristics as a loop I wrote earlier in a program, I&amp;rsquo;ll think back to Week 1 and the elegance of the solutions our instructors offered on the aforementioned problems. &lt;/p&gt;
-
-&lt;p&gt;Moreover, I want to make it a priority to not even write these lines of code in the first place by writing better pseudocode (although to be fair, sometimes writing initial hacky solutions helps me see the more concise solution). The mindset of good programmers it seems to me is to understand at all points in time the logical consequences of each line of code, as well as the &amp;ldquo;work&amp;rdquo; each line is doing (e.g. a recursive call does significant work - each nested for loop less so). I hope to think more like a good programmer as I progress through the next eight weeks of camp.  &lt;/p&gt;
-</description>
-        <pubDate>Sun, 08 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/06/08/think-like-a-programmer/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/08/think-like-a-programmer/</guid>
       </item>
     
   </channel>
