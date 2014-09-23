@@ -7,6 +7,51 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Abstraction</title>
+        <description>&lt;blockquote&gt; If you interview somebody coming out of computer science right now, they don&amp;rsquo;t understand the underyling computing at all. It&amp;rsquo;s really, really scary how abstract they are from what a computer is or even the theory of of computing. They just don&amp;rsquo;t understand it. &lt;/blockquote&gt;.
+
+&lt;blockquote&gt;Computer science is coming into its middle age. It&amp;rsquo;s turning into a commodity. People don&amp;rsquo;t know about Carnot cycles for refrigerators, yet they buy refrigerators. It&amp;rsquo;s happening in computing too. Who knows about compilers? They buy computers to play games and balance their checkbooks. &lt;/blockquote&gt; 
+
+&lt;p&gt;&lt;center&gt; - Ken Thompson, from &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Coders at Work&lt;/i&gt;&lt;/a&gt; and &lt;a href=&quot;http://genius.cat-v.org/ken-thompson/interviews/unix-and-beyond&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Computer&lt;/i&gt;&lt;/a&gt; magazine, respectively &lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;The knock against junior programmers for several decades now seems to be that they don&amp;rsquo;t sufficiently understand the layers and layers upon which the tools they use are built. From a senior programmer&amp;rsquo;s perspective, junior programmers are, among other reasons, a liability because they lack strong understanding of &lt;i&gt;how&lt;/i&gt; their code works. This criticism is fair because poor understanding generally translates into an inability to debug code or optimize performance or do any number of things. &lt;/p&gt;
+
+&lt;p&gt;This issue seems especially relevant now because of the preponderence of coding bootcamps in New York churning out &amp;ldquo;Rails developers&amp;rdquo;, of which I suppose I am one. I put Rails developers in quotes because I believe it&amp;rsquo;s ridiculous to characterize anyone as a particular type of programmer when they have less than a year of experience and have never worked in a professional setting (I&amp;rsquo;d honestly just prefer to be characterized as a junior developer). &lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Rails developers&amp;rdquo; in particular are viewed by some as liabilities because the very framework that governs their productivity champions abstraction and (it seems) seeks to become increasingly more abstracted. I previously wrote a little bit about &lt;a href=&quot;http://benbrostoff.github.io/2014/05/28/magiccurtain/&quot; target=&quot;_blank&quot;&gt; my own discomfort&lt;/a&gt; with these abstractions. &lt;/p&gt;
+
+&lt;p&gt;Ironically, the success of Rails in enterprise settings also to me seems founded upon abstraction, as abstraction (at its most basic, all the &lt;code&gt;rails g&lt;/code&gt; commands) boosts productivity, where productivity is a nebulous concept defined by product managers. I would venture to guess many bootcamps believe Rails is the most effective way for junior programmers to become value-adds in their future workplaces.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t believe any discussion about productivity can be had without also discussing fragility. If productivity is measured as simply the number of lines of code someone writes, it&amp;rsquo;s easy to imagine a scenario wherein someone is massively productive, but the codebase is also incredibly fragile (the same situation occurs where productivity is a measure of features added / time). &lt;/p&gt;
+
+&lt;p&gt;A familiar story in tech start-ups is the web application thrown together in two weeks that initially took off but then could not scale because of the technical debt accrued during the two-week sprint. Perhaps as familiar are all the stories of Rails applications that could not scale. &lt;/p&gt;
+
+&lt;p&gt;Alternatively, there are scores of stories about software engineers trying to do something concisely and infinitely scaleable in Language X and taking months to launch a simple product as a result. There is an unknown relationship between productivity and fragility, although it&amp;rsquo;s certainly not linear. Importantly, I think the idea of abstraction is at the heart of this relationship. More abstracted tools lead to greater productivity but also greater fragility.&lt;/p&gt;
+
+&lt;p&gt;I do not believe the benefits and dangers of abstraction are any less great in other industries than they are in software. I&amp;rsquo;m currently reading Robert Gates&amp;#39; memoirs, &lt;a href=&quot;http://www.amazon.com/Duty-Memoirs-Secretary-at-War/dp/0307959473&quot; target=&quot;_blank&quot;&gt;Duty&lt;/a&gt;, and my main takeaway thus far is how much the Pentagon and Commander in Chief rely on abstraction to speed up processes. Based on my reading of Gates, extremely complex issues (how many dollars to budget for new military technology Y or Z; how many troops to allocate and reallocate based on US strategic interests; etc.) are increasingly simplified as they&amp;rsquo;re pushed up the chain. &lt;/p&gt;
+
+&lt;p&gt;By the time the Commander in Chief rules on a particular issue, it seems to have literally been simplified to an abstract from an original thousand plus page memo. The fragility-productivity tradeoff I see as one of the major themes of the book, as the decisions Gates regrets can often be attributed to a lack of information, or rather, he was too abstracted out to understand the consequences of these decisions.&lt;/p&gt;
+
+&lt;p&gt;Gates seems actively aware of this tradeoff and frequently dives deeper into issues where he believes abstraction could do him a disservice. He professes to being extremely confused toward the end of Bush 43&amp;rsquo;s second term as to whether progress was being made in Afghanistan; his commanders on the field claim yes, while the analysts in Washington claim no. Whereas some internal abstraction laws might have sped up Afghanistan-related decisions (trust the Washington guys here; trust the military here), Gates is content to devote resources to resolving the disagreements and studying each side at length to reconcile the opinions he&amp;rsquo;s receiving.&lt;/p&gt;
+
+&lt;p&gt;At a much less consequential level, software engineers have to make decisions like this every day. In a Rails setting, for instance, it seems extremely common to have a situation where a certain gem does the gist of what you&amp;rsquo;re looking for, but doesn&amp;rsquo;t quite accomplish the task. I have no doubt spent countless hours reading gem documentation where it would have been more productive to just write code that replicates some of the gem&amp;rsquo;s basic functionality and adds the specifications I want. &lt;/p&gt;
+
+&lt;p&gt;On the other end of the spectrum, I&amp;rsquo;ve spent countless hours writing code when there exists a gem that houses what I was going for and does it in a cleaner way. That said, I prefer this experience to the former, as recreating the wheel at least teaches you how to build a wheel.&lt;/p&gt;
+
+&lt;p&gt;The decision to deep dive or to trust abstraction in some respects boils down to (i) our view of the risk associated with relying on other people or tools built by other people and, perhaps more importantly, (ii) the risk of not learning the ground that our abstractions stand on. I believe (i) to be a reality of life in general; we are inherently forced to rely on other people and tools to be productive members of society. The risk of (i) can in part be avoided by good due diligence.&lt;/p&gt;
+
+&lt;p&gt;I consider (ii), however, critically important and that bending on (ii) is tantamount to bending on long-term quality and risk-management. As a junior programmer, I know well that (ii) will govern whether senior engineers trust me and are comfortable with my work. I believe being able to trace the ladder of abstraction, whether in software or in life, can enhance all decisions by building in logic and reason where it might not have existed. Furthermore, I think a strong knowledge of where certain tools and assumptions come from can inform the abstraction v. productivity tradeoff, leading to time-saved in some areas and time well-spent in other areas.&lt;/p&gt;
+
+&lt;p&gt;I speak as someone extremely early in my quest to build this knowledge, and hope that my own abstactions have not affected my intended meaning. In the words of Guy Steele in Peter Seibel&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1411478931&amp;sr=1-1&amp;keywords=coders+at+work&quot; target=&quot;_blank&quot;&lt;i&gt;Coders at Work&lt;/i&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote&gt; Something I worry about a lot when I write, that I&amp;rsquo;m less worried about with a computer, is about the ways in which English is ambiguous. I&amp;rsquo;m constantly worried about the ways in which the reader might misinterpret what I&amp;rsquo;ve written. &lt;/blockquote&gt;. &lt;/p&gt;
+</description>
+        <pubDate>Tue, 23 Sep 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/09/23/Abstraction/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/09/23/Abstraction/</guid>
+      </item>
+    
+      <item>
         <title>Callbacks & Closures in JS with Brad Dayley</title>
         <description>&lt;p&gt;I recently purchased Brad Dayley&amp;rsquo;s book on the MEAN stack entitled &lt;a href=&quot;http://www.amazon.com/Node-js-MongoDB-AngularJS-Development-Developers/dp/0321995783&quot; target=&quot;_blank&quot;&gt; Node.js, MongoDB and AngularJS Web Development &lt;/a&gt; (there&amp;rsquo;s also a section on Express, for those wondering about the E).The book is fantastic and Dayley provides a &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development&quot; target=&quot;_blank&quot;&gt; GitHub repo &lt;/a&gt; with the code for all the exercises covered in the book.&lt;/p&gt;
 
@@ -36,9 +81,9 @@
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/bsusensjackson/&quot; target=&quot;_blank&quot;&gt; Brendan Susens-Jackson&lt;/a&gt;, who I worked with on a side project called &lt;a href=&quot;http://ready-reader.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;ReadyReader&lt;/a&gt;, originally explained this idea to me and put it to work on our application. The source code can be found &lt;a href=&quot;https://github.com/woodchucks-2014/ReadyReader&quot;&gt; here&lt;/a&gt;. Brendan helped edit this post, so hats off to him :-).  &lt;/p&gt;
 </description>
-        <pubDate>Sat, 06 Sep 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/09/06/Closures-in-JS-from-Brad-Dayley/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/09/06/Closures-in-JS-from-Brad-Dayley/</guid>
+        <pubDate>Sun, 07 Sep 2014 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2014/09/07/Closures-in-JS-from-Brad-Dayley/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/09/07/Closures-in-JS-from-Brad-Dayley/</guid>
       </item>
     
       <item>
@@ -108,8 +153,8 @@
 &lt;p&gt;** &lt;i&gt;B.N. I posted a &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;_blank&quot;&gt; small GitHub repo &lt;/a&gt; for those interested in fooling around with the data and seeing my solution in full.&lt;/i&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 Aug 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node+copy/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node+copy/</guid>
+        <link>http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</guid>
       </item>
     
       <item>
@@ -374,35 +419,6 @@ Now I understand that the technology world operates in its own reality distortio
         <pubDate>Sun, 15 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/06/15/onthespurs/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/15/onthespurs/</guid>
-      </item>
-    
-      <item>
-        <title>From CSV to SQL</title>
-        <description>&lt;p&gt;I&amp;rsquo;m a sports nerd and regular attendee of the &lt;a href=&quot;http://www.sloansportsconference.com/&quot;&gt;Sloan Sports Conference&lt;/a&gt;, so DBC&amp;rsquo;s focus on parsing data in Week 2 of camp was right up my alley. It also gave me an excuse to delve deeply into my favorite baseball team&amp;rsquo;s last 100+ years of team stats, which culminated in the creation of a Boston Red Sox terminal applicaton. This post will discuss the creation of this little app, the repository of which can be found &lt;a href=&quot;https://github.com/BenBrostoff/red_sox_stat_finder&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
-
-&lt;p&gt;Among other things, Week 2 of DBC was heavy on using Ruby&amp;rsquo;s &lt;a href=&quot;http://ruby-doc.org/stdlib-1.9.2/libdoc/csv/rdoc/CSV.html&quot;&gt;CSV class&lt;/a&gt; and the &lt;a href=&quot;http://rubydoc.info/gems/sqlite3/1.3.9/frames&quot;&gt;SQLite3 gem&lt;/a&gt;. The former is a means of parsing CSV data and the latter allows for execution of SQL commands from external databases within Ruby programs. &lt;/p&gt;
-
-&lt;p&gt;These two tools got me thinking a lot about filtering data. The CSV class in Ruby can be used to convert rows of CSV data into an array of arrays, while SQLite3 gives you the full force of SQL querying functionality. As someone who enjoys looking at random baseball stats, I knew I had to put these tools to use in a baseball capacity. &lt;/p&gt;
-
-&lt;p&gt;The folks over at &lt;a href=&quot;http://www.baseball-reference.com/&quot;&gt;baseball-reference&lt;/a&gt; have tables of tables of every baseball stat imaginable in CSV format. I decided to grab the Red Sox team history &lt;a href=&quot;http://www.baseball-reference.com/teams/BOS/&quot;&gt;page&lt;/a&gt;, and parse the whole thing using &lt;code&gt;CSV#read&lt;/code&gt;, which returns an array of arrays, wherein each array is a row of data. From there, I iterated through the array and loaded the data into a database using SQLite3. &lt;/p&gt;
-
-&lt;p&gt;Once the data was in the database, it was easy to write methods that used database queries to filter information. Consider the method below, which takes four arguments to determine what type of data a user wants to see, the range of years over which the data spans and whether the data is sorted in chronological order, ascending by category or descending by category:    &lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/08f31330002bf2b0f150.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;As an avid Red Sox, I was pleased to find this app was nice for discovering some interesting info about our wonderful franchise. The best Red Sox team of the three recent WS teams by &lt;a href=&quot;http://en.wikipedia.org/wiki/Pythagorean_expectation&quot;&gt;Pythagorean Winning Percentage&lt;/a&gt; was the 2007 team (.624). I fully expected those teams to be followed by the 2013 and 2004 teams since, say, 2000, but the 2002 team was actually better than the 2004 team on this basis. Note that the 2002 team did not make the playoffs despite posting 93 wins and sending 7 guys to the All-Star Game. Thus, the stats bear out that fortune did not favor this team:&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh6.googleusercontent.com/-ESbN4LdAlr8/U5xiRronReI/AAAAAAAAAMc/hnBCHj9IUUs/w342-h451-no/Screen+Shot+2014-06-14+at+10.50.48+AM.png&quot; alt=&quot;some_text&quot;&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Also, did you know the Red Sox team with the oldest pitching staff ever (clocking in at an average age of 33.6 years) was the 2005 Red Sox? Credit David Wells (42 at the time), Tim Wakefield (38), Mike Timlin (39) and Mike Myers (36) for that one. Youngest? The 1916 team, at 24.4 years (a trend I noticed here is that baseball teams in the early 1900s were much, much younger than &amp;ldquo;modern era teams&amp;rdquo; - in fact, the top 12 youngest Sox teams are all from 1930 or earlier).  &lt;/p&gt;
-
-&lt;p&gt;The process of building this little application only continued to reaffirm to me the value of programming skills as they apply to statistical analysis. I&amp;rsquo;m excited to continue learning in this and many other respects. &lt;/p&gt;
-</description>
-        <pubDate>Sat, 14 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/06/14/csv-sql/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/14/csv-sql/</guid>
       </item>
     
   </channel>
