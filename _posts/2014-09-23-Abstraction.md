@@ -5,7 +5,7 @@ title: Abstraction
 date: 2014-09-23
 ---
 
-<blockquote> If you interview somebody coming out of computer science right now, they don't understand the underyling computing at all. It's really, really scary how abstract they are from what a computer is or even the theory of of computing. They just don't understand it. </blockquote>.
+<blockquote> If you interview somebody coming out of computer science right now, they don't understand the underyling computing at all. It's really, really scary how abstract they are from what a computer is or even the theory of computing. They just don't understand it. </blockquote>.
 
 <blockquote>Computer science is coming into its middle age. It's turning into a commodity. People don't know about Carnot cycles for refrigerators, yet they buy refrigerators. It's happening in computing too. Who knows about compilers? They buy computers to play games and balance their checkbooks. </blockquote> 
 
