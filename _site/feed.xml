@@ -8,7 +8,7 @@
     
       <item>
         <title>Abstraction</title>
-        <description>&lt;blockquote&gt; If you interview somebody coming out of computer science right now, they don&amp;rsquo;t understand the underyling computing at all. It&amp;rsquo;s really, really scary how abstract they are from what a computer is or even the theory of of computing. They just don&amp;rsquo;t understand it. &lt;/blockquote&gt;.
+        <description>&lt;blockquote&gt; If you interview somebody coming out of computer science right now, they don&amp;rsquo;t understand the underyling computing at all. It&amp;rsquo;s really, really scary how abstract they are from what a computer is or even the theory of computing. They just don&amp;rsquo;t understand it. &lt;/blockquote&gt;.
 
 &lt;blockquote&gt;Computer science is coming into its middle age. It&amp;rsquo;s turning into a commodity. People don&amp;rsquo;t know about Carnot cycles for refrigerators, yet they buy refrigerators. It&amp;rsquo;s happening in computing too. Who knows about compilers? They buy computers to play games and balance their checkbooks. &lt;/blockquote&gt; 
 
@@ -372,7 +372,7 @@ Now I understand that the technology world operates in its own reality distortio
         <title>Chris Hunt at GORUCU</title>
         <description>&lt;p&gt;Chris Hunt gave an excellent talk on improving working memory at yesterday&amp;rsquo;s &lt;a href=&quot;http://goruco.com/&quot;&gt;GORUCU&lt;/a&gt; conference. I&amp;rsquo;ve read part of Harry Lorayne&amp;rsquo;s and Jerry Lucas&amp;#39; classic book on improving &lt;a href=&quot;http://www.amazon.com/The-Memory-Book-Classic-Improving/dp/0345337581&quot;&gt;memory&lt;/a&gt;, so some of the techniques Chris promoted were familiar to me. However, his real-world examples of using the locus method and mnemonics demonstrated implementation of these methods in an easy-to-understand way. I find it interesting and not at all coincidental that Chris is a world-class &lt;a href=&quot;https://github.com/chrishunt&quot;&gt;programmer&lt;/a&gt; at GitHub and a memory enthusiast.&lt;/p&gt;
 
-&lt;p&gt;My admittedly limited programming experience has hammered home the value of working memory in a programming context. Although Sublime or your text editor of choice will provide suggested variables / methods / classes / etc. given the first letter you type, it can&amp;rsquo;t be stressed enough how easy it is to forget names you wrote in a large program. Popping open another file or scrolling up or down to figure out what I named method X has destroyed my &lt;a href=&quot;http://en.wikipedia.org/wiki/Flow_(psychology&quot;&gt;flow state&lt;/a&gt; on numerous occasions. &lt;/p&gt;
+&lt;p&gt;My admittedly limited programming experience has hammered home the value of working memory in a programming context. Although Sublime or your text editor of choice will provide suggested variables / methods / classes / etc. given the first letter you type, it can&amp;rsquo;t be stressed enough how easy it is to forget names you wrote in a large program. Popping open another file or scrolling up or down to figure out what I named method X has destroyed my &lt;a href=&quot;http://en.wikipedia.org/wiki/Flow_(psychology)&quot; target=&quot;_blank&quot;&gt;flow state&lt;/a&gt; on numerous occasions. &lt;/p&gt;
 
 &lt;p&gt;What benefits could 10 minutes a day of working memory exercises deliver to my programming productivity? I certainly believe it&amp;rsquo;s worth finding out. Chris recommended this week by week memory &lt;a href=&quot;http://www.amazon.com/How-Develop-Brilliant-Memory-Week/dp/1780287909&quot;&gt;improvement guide&lt;/a&gt; by multi-time world memory champion &lt;a href=&quot;http://en.wikipedia.org/wiki/Dominic_O&amp;#x27;Brien&quot;&gt;Dominic O&amp;#39;Brien&lt;/a&gt;, as well as &lt;i&gt;&lt;a href=&quot;http://www.amazon.com/Moonwalking-Einstein-Science-Remembering-Everything/dp/0143120530&quot;&gt;Moonwalking with Einstein&lt;/a&gt;&lt;/i&gt; by Josh Foer. The latter book details Foer&amp;rsquo;s journey from a science journalist studying memory to 2006 USA World Memory Champion. The time investment here is relatively small (reading two books and putting aside 10 minutes a day) and the payoffs are potentially enormous.  &lt;/p&gt;
 
@@ -381,6 +381,8 @@ Now I understand that the technology world operates in its own reality distortio
 &lt;p&gt;I&amp;rsquo;m still in awe of how bad-ass those fifteen minutes were. Here&amp;rsquo;s to you, Chris Hunt. &lt;/p&gt;
 
 &lt;p&gt;&lt;i&gt;**Another unabashed Chris Hunt plug - install his &lt;a href=&quot;https://github.com/chrishunt/desktop&quot;&gt;desktop Ruby gem&lt;/a&gt;. I change my desktop background all the time and love the fact that, thanks to Chris, I can now do it from my command line.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;**Update from 10/12 - Chris answered a question I asked him regarding &lt;a href=&quot;http://www.healthyhacker.com/2014/10/06/growing-as-a-programmer/&quot;&gt;growing and improving as a programmer on his podcast&lt;/a&gt;. I&amp;rsquo;m a huge fan of &lt;a href=&quot;http://www.healthyhacker.com/&quot;&gt;HealthyHacker&lt;/a&gt; and highly recommend subscribing.&lt;/i&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 22 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/06/22/chris-hunt-at-gorucu/</link>
