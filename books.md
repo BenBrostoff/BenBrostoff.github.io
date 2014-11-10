@@ -28,7 +28,7 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 ##<center><b>ON DECK</b></center>
 
 * [*Mythical Man Month*, Fred Brooks](http://www.amazon.com/The-Mythical-Man-Month-Engineering-Anniversary/dp/0201835959), added 9/7/2014
-* [*A Guide to the Good Life: The Ancient Art of Stoic Joy*, William Irvine](http://www.amazon.com/dp/0195374614?tag=sivers-20), added 9/7/2014
+* [*A Guide to the Good Life: The Ancient Art of Stoic Joy*, William Irvine](http://www.amazon.com/dp/0195374614?tag=sivers-20), added 9/7/2014, completed 11/2/2014 | <span style="color:green">recommend</span>
 * [*Zen and the Art of Motorcycle Maintenance*, Robert Pirsig](http://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0060589469), added 9/7/2014
 * [*Business Adventures*, John Brooks](http://www.amazon.com/Business-Adventures-Twelve-Classic-Street-ebook/dp/B00L1TPCKW/ref=sr_1_1?s=books&ie=UTF8&qid=1410102391&sr=1-1&keywords=business+adventures), added 9/7/2014
 
