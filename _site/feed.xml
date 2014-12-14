@@ -7,6 +7,39 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>The Internet Is Awesome</title>
+        <description>&lt;p&gt;I spent the great majority of this weekend messing around with a Raspberry Pi I received for my birthday from my dad. Besides being a leading candidate for best present I have ever received, the Pi led me to three great epiphanies:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The internet has exponentially expanded our ability to work alone and without friction costs on projects we enjoy, which in turn has led us to new projects we otherwise never would have taken on&lt;/li&gt;
+&lt;li&gt;Contributing to the internet is as enjoyable as receiving from it, which encourages people to both consume and create knowledge&lt;/li&gt;
+&lt;li&gt;All of this bodes well for a knowledge economy&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I think (1) was the most obvious realization for me, so I&amp;rsquo;ll start there. I am absolutely sure the Rasberry Pi is a project I would have abandoned as a child. I know I would have abandoned it not out of a lack of tenacity or curiousity - I know I would not have been able to find out what to do if I were stuck. To be clear, the Rasberry Pi is meant for children, and the projects I worked on this weekend are embarrassingly kid-oriented (lighting up LED bulbs). Yet, do-it-yourself assembly kits for kids require instruction (think &lt;a href=&quot;http://www.amazon.com/Schylling-Sea-Monkeys-Ocean-Zoo/dp/B001CBZXEE&quot; target=&quot;_blank&quot;&gt; Sea Monkeys&lt;/a&gt;) that might not necessarily be obvious to adults.&lt;/p&gt;
+
+&lt;p&gt;Most every step of the way this weekend on the Raspberry Pi I had no idea what to do and was just referring to some online tutorial or YouTube video (among other things, I learned the UK seems to be the largest producer of Pi-oriented content, perhaps because the Pi was invented there). Parsing through good and bad stuff was fairly easy, and even YouTube comments served as a means of curating material for me:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-b5hljcg0F9g/VIzfI0f-vCI/AAAAAAAAAZU/riSmAtr7-n4/w621-h515-no/Screen%2BShot%2B2014-12-13%2Bat%2B7.50.52%2BPM.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;I know of no other medium so good at simultaneously offering humor and useful information. &lt;/p&gt;
+
+&lt;p&gt;That brings me to (2). I thank the internet this weekend for giving me the opportunity to SSH into my Pi from my laptop, light up LEDs and not look like an idiot when working with Vi. All these things no doubt better my quality of life, which is why I feel strongly about giving back to the internet through developing software and general knowledge sharing (this blog, I hope). &lt;/p&gt;
+
+&lt;p&gt;And finally, (3). The fact that the Raspberry Pi is aimed at children but that an entire knowledge economy among adults has formed (and continues to grow) makes me optimistic about the future of Planet Earth. In addition to enriching our experience and pushing us to produce good content as knowledge-sharers, the internet leads to wholly unpredictable innovation. When the Pi&amp;rsquo;s inventors built it to raise computer science interest, I&amp;rsquo;m not sure they could have envisoned adults &lt;a href=&quot;http://jack.minardi.org/raspberry_pi/make-an-internet-controlled-lamp-with-a-raspberry-pi-and-flask/&quot; target=&quot;_blank&quot;&gt; building web applications to control lights &lt;/a&gt; with a back-end framework developed in 2010. As the writer, Jack Minardi notes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&amp;ldquo;NOTE: I am not a Flask or web design expert, so I might not be doing things the correct way. But it wouldn&amp;rsquo;t be hacking if we knew what we was doing all the time, would it?&amp;rdquo;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I believe people feel initiative to contribute on the internet and are not burdened by fear of being wrong (a burden that so often rears its ugly in corporate culture and academia). The environment people have created online is conducive to exponential knowledge growth, which is overwhelming positive in any knowledge economy. The internet is awesome. I&amp;rsquo;m excited and proud to be a part of it.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Dec 2014 00:00:00 -0500</pubDate>
+        <link>http://benbrostoff.github.io//2014/12/13/The-Internet-is-Awesome/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2014/12/13/The-Internet-is-Awesome/</guid>
+      </item>
+    
+      <item>
         <title>Abstraction</title>
         <description>&lt;blockquote&gt; If you interview somebody coming out of computer science right now, they don&amp;rsquo;t understand the underyling computing at all. It&amp;rsquo;s really, really scary how abstract they are from what a computer is or even the theory of computing. They just don&amp;rsquo;t understand it. &lt;/blockquote&gt;.
 
@@ -387,40 +420,6 @@ Now I understand that the technology world operates in its own reality distortio
         <pubDate>Sun, 22 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/06/22/chris-hunt-at-gorucu/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/22/chris-hunt-at-gorucu/</guid>
-      </item>
-    
-      <item>
-        <title>On the Spurs</title>
-        <description>&lt;p&gt;I recall the post-lockout 1999 season well, only because it was, in NBA time, the first post-Jordan year. I was facing a dilemma at the time I&amp;rsquo;m sure many 9 year olds also had - what does the NBA have in store for &lt;i&gt;me&lt;/i&gt; now that Jordan is gone? My first several years watching the NBA were really just years watching Jordan. Eyes on 23 on literally every possession. Jordan spoiled a lot of people, me included, because everyone became accustomed to that level of dominance - we expected it of future superstars.&lt;/p&gt;
-
-&lt;p&gt;Tim Duncan won the 1999 NBA Finals MVP with a nice-but-not-unbelievable 22-11-2 average for the series. Yes, Tim Duncan to the 9-year-old me was a slight disappointment against 1998 NBA Finals Michael Jordan (but then again, how can you follow up the greatest shot of all time?). You can find all NBA Finals MVPs&amp;#39; series stat lines since 1987 (inclusive) &lt;a href=&quot;http://espn.go.com/nba/history/awards/_/id/43&quot;&gt;here&lt;/a&gt;, and Duncan&amp;rsquo;s three MVPs are statistically on the bottom quartile. For this and likely other reasons, Duncan over the years never truly attained the talking heads&amp;#39; attention in the same way a Shaq, Kobe, LeBron, or even Dirk, did. &lt;/p&gt;
-
-&lt;p&gt;The Spurs over the last decade plus have been associated with the adjective &lt;i&gt;boring&lt;/i&gt;. I googled &amp;lsquo;boring Spurs&amp;rsquo; and the &lt;a href=&quot;https://www.google.com/webhp?sourceid=chrome-instant&amp;amp;ion=1&amp;amp;espv=2&amp;amp;ie=UTF-8#q=spurs%20boring&quot;&gt;results&lt;/a&gt; are pretty comical. The amount of opinion content debating whether the Spurs are boring is insane. Isn&amp;rsquo;t what we find exciting / boring largely a personal preference? How else do you explain the love / hate relationships general sports fans have with soccer, hockey and NASCAR? (I used these as examples, but obviously every sport has its boring / exciting advocates). &lt;/p&gt;
-
-&lt;p&gt;I find it a nice bend of history that the Spurs are both of these things:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The most dominant post-Jordan team ever (by wins and (possibly after tonight) tied for rings with the Lakers - let&amp;rsquo;s say wins is the tiebreaker) &lt;/li&gt;
-&lt;li&gt;The most dominant post-Jordan team without a major month-plus-ESPN-occupying story line that polarized the NBA fan base (and yes, I&amp;rsquo;m delving into opinion here)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The closest comp to the Spurs - at least for dominance over time period - is the New England Patriots, who we all know had a major month-plus-ESPN-occupying story line. Every NFL fan has a reason to hate the Pats. NBA fans have no justifiable reason to hate the Spurs - thus, it seems that reason has become that they&amp;rsquo;re boring. &lt;/p&gt;
-
-&lt;p&gt;The current foil to the Spurs is their NBA Finals opponent - the Miami Heat. The Heat as we know them now have been, since inception, exciting. They more than polarized the entire NBA fan base with some questionable &lt;a href=&quot;https://www.youtube.com/watch?v=pT-I8jQDQ7c&quot;&gt;behavior&lt;/a&gt;. Per a Sports Nation poll, every state excepting Florida is &lt;a href=&quot;http://www.slate.com/blogs/the_slatest/2014/06/04/nba_finals_poll_spurs_over_heat_says_america.html&quot;&gt;rooting against them&lt;/a&gt; in the Finals. The Heat are a never-ending source of interest for NBA fans in the same way embattled celebrities are a never-ending source of interest for cable news. &lt;/p&gt;
-
-&lt;p&gt;The Spurs have never caused a non-basketball-related ruckus, and we (the collective NBA fan base) have very little to talk about outside of their &amp;ldquo;quiet&amp;rdquo; basketball-related dominance. There&amp;rsquo;s no selfish-but-talented point guard stealing shots from the all-caliber power forward. There&amp;rsquo;s no paranoid coach demoting assistants and smashing horns with the owner. And there&amp;rsquo;s most definitely no senile owner alienating the entire franchise in a recorded phone conversation. &lt;/p&gt;
-
-&lt;p&gt;So we have a situation wherein the best team from a basketball perspective is likely the worst team from a Sportscenter perspective. If sports and media were entirely delinked, this little coincidence would not matter to the media at all. But it does, since media is pro sports as much as pro sports are pro sports. &lt;/p&gt;
-
-&lt;p&gt;Conversely, this coincidence matters not to the Spurs, whose head coach is notorious for giving one syllable answers in interviews. Better yet, the face of their franchise (Duncan) really doesn&amp;rsquo;t seem to care, and, other than some animated protests to thorn-in-the-side officials, lives on the emotional plane of a normal person engaging in recreation. &lt;/p&gt;
-
-&lt;p&gt;The post-MJ Spurs have refused to play ball with our shiny social media age, but refused in the most polite way possible. They do the bare minimum of NBA-mandated PR work and then go home. It&amp;rsquo;s admirable and it&amp;rsquo;s inspiring precisely because they&amp;rsquo;re not trying to sell us anything. I can barely open up Chrome without being hit by 35 scandalous headlines, lest watch a basketball game purely about basketball nowadays.&lt;/p&gt;
-
-&lt;p&gt;As it pertains to the NBA, the Spurs don&amp;rsquo;t care about anything except playing the best basketball in the league. If the 9-year-old me found the Spurs dominance quiet and a bit boring, the 24-year-old version appreciates the singular focus on craftsmanship.  &lt;/p&gt;
-</description>
-        <pubDate>Sun, 15 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/06/15/onthespurs/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/06/15/onthespurs/</guid>
       </item>
     
   </channel>
