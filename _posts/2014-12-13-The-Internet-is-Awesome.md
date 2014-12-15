@@ -29,4 +29,4 @@ The internet has a way of inspiring creative initiatives. As Jack Minardi notes 
 "NOTE: I am not a Flask or web design expert, so I might not be doing things the correct way. But it wouldn't be hacking if we knew what we was doing all the time, would it?"
 </blockquote>
 
-I believe people feel initiative to contribute on the internet and are not burdened by fear of being wrong (a burden that so often rears its ugly in corporate culture and academia). The environment people have created online is conducive to exponential knowledge growth, which is overwhelming positive in any knowledge economy. The internet is awesome. I'm excited and proud to be a part of it.
+I believe people feel initiative to contribute on the internet and are not burdened by fear of being wrong (a burden that so often rears its ugly in corporate culture and academia). The environment people have created online is conducive to exponential knowledge growth, which is overwhelmingly positive in any knowledge economy. The internet is awesome. I'm excited and proud to be a part of it.
