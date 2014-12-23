@@ -31,6 +31,7 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*A Guide to the Good Life: The Ancient Art of Stoic Joy*, William Irvine](http://www.amazon.com/dp/0195374614?tag=sivers-20), added 9/7/2014, **completed 11/2/2014** | <span style="color:green">recommend</span>
 * [*Zen and the Art of Motorcycle Maintenance*, Robert Pirsig](http://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0060589469), added 9/7/2014, **completed 11/21/2014** | <span style="color:green">recommend</span>
 * [*Business Adventures*, John Brooks](http://www.amazon.com/Business-Adventures-Twelve-Classic-Street-ebook/dp/B00L1TPCKW/ref=sr_1_1?s=books&ie=UTF8&qid=1410102391&sr=1-1&keywords=business+adventures), added 9/7/2014
-* [*The Innovators*, Walter Isaacson](http://www.amazon.com/The-Innovators-Hackers-Geniuses-Revolution/dp/147670869X), added 11/22/2014
+* [*The Innovators*, Walter Isaacson](http://www.amazon.com/The-Innovators-Hackers-Geniuses-Revolution/dp/147670869X), added 11/22/2014, **completed 12/23/2014** | <span style="color:green">recommend</span>
+* [*Hackers*, Steven Levy](http://www.amazon.com/Hackers-Heroes-Computer-Revolution-Anniversary-ebook/dp/B003PDMKIY/ref=sr_1_1?ie=UTF8&qid=1419378981&sr=8-1&keywords=steven+levy+hackers), added 12/23/2014
 
 
