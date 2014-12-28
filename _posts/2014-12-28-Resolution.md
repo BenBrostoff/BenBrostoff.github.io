@@ -48,13 +48,13 @@ I recently finished Walter Isaacson's <a href="http://www.amazon.com/dp/14767086
 
 More than anything else, learning more about my predecessors motivates me to want to improve the existing body of knowledge we have about computer science and build better tools for future programmers to work with. 
 
-**5. Answering the "What am I trying to accomplish right now?" Question**
+**5. Answering the "What am I trying to accomplish right now?" question**
 
 Too often in 2014 I found myself traveling down a rabbit hole when trying to implement a new feature on a project, debug a problem, or learn how to do something new. I'm sure this experience is common among developers - you enter a question or error message into Google, begin reading a Stack Overflow post, run over to a GitHub issue page, copy and paste some code, get a new error message, and then rinse and repeat. After a couple iterations, you're so far removed from the original task that you forget what exactly it is you're trying to do. 
 
 In my opinion, this is the biggest problem with "Google-driven" development. Without some consciousness of your intent and original goals, you rely on the advice of others while implicity assuming they know the exact nature of your problem. In 2014, I was too quick to keep googling without doing important intermittent analyses on what I looking for. In 2015, I'd like to know what I'm trying to accomplish before traversing the interwebs for solutions.
 
-**6. Combating Imposter Syndrome with Improvement**
+**6. Combating Imposter Syndrome with improvement**
 
 Much has been written on Imposter Syndrome, <a href="http://blog.42floors.com/imposter-syndrome/" target="_blank"> including this post </a> I particulary enjoyed from Jason Freedman. As someone who began programming in college and attended a non-college / university program to gain a better background in web development, I find it tempting to compare myself against life-long programmers and feel like an imposter. 
 
