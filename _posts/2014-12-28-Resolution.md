@@ -15,7 +15,7 @@ Once this familiarity is engrained, you spend less time fumbling around levels a
 
 The habit I feel has developed for me the most from (ii) is to try to refactor my own code by making it less repetitive. One of my most common personal refactors no doubt is to abstract similar blocks of code into one function I then call twice or more. 
 
-For instance, a <a href="https://github.com/BenBrostoff/EveryColor-Visual" target=_blank"> side project </a> I've been working on that involved animating dots called for to assign a random horizontal and vertical direction for each dot upon page load. My first shot at this involved me writing the same code for each direction: 
+For instance, a <a href="https://github.com/BenBrostoff/EveryColor-Visual" target=_blank"> side project </a> I've been working on that involved animating dots called for me to assign a random horizontal and vertical direction for each dot upon page load. My first shot at this involved me writing the same instructions for each direction: 
 
 <script src="https://gist.github.com/BenBrostoff/6475c1547194c46870e9.js"></script>
 	
