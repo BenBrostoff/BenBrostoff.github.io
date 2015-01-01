@@ -7,6 +7,51 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Resolutions by Type</title>
+        <description>&lt;p&gt;I posted thoughts on &lt;a href=&quot;http://benbrostoff.github.io/2014/12/28/Resolution/&quot; target=&quot;_blank&quot;&gt; improving as a programmer &lt;/a&gt; in 2015 a few days back, but thought I would post my complete resolutions so I can reference them come 12/31/2015. &lt;a href=&quot;http://blog.fogus.me/&quot; target=&quot;_blank&quot;&gt;Fogus&lt;/a&gt; has an awesome tradition on his blog of posting &amp;ldquo;The best things and stuff of [Year]&amp;rdquo; going back to 2010, so I think it would be cool to emulate that idea with resolutions and reflections on whether those resolutions were met or not. Here we go, by type: &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Attitude&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Keep this quote in mind every day. From Marcus Aurelius in &lt;a href=&quot;http://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255&quot; target=&quot;_blank&quot;&gt;Meditations&lt;/a&gt;, Book 2.5:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you with precise and genuine seriousness, tenderly, willingly, with justice. And on freeing yourself from all other distractions. Yes, you can - if you do everything as if it were the last thing you were doing in your life, and stop being aimless, stop letting your emotions override what your mind tells you, stop being hypocritical, self-centered, irritable. You see how few things you have to do to live a satisfying and relevant life?
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Craft&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Program every day&lt;/li&gt;
+&lt;li&gt;Blog every month with a quality post&lt;/li&gt;
+&lt;li&gt;Read cover to cover &lt;a href=&quot;http://www.amazon.com/Understanding-Computation-Machines-Impossible-Programs/dp/1449329276&quot; target=&quot;_blank&quot;&gt;Understanding Computation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Study Haskell and Lisp in concert on weekends, under the theory that &lt;a href=&quot;http://lemire.me/blog/archives/2014/12/30/how-to-learn-efficiently/&quot; target=&quot;_blank&quot;&gt;interleaved study trumps mass study&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Review &lt;a href=&quot;https://github.com/thomasahle/sunfish&quot; target=&quot;_blank&quot;&gt;Sunfish&lt;/a&gt; in its entirety and blog on it&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Fitness (Body and Mind)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Eradicate sugar intake, sans social occassions &lt;/li&gt;
+&lt;li&gt;20 minutes+ of physical activity, 5+ days a week&lt;/li&gt;
+&lt;li&gt;Meditate 5+ minutes every day&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Read 20+ minutes every day&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Other&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Memorize a 52 card deck in &amp;lt; 5 minutes&lt;/li&gt;
+&lt;li&gt;Complete the Rubik&amp;rsquo;s cube in &amp;lt; 5 minutes&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Thu, 01 Jan 2015 00:00:00 -0500</pubDate>
+        <link>http://benbrostoff.github.io//2015/01/01/Resolutions-by-Type/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2015/01/01/Resolutions-by-Type/</guid>
+      </item>
+    
+      <item>
         <title>Resolution</title>
         <description>&lt;p&gt;My top New Year&amp;rsquo;s Resolution for 2015 is the same as it was for 2014: improve as a programmer. How to improve is a question I feel I&amp;rsquo;m continually exploring. I thought it would be useful to reflect on some techniques for improving that worked well for me this year, as well as techniques I would like to implement next year.&lt;/p&gt;
 
@@ -18,7 +63,7 @@
 
 &lt;p&gt;The habit I feel has developed for me the most from (ii) is to try to refactor my own code by making it less repetitive. One of my most common personal refactors no doubt is to abstract similar blocks of code into one function I then call twice or more. &lt;/p&gt;
 
-&lt;p&gt;For instance, a &lt;a href=&quot;https://github.com/BenBrostoff/EveryColor-Visual&quot; target=_blank&quot;&gt; side project &lt;/a&gt; I&amp;rsquo;ve been working on that involved animating dots called for to assign a random horizontal and vertical direction for each dot upon page load. My first shot at this involved me writing the same code for each direction: &lt;/p&gt;
+&lt;p&gt;For instance, a &lt;a href=&quot;https://github.com/BenBrostoff/EveryColor-Visual&quot; target=_blank&quot;&gt; side project &lt;/a&gt; I&amp;rsquo;ve been working on that involved animating dots called for me to assign a random horizontal and vertical direction for each dot upon page load. My first shot at this involved me writing the same instructions for each direction: &lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/6475c1547194c46870e9.js&quot;&gt;&lt;/script&gt;
     
@@ -52,13 +97,13 @@
 
 &lt;p&gt;More than anything else, learning more about my predecessors motivates me to want to improve the existing body of knowledge we have about computer science and build better tools for future programmers to work with. &lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;5. Answering the &amp;ldquo;What am I trying to accomplish right now?&amp;rdquo; Question&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. Answering the &amp;ldquo;What am I trying to accomplish right now?&amp;rdquo; question&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Too often in 2014 I found myself traveling down a rabbit hole when trying to implement a new feature on a project, debug a problem, or learn how to do something new. I&amp;rsquo;m sure this experience is common among developers - you enter a question or error message into Google, begin reading a Stack Overflow post, run over to a GitHub issue page, copy and paste some code, get a new error message, and then rinse and repeat. After a couple iterations, you&amp;rsquo;re so far removed from the original task that you forget what exactly it is you&amp;rsquo;re trying to do. &lt;/p&gt;
 
 &lt;p&gt;In my opinion, this is the biggest problem with &amp;ldquo;Google-driven&amp;rdquo; development. Without some consciousness of your intent and original goals, you rely on the advice of others while implicity assuming they know the exact nature of your problem. In 2014, I was too quick to keep googling without doing important intermittent analyses on what I looking for. In 2015, I&amp;rsquo;d like to know what I&amp;rsquo;m trying to accomplish before traversing the interwebs for solutions.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;6. Combating Imposter Syndrome with Improvement&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. Combating Imposter Syndrome with improvement&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Much has been written on Imposter Syndrome, &lt;a href=&quot;http://blog.42floors.com/imposter-syndrome/&quot; target=&quot;_blank&quot;&gt; including this post &lt;/a&gt; I particulary enjoyed from Jason Freedman. As someone who began programming in college and attended a non-college / university program to gain a better background in web development, I find it tempting to compare myself against life-long programmers and feel like an imposter. &lt;/p&gt;
 
@@ -449,23 +494,6 @@ Now I understand that the technology world operates in its own reality distortio
         <pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/08/02/graduation/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/02/graduation/</guid>
-      </item>
-    
-      <item>
-        <title>TDD's Value Proposition</title>
-        <description>&lt;p&gt;I begin my final three weeks of Dev Bootcamp tomorrow, and am most looking forward to taking a deep dive into test-driven development in the context of Rails starting Monday. The reason for my interest is that I have come to believe junior programmers with strong TDD fundamentals can be significantly larger value-adds out of the box than their non TDD-inclined counterparts.&lt;/p&gt;
-
-&lt;p&gt;Evan Dorn of Logical Reality Design has an excellent thirty minute video on &lt;a href=&quot;https://www.youtube.com/watch?v=HhwElTL-mdI&quot;&gt;this very theme&lt;/a&gt;. Dorn contends that the difference between programming and software engineering lies in tests. Modular and concise code springs from the test driven framework because programmers write small snippets at a time to make failing tests pass. Tests are short and to the point; the code to make tests pass is correspondingly short and sweet. If programmers operate under the TDD paradigm from a program&amp;rsquo;s inception, they significantly lessen the risk of needing to pony up capital for a code rescue later down the line.&lt;/p&gt;
-
-&lt;p&gt;Admittedly, there are some strong counterpoints to this school of thought. One I constantly hear is that getting your product out the door in X amount of time is worth the Y hours of refactoring that can be done at a later point in time. Refactoring by definition will not improve the basic functionality of your program, so one has to consider carefully the costs of delaying a product release when the delay will not materially improve the user experience. A second argument against TDD (and yes, there obviously are far more I&amp;rsquo;m not covering here) is that certain tests really test nothing and / or encourage tunnel vision on passing the tests at the expense of more important architectural decisions. Rails creator David Heinemeir Hansson in part championed this argument in April on his &lt;a href=&quot;http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html&quot;&gt;blog&lt;/a&gt;, decrying unit tests specifically. Both arguments hold water and present complex-enough issues to warrant more attention in future writings. &lt;/p&gt;
-
-&lt;p&gt;Rather than focus on these arguments, I want to argue that TDD is a valuable skill in particular for junior developers (such as myself), because TDD (i) introduces scientific rigor to the coding process, (ii) acts as a strong defense against poorly written code and (iii) doubles as a superior communication tool to make the intent of code clear. I would presume the number one concern most employers have in hiring junior developers is their potential to detract value from companies by writing dependency-laden, dysfunctional code with hard-to-trace errors capable of driving away clients. TDD demands an approach that goes a long way towards eradicating this potential.  &lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve had a chance to look at some of the code from previous DBC final projects (&lt;a href=&quot;https://github.com/cicadas-2014/quotemunk&quot;&gt;this app&lt;/a&gt; for managing Kindle quotes is among my favorites), and have been struck by the test-driven approach evident in all of them. DBC students write unit-based, controller-based and feature-based tests in Rails that comprehensively test the entire application. In the coming weeks, I intend to post on testing techniques  in Rails and the advantages to be had from a TDD-oriented approach. &lt;/p&gt;
-</description>
-        <pubDate>Sun, 13 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/07/13/TDD/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/07/13/TDD/</guid>
       </item>
     
   </channel>
