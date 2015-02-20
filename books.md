@@ -34,7 +34,8 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*The Innovators*, Walter Isaacson](http://www.amazon.com/The-Innovators-Hackers-Geniuses-Revolution/dp/147670869X), added 11/22/2014, **completed 12/23/2014** | <span style="color:green">recommend</span>
 * [*Hackers*, Steven Levy](http://www.amazon.com/Hackers-Heroes-Computer-Revolution-Anniversary-ebook/dp/B003PDMKIY/ref=sr_1_1?ie=UTF8&qid=1419378981&sr=8-1&keywords=steven+levy+hackers), added 12/23/2014, **completed 1/13/2015** | <span style="color:green">recommend</span>
 * [*Moonwalking with Einstein*, Joshua Foer](http://www.amazon.com/Moonwalking-Einstein-Science-Remembering-Everything/dp/0143120530), added 1/19/2015, **completed 1/28/2015** | <span style="color:green">recommend</span>
-* [*Masters of Doom*, David Kushner](http://www.amazon.com/Masters-Doom-Created-Transformed-Culture/dp/0812972155), added 1/31/2015
+* [*Masters of Doom*, David Kushner](http://www.amazon.com/Masters-Doom-Created-Transformed-Culture/dp/0812972155), added 1/31/2015, **completed 2/17/2015** | <span style="color:green">recommend</span>
+* [*The Hard Thing About Hard Things*, Ben Horowitz](http://www.amazon.com/The-Hard-Thing-About-Things-ebook/dp/B00DQ845EA), added 2/17/2015
 
 
 
