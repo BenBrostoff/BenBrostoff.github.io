@@ -37,8 +37,8 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*Masters of Doom*, David Kushner](http://www.amazon.com/Masters-Doom-Created-Transformed-Culture/dp/0812972155), added 1/31/2015, **completed 2/17/2015** | <span style="color:green">recommend</span>
 * [*The Hard Thing About Hard Things*, Ben Horowitz](http://www.amazon.com/The-Hard-Thing-About-Things-ebook/dp/B00DQ845EA), added 2/17/2015, **completed 2/25/2015** | <span style="color:green">recommend</span>
 * [*Rework*, Jason Fried, DHH](http://www.amazon.com/Rework-Jason-Fried/dp/0307463745), added 2/25/2015, **completed 2/28/2015** | <span style="color:green">recommend</span>
-* [*Playing to Win*, David Sirlin](http://www.amazon.com/Playing-Win-Becoming-David-Sirlin-ebook/dp/B001GS7AZI/ref=sr_1_2?s=books&ie=UTF8&qid=1425472170&sr=1-2&keywords=playing+to+win), added 3/1/2015 after reading this excellent [Steve Klabnik blog post](http://words.steveklabnik.com/how-do-you-find-the-time)
-
+* [*Playing to Win*, David Sirlin](http://www.amazon.com/Playing-Win-Becoming-David-Sirlin-ebook/dp/B001GS7AZI/ref=sr_1_2?s=books&ie=UTF8&qid=1425472170&sr=1-2&keywords=playing+to+win), added 3/1/2015 after reading this excellent [Steve Klabnik blog post](http://words.steveklabnik.com/how-do-you-find-the-time), **completed 3/9/2015** | <span style="color:green">recommend</span>
+* [*Drive*, Daniel H. Pink](http://www.amazon.com/Drive-Surprising-Truth-About-Motivates/dp/1594484805), added 3/15/2015
 
 
 
