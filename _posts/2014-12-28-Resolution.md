@@ -4,6 +4,7 @@ title: Resolution
 
 date: 2014-12-28
 ---
+*Update (5/5/2015) - I saw that Matt Might had a fantastic article on his blog on this same subject. <a href="http://matt.might.net/articles/programmers-resolutions/" target="_blank" > Here it is </a>*.
 
 My top New Year's Resolution for 2015 is the same as it was for 2014: improve as a programmer. How to improve is a question I feel I'm continually exploring. I thought it would be useful to reflect on some techniques for improving that worked well for me this year, as well as techniques I would like to implement next year.
 
