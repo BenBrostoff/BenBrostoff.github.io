@@ -39,6 +39,9 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*Rework*, Jason Fried, DHH](http://www.amazon.com/Rework-Jason-Fried/dp/0307463745), added 2/25/2015, **completed 2/28/2015** | <span style="color:green">recommend</span>
 * [*Playing to Win*, David Sirlin](http://www.amazon.com/Playing-Win-Becoming-David-Sirlin-ebook/dp/B001GS7AZI/ref=sr_1_2?s=books&ie=UTF8&qid=1425472170&sr=1-2&keywords=playing+to+win), added 3/1/2015 after reading this excellent [Steve Klabnik blog post](http://words.steveklabnik.com/how-do-you-find-the-time), **completed 3/9/2015** | <span style="color:green">recommend</span>
 * [*Drive*, Daniel H. Pink](http://www.amazon.com/Drive-Surprising-Truth-About-Motivates/dp/1594484805), added 3/15/2015
+* [*Trust Me, I'm Lying*, Ryan Holiday](http://www.amazon.com/Trust-Me-Lying-Confessions-Manipulator/dp/1591846285), added 3/16/2015,  **completed 4/13/2015** | <span style="color:green">recommend</span>
+* [*eBoys*, Randall E. Stross](http://www.amazon.com/eBoys-Inside-Account-Venture-Capitalists/dp/0812930959), added 4/18/2015
+* [*Dropping Ashes on the Buddha*, Zen Master Seung Sahn](http://www.amazon.com/Dropping-Ashes-Buddha-Teachings-Master/dp/0802130526/?tag=offsitoftimfe-20), added 4/18/2015
 
 
 
