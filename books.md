@@ -42,6 +42,7 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*Trust Me, I'm Lying*, Ryan Holiday](http://www.amazon.com/Trust-Me-Lying-Confessions-Manipulator/dp/1591846285), added 3/16/2015,  **completed 4/13/2015** | <span style="color:green">recommend</span>
 * [*eBoys*, Randall E. Stross](http://www.amazon.com/eBoys-Inside-Account-Venture-Capitalists/dp/0812930959), added 4/18/2015
 * [*Dropping Ashes on the Buddha*, Zen Master Seung Sahn](http://www.amazon.com/Dropping-Ashes-Buddha-Teachings-Master/dp/0802130526/?tag=offsitoftimfe-20), added 4/18/2015
+* [*Surely You're Joking, Mr. Feynman!*, Richard Feynman](http://www.amazon.com/Surely-Feynman-Adventures-Curious-Character/dp/0393316041), added 5/10/2015
 
 
 
