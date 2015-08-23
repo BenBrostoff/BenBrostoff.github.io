@@ -7,6 +7,31 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Automation Via Aliasing and Bash</title>
+        <description>&lt;p&gt;I&amp;rsquo;ve been trying to make a concerted effort recently to automate more stuff. Working on a side project or open source project you haven&amp;rsquo;t touched in a while I&amp;rsquo;ve found can be annoying to get back into - first navigate to the directory, run a few tasks to set up the DB, install dependencies, pull from master, etc.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, I&amp;rsquo;ve taken to some aggressive aliasing on a few side projects to get to the fun stuff more quickly. I thought I&amp;rsquo;d jot down a few interesting takeways from the experience.&lt;/p&gt;
+
+&lt;p&gt;All of the below assume you have a &lt;code&gt;.bash_profile&lt;/code&gt; set up. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;On your home setup, it&amp;rsquo;s worth having aliases to navigate to a project immediately. &lt;/li&gt;
+&lt;li&gt;For setup tasks, it&amp;rsquo;s tempting to chain together a bunch of terminal commands with &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;, but bash functions I&amp;rsquo;ve found make for easier edits in the future and are more elegant as well.
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/398a5ca5397d6a950e64.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;li&gt;For anything that involves sshing into another machine, it&amp;rsquo;s nice to alias:
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/dfa397492f727862ccc5.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;li&gt;Finally, I like having easy access to my &lt;code&gt; .bash_profile &lt;/code&gt;, so it makes sense for me to alias the following:
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/e455104c9d487cfdbb11.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I admit a reasonable knock against aliasing is that when you move over to another machine, you&amp;rsquo;re a fish out of water. However, I&amp;rsquo;d like to believe if I take a few minutes every month to review my &lt;code&gt; .bash_profile &lt;/code&gt;, I can partially mitigate this risk.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Aug 2015 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2015/08/23/Automating-Via-Alias-And-Bash/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2015/08/23/Automating-Via-Alias-And-Bash/</guid>
+      </item>
+    
+      <item>
         <title>Languages and Opinions</title>
         <description>&lt;p&gt;I find a lot of my preferences often are based on what I&amp;rsquo;ve been exposed to. If given a choice, I&amp;rsquo;d prefer to program something in Python rather than in Haskell because I have many, many times more hours of experience in the former. &lt;/p&gt;
 
@@ -424,67 +449,6 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
         <pubDate>Sun, 17 Aug 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/08/17/open-source-everything/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/17/open-source-everything/</guid>
-      </item>
-    
-      <item>
-        <title>A Highly Entertaining Spat</title>
-        <description>&lt;p&gt;Mommy and Daddy have been fighting lately in the Twitter equivalent of the Brostoff household. I woke up this morning to the following:  &lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-1C_VnO7KC2A/U-SigyQvE6I/AAAAAAAAAOs/AtuDreRZVlA/w582-h161-no/edm_v_pmarca.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Before we go any further - there&amp;rsquo;s no actual animosity here I&amp;rsquo;m sure, and I think all this tweeting is in good jest. As background, the &lt;a href=&quot;http://epicureandealmaker.blogspot.com/&quot;&gt;Epicurean Dealmaker&lt;/a&gt; and &lt;a href=&quot;http://blog.pmarca.com/&quot;&gt;Marc Andreessen&lt;/a&gt; are two people I greatly admire and relate to as a former banker turned software engineer. I was a religious reader of EDM during my two years as an investment banker; I remember reading &lt;a href=&quot;http://online.wsj.com/news/articles/SB10001424053111903480904576512250915629460&quot;&gt;&amp;ldquo;Why Software Is Eating the World&amp;rdquo;&lt;/a&gt; in August 2011 in the WSJ, and Marc Andreeseen is at least part of the reason for the career change I recently made. &lt;/p&gt;
-
-&lt;p&gt;So, I&amp;rsquo;ve taken a rather large interest in their mildy heated (lukewarm?) Twitter exchanges of late. I actually was in the middle of one of them:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-qL7auIEAKy4/U-SkIAPqISI/AAAAAAAAAPU/4XFpWhO9xjQ/w571-h527-no/me_pmarca.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;The particular feud I happened to get in the middle of started with a &lt;a href=&quot;http://epicureandealmaker.blogspot.com/2014/08/where-did-he-learn-to-negotiate-like.html&quot;&gt;blogpost&lt;/a&gt; EDM wrote on 8/2. The post suggests that Trulia - a real estate website - was mistreated by its former advisor, Qatalyst Partners. Trulia had originally engaged Qatalyst three years ago to negotiate the sale of the company to Zillow, and failed to legally end the engagment when the sale fell through at the time. EDM&amp;rsquo;s claim to me seems &lt;a href=&quot;http://dealbook.nytimes.com/2014/07/29/old-attempt-to-sell-trulia-rewards-ex-adviser-qatalyst-now/&quot;&gt;to have merit&lt;/a&gt;, as Qatalyst (i) charged Trulia off-market fees and (ii) likely destroyed &lt;a href=&quot;https://twitter.com/EpicureanDeal/status/496991408071643136&quot;&gt;Trulia shareholder value&lt;/a&gt; (albeit created Qatalyst shareholder value). &lt;/p&gt;
-
-&lt;p&gt;In short, I read EDM&amp;rsquo;s argument on Qatalyst and found it to be extremely reasonable and well grounded. Because I agreed with the post, I by extension felt inclined to agree with EDM that two Qatalyst bankers - George Boutros and Frank Quattrone - perhaps did not have their clients&amp;#39; best interests at heart. I ended up eating my words because I tried to comment on a subject I was not qualified to comment on. I do not personally know either banker; Marc Andreessen has known each for twenty years, and was right to put me in my place.&lt;/p&gt;
-
-&lt;p&gt;To my credit, however, I admitted my lack of knowledge on Frank Quattrone and George Boutros and earned some Twitter karma points:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-1C-MemfrB88/U-SlZDVkyLI/AAAAAAAAAP8/bQBslhx5D6M/w545-h290-no/Screen%2BShot%2B2014-08-08%2Bat%2B6.23.57%2BAM.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;My banking idol has yet to do so - in part because he is qualified to comment on what he writes on - and thus, the @pmarca v. @EpicureanDeal Twitter wars wage on. I find this spat interesting because I believe it has deep roots in the way certain types of people view technological progress, specifically in our social-media dominated age. &lt;/p&gt;
-
-&lt;p&gt;I think in general that people who do not work in a tech-related industry tend to believe that a large portion of the &amp;ldquo;value&amp;rdquo; tech contributes to the world economy is in the form of social media value. Social media is prevalent enough to annoy EDM:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-1ztc8RB2sdY/U-SrsMe23XI/AAAAAAAAARY/bkjq0HPt76M/w553-h280-no/Screen%2BShot%2B2014-08-08%2Bat%2B6.50.55%2BAM.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Popular media contributes to the perception that social media is the bulk of tech, as most tech-related articles I read as a banker (meaning these articles generally derived from WSJ or the Financial Times) were about social media companies who raised funding or were acquired by larger companies. &lt;/p&gt;
-
-&lt;p&gt;One salient memory I have from banking is the day &lt;a href=&quot;http://dealbook.nytimes.com/2014/02/19/facebook-to-buy-messaging-start-up/&quot;&gt;Facebook acquired WhatsApp&lt;/a&gt;. I recall that virtually every conversation I overhead involved someone suggesting that Facebook&amp;rsquo;s inflated shares were causing the company to pull the trigger on unwise acquisitions, and someone else agreeing. Then another person would talk about the pressure to compete with company X and acquire more users. Then another person would make a comment about a tech bubble and a vicious cycle. And so on and so forth. &lt;/p&gt;
-
-&lt;p&gt;That day serves as a decent example of how bankers (and perhaps others as well) perceive the tech space. The frequent articles emphasizing eye-popping purchase prices make a lot of people wary and suggest that the tech industry is out of sorts with the rest of the economy. EDM in some respects makes this point in the aforementioned post:&lt;/p&gt;
-
-&lt;blockquote&gt;
-Now I understand that the technology world operates in its own reality distortion field, but I have to confess I was stunned by that fee percentage. In the normal business world, where industrial logic and economic pressures operate in place of the moonbeams and unicorn piss of tech land, a billion dollar sale mandate should earn the sell-side advisor flogging it significantly less than one percent of transaction value.
-&lt;/blockquote&gt;
-
-&lt;p&gt;So, we have a number of data points now in EDM&amp;rsquo;s blog and tweets evidencing that he believes techies are out of touch with reality and even pigheaded. To be clear, I do not see this opinion as unfounded. At the same time, this opinion is not &amp;ldquo;true&amp;rdquo;, because it&amp;rsquo;s easy to find at least one exception to the claim: @pmarca. &lt;/p&gt;
-
-&lt;p&gt;The @pmarca feed is a frequent source of technological optimism that oftentimes has nothing to do with social media. Par for the course are tweets documenting groundbreaking work in tech: &lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-7cinCcxFbHQ/U-SpXMPYbnI/AAAAAAAAAQs/LD81D-HhRSY/w456-h408-no/Screen%2BShot%2B2014-08-08%2Bat%2B6.39.45%2BAM.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Andreessen also has recently gone on double digit tweet-sprees about the practical applications of virtual reality and the &lt;a href=&quot;https://twitter.com/pngmarca/status/497155377100619777/photo/1&quot;&gt;societal benefits encompassed&lt;/a&gt; in &lt;a href=&quot;http://www.nytimes.com/2014/08/07/technology/personaltech/lyft-tries-to-coax-commuters-to-leave-their-cars.html?_r=0&quot;&gt;Lyft Line&lt;/a&gt;. If you want proof that tech is not pigheaded and that progress is not superficial, but real and measurable, look no further than @pmarca&amp;rsquo;s twitter. &lt;/p&gt;
-
-&lt;p&gt;By the same token, I think @pmarca&amp;rsquo;s perception of finance may reflect a public perception that lacks basis in reality. Let&amp;rsquo;s look at a recent string of tweets: &lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
-&lt;img src=&quot;https://lh4.googleusercontent.com/-ErAcP0pYtv8/U-S7n96eb9I/AAAAAAAAASI/jVT10QbHB6I/w354-h485-no/Screen%2BShot%2B2014-08-08%2Bat%2B7.58.57%2BAM.png&quot; alt=&quot;&quot;&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Just as most people view social media as an inordinate proportion of the tech space, it&amp;rsquo;s my view that the public focuses far too much on the consequences of TARP and the bailouts of the last recession. When I say &amp;ldquo;focuses far too much&amp;rdquo;, I mean that people are incorrect to believe that these bailouts continue to have an enormous impact on employee behavior at banks. Even if I were to acknowledge the @pmarca argument that &amp;ldquo;bailouts are guaranteed&amp;rdquo;, I do not believe this guarantee has large consequences on how banks operate (hold on, let me explain).&lt;/p&gt;
-
-&lt;p&gt;Banks are under significantly stricter reporting, acccounting and capital standards - both from an S&amp;amp;T and i-banking perspecting - than pre-crisis, and cannot take outsize risks as a result. Even if banks are incentivized to take larger risks, Dodd-Frank and a slew of other types of legislation prevents them from doing so - I feel as though @pmarca should have acknowledged this in the tweet essay above. The banking sector is not growing nearly as fast as the tech sector in part because bankers have more hurdles in taking on risk, and therefore cannot realize as large rewards. &lt;/p&gt;
-
-&lt;p&gt;What I&amp;rsquo;m really getting at here is that the @pmarca - @EpicureanDeal spat is borne out of misunderstanding of the other&amp;rsquo;s craft. To my idols - Marc Andreessen and the man behind the Epicurean Dealmaker mask - I propose an end to your war. I think you have far more in common than you realize. &lt;/p&gt;
-</description>
-        <pubDate>Fri, 08 Aug 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/08/08/techies-v-bankers/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/08/techies-v-bankers/</guid>
       </item>
     
   </channel>

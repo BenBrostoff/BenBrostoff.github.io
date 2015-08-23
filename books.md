@@ -46,7 +46,7 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*Dropping Ashes on the Buddha*, Zen Master Seung Sahn](http://www.amazon.com/Dropping-Ashes-Buddha-Teachings-Master/dp/0802130526/?tag=offsitoftimfe-20), added 4/18/2015
 * [*Surely You're Joking, Mr. Feynman!*, Richard Feynman](http://www.amazon.com/Surely-Feynman-Adventures-Curious-Character/dp/0393316041), added 5/10/2015, **completed 5/17/2015** | <span style="color:green">highly recommend / favorite books list</span>
 * [*Elon Musk: Tesla, SpaceX and the Quest for a Fantastic Future*, Ashlee Vance](http://www.amazon.com/Elon-Musk-SpaceX-Fantastic-Future-ebook/dp/B00KVI76ZS), added 6/1/2015, **completed June 2015** | <span style="color:green">highly recommend</span>
-* [*Not Fade Away: A Short Life Well Lived*, Laurence Shames and Pete Barton](http://www.amazon.com/Not-Fade-Away-Short-Lived/dp/006073731X/?tag=offsitoftimfe-20), added 6/1/2015 after listening to this tour de force <a href="http://fourhourworkweek.com/2015/05/30/chris-sacca/">Tim Ferriss interview of Chris Sacco</a>
+* [*Not Fade Away: A Short Life Well Lived*, Laurence Shames and Pete Barton](http://www.amazon.com/Not-Fade-Away-Short-Lived/dp/006073731X/?tag=offsitoftimfe-20), added 6/1/2015 after listening to this tour de force <a href="http://fourhourworkweek.com/2015/05/30/chris-sacca/">Tim Ferriss interview of Chris Sacca</a>
 * [*The Signal and the Noise*, Nate Silver](http://www.amazon.com/The-Signal-Noise-Predictions-Fail-but/dp/0143125087), added July 2015
 * [*Founders at Work*, Jessica Livingston](http://www.amazon.com/Founders-Work-Stories-Startups-Early-ebook/dp/B009IXMK4O/ref=sr_1_1?s=books&ie=UTF8&qid=1437847204&sr=1-1&keywords=founders+livingston), added July 2015
 
