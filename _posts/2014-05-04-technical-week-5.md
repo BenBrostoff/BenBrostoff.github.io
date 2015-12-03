@@ -9,7 +9,7 @@ date: 2014-05-04
 
 <p>Below is a short class I wrote for the purpose of tracking information on NBA players. Using the class, entitled NBAPlayer (classes are always capitalized, per Ruby convention) you can create <b>instances</b> of NBA Players, with the respective information attributes of each instance known as <b>instance variables</b>. Methods within the class can take arguments or have no arguments; their purpose can be to display information, manipulate instance variables or do any other number of different functions.</p>
 
-<p>I have provided comments in the code below, but a few initial thoughts: <p/>
+<p>I have provided comments in the code below, but a few initial thoughts: </p>
 
 <ul>
 <li>The class variable (prefaced by @@) no_players can be accessed by any method in the class and is the same for all instances of the class. Take a look at the dirk and pierce objects that follow in the code - once pierce is created, no_players is 2 for both pierce and dirk.</li>

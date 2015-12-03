@@ -15,7 +15,7 @@ Funnily enough, Chris' talk itself served as an incredible example of the benefi
 
 I'm still in awe of how bad-ass those fifteen minutes were. Here's to you, Chris Hunt. 
 
-<i>**Another unabashed Chris Hunt plug - install his [desktop Ruby gem](https://github.com/chrishunt/desktop). I change my desktop background all the time and love the fact that, thanks to Chris, I can now do it from my command line.</i>
+<i>Another unabashed Chris Hunt plug - install his [desktop Ruby gem](https://github.com/chrishunt/desktop). I change my desktop background all the time and love the fact that, thanks to Chris, I can now do it from my command line.</i>
 
-<i>**Update from 10/12 - Chris answered a question I asked him regarding [growing and improving as a programmer on his podcast](http://www.healthyhacker.com/2014/10/06/growing-as-a-programmer/). I'm a huge fan of [HealthyHacker](http://www.healthyhacker.com/) and highly recommend subscribing.</i>
+<i>Update from 10/12 - Chris answered a question I asked him regarding [growing and improving as a programmer on his podcast](http://www.healthyhacker.com/2014/10/06/growing-as-a-programmer/). I'm a huge fan of [HealthyHacker](http://www.healthyhacker.com/) and highly recommend subscribing.</i>
 

@@ -39,7 +39,7 @@ The decision to deep dive or to trust abstraction in some respects boils down to
 
 I consider (ii), however, critically important and that bending on (ii) is tantamount to bending on long-term quality and risk-management. As a junior programmer, I know well that (ii) will govern whether senior engineers trust me and are comfortable with my work. I believe being able to trace the ladder of abstraction, whether in software or in life, can enhance all decisions by building in logic and reason where it might not have existed. Furthermore, I think a strong knowledge of where certain tools and assumptions come from can inform the abstraction v. productivity tradeoff, leading to time-saved in some areas and time well-spent in other areas.
 
-I speak as someone extremely early in my quest to build this knowledge, and hope that my own abstactions have not affected my intended meaning. In the words of Guy Steele in Peter Seibel's <a href="http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483/ref=sr_1_1?s=books&ie=UTF8&qid=1411478931&sr=1-1&keywords=coders+at+work" target="_blank"<i>Coders at Work</i></a>:
+I speak as someone extremely early in my quest to build this knowledge, and hope that my own abstactions have not affected my intended meaning. In the words of Guy Steele in Peter Seibel's <a href="http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483/" target="_blank"><i>Coders at Work</i></a>:
 
 <blockquote> Something I worry about a lot when I write, that I'm less worried about with a computer, is about the ways in which English is ambiguous. I'm constantly worried about the ways in which the reader might misinterpret what I've written. </blockquote>. 
 

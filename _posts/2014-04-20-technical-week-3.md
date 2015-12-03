@@ -4,7 +4,7 @@ title: The Rise of JavaScript
 date: 2014-04-20 
 ---
 
-<blockquote class = "blogpost"> JavaScript became the world&#8217s biggest programming language completely independent of its merits. 
+<blockquote class = "blogpost"> JavaScript became the world's biggest programming language completely independent of its merits. 
 
 <p><center> -Douglas Crockford, <a href="https://www.youtube.com/watch?v=hQVTIJBZook" target="_blank">Javascript: The Good Parts</a></center></p>
 
@@ -20,7 +20,7 @@ date: 2014-04-20
 
 <p> So why is JavaScript popular? Let's cover the historical element before praising the positive attributes of the language (which the aforementioned Douglas Crockford has also done in the video linked above). Javascript is the product of the Netscape team that developed Netscape Navigator and designed the language to run on Netscape. The success of Netscape was a boon for Javascript. Netscape was the go-to broweser for early web users, and thus, Javascript was the earliest web language. First to market appears to have been a signicant win for JavaScript that buoyed it. </p>
 
-<p>This is not to say JavaScript's success is purely right place right time, <a href="http://programmers.stackexchange.com/questions/28947/how-did-javascript-become-popular" target="_blank"> and this online thread relays this message home quite well.</a> JavaScript has numerous technical attributes that make it a powerful language. Many of these I admit I can't appreciate because my programming career is in its relative infancy. Indeed, the entire programming language debate I find simultaneously fascinating and confusing: <a href="http://www.paulgraham.com/icad.html" target="_blank"> check out this Paul Graham essay for a full overview of what makes a strong programming language.</a> 
+<p>This is not to say JavaScript's success is purely right place right time, <a href="http://programmers.stackexchange.com/questions/28947/how-did-javascript-become-popular" target="_blank"> and this online thread relays this message home quite well.</a> JavaScript has numerous technical attributes that make it a powerful language. Many of these I admit I can't appreciate because my programming career is in its relative infancy. Indeed, the entire programming language debate I find simultaneously fascinating and confusing: <a href="http://www.paulgraham.com/icad.html" target="_blank"> check out this Paul Graham essay for a full overview of what makes a strong programming language.</a></p> 
 
 <p>One example of a strong technical attribute JavaScript has in its favor: first-class functions. A first-class function can be treated / passed as an argument (in math, consider (f(f(x)) - this is called a higher order function, or a function that takes a function as an argument). First-class functions are not supported by Java and C. Other strong language attributes Crockford cites in his talk include dynamic objects and object literals. Importantly, other languages have many of these aforementioned strengths, but are perhaps not as popular as JavaScript because they lack the first-to-market advantages it gained early on.</p>
 
