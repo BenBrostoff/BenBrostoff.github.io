@@ -56,4 +56,4 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*Linchpin: Are You Indispensable?*, Seth Godin](http://www.amazon.com/Linchpin-Are-Indispensable-Seth-Godin-ebook/dp/B00354Y9ZU/ref=sr_1_1?s=books&ie=UTF8&qid=1449145814&sr=1-1&keywords=seth+godin), added December 2015, **completed December 2015** | <span style="color:green">highly recommend</span>
 * [*High Output Management*, Andrew Grove](http://www.amazon.com/gp/product/B015VACHOK/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added December 2015
 * [*Joel on Software*, Joel Spolsky](http://www.amazon.com/Joel-Software-Occasionally-Developers-Designers/dp/1590593898), added December 2015
-* [*Spartan Up!*, Joe De Sena](http://www.amazon.com/gp/product/B00E78IFYO/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added December 2015
+* [*Spartan Up!*, Joe De Sena](http://www.amazon.com/gp/product/B00E78IFYO/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added December 2015, **completed December 2015** | <span style="color:green">recommend</span>

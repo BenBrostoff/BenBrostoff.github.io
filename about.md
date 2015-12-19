@@ -2,7 +2,7 @@
 layout: page
 title: About
 ---
-I am a junior software engineer at <a href="http://www.wisertogether.com/" target="_blank">WiserTogether</a>.
+I am a software engineer at <a href="http://www.xlhybrids.com/" target="_blank">XL Hybrids</a>.
 
 Professionally, I mostly work in Ruby, Python and JavaScript. I care deeply about improving as a programmer and am always looking for opportunities to learn something new. 
 
