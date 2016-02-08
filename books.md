@@ -58,3 +58,4 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*Joel on Software*, Joel Spolsky](http://www.amazon.com/Joel-Software-Occasionally-Developers-Designers/dp/1590593898), added December 2015
 * [*Spartan Up!*, Joe De Sena](http://www.amazon.com/gp/product/B00E78IFYO/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added December 2015, **completed December 2015** | <span style="color:green">recommend</span>
 * [*Awaken the Giant Within*, Tony Robbins](http://www.amazon.com/gp/product/B001EM101Q/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added January 2016
+* [*Deep Work*, Cal Newport](http://www.amazon.com/gp/product/B00X47ZVXM/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added January 2016, **completed February 2016** | <span style="color:green">highly recommend</span>
