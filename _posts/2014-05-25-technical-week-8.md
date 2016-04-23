@@ -6,11 +6,11 @@ date: 2014-05-25
 
 This quote from Brendan Eich (creator of JavaScript) caught my eye while reading Peter Seibel's [*Coders at Work*](http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483):
 
->Dynamic languages became popular because people can actually rapidly prototype... Then maybe ater on, if they have a language that can support it, or if they're recoding in a static language, they can write down the types. That was one of the reasons why in JavaScript we were intereted in optional typing, and we still are, though it's controversial in the committee. There's still a strong chance we'll get some kind of hybrid type system into a future version of JavaScript.
+<blockquote>
+Dynamic languages became popular because people can actually rapidly prototype... Then maybe ater on, if they have a language that can support it, or if they're recoding in a static language, they can write down the types. That was one of the reasons why in JavaScript we were intereted in optional typing, and we still are, though it's controversial in the committee. There's still a strong chance we'll get some kind of hybrid type system into a future version of JavaScript.
+</blockquote>
 
->
-
-I neglected to note [in an earlier post on criticisms of JavaScript] (http://benbrostoff.github.io/2014/04/20/technical-week-3/) that many programmers object to the language only catching type errors at runtime as opposed to compile time. In JavaScript, as in Ruby, Python, and other dynamically typed languages, variables are interpreted at runtime and can be changed (e.g. reassigned) as the program runs sequentially. 
+I neglected to note [in an earlier post on criticisms of JavaScript](http://benbrostoff.github.io/2014/04/20/technical-week-3/) that many programmers object to the language only catching type errors at runtime as opposed to compile time. In JavaScript, as in Ruby, Python, and other dynamically typed languages, variables are interpreted at runtime and can be changed (e.g. reassigned) as the program runs sequentially. 
 
 Consequently, **dynamic languages** make no demands of the programmer at compilation time and use inference to define types at runtime. This inference is also referred to as **duck typing** - objects that look like and act like type "duck" are assumed to be of type "duck" at runtime. As Eich notes in the quote above, such languages allow for faster prototyping. 
   
@@ -26,7 +26,7 @@ This last point registers significantly with me, as during my brief time in an i
 
 I understand any programmer over the age of 30 is probably reading this and shaking their head. Older languages no doubt were less lenient on type definition and built better programmers as a result. Anyone who argues that today's programmers are building bad habits as a result of new dynamically typed languages is likely correct. 
 
-However, the solution to the new generation of programmers having bad habits is not to have them stop using dynamic languages entirely - it's to change the education system. Even if a language is dynamically typed, programmers can learn to keep track of their types by explicity defining them in the code (if the language allows it), using well written tests and [constant vigilance] (http://harrypotter.wikia.com/wiki/Alastor_Moody). 
+However, the solution to the new generation of programmers having bad habits is not to have them stop using dynamic languages entirely - it's to change the education system. Even if a language is dynamically typed, programmers can learn to keep track of their types by explicity defining them in the code (if the language allows it), using well written tests and [constant vigilance](http://harrypotter.wikia.com/wiki/Alastor_Moody). 
 
 Now, if you'll excuse me, I have to go bang out some Ruby code with no regard for type errors. 
  

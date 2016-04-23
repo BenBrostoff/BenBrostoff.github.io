@@ -6,7 +6,7 @@ date: 2015-12-02
 ---
 I think reading code is the best way to improve as a software engineer.
 
-I like lists for standardizing processes with many steps. To this end, I thought I'd make a checklist of things I've come to realize are my own best techniques as they relate to reading code. The central question they all get at - <i>If asked to explain and defend every engineering decision made in whatever piece of code I'm reviewing, could I do it?</i>**
+I like lists for standardizing processes with many steps. To this end, I thought I'd make a checklist of things I've come to realize are my own best techniques as they relate to reading code. The central question they all get at - <i>If asked to explain and defend every engineering decision made in whatever piece of code I'm reviewing, could I do it?</i>
  
 Anyways, the checklist:
 
@@ -28,7 +28,7 @@ Anyways, the checklist:
 * If I see something I really like or find interesting, did I file it away for future reference? Am I making sure to go back to this reference over time and trying to implement the patterns in it?
 * Do I have a strong understanding of how to deploy this code? What differences need to be taken into account when thinking about non-local environments?
 
-I wrote this list mainly so I could review it for my own reference, but I'd love for it to be useful to other people. I know I'm missing stuff and would love for this post to grow over time - shoot me an email at <a href="mailto:ben.brostoff@gmail.com""> ben.brostoff@gmail.com</a> with suggestions.	 
+I wrote this list mainly so I could review it for my own reference, but I'd love for it to be useful to other people. I know I'm missing stuff and would love for this post to grow over time - shoot me an email at <a href="mailto:ben.brostoff@gmail.com"> ben.brostoff@gmail.com</a> with suggestions.	 
 
 
 ** I think the original influence for the question above was <a href="http://www.scotthyoung.com/learnonsteroids/grab/TranscriptFeynman.pdf" target="_blank">The Feynman Technique.</a>

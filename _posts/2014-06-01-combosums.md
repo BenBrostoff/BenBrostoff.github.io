@@ -29,7 +29,7 @@ Only experience can really bear out some of the advantages to be had from using 
 * Recursion allows one to write significantly shorter code (compare my initial solution to Sam's)
 * Recursion takes up an exponentially increasing amount of memory as you recurse within a function (again, try `getPossSums(100)`).
 
-As a side note, it's fun / a bit weird to play [Sam's demo of Strike 9] (http://samschlinkert.com/strike9/) now that I understand a bit more of the code behind it. We rarely take the time to appreciate the hard work and cleverness of game designers.  
+As a side note, it's fun / a bit weird to play [Sam's demo of Strike 9](http://samschlinkert.com/strike9/) now that I understand a bit more of the code behind it. We rarely take the time to appreciate the hard work and cleverness of game designers.  
 
 
 
