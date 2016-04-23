@@ -10,34 +10,34 @@
         <title>Reading Code</title>
         <description>&lt;p&gt;I think reading code is the best way to improve as a software engineer.&lt;/p&gt;
 
-&lt;p&gt;I like lists for standardizing processes with many steps. To this end, I thought I&amp;rsquo;d make a checklist of things I&amp;rsquo;ve come to realize are my own best techniques as they relate to reading code. The central question they all get at - &lt;i&gt;If asked to explain and defend every engineering decision made in whatever piece of code I&amp;rsquo;m reviewing, could I do it?&lt;/i&gt;**&lt;/p&gt;
+&lt;p&gt;I like lists for standardizing processes with many steps. To this end, I thought I’d make a checklist of things I’ve come to realize are my own best techniques as they relate to reading code. The central question they all get at - &lt;i&gt;If asked to explain and defend every engineering decision made in whatever piece of code I’m reviewing, could I do it?&lt;/i&gt;&lt;/p&gt;
 
 &lt;p&gt;Anyways, the checklist:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Can I run the code successfully on my local environment? If I had to do a bunch of manual configuration, could any of this configuration be automated and checked into source control? If not, does the project Wiki need to be updated to include the manual configuration steps?&lt;/li&gt;
-&lt;li&gt;Does the code solve the issue or implement the feature it set out to resolve? If it&amp;rsquo;s tied to a GitHub issue, JIRA ticket, etc., does it satisfy whatever criteria was outlined in the issue or ticket?&lt;/li&gt;
-&lt;li&gt;Can I hit breakpoints in the code additions and follow a stack trace back to the entry point? &lt;/li&gt;
-&lt;li&gt;If there is exception handling, can I hit the error cases and see that they&amp;rsquo;re handled as expected?&lt;/li&gt;
-&lt;li&gt;Can I differentiate between 1) standard library calls, 2) third-party library calls and 3) internal project calls? (importantly, &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/#imports&quot; target=&quot;_blank&quot;&gt; this list corresponds to the order of imports in PEP-8&lt;/a&gt;)
-
-&lt;ul&gt;
-&lt;li&gt;On standard libary calls - if there are methods I&amp;rsquo;m not familiar with, did I look at the official docs and find an example case? Did I sandbox the method in the shell and try a few simple test cases? If I&amp;rsquo;ve never worked with the language, am I developing a familiarity with the types / scoping / syntax, etc?&lt;/li&gt;
-&lt;li&gt;On third party library calls - same as above, but a few additions. Do I generally understand the point of the library? Does the library have a set of best practices? &lt;/li&gt;
-&lt;li&gt;If the library is a wrapper around a broader technology (e.g. &lt;a href=&quot;https://pypi.python.org/pypi/elasticsearch-dsl&quot; target=&quot;_blank&quot;&gt;elasticsearch-dsl&lt;/a&gt;), do I know what&amp;rsquo;s really going on beneath the language wrapper? For instance, if I&amp;rsquo;m using an API wrapper, can I reproduce what the wrapper is doing via &lt;code&gt;curl&lt;/code&gt;? If the library is totally foreign to me and I&amp;rsquo;m guessing at what it may do, do I need to purchase an O&amp;#39;Reilly book or spend an hour or so perusing the docs / tutorials / etc.? &lt;/li&gt;
-&lt;li&gt;One more on libraries - is the library the latest version or an older one? Is the version frozen? Should it be if it&amp;rsquo;s not?&lt;/li&gt;
-&lt;li&gt;On internal project calls - are these calls self-explanatory or is there a history around what&amp;rsquo;s going on I need to be aware of? Have I turned on annotations in whatever IDE I&amp;rsquo;m using (or &lt;code&gt; git blame &lt;/code&gt; if not using an IDE) and tried to understand the related commits?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;If the language I&amp;rsquo;m working in is dynamically typed, do I have an appreciation for which types are being handled? Am I sight reading or actually setting breakpoints and confirming my intuition is correct?&lt;/li&gt;
-&lt;li&gt;Would I have done anything differently from an architectural perspective (throwing aside style or organization)? Are there risks in whatever I&amp;rsquo;m reviewing that the use-case if one-off and will have to be totally ripped out and rebuilt in the future?&lt;/li&gt;
-&lt;li&gt;If I&amp;rsquo;m making suggestions, are they actually good ones in that they 1) improve performance, 2) improve readability and 3) allow for easy building on top of whatever I&amp;rsquo;m reviewing?&lt;/li&gt;
-&lt;li&gt;If I&amp;rsquo;m making stylistic suggestions, does the linter need to be changed so it picks them up?&lt;/li&gt;
-&lt;li&gt;If I&amp;rsquo;m making organizational suggestions (method extraction, refactoring something into a module, etc.), am I simply shifting pieces around or actually making the project more maintainable in the long-term?&lt;/li&gt;
-&lt;li&gt;If I see something I really like or find interesting, did I file it away for future reference? Am I making sure to go back to this reference over time and trying to implement the patterns in it?&lt;/li&gt;
-&lt;li&gt;Do I have a strong understanding of how to deploy this code? What differences need to be taken into account when thinking about non-local environments?&lt;/li&gt;
+  &lt;li&gt;Can I run the code successfully on my local environment? If I had to do a bunch of manual configuration, could any of this configuration be automated and checked into source control? If not, does the project Wiki need to be updated to include the manual configuration steps?&lt;/li&gt;
+  &lt;li&gt;Does the code solve the issue or implement the feature it set out to resolve? If it’s tied to a GitHub issue, JIRA ticket, etc., does it satisfy whatever criteria was outlined in the issue or ticket?&lt;/li&gt;
+  &lt;li&gt;Can I hit breakpoints in the code additions and follow a stack trace back to the entry point? &lt;/li&gt;
+  &lt;li&gt;If there is exception handling, can I hit the error cases and see that they’re handled as expected?&lt;/li&gt;
+  &lt;li&gt;Can I differentiate between 1) standard library calls, 2) third-party library calls and 3) internal project calls? (importantly, &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/#imports&quot; target=&quot;_blank&quot;&gt; this list corresponds to the order of imports in PEP-8&lt;/a&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;On standard libary calls - if there are methods I’m not familiar with, did I look at the official docs and find an example case? Did I sandbox the method in the shell and try a few simple test cases? If I’ve never worked with the language, am I developing a familiarity with the types / scoping / syntax, etc?&lt;/li&gt;
+      &lt;li&gt;On third party library calls - same as above, but a few additions. Do I generally understand the point of the library? Does the library have a set of best practices? &lt;/li&gt;
+      &lt;li&gt;If the library is a wrapper around a broader technology (e.g. &lt;a href=&quot;https://pypi.python.org/pypi/elasticsearch-dsl&quot; target=&quot;_blank&quot;&gt;elasticsearch-dsl&lt;/a&gt;), do I know what’s really going on beneath the language wrapper? For instance, if I’m using an API wrapper, can I reproduce what the wrapper is doing via &lt;code&gt;curl&lt;/code&gt;? If the library is totally foreign to me and I’m guessing at what it may do, do I need to purchase an O’Reilly book or spend an hour or so perusing the docs / tutorials / etc.? &lt;/li&gt;
+      &lt;li&gt;One more on libraries - is the library the latest version or an older one? Is the version frozen? Should it be if it’s not?&lt;/li&gt;
+      &lt;li&gt;On internal project calls - are these calls self-explanatory or is there a history around what’s going on I need to be aware of? Have I turned on annotations in whatever IDE I’m using (or &lt;code&gt; git blame &lt;/code&gt; if not using an IDE) and tried to understand the related commits?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If the language I’m working in is dynamically typed, do I have an appreciation for which types are being handled? Am I sight reading or actually setting breakpoints and confirming my intuition is correct?&lt;/li&gt;
+  &lt;li&gt;Would I have done anything differently from an architectural perspective (throwing aside style or organization)? Are there risks in whatever I’m reviewing that the use-case if one-off and will have to be totally ripped out and rebuilt in the future?&lt;/li&gt;
+  &lt;li&gt;If I’m making suggestions, are they actually good ones in that they 1) improve performance, 2) improve readability and 3) allow for easy building on top of whatever I’m reviewing?&lt;/li&gt;
+  &lt;li&gt;If I’m making stylistic suggestions, does the linter need to be changed so it picks them up?&lt;/li&gt;
+  &lt;li&gt;If I’m making organizational suggestions (method extraction, refactoring something into a module, etc.), am I simply shifting pieces around or actually making the project more maintainable in the long-term?&lt;/li&gt;
+  &lt;li&gt;If I see something I really like or find interesting, did I file it away for future reference? Am I making sure to go back to this reference over time and trying to implement the patterns in it?&lt;/li&gt;
+  &lt;li&gt;Do I have a strong understanding of how to deploy this code? What differences need to be taken into account when thinking about non-local environments?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I wrote this list mainly so I could review it for my own reference, but I&amp;rsquo;d love for it to be useful to other people. I know I&amp;rsquo;m missing stuff and would love for this post to grow over time - shoot me an email at &lt;a href=&quot;mailto:ben.brostoff@gmail.com&quot;&quot;&gt; ben.brostoff@gmail.com&lt;/a&gt; with suggestions.  &lt;/p&gt;
+&lt;p&gt;I wrote this list mainly so I could review it for my own reference, but I’d love for it to be useful to other people. I know I’m missing stuff and would love for this post to grow over time - shoot me an email at &lt;a href=&quot;mailto:ben.brostoff@gmail.com&quot;&gt; ben.brostoff@gmail.com&lt;/a&gt; with suggestions.	 &lt;/p&gt;
 
 &lt;p&gt;** I think the original influence for the question above was &lt;a href=&quot;http://www.scotthyoung.com/learnonsteroids/grab/TranscriptFeynman.pdf&quot; target=&quot;_blank&quot;&gt;The Feynman Technique.&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -48,23 +48,23 @@
     
       <item>
         <title>Automation Via Aliasing and Bash</title>
-        <description>&lt;p&gt;I&amp;rsquo;ve been trying to make a concerted effort recently to automate more stuff. Working on a side project or open source project you haven&amp;rsquo;t touched in a while I&amp;rsquo;ve found can be annoying to get back into - first navigate to the directory, run a few tasks to set up the DB, install dependencies, pull from master, etc.&lt;/p&gt;
+        <description>&lt;p&gt;I’ve been trying to make a concerted effort recently to automate more stuff. Working on a side project or open source project you haven’t touched in a while I’ve found can be annoying to get back into - first navigate to the directory, run a few tasks to set up the DB, install dependencies, pull from master, etc.&lt;/p&gt;
 
-&lt;p&gt;With that in mind, I&amp;rsquo;ve taken to some aggressive aliasing on a few side projects to get to the fun stuff more quickly. I thought I&amp;rsquo;d jot down a few interesting takeways from the experience.&lt;/p&gt;
+&lt;p&gt;With that in mind, I’ve taken to some aggressive aliasing on a few side projects to get to the fun stuff more quickly. I thought I’d jot down a few interesting takeways from the experience.&lt;/p&gt;
 
 &lt;p&gt;All of the below assume you have a &lt;code&gt;.bash_profile&lt;/code&gt; set up. &lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;On your home setup, it&amp;rsquo;s worth having aliases to navigate to a project immediately. &lt;/li&gt;
-&lt;li&gt;For setup tasks, it&amp;rsquo;s tempting to chain together a bunch of terminal commands with &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;, but bash functions I&amp;rsquo;ve found make for easier edits in the future and are more elegant as well.
+  &lt;li&gt;On your home setup, it’s worth having aliases to navigate to a project immediately. &lt;/li&gt;
+  &lt;li&gt;For setup tasks, it’s tempting to chain together a bunch of terminal commands with &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;, but bash functions I’ve found make for easier edits in the future and are more elegant as well.
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/398a5ca5397d6a950e64.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;li&gt;For anything that involves sshing into another machine, it&amp;rsquo;s nice to alias:
+  &lt;li&gt;For anything that involves sshing into another machine, it’s nice to alias:
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/dfa397492f727862ccc5.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;li&gt;Finally, I like having easy access to my &lt;code&gt; .bash_profile &lt;/code&gt;, so it makes sense for me to alias the following:
+  &lt;li&gt;Finally, I like having easy access to my &lt;code&gt; .bash_profile &lt;/code&gt;, so it makes sense for me to alias the following:
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/e455104c9d487cfdbb11.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I admit a reasonable knock against aliasing is that when you move over to another machine, you&amp;rsquo;re a fish out of water. However, I&amp;rsquo;d like to believe if I take a few minutes every month to review my &lt;code&gt; .bash_profile &lt;/code&gt;, I can partially mitigate this risk.&lt;/p&gt;
+&lt;p&gt;I admit a reasonable knock against aliasing is that when you move over to another machine, you’re a fish out of water. However, I’d like to believe if I take a few minutes every month to review my &lt;code&gt; .bash_profile &lt;/code&gt;, I can partially mitigate this risk.&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Aug 2015 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2015/08/23/Automating-Via-Alias-And-Bash/</link>
@@ -73,7 +73,7 @@
     
       <item>
         <title>Languages and Opinions</title>
-        <description>&lt;p&gt;I find a lot of my preferences often are based on what I&amp;rsquo;ve been exposed to. If given a choice, I&amp;rsquo;d prefer to program something in Python rather than in Haskell because I have many, many times more hours of experience in the former. &lt;/p&gt;
+        <description>&lt;p&gt;I find a lot of my preferences often are based on what I’ve been exposed to. If given a choice, I’d prefer to program something in Python rather than in Haskell because I have many, many times more hours of experience in the former. &lt;/p&gt;
 
 &lt;p&gt;The risk of this inevitable correlation between preferences and exposure is that prefences and norms begin to overlap with eachother. An example - while working in Ruby the other day, something along the lines of the following happened:&lt;/p&gt;
 
@@ -83,7 +83,7 @@
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/5e261bd7317391c69e74.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Differences in languages like this one seem to me to be the beginnings of endlessly long programming language debates that are always normative in nature - &amp;ldquo;How should things be?&amp;rdquo; These debates are where my own preferences are sometimes revealed as my desired norms, and, by extension, my preferred norms are what I have been exposed to. Admittedly, sometimes my preferred norms are a reaction &lt;em&gt;against&lt;/em&gt; what I have been exposed to (perhaps this is more common in general, considering all the complaining about the shortcomings of, say, JavaScript). &lt;/p&gt;
+&lt;p&gt;Differences in languages like this one seem to me to be the beginnings of endlessly long programming language debates that are always normative in nature - “How should things be?” These debates are where my own preferences are sometimes revealed as my desired norms, and, by extension, my preferred norms are what I have been exposed to. Admittedly, sometimes my preferred norms are a reaction &lt;em&gt;against&lt;/em&gt; what I have been exposed to (perhaps this is more common in general, considering all the complaining about the shortcomings of, say, JavaScript). &lt;/p&gt;
 
 &lt;p&gt;In the above example, there are strong debates on both sides for whether languages should allow local variables declared outside the body of a method to have scope that extends inside the body of a method. Language designers have thought far more about this debate than I have. I am merely a language consumer.&lt;/p&gt;
 
@@ -98,42 +98,42 @@
     
       <item>
         <title>Resolutions by Type</title>
-        <description>&lt;p&gt;I posted thoughts on &lt;a href=&quot;http://benbrostoff.github.io/2014/12/28/Resolution/&quot; target=&quot;_blank&quot;&gt; improving as a programmer &lt;/a&gt; in 2015 a few days back, but thought I would post my complete resolutions so I can reference them come 12/31/2015. &lt;a href=&quot;http://blog.fogus.me/&quot; target=&quot;_blank&quot;&gt;Fogus&lt;/a&gt; has an awesome tradition on his blog of posting &amp;ldquo;The best things and stuff of [Year]&amp;rdquo; going back to 2010, so I think it would be cool to emulate that idea with resolutions and reflections on whether those resolutions were met or not. Here we go, by type: &lt;/p&gt;
+        <description>&lt;p&gt;I posted thoughts on &lt;a href=&quot;http://benbrostoff.github.io/2014/12/28/Resolution/&quot; target=&quot;_blank&quot;&gt; improving as a programmer &lt;/a&gt; in 2015 a few days back, but thought I would post my complete resolutions so I can reference them come 12/31/2015. &lt;a href=&quot;http://blog.fogus.me/&quot; target=&quot;_blank&quot;&gt;Fogus&lt;/a&gt; has an awesome tradition on his blog of posting “The best things and stuff of [Year]” going back to 2010, so I think it would be cool to emulate that idea with resolutions and reflections on whether those resolutions were met or not. Here we go, by type: &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Attitude&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Keep this quote in mind every day. From Marcus Aurelius in &lt;a href=&quot;http://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255&quot; target=&quot;_blank&quot;&gt;Meditations&lt;/a&gt;, Book 2.5:&lt;/li&gt;
+  &lt;li&gt;Keep this quote in mind every day. From Marcus Aurelius in &lt;a href=&quot;http://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255&quot; target=&quot;_blank&quot;&gt;Meditations&lt;/a&gt;, Book 2.5:&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
-Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you with precise and genuine seriousness, tenderly, willingly, with justice. And on freeing yourself from all other distractions. Yes, you can - if you do everything as if it were the last thing you were doing in your life, and stop being aimless, stop letting your emotions override what your mind tells you, stop being hypocritical, self-centered, irritable. You see how few things you have to do to live a satisfying and relevant life?
+Concentrate every minute... on doing what&#39;s in front of you with precise and genuine seriousness, tenderly, willingly, with justice. And on freeing yourself from all other distractions. Yes, you can - if you do everything as if it were the last thing you were doing in your life, and stop being aimless, stop letting your emotions override what your mind tells you, stop being hypocritical, self-centered, irritable. You see how few things you have to do to live a satisfying and relevant life?
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;Craft&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Program every day&lt;/li&gt;
-&lt;li&gt;Blog every month with a quality post&lt;/li&gt;
-&lt;li&gt;Read cover to cover &lt;a href=&quot;http://www.amazon.com/Understanding-Computation-Machines-Impossible-Programs/dp/1449329276&quot; target=&quot;_blank&quot;&gt;Understanding Computation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Study Haskell and Lisp in concert on weekends, under the theory that &lt;a href=&quot;http://lemire.me/blog/archives/2014/12/30/how-to-learn-efficiently/&quot; target=&quot;_blank&quot;&gt;interleaved study trumps mass study&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Review &lt;a href=&quot;https://github.com/thomasahle/sunfish&quot; target=&quot;_blank&quot;&gt;Sunfish&lt;/a&gt; in its entirety and blog on it&lt;/li&gt;
+  &lt;li&gt;Program every day&lt;/li&gt;
+  &lt;li&gt;Blog every month with a quality post&lt;/li&gt;
+  &lt;li&gt;Read cover to cover &lt;a href=&quot;http://www.amazon.com/Understanding-Computation-Machines-Impossible-Programs/dp/1449329276&quot; target=&quot;_blank&quot;&gt;Understanding Computation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Study Haskell and Lisp in concert on weekends, under the theory that &lt;a href=&quot;http://lemire.me/blog/archives/2014/12/30/how-to-learn-efficiently/&quot; target=&quot;_blank&quot;&gt;interleaved study trumps mass study&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Review &lt;a href=&quot;https://github.com/thomasahle/sunfish&quot; target=&quot;_blank&quot;&gt;Sunfish&lt;/a&gt; in its entirety and blog on it&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;Fitness (Body and Mind)&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Eradicate sugar intake, sans social occassions &lt;/li&gt;
-&lt;li&gt;20 minutes+ of physical activity, 5+ days a week&lt;/li&gt;
-&lt;li&gt;Meditate 5+ minutes every day&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Read 20+ minutes every day&lt;/li&gt;
+  &lt;li&gt;Eradicate sugar intake, sans social occassions &lt;/li&gt;
+  &lt;li&gt;20 minutes+ of physical activity, 5+ days a week&lt;/li&gt;
+  &lt;li&gt;Meditate 5+ minutes every day  &lt;/li&gt;
+  &lt;li&gt;Read 20+ minutes every day&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;Other&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Memorize a 52 card deck in &amp;lt; 5 minutes&lt;/li&gt;
-&lt;li&gt;Complete the Rubik&amp;rsquo;s cube in &amp;lt; 5 minutes&lt;/li&gt;
+  &lt;li&gt;Memorize a 52 card deck in &amp;lt; 5 minutes&lt;/li&gt;
+  &lt;li&gt;Complete the Rubik’s cube in &amp;lt; 5 minutes&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 01 Jan 2015 00:00:00 -0500</pubDate>
@@ -143,40 +143,39 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
     
       <item>
         <title>Resolution</title>
-        <description>&lt;p&gt;&lt;em&gt;Update (4/5/2015) - Matt Might has a fantastic article on his blog on this same subject. &lt;a href=&quot;http://matt.might.net/articles/programmers-resolutions/&quot; target=&quot;_blank&quot; &gt; Here it is &lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;em&gt;Update (4/5/2015) - Matt Might has a fantastic article on his blog on this same subject. &lt;a href=&quot;http://matt.might.net/articles/programmers-resolutions/&quot; target=&quot;_blank&quot;&gt; Here it is &lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;My top New Year&amp;rsquo;s Resolution for 2015 is the same as it was for 2014: improve as a programmer. How to improve is a question I feel I&amp;rsquo;m continually exploring. I thought it would be useful to reflect on some techniques for improving that worked well for me this year, as well as techniques I would like to implement next year.&lt;/p&gt;
+&lt;p&gt;My top New Year’s Resolution for 2015 is the same as it was for 2014: improve as a programmer. How to improve is a question I feel I’m continually exploring. I thought it would be useful to reflect on some techniques for improving that worked well for me this year, as well as techniques I would like to implement next year.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;1. Programming (almost) every day&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;John Resig has an &lt;a href=&quot;http://ejohn.org/blog/write-code-every-day/&quot; target=&quot;_blank&quot;&gt; excellent post on this topic &lt;/a&gt; which I found myself referring to a number of times over the last year. I find the main benefit of this practice for me has been to (i) familiarize myself with languages and frameworks via repetition and (ii) inspire good habits via repetition (alternatively, I&amp;rsquo;m sure I&amp;rsquo;ve also inspired some bad habits). I don&amp;rsquo;t think (i) deserves much explanation - to me, this familiarization is tantamount to learning the controls of a video game after a few days of playing. &lt;/p&gt;
+&lt;p&gt;John Resig has an &lt;a href=&quot;http://ejohn.org/blog/write-code-every-day/&quot; target=&quot;_blank&quot;&gt; excellent post on this topic &lt;/a&gt; which I found myself referring to a number of times over the last year. I find the main benefit of this practice for me has been to (i) familiarize myself with languages and frameworks via repetition and (ii) inspire good habits via repetition (alternatively, I’m sure I’ve also inspired some bad habits). I don’t think (i) deserves much explanation - to me, this familiarization is tantamount to learning the controls of a video game after a few days of playing. &lt;/p&gt;
 
 &lt;p&gt;Once this familiarity is engrained, you spend less time fumbling around levels and more time learning strategy and the nuances of gameplay. I like (ii) because to a degree it happens naturally, just like (i). The more code I read from programmers I admire, the more I intuitively try to emulate their techniques and habits.&lt;/p&gt;
 
 &lt;p&gt;The habit I feel has developed for me the most from (ii) is to try to refactor my own code by making it less repetitive. One of my most common personal refactors no doubt is to abstract similar blocks of code into one function I then call twice or more. &lt;/p&gt;
 
-&lt;p&gt;For instance, a &lt;a href=&quot;https://github.com/BenBrostoff/EveryColor-Visual&quot; target=_blank&quot;&gt; side project &lt;/a&gt; I&amp;rsquo;ve been working on that involved animating dots called for me to assign a random horizontal and vertical direction for each dot upon page load. My first shot at this involved me writing the same instructions for each direction: &lt;/p&gt;
+&lt;p&gt;For instance, a &amp;lt;a href=”https://github.com/BenBrostoff/EveryColor-Visual” target=_blank”&amp;gt; side project &amp;lt;/a&amp;gt; I’ve been working on that involved animating dots called for me to assign a random horizontal and vertical direction for each dot upon page load. My first shot at this involved me writing the same instructions for each direction: &lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/6475c1547194c46870e9.js&quot;&gt;&lt;/script&gt;
-    
 
 &lt;p&gt;I saw this code and remember feeling annoyed enough that I had to refactor immediately:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/24cb8ea606dd3f2df11e.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;I don&amp;rsquo;t know that I would have been so bothered as to be compelled to make this change back in January. I believe reading and writing code on a regular basis has resulted in increased standards for code quality on my personal projecs; I am hopeful that 2015 will bring more of this effect.&lt;/p&gt;
+&lt;p&gt;I don’t know that I would have been so bothered as to be compelled to make this change back in January. I believe reading and writing code on a regular basis has resulted in increased standards for code quality on my personal projecs; I am hopeful that 2015 will bring more of this effect.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2. Working on mini-projects to learn new technologies&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;I first heard this technique really explained well by Dave Hoover in his book &lt;a href=&quot;http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382&quot; target=&quot;_blank&quot;&gt;Apprenticeship Patterns&lt;/a&gt; - he calls it building &amp;ldquo;breakable toys&amp;rdquo;. It&amp;rsquo;s also suggested by a number of the elite programmers Peter Seibel interviews in his book &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483&quot; target=&quot;_blank&quot;&gt;Coders at Work&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;I first heard this technique really explained well by Dave Hoover in his book &lt;a href=&quot;http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382&quot; target=&quot;_blank&quot;&gt;Apprenticeship Patterns&lt;/a&gt; - he calls it building “breakable toys”. It’s also suggested by a number of the elite programmers Peter Seibel interviews in his book &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483&quot; target=&quot;_blank&quot;&gt;Coders at Work&lt;/a&gt;. &lt;/p&gt;
 
-&lt;p&gt;The chief advantage of this technique is that it allows for learning in a zero-pressure environment (that might also be its chief disadvantage). Without the requirement of delivering deadline-bound results, I find I&amp;rsquo;m more apt to explore the why and how of technologies as opposed to focusing on implementation of them. I&amp;rsquo;ve used this technique effectively to learn a little bit about building &lt;a href=&quot;https://github.com/BenBrostoff/BenTrackerGem&quot; target=&quot;_blank&quot;&gt; Ruby gems &lt;/a&gt;, &lt;a href=&quot;https://github.com/BenBrostoff/Angular-JS-Lightning-Talk&quot; target=&quot;_blank&quot;&gt; using Angular.js &lt;/a&gt; and &lt;a href=&quot;http://benbrostoff.github.io/2014/08/26/querying-in-mongo-with-node/&quot; target=&quot;blank&quot;&gt; working with MongoDB &lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The chief advantage of this technique is that it allows for learning in a zero-pressure environment (that might also be its chief disadvantage). Without the requirement of delivering deadline-bound results, I find I’m more apt to explore the why and how of technologies as opposed to focusing on implementation of them. I’ve used this technique effectively to learn a little bit about building &lt;a href=&quot;https://github.com/BenBrostoff/BenTrackerGem&quot; target=&quot;_blank&quot;&gt; Ruby gems &lt;/a&gt;, &lt;a href=&quot;https://github.com/BenBrostoff/Angular-JS-Lightning-Talk&quot; target=&quot;_blank&quot;&gt; using Angular.js &lt;/a&gt; and &lt;a href=&quot;http://benbrostoff.github.io/2014/08/26/querying-in-mongo-with-node/&quot; target=&quot;blank&quot;&gt; working with MongoDB &lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;My favorite ongoing mini-project this year has been my work with the Raspberry Pi I received for my birthday. &lt;a href=&quot;http://benbrostoff.github.io/2014/12/13/The-Internet-is-Awesome/&quot; target=&quot;_blank&quot;&gt; I wrote about it here&lt;/a&gt;, but in summary, the Pi has continually delivered education for me on the relationship between hardware and software.  &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3. Learning a new language to explore new concepts&lt;/strong&gt;&lt;/p&gt;
 
-&lt;blockquote&gt; LISP has been jokingly described as &amp;ldquo;the most intelligent way to misuse a computer&amp;rdquo;. I think that description a great compliment because it transmits the full flavor of liberation: it has assisted a number of our most gifted fellow humans in thinking previously impossible thoughts. 
+&lt;blockquote&gt; LISP has been jokingly described as &quot;the most intelligent way to misuse a computer&quot;. I think that description a great compliment because it transmits the full flavor of liberation: it has assisted a number of our most gifted fellow humans in thinking previously impossible thoughts. 
 &lt;p&gt;&lt;/p&gt;
 &lt;center&gt; - Edsger Dijkstra&lt;/center&gt;
 &lt;/blockquote&gt;
@@ -185,23 +184,23 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
 
 &lt;p&gt;&lt;strong&gt;4. Reading about your predecessors to motivate you&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;I recently finished Walter Isaacson&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/dp/147670869X&quot; target=&quot;_blank&quot;&gt;The Innovators&lt;/a&gt; and am in the process of reading &lt;a href=&quot;http://www.amazon.com/Hackers-Computer-Revolution-Anniversary-Edition/dp/1449388396&quot; target=&quot;_blank&quot;&gt; Hackers&lt;/a&gt; by Steven Levy. The engineers who laid the foundation for modern computing are giants, and it has humbled me to read about them and then use the software they wrote on a regular basis. The impulse to complain about certain tools (technology X can&amp;rsquo;t do Y) is more than negated when I consider the amount of ingenuity and effort it took to construct the tools in the first place (and the tools that built the tools, and so on). Complaints should always be replaced with attempts at solutions; to me, this seems to be a central part of the engineer ethic. &lt;/p&gt;
+&lt;p&gt;I recently finished Walter Isaacson’s &lt;a href=&quot;http://www.amazon.com/dp/147670869X&quot; target=&quot;_blank&quot;&gt;The Innovators&lt;/a&gt; and am in the process of reading &lt;a href=&quot;http://www.amazon.com/Hackers-Computer-Revolution-Anniversary-Edition/dp/1449388396&quot; target=&quot;_blank&quot;&gt; Hackers&lt;/a&gt; by Steven Levy. The engineers who laid the foundation for modern computing are giants, and it has humbled me to read about them and then use the software they wrote on a regular basis. The impulse to complain about certain tools (technology X can’t do Y) is more than negated when I consider the amount of ingenuity and effort it took to construct the tools in the first place (and the tools that built the tools, and so on). Complaints should always be replaced with attempts at solutions; to me, this seems to be a central part of the engineer ethic. &lt;/p&gt;
 
 &lt;p&gt;More than anything else, learning more about my predecessors motivates me to want to improve the existing body of knowledge we have about computer science and build better tools for future programmers to work with. &lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;5. Answering the &amp;ldquo;What am I trying to accomplish right now?&amp;rdquo; question&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. Answering the “What am I trying to accomplish right now?” question&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Too often in 2014 I found myself traveling down a rabbit hole when trying to implement a new feature on a project, debug a problem, or learn how to do something new. I&amp;rsquo;m sure this experience is common among developers - you enter a question or error message into Google, begin reading a Stack Overflow post, run over to a GitHub issue page, copy and paste some code, get a new error message, and then rinse and repeat. After a couple iterations, you&amp;rsquo;re so far removed from the original task that you forget what exactly it is you&amp;rsquo;re trying to do. &lt;/p&gt;
+&lt;p&gt;Too often in 2014 I found myself traveling down a rabbit hole when trying to implement a new feature on a project, debug a problem, or learn how to do something new. I’m sure this experience is common among developers - you enter a question or error message into Google, begin reading a Stack Overflow post, run over to a GitHub issue page, copy and paste some code, get a new error message, and then rinse and repeat. After a couple iterations, you’re so far removed from the original task that you forget what exactly it is you’re trying to do. &lt;/p&gt;
 
-&lt;p&gt;In my opinion, this is the biggest problem with &amp;ldquo;Google-driven&amp;rdquo; development. Without some consciousness of your intent and original goals, you rely on the advice of others while implicity assuming they know the exact nature of your problem. In 2014, I was too quick to keep googling without doing important intermittent analyses on what I looking for. In 2015, I&amp;rsquo;d like to know what I&amp;rsquo;m trying to accomplish before traversing the interwebs for solutions.&lt;/p&gt;
+&lt;p&gt;In my opinion, this is the biggest problem with “Google-driven” development. Without some consciousness of your intent and original goals, you rely on the advice of others while implicity assuming they know the exact nature of your problem. In 2014, I was too quick to keep googling without doing important intermittent analyses on what I looking for. In 2015, I’d like to know what I’m trying to accomplish before traversing the interwebs for solutions.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;6. Combating Imposter Syndrome with improvement&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Much has been written on Imposter Syndrome, &lt;a href=&quot;http://blog.42floors.com/imposter-syndrome/&quot; target=&quot;_blank&quot;&gt; including this post &lt;/a&gt; I particulary enjoyed from Jason Freedman. As someone who began programming in college and attended a non-college / university program to gain a better background in web development, I find it tempting to compare myself against life-long programmers and feel like an imposter. &lt;/p&gt;
 
-&lt;p&gt;While I do think as a collective society we have to acknowledge that programmers who started at a young age have certain inherent advantages over people like myself, starting &amp;ldquo;late&amp;rdquo; by no means should disqualify anyone from being a value-add in whatever profession they display interest in. All I can do at this point is attempt to improve as best I can and use my time wisely to become a better programmer. &lt;/p&gt;
+&lt;p&gt;While I do think as a collective society we have to acknowledge that programmers who started at a young age have certain inherent advantages over people like myself, starting “late” by no means should disqualify anyone from being a value-add in whatever profession they display interest in. All I can do at this point is attempt to improve as best I can and use my time wisely to become a better programmer. &lt;/p&gt;
 
-&lt;p&gt;And indeed, that&amp;rsquo;s my top New Year&amp;rsquo;s resolution for 2015. &lt;/p&gt;
+&lt;p&gt;And indeed, that’s my top New Year’s resolution for 2015. &lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://benbrostoff.github.io//2014/12/28/Resolution/</link>
@@ -213,30 +212,30 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
         <description>&lt;p&gt;I spent the great majority of this weekend messing around with a Raspberry Pi I received for my birthday from my dad. Besides being a leading candidate for best present I have ever received, the Pi led me to three great epiphanies:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;The internet has exponentially expanded our ability to work alone and without friction costs on projects we enjoy, which in turn has led us to new projects we otherwise never would have taken on&lt;/li&gt;
-&lt;li&gt;Contributing to the internet is as enjoyable as receiving from it, which encourages people to both consume and create knowledge&lt;/li&gt;
-&lt;li&gt;All of this bodes well for a knowledge economy&lt;/li&gt;
+  &lt;li&gt;The internet has exponentially expanded our ability to work alone and without friction costs on projects we enjoy, which in turn has led us to new projects we otherwise never would have taken on&lt;/li&gt;
+  &lt;li&gt;Contributing to the internet is as enjoyable as receiving from it, which encourages people to both consume and create knowledge&lt;/li&gt;
+  &lt;li&gt;All of this bodes well for a knowledge economy&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;I think (1) was the most obvious realization for me, so I&amp;rsquo;ll start there. I am absolutely sure the Rasberry Pi is a project I would have abandoned as a child. I know I would have abandoned it not out of a lack of tenacity or curiousity - I know I would not have been able to find out what to do if I were stuck. To be clear, the Rasberry Pi is meant for children, and the projects I worked on this weekend are embarrassingly kid-oriented (lighting up LED bulbs). Yet, do-it-yourself assembly kits for kids require instruction (think &lt;a href=&quot;http://www.amazon.com/Schylling-Sea-Monkeys-Ocean-Zoo/dp/B001CBZXEE&quot; target=&quot;_blank&quot;&gt; Sea Monkeys&lt;/a&gt;) that might not necessarily be obvious to adults.&lt;/p&gt;
+&lt;p&gt;I think (1) was the most obvious realization for me, so I’ll start there. I am absolutely sure the Rasberry Pi is a project I would have abandoned as a child. I know I would have abandoned it not out of a lack of tenacity or curiousity - I know I would not have been able to find out what to do if I were stuck. To be clear, the Rasberry Pi is meant for children, and the projects I worked on this weekend are embarrassingly kid-oriented (lighting up LED bulbs). Yet, do-it-yourself assembly kits for kids require instruction (think &lt;a href=&quot;http://www.amazon.com/Schylling-Sea-Monkeys-Ocean-Zoo/dp/B001CBZXEE&quot; target=&quot;_blank&quot;&gt; Sea Monkeys&lt;/a&gt;) that might not necessarily be obvious to adults.&lt;/p&gt;
 
 &lt;p&gt;Most every step of the way this weekend on the Raspberry Pi I had no idea what to do and was just referring to some online tutorial or YouTube video (among other things, I learned the UK seems to be the largest producer of Pi-oriented content, perhaps because the Pi was invented there). Parsing through good and bad stuff was fairly easy, and even YouTube comments served as a means of curating material for me:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-b5hljcg0F9g/VIzfI0f-vCI/AAAAAAAAAZU/riSmAtr7-n4/w621-h515-no/Screen%2BShot%2B2014-12-13%2Bat%2B7.50.52%2BPM.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-b5hljcg0F9g/VIzfI0f-vCI/AAAAAAAAAZU/riSmAtr7-n4/w621-h515-no/Screen%2BShot%2B2014-12-13%2Bat%2B7.50.52%2BPM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I know of no other medium so good at simultaneously offering humor and useful information. &lt;/p&gt;
 
 &lt;p&gt;That brings me to (2). I thank the internet this weekend for giving me the opportunity to SSH into my Pi from my laptop, light up LEDs and not look like an idiot when working with Vi. All these things no doubt better my quality of life, which is why I feel strongly about giving back to the internet through developing software and general knowledge sharing (this blog, I hope). &lt;/p&gt;
 
-&lt;p&gt;And finally, (3). The fact that the Raspberry Pi is aimed at children but that an entire knowledge economy among adults has formed (and continues to grow) makes me optimistic about the future of Planet Earth. In addition to enriching our experience and pushing us to produce good content as knowledge-sharers, the internet leads to wholly unpredictable innovation. When the Pi&amp;rsquo;s inventors built it to raise computer science interest, I&amp;rsquo;m not sure they could have envisoned adults &lt;a href=&quot;http://jack.minardi.org/raspberry_pi/make-an-internet-controlled-lamp-with-a-raspberry-pi-and-flask/&quot; target=&quot;_blank&quot;&gt; building web applications to control lights &lt;/a&gt; with a back-end framework developed in 2010. &lt;/p&gt;
+&lt;p&gt;And finally, (3). The fact that the Raspberry Pi is aimed at children but that an entire knowledge economy among adults has formed (and continues to grow) makes me optimistic about the future of Planet Earth. In addition to enriching our experience and pushing us to produce good content as knowledge-sharers, the internet leads to wholly unpredictable innovation. When the Pi’s inventors built it to raise computer science interest, I’m not sure they could have envisoned adults &lt;a href=&quot;http://jack.minardi.org/raspberry_pi/make-an-internet-controlled-lamp-with-a-raspberry-pi-and-flask/&quot; target=&quot;_blank&quot;&gt; building web applications to control lights &lt;/a&gt; with a back-end framework developed in 2010. &lt;/p&gt;
 
 &lt;p&gt;The internet has a way of inspiring creative initiatives. As Jack Minardi notes in his blog post linked above:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&amp;ldquo;NOTE: I am not a Flask or web design expert, so I might not be doing things the correct way. But it wouldn&amp;rsquo;t be hacking if we knew what we was doing all the time, would it?&amp;rdquo;
+&quot;NOTE: I am not a Flask or web design expert, so I might not be doing things the correct way. But it wouldn&#39;t be hacking if we knew what we was doing all the time, would it?&quot;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I believe people feel initiative to contribute on the internet and are not burdened by fear of being wrong (a burden that so often rears its ugly in corporate culture and academia). The environment people have created online is conducive to exponential knowledge growth, which is overwhelmingly positive in any knowledge economy. The internet is awesome. I&amp;rsquo;m excited and proud to be a part of it.&lt;/p&gt;
+&lt;p&gt;I believe people feel initiative to contribute on the internet and are not burdened by fear of being wrong (a burden that so often rears its ugly in corporate culture and academia). The environment people have created online is conducive to exponential knowledge growth, which is overwhelmingly positive in any knowledge economy. The internet is awesome. I’m excited and proud to be a part of it.&lt;/p&gt;
 </description>
         <pubDate>Sat, 13 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://benbrostoff.github.io//2014/12/13/The-Internet-is-Awesome/</link>
@@ -245,43 +244,45 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
     
       <item>
         <title>Abstraction</title>
-        <description>&lt;blockquote&gt; If you interview somebody coming out of computer science right now, they don&amp;rsquo;t understand the underyling computing at all. It&amp;rsquo;s really, really scary how abstract they are from what a computer is or even the theory of computing. They just don&amp;rsquo;t understand it. &lt;/blockquote&gt;.
+        <description>&lt;blockquote&gt; If you interview somebody coming out of computer science right now, they don&#39;t understand the underyling computing at all. It&#39;s really, really scary how abstract they are from what a computer is or even the theory of computing. They just don&#39;t understand it. &lt;/blockquote&gt;
 
-&lt;blockquote&gt;Computer science is coming into its middle age. It&amp;rsquo;s turning into a commodity. People don&amp;rsquo;t know about Carnot cycles for refrigerators, yet they buy refrigerators. It&amp;rsquo;s happening in computing too. Who knows about compilers? They buy computers to play games and balance their checkbooks. &lt;/blockquote&gt; 
+&lt;blockquote&gt;Computer science is coming into its middle age. It&#39;s turning into a commodity. People don&#39;t know about Carnot cycles for refrigerators, yet they buy refrigerators. It&#39;s happening in computing too. Who knows about compilers? They buy computers to play games and balance their checkbooks. &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;center&gt; - Ken Thompson, from &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Coders at Work&lt;/i&gt;&lt;/a&gt; and &lt;a href=&quot;http://genius.cat-v.org/ken-thompson/interviews/unix-and-beyond&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Computer&lt;/i&gt;&lt;/a&gt; magazine, respectively &lt;/center&gt;&lt;/p&gt;
+&lt;center&gt; - Ken Thompson, from &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Coders at Work&lt;/i&gt;&lt;/a&gt; and &lt;a href=&quot;http://genius.cat-v.org/ken-thompson/interviews/unix-and-beyond&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Computer&lt;/i&gt;&lt;/a&gt; magazine, respectively &lt;/center&gt;
 
-&lt;p&gt;The knock against junior programmers for several decades now seems to be that they don&amp;rsquo;t sufficiently understand the layers and layers upon which the tools they use are built. From a senior programmer&amp;rsquo;s perspective, junior programmers are, among other reasons, a liability because they lack strong understanding of &lt;i&gt;how&lt;/i&gt; their code works. This criticism is fair because poor understanding generally translates into an inability to debug code or optimize performance or do any number of things. &lt;/p&gt;
+&lt;p&gt;The knock against junior programmers for several decades now seems to be that they don’t sufficiently understand the layers and layers upon which the tools they use are built. From a senior programmer’s perspective, junior programmers are, among other reasons, a liability because they lack strong understanding of &lt;i&gt;how&lt;/i&gt; their code works. This criticism is fair because poor understanding generally translates into an inability to debug code or optimize performance or do any number of things. &lt;/p&gt;
 
-&lt;p&gt;This issue seems especially relevant now because of the preponderence of coding bootcamps in New York churning out &amp;ldquo;Rails developers&amp;rdquo;, of which I suppose I am one. I put Rails developers in quotes because I believe it&amp;rsquo;s ridiculous to characterize anyone as a particular type of programmer when they have less than a year of experience and have never worked in a professional setting (I&amp;rsquo;d honestly just prefer to be characterized as a junior developer). &lt;/p&gt;
+&lt;p&gt;This issue seems especially relevant now because of the preponderence of coding bootcamps in New York churning out “Rails developers”, of which I suppose I am one. I put Rails developers in quotes because I believe it’s ridiculous to characterize anyone as a particular type of programmer when they have less than a year of experience and have never worked in a professional setting (I’d honestly just prefer to be characterized as a junior developer). &lt;/p&gt;
 
-&lt;p&gt;&amp;ldquo;Rails developers&amp;rdquo; in particular are viewed by some as liabilities because the very framework that governs their productivity champions abstraction and (it seems) seeks to become increasingly more abstracted. I previously wrote a little bit about &lt;a href=&quot;http://benbrostoff.github.io/2014/05/28/magiccurtain/&quot; target=&quot;_blank&quot;&gt; my own discomfort&lt;/a&gt; with these abstractions. &lt;/p&gt;
+&lt;p&gt;“Rails developers” in particular are viewed by some as liabilities because the very framework that governs their productivity champions abstraction and (it seems) seeks to become increasingly more abstracted. I previously wrote a little bit about &lt;a href=&quot;http://benbrostoff.github.io/2014/05/28/magiccurtain/&quot; target=&quot;_blank&quot;&gt; my own discomfort&lt;/a&gt; with these abstractions. &lt;/p&gt;
 
 &lt;p&gt;Ironically, the success of Rails in enterprise settings also to me seems founded upon abstraction, as abstraction (at its most basic, all the &lt;code&gt;rails g&lt;/code&gt; commands) boosts productivity, where productivity is a nebulous concept defined by product managers. I would venture to guess many bootcamps believe Rails is the most effective way for junior programmers to become value-adds in their future workplaces.&lt;/p&gt;
 
-&lt;p&gt;I don&amp;rsquo;t believe any discussion about productivity can be had without also discussing fragility. If productivity is measured as simply the number of lines of code someone writes, it&amp;rsquo;s easy to imagine a scenario wherein someone is massively productive, but the codebase is also incredibly fragile (the same situation occurs where productivity is a measure of features added / time). &lt;/p&gt;
+&lt;p&gt;I don’t believe any discussion about productivity can be had without also discussing fragility. If productivity is measured as simply the number of lines of code someone writes, it’s easy to imagine a scenario wherein someone is massively productive, but the codebase is also incredibly fragile (the same situation occurs where productivity is a measure of features added / time). &lt;/p&gt;
 
 &lt;p&gt;A familiar story in tech start-ups is the web application thrown together in two weeks that initially took off but then could not scale because of the technical debt accrued during the two-week sprint. Perhaps as familiar are all the stories of Rails applications that could not scale. &lt;/p&gt;
 
-&lt;p&gt;Alternatively, there are scores of stories about software engineers trying to do something concisely and infinitely scaleable in Language X and taking months to launch a simple product as a result. There is an unknown relationship between productivity and fragility, although it&amp;rsquo;s certainly not linear. Importantly, I think the idea of abstraction is at the heart of this relationship. More abstracted tools lead to greater productivity but also greater fragility.&lt;/p&gt;
+&lt;p&gt;Alternatively, there are scores of stories about software engineers trying to do something concisely and infinitely scaleable in Language X and taking months to launch a simple product as a result. There is an unknown relationship between productivity and fragility, although it’s certainly not linear. Importantly, I think the idea of abstraction is at the heart of this relationship. More abstracted tools lead to greater productivity but also greater fragility.&lt;/p&gt;
 
-&lt;p&gt;I do not believe the benefits and dangers of abstraction are any less great in other industries than they are in software. I&amp;rsquo;m currently reading Robert Gates&amp;#39; memoirs, &lt;a href=&quot;http://www.amazon.com/Duty-Memoirs-Secretary-at-War/dp/0307959473&quot; target=&quot;_blank&quot;&gt;Duty&lt;/a&gt;, and my main takeaway thus far is how much the Pentagon and Commander in Chief rely on abstraction to speed up processes. Based on my reading of Gates, extremely complex issues (how many dollars to budget for new military technology Y or Z; how many troops to allocate and reallocate based on US strategic interests; etc.) are increasingly simplified as they&amp;rsquo;re pushed up the chain. &lt;/p&gt;
+&lt;p&gt;I do not believe the benefits and dangers of abstraction are any less great in other industries than they are in software. I’m currently reading Robert Gates’ memoirs, &lt;a href=&quot;http://www.amazon.com/Duty-Memoirs-Secretary-at-War/dp/0307959473&quot; target=&quot;_blank&quot;&gt;Duty&lt;/a&gt;, and my main takeaway thus far is how much the Pentagon and Commander in Chief rely on abstraction to speed up processes. Based on my reading of Gates, extremely complex issues (how many dollars to budget for new military technology Y or Z; how many troops to allocate and reallocate based on US strategic interests; etc.) are increasingly simplified as they’re pushed up the chain. &lt;/p&gt;
 
 &lt;p&gt;By the time the Commander in Chief rules on a particular issue, it seems to have literally been simplified to an abstract from an original thousand plus page memo. The fragility-productivity tradeoff I see as one of the major themes of the book, as the decisions Gates regrets can often be attributed to a lack of information, or rather, he was too abstracted out to understand the consequences of these decisions.&lt;/p&gt;
 
-&lt;p&gt;Gates seems actively aware of this tradeoff and frequently dives deeper into issues where he believes abstraction could do him a disservice. He professes to being extremely confused toward the end of Bush 43&amp;rsquo;s second term as to whether progress was being made in Afghanistan; his commanders on the field claim yes, while the analysts in Washington claim no. Whereas some internal abstraction laws might have sped up Afghanistan-related decisions (trust the Washington guys here; trust the military here), Gates is content to devote resources to resolving the disagreements and studying each side at length to reconcile the opinions he&amp;rsquo;s receiving.&lt;/p&gt;
+&lt;p&gt;Gates seems actively aware of this tradeoff and frequently dives deeper into issues where he believes abstraction could do him a disservice. He professes to being extremely confused toward the end of Bush 43’s second term as to whether progress was being made in Afghanistan; his commanders on the field claim yes, while the analysts in Washington claim no. Whereas some internal abstraction laws might have sped up Afghanistan-related decisions (trust the Washington guys here; trust the military here), Gates is content to devote resources to resolving the disagreements and studying each side at length to reconcile the opinions he’s receiving.&lt;/p&gt;
 
-&lt;p&gt;At a much less consequential level, software engineers have to make decisions like this every day. In a Rails setting, for instance, it seems extremely common to have a situation where a certain gem does the gist of what you&amp;rsquo;re looking for, but doesn&amp;rsquo;t quite accomplish the task. I have no doubt spent countless hours reading gem documentation where it would have been more productive to just write code that replicates some of the gem&amp;rsquo;s basic functionality and adds the specifications I want. &lt;/p&gt;
+&lt;p&gt;At a much less consequential level, software engineers have to make decisions like this every day. In a Rails setting, for instance, it seems extremely common to have a situation where a certain gem does the gist of what you’re looking for, but doesn’t quite accomplish the task. I have no doubt spent countless hours reading gem documentation where it would have been more productive to just write code that replicates some of the gem’s basic functionality and adds the specifications I want. &lt;/p&gt;
 
-&lt;p&gt;On the other end of the spectrum, I&amp;rsquo;ve spent countless hours writing code when there exists a gem that houses what I was going for and does it in a cleaner way. That said, I prefer this experience to the former, as recreating the wheel at least teaches you how to build a wheel.&lt;/p&gt;
+&lt;p&gt;On the other end of the spectrum, I’ve spent countless hours writing code when there exists a gem that houses what I was going for and does it in a cleaner way. That said, I prefer this experience to the former, as recreating the wheel at least teaches you how to build a wheel.&lt;/p&gt;
 
 &lt;p&gt;The decision to deep dive or to trust abstraction in some respects boils down to (i) our view of the risk associated with relying on other people or tools built by other people and, perhaps more importantly, (ii) the risk of not learning the ground that our abstractions stand on. I believe (i) to be a reality of life in general; we are inherently forced to rely on other people and tools to be productive members of society. The risk of (i) can in part be avoided by good due diligence.&lt;/p&gt;
 
 &lt;p&gt;I consider (ii), however, critically important and that bending on (ii) is tantamount to bending on long-term quality and risk-management. As a junior programmer, I know well that (ii) will govern whether senior engineers trust me and are comfortable with my work. I believe being able to trace the ladder of abstraction, whether in software or in life, can enhance all decisions by building in logic and reason where it might not have existed. Furthermore, I think a strong knowledge of where certain tools and assumptions come from can inform the abstraction v. productivity tradeoff, leading to time-saved in some areas and time well-spent in other areas.&lt;/p&gt;
 
-&lt;p&gt;I speak as someone extremely early in my quest to build this knowledge, and hope that my own abstactions have not affected my intended meaning. In the words of Guy Steele in Peter Seibel&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483/&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Coders at Work&lt;/i&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;I speak as someone extremely early in my quest to build this knowledge, and hope that my own abstactions have not affected my intended meaning. In the words of Guy Steele in Peter Seibel’s &lt;a href=&quot;http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483/&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Coders at Work&lt;/i&gt;&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;blockquote&gt; Something I worry about a lot when I write, that I&amp;rsquo;m less worried about with a computer, is about the ways in which English is ambiguous. I&amp;rsquo;m constantly worried about the ways in which the reader might misinterpret what I&amp;rsquo;ve written. &lt;/blockquote&gt;. &lt;/p&gt;
+&lt;blockquote&gt; Something I worry about a lot when I write, that I&#39;m less worried about with a computer, is about the ways in which English is ambiguous. I&#39;m constantly worried about the ways in which the reader might misinterpret what I&#39;ve written. &lt;/blockquote&gt;
+&lt;p&gt;. &lt;/p&gt;
+
 </description>
         <pubDate>Tue, 23 Sep 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/09/23/Abstraction/</link>
@@ -290,26 +291,26 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
     
       <item>
         <title>Callbacks & Closures in JS with Brad Dayley</title>
-        <description>&lt;p&gt;I recently purchased Brad Dayley&amp;rsquo;s book on the MEAN stack entitled &lt;a href=&quot;http://www.amazon.com/Node-js-MongoDB-AngularJS-Development-Developers/dp/0321995783&quot; target=&quot;_blank&quot;&gt; Node.js, MongoDB and AngularJS Web Development &lt;/a&gt; (there&amp;rsquo;s also a section on Express, for those wondering about the E).The book is fantastic and Dayley provides a &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development&quot; target=&quot;_blank&quot;&gt; GitHub repo &lt;/a&gt; with the code for all the exercises covered in the book.&lt;/p&gt;
+        <description>&lt;p&gt;I recently purchased Brad Dayley’s book on the MEAN stack entitled &lt;a href=&quot;http://www.amazon.com/Node-js-MongoDB-AngularJS-Development-Developers/dp/0321995783&quot; target=&quot;_blank&quot;&gt; Node.js, MongoDB and AngularJS Web Development &lt;/a&gt; (there’s also a section on Express, for those wondering about the E).The book is fantastic and Dayley provides a &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development&quot; target=&quot;_blank&quot;&gt; GitHub repo &lt;/a&gt; with the code for all the exercises covered in the book.&lt;/p&gt;
 
-&lt;p&gt;I have always struggled with the idea of callbacks and closures in JavaScript, and fortunately, Dayley is up to the task of walking through them. Callbacks and closures are especially important in Node.js, which, unlike most web-servers (when Node is used as a web-server), is single-threaded and event driven. To use an extended analogy provided in the book, if Node were the host of a party, it would speak to all guests individually and remember to come back to certain conversations after it had attended to other conversations, whereas most web-servers would just chat with everyone at one time. Node&amp;rsquo;s ability to push events into the background and return to them can act as a powerful advantage.   &lt;/p&gt;
+&lt;p&gt;I have always struggled with the idea of callbacks and closures in JavaScript, and fortunately, Dayley is up to the task of walking through them. Callbacks and closures are especially important in Node.js, which, unlike most web-servers (when Node is used as a web-server), is single-threaded and event driven. To use an extended analogy provided in the book, if Node were the host of a party, it would speak to all guests individually and remember to come back to certain conversations after it had attended to other conversations, whereas most web-servers would just chat with everyone at one time. Node’s ability to push events into the background and return to them can act as a powerful advantage.   &lt;/p&gt;
 
-&lt;p&gt;The exercise Dayley uses to demonstrate is one that relies on the &lt;a href=&quot;http://nodejs.org/api/process.html#process_process_nexttick_callback&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;process.nextTick()&lt;/code&gt; &lt;/a&gt; function native to Node. The function takes a callback and tells Node to execute the function on the next event loop. To return to the party analogy, &lt;code&gt;process.nextTick()&lt;/code&gt; schedules conversations with guests only after &amp;ldquo;earlier&amp;rdquo;&amp;ldquo; scheduled conversations have been attended to. I have tried to visually depict these loops in the console in the code below (which is almost wholly copied from Dayley&amp;rsquo;s &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development/blob/master/ch04/callback_closure.js&quot; target=&quot;_blank&quot;&gt; exercise &lt;/a&gt;, with some minor alterations):&lt;/p&gt;
+&lt;p&gt;The exercise Dayley uses to demonstrate is one that relies on the &lt;a href=&quot;http://nodejs.org/api/process.html#process_process_nexttick_callback&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;process.nextTick()&lt;/code&gt; &lt;/a&gt; function native to Node. The function takes a callback and tells Node to execute the function on the next event loop. To return to the party analogy, &lt;code&gt;process.nextTick()&lt;/code&gt; schedules conversations with guests only after “earlier”” scheduled conversations have been attended to. I have tried to visually depict these loops in the console in the code below (which is almost wholly copied from Dayley’s &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development/blob/master/ch04/callback_closure.js&quot; target=&quot;_blank&quot;&gt; exercise &lt;/a&gt;, with some minor alterations):&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/e4e619df6d4ecbb2f436.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;The code above iterates twice through an array of three cars and logs the cars to the console. The key difference here is &lt;i&gt; when &lt;/i&gt; the execution of the function &lt;code&gt;logCar()&lt;/code&gt; nested in the loop in 11-17 occurs, versus the function &lt;code&gt;wrapperFn()&lt;/code&gt; nested in the loop in 19-28. &lt;code&gt;wrapperFn()&lt;/code&gt; calls &lt;code&gt;logCar()&lt;/code&gt; and &amp;quot;wraps&amp;rdquo; around it - hence the name. &lt;/p&gt;
+&lt;p&gt;The code above iterates twice through an array of three cars and logs the cars to the console. The key difference here is &lt;i&gt; when &lt;/i&gt; the execution of the function &lt;code&gt;logCar()&lt;/code&gt; nested in the loop in 11-17 occurs, versus the function &lt;code&gt;wrapperFn()&lt;/code&gt; nested in the loop in 19-28. &lt;code&gt;wrapperFn()&lt;/code&gt; calls &lt;code&gt;logCar()&lt;/code&gt; and “wraps” around it - hence the name. &lt;/p&gt;
 
-&lt;p&gt;The wrapper function here makes all the difference. The callback in &lt;code&gt;logCar()&lt;/code&gt; is destined not to execute until the second event loop in the program because it is wrapped in the aforementioned &lt;code&gt;process.nextTick()&lt;/code&gt;. Thus, &amp;ldquo;first loop&amp;rdquo; events, like the for loops that begin in 11 and 19,  will occur prior to the callback. &lt;/p&gt;
+&lt;p&gt;The wrapper function here makes all the difference. The callback in &lt;code&gt;logCar()&lt;/code&gt; is destined not to execute until the second event loop in the program because it is wrapped in the aforementioned &lt;code&gt;process.nextTick()&lt;/code&gt;. Thus, “first loop” events, like the for loops that begin in 11 and 19,  will occur prior to the callback. &lt;/p&gt;
 
 &lt;p&gt;Because the execution of the callback must occur after the for loops are complete, the only way all the cars can get logged to the console is if the variables passed in as parameters each uniquely represent the three cars. &lt;/p&gt;
 
 &lt;p&gt;In 11-17, the &lt;code&gt;message&lt;/code&gt; parameter &lt;code&gt;logCar()&lt;/code&gt; takes on 13 will appear in the anonymous function always as the final element in the car array: Bugatti. The variable &lt;code&gt;message&lt;/code&gt; serving as the parameter in &lt;code&gt;logCar()&lt;/code&gt; is changing each time through the loop, and by the time the anonymous function uses it on the second event loop, the variable is equal to the final element in the array. In closure terms, &lt;code&gt;logCar()&lt;/code&gt; is the parent function of the anonymous function, and the parameter it passes to the anonymous function changes twice; however, since the callback executes on the second event loop, it is doomed to grab the parameter after the final iteration.&lt;/p&gt;
 
-&lt;p&gt;In contrast, the function &lt;code&gt;wrapperFn()&lt;/code&gt; in 21 does not let cars race by (excuse the pun), instead grabbing them and passing them along to its child functions in 27 when &lt;code&gt;wrapperFn()&lt;/code&gt; is called. As you can see visually via &amp;ldquo;PARAMETER PASSED 2: &amp;rdquo;, the message variable is being caught on the first event loop and saved in memory for the second event loop. &lt;/p&gt;
+&lt;p&gt;In contrast, the function &lt;code&gt;wrapperFn()&lt;/code&gt; in 21 does not let cars race by (excuse the pun), instead grabbing them and passing them along to its child functions in 27 when &lt;code&gt;wrapperFn()&lt;/code&gt; is called. As you can see visually via “PARAMETER PASSED 2: “, the message variable is being caught on the first event loop and saved in memory for the second event loop. &lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh5.googleusercontent.com/-VQSw0iVAE1w/VAyfjUURN5I/AAAAAAAAAXY/0OA4CB01Q_8/w282-h458-no/Screen%2BShot%2B2014-09-07%2Bat%2B2.09.07%2BPM.png&quot; alt=&quot;callback_clos_output&quot; &gt;
+&lt;img src=&quot;https://lh5.googleusercontent.com/-VQSw0iVAE1w/VAyfjUURN5I/AAAAAAAAAXY/0OA4CB01Q_8/w282-h458-no/Screen%2BShot%2B2014-09-07%2Bat%2B2.09.07%2BPM.png&quot; alt=&quot;callback_clos_output&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;The value of closures in this exercise was to close off certain variables from change and give the callback function the information it needed. Because Node (and JavaScript in general) relies heavily on events occurring at different points in time, closures are key to making sure the passage of time will not get in the way of what the programmer intended (at least the way I see it).&lt;/p&gt;
@@ -317,6 +318,7 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
 &lt;p&gt;Additionally, I realized while doing this exercise the importance of using closures in conjunction with callbacks to grab information from AJAX requests to bring such information to the client-side. As AJAX requests by definition occur asynchronously, they represent a perfect situation for implementing closures and callbacks.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/bsusensjackson/&quot; target=&quot;_blank&quot;&gt; Brendan Susens-Jackson&lt;/a&gt;, who I worked with on a side project called &lt;a href=&quot;http://ready-reader.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;ReadyReader&lt;/a&gt;, originally explained this idea to me and put it to work on our application. The source code can be found &lt;a href=&quot;https://github.com/woodchucks-2014/ReadyReader&quot;&gt; here&lt;/a&gt;. Brendan helped edit this post, so hats off to him :-).  &lt;/p&gt;
+
 </description>
         <pubDate>Sun, 07 Sep 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/09/07/Closures-in-JS-from-Brad-Dayley/</link>
@@ -325,15 +327,15 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
     
       <item>
         <title>Querying in Mongo with Node</title>
-        <description>&lt;p&gt;I&amp;rsquo;m in the midst of taking an online course using &lt;a href=&quot;http://www.mongodb.org/&quot; target=&quot;_blank&quot;&gt; MongoDB&lt;/a&gt; through Mongo&amp;rsquo;s online university entitled &lt;a href=&quot;https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus&quot; target=&quot;_blank&quot;&gt; MongoDB for Node.js Developers&lt;/a&gt; and thought I&amp;rsquo;d share a few insights here. &lt;/p&gt;
+        <description>&lt;p&gt;I’m in the midst of taking an online course using &lt;a href=&quot;http://www.mongodb.org/&quot; target=&quot;_blank&quot;&gt; MongoDB&lt;/a&gt; through Mongo’s online university entitled &lt;a href=&quot;https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus&quot; target=&quot;_blank&quot;&gt; MongoDB for Node.js Developers&lt;/a&gt; and thought I’d share a few insights here. &lt;/p&gt;
 
-&lt;p&gt;As background, MongoDB is a NoSQL database that is open-source and used by the likes of BuzzFeed, BusinessInsider, Disqus, Expedia, LinkedIn, Sailthru, Electronic Arts, Under Armour, CERN and a growing list of &lt;a href=&quot;https://www.mongodb.org/about/production-deployments/&quot; target=&quot;_blank&quot;&gt; others&lt;/a&gt;. The advantages of NoSQL over SQL frameworks are largely scalabity and performance related. As the name implies, NoSQL databases are schemaless and do not have to work over numerous tables - instead, they generally use documents (similar to a JSON object in Mongo&amp;rsquo;s case) in place of rows and deep embedding inside documents in place of joins. Notably, the aforementioned companies in many cases still use relational databases, as SQL is still thought to be more usable as database complexity ramps up. &lt;/p&gt;
+&lt;p&gt;As background, MongoDB is a NoSQL database that is open-source and used by the likes of BuzzFeed, BusinessInsider, Disqus, Expedia, LinkedIn, Sailthru, Electronic Arts, Under Armour, CERN and a growing list of &lt;a href=&quot;https://www.mongodb.org/about/production-deployments/&quot; target=&quot;_blank&quot;&gt; others&lt;/a&gt;. The advantages of NoSQL over SQL frameworks are largely scalabity and performance related. As the name implies, NoSQL databases are schemaless and do not have to work over numerous tables - instead, they generally use documents (similar to a JSON object in Mongo’s case) in place of rows and deep embedding inside documents in place of joins. Notably, the aforementioned companies in many cases still use relational databases, as SQL is still thought to be more usable as database complexity ramps up. &lt;/p&gt;
 
-&lt;p&gt;I don&amp;rsquo;t profess to have a view on either (Ian White in 2009 laid out the case for Mongo / NoSQL quite nicely &lt;a href=&quot;http://www.businessinsider.com/how-we-use-mongodb-2009-11&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;), but believe it&amp;rsquo;s important to learn more about both paradigms and form a view over time. In the words of John Carmack: &lt;/p&gt;
+&lt;p&gt;I don’t profess to have a view on either (Ian White in 2009 laid out the case for Mongo / NoSQL quite nicely &lt;a href=&quot;http://www.businessinsider.com/how-we-use-mongodb-2009-11&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;), but believe it’s important to learn more about both paradigms and form a view over time. In the words of John Carmack: &lt;/p&gt;
 
-&lt;blockquote&gt;If you aren&amp;rsquo;t sure which way to do something, do it both ways and see which works better.&lt;/blockquote&gt;
+&lt;blockquote&gt;If you aren&#39;t sure which way to do something, do it both ways and see which works better.&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://nodejs.org/&quot; target=&quot;_blank&quot;&gt; Node.js &lt;/a&gt; is a JavaScript-based platform that, among other things, facilitates building of web applications. Node is built on V8 (Google&amp;rsquo;s open source JavaScript framework) and part of the ever-increasing body of tools and frameworks that utilize JavaScript. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://nodejs.org/&quot; target=&quot;_blank&quot;&gt; Node.js &lt;/a&gt; is a JavaScript-based platform that, among other things, facilitates building of web applications. Node is built on V8 (Google’s open source JavaScript framework) and part of the ever-increasing body of tools and frameworks that utilize JavaScript. &lt;/p&gt;
 
 &lt;p&gt;I want to cover a basic querying exercise here included in the aforementioned MongoDB course (if you feel so inclined to follow along from here, the below assumes you have Mongo and Node installed). &lt;/p&gt;
 
@@ -341,35 +343,35 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
 
 &lt;blockquote&gt;Given a large CSV file, how would you use MongoDB and Node to import the CSV into Mongo and query it using Mongo in combination with Node?&lt;/blockquote&gt;
 
-&lt;p&gt;Mongo asks you to do exactly that in their online course, where they&amp;rsquo;ve provided a CSV file full of state-based weather and wind data for one month for Vermont, California, Florida and New Mexico. The CSV contains the temperature, wind speed and various other facts for every single hour for each state over the course of one month. &lt;b&gt;The ask here is to add a boolean field to the database showing whether the temperature recorded in the state was a month high.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Mongo asks you to do exactly that in their online course, where they’ve provided a CSV file full of state-based weather and wind data for one month for Vermont, California, Florida and New Mexico. The CSV contains the temperature, wind speed and various other facts for every single hour for each state over the course of one month. &lt;b&gt;The ask here is to add a boolean field to the database showing whether the temperature recorded in the state was a month high.&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;Before we can begin narrowing down the data based on state and temperature, we have to import it into Mongo in full. The Mongo docs are an excellent place to start and have step-by-step instructions &lt;a href=&quot;http://docs.mongodb.org/manual/reference/program/mongoimport/&quot; target=&quot;_blank&quot;&gt;for importing CSV files &lt;/a&gt; using the Mongo shell (which can be accessed from the command line via the command &lt;code&gt;mongo&lt;/code&gt;). Here&amp;rsquo;s how I imported the weather data Mongo provided:&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh6.googleusercontent.com/-5IPDMkSr1Ys/U_yzY0KzWzI/AAAAAAAAAUI/JkoTYXE8JY4/w607-h92-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.18.21%2BPM.png&quot; alt=&quot;mongo_data&quot; &gt;
-&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;mongoimport&lt;/code&gt; command and relevant arguments here tell Mongo to construct a database called &lt;code&gt;state_weather&lt;/code&gt; with a collection named &lt;code&gt;data&lt;/code&gt; that has the attributes in the CSV header (Day, Time, State, etc.). The two lines below the command confirm the import was successful and that I now have a database with 2,963 &amp;ldquo;rows&amp;rdquo; (recall, these are documents / objects in Mongo). &lt;/p&gt;
-
-&lt;p&gt;You can fool around with the data by using the relevant database and running queries in the shell. For those familiar with Rails, this achieves the same purpose as running &lt;code&gt;rails c&lt;/code&gt; in a Rails project and is useful for exploring your database. If I wanted to see the first entry imported, I&amp;rsquo;d do the following:&lt;/p&gt;
+&lt;p&gt;Before we can begin narrowing down the data based on state and temperature, we have to import it into Mongo in full. The Mongo docs are an excellent place to start and have step-by-step instructions &lt;a href=&quot;http://docs.mongodb.org/manual/reference/program/mongoimport/&quot; target=&quot;_blank&quot;&gt;for importing CSV files &lt;/a&gt; using the Mongo shell (which can be accessed from the command line via the command &lt;code&gt;mongo&lt;/code&gt;). Here’s how I imported the weather data Mongo provided:&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh4.googleusercontent.com/-uXIWtoF6Kfo/U_y0qfhh01I/AAAAAAAAAU0/fjcwYmH6jfk/w435-h343-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.23.23%2BPM.png&quot; alt=&quot;mongo_query&quot;&gt;
+&lt;img src=&quot;https://lh6.googleusercontent.com/-5IPDMkSr1Ys/U_yzY0KzWzI/AAAAAAAAAUI/JkoTYXE8JY4/w607-h92-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.18.21%2BPM.png&quot; alt=&quot;mongo_data&quot; /&gt;
 &lt;/p&gt;
 
-&lt;p&gt;With the database populated, we can begin writing a Node program that will log our desired results to the terminal (better yet, you could log them to your browser, but I&amp;rsquo;ll save that for another time). &lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;mongoimport&lt;/code&gt; command and relevant arguments here tell Mongo to construct a database called &lt;code&gt;state_weather&lt;/code&gt; with a collection named &lt;code&gt;data&lt;/code&gt; that has the attributes in the CSV header (Day, Time, State, etc.). The two lines below the command confirm the import was successful and that I now have a database with 2,963 “rows” (recall, these are documents / objects in Mongo). &lt;/p&gt;
+
+&lt;p&gt;You can fool around with the data by using the relevant database and running queries in the shell. For those familiar with Rails, this achieves the same purpose as running &lt;code&gt;rails c&lt;/code&gt; in a Rails project and is useful for exploring your database. If I wanted to see the first entry imported, I’d do the following:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://lh4.googleusercontent.com/-uXIWtoF6Kfo/U_y0qfhh01I/AAAAAAAAAU0/fjcwYmH6jfk/w435-h343-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.23.23%2BPM.png&quot; alt=&quot;mongo_query&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;With the database populated, we can begin writing a Node program that will log our desired results to the terminal (better yet, you could log them to your browser, but I’ll save that for another time). &lt;/p&gt;
 
 &lt;p&gt;Importantly, you can create variables holding documents in Mongo referred to as cursors. Cursors are easy to iterate through and make code more readable when in Node. In the below example, I create a cursor which has the database data imported previously sorted first by state name and then by temperature. &lt;/p&gt;
 
-&lt;p&gt;Sorting data in Mongo can be achieved through the use of a cursor and the use of the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/cursor.sort/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;sort&lt;/code&gt; method &lt;/a&gt;, which can be called on a cursor (note that I&amp;rsquo;m now out of the Mongo shell and working in Node - if you want to follow along with all the code, see my &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;blank&quot;&gt; GitHub repo&lt;/a&gt;, also linked at the bottom of this post).:&lt;/p&gt;
+&lt;p&gt;Sorting data in Mongo can be achieved through the use of a cursor and the use of the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/cursor.sort/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;sort&lt;/code&gt; method &lt;/a&gt;, which can be called on a cursor (note that I’m now out of the Mongo shell and working in Node - if you want to follow along with all the code, see my &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;blank&quot;&gt; GitHub repo&lt;/a&gt;, also linked at the bottom of this post).:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/1dc63a0d77649f73a02e.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;What&amp;rsquo;s nice about Mongo is that passing in an array to sort will sort based on the order of the array - in this case, we sort first by alphabetical order and then by temperature. Now that all 2,963 documents are sorted, I can iterate through the cursor and pull out the first entry for each state. I know that this entry represents the month high because of how the cursor was sorted. Every time the state chages, we&amp;rsquo;ll arrive at the new month high and can add a key-value pair to each document accordingly. This addition of the key-value pairs occurs in the database using the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/db.collection.update/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;update&lt;/code&gt; method &lt;/a&gt; in Mongo. &lt;/p&gt;
+&lt;p&gt;What’s nice about Mongo is that passing in an array to sort will sort based on the order of the array - in this case, we sort first by alphabetical order and then by temperature. Now that all 2,963 documents are sorted, I can iterate through the cursor and pull out the first entry for each state. I know that this entry represents the month high because of how the cursor was sorted. Every time the state chages, we’ll arrive at the new month high and can add a key-value pair to each document accordingly. This addition of the key-value pairs occurs in the database using the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/db.collection.update/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;update&lt;/code&gt; method &lt;/a&gt; in Mongo. &lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/3c723f970997a707c5a0.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;As you&amp;rsquo;ll see above, a number of Mongo database methods as they appear in Node take callbacks wherein the parameters you pass in are errors, documents and other related arguments. This in part allows for useful logging of error messages and other information. Further, when executing Mongo functions in Node, it&amp;rsquo;s necessary to close out of the database to avoid iterating over empty entries; that&amp;rsquo;s the purpose of lines 3-5 above. &lt;/p&gt;
+&lt;p&gt;As you’ll see above, a number of Mongo database methods as they appear in Node take callbacks wherein the parameters you pass in are errors, documents and other related arguments. This in part allows for useful logging of error messages and other information. Further, when executing Mongo functions in Node, it’s necessary to close out of the database to avoid iterating over empty entries; that’s the purpose of lines 3-5 above. &lt;/p&gt;
 
 &lt;p&gt;Finally, with the data modified as desired, we can revise the cursor to only include entries that were month-highs and then iterate and log to the console:&lt;/p&gt;
 
@@ -378,14 +380,14 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
 &lt;p&gt;The resulting output is below:&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh6.googleusercontent.com/-ykdOSUGFR74/U_zZsKjOemI/AAAAAAAAAVw/RXrxYxQoxWY/w558-h82-no/Screen%2BShot%2B2014-08-26%2Bat%2B3.00.52%2BPM.png&quot; alt=&quot;output&quot; &gt;
+&lt;img src=&quot;https://lh6.googleusercontent.com/-ykdOSUGFR74/U_zZsKjOemI/AAAAAAAAAVw/RXrxYxQoxWY/w558-h82-no/Screen%2BShot%2B2014-08-26%2Bat%2B3.00.52%2BPM.png&quot; alt=&quot;output&quot; /&gt;
 &lt;/p&gt;
 
-&lt;p&gt;I found the experience of doing this exercise significantly different from my work in a relational database (where I mostly have used Postgres and ActiveRecord as an ORM). As Ian White notes in the previously linked post, it&amp;rsquo;s nice to write less abstracted code using Mongo than you would in an ORM. Additionally, the process of writing raw SQL (in the few scenarios you might do so) is often drawn out and frustrating; the &lt;code&gt;find&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt; and other methods Mongo gives you make querying and altering documents relatively easy compared to &lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;WHERE&lt;/code&gt;, &lt;code&gt;HAVING&lt;/code&gt;, etc. in SQL. &lt;/p&gt;
+&lt;p&gt;I found the experience of doing this exercise significantly different from my work in a relational database (where I mostly have used Postgres and ActiveRecord as an ORM). As Ian White notes in the previously linked post, it’s nice to write less abstracted code using Mongo than you would in an ORM. Additionally, the process of writing raw SQL (in the few scenarios you might do so) is often drawn out and frustrating; the &lt;code&gt;find&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt; and other methods Mongo gives you make querying and altering documents relatively easy compared to &lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;WHERE&lt;/code&gt;, &lt;code&gt;HAVING&lt;/code&gt;, etc. in SQL. &lt;/p&gt;
 
-&lt;p&gt;Yet, the relative simplicity of this exercise makes it hard to reason about Mongo&amp;rsquo;s limitations. For instance, how would Mongo deal with &lt;a href=&quot;http://guides.rubyonrails.org/association_basics.html#polymorphic-associations&quot; target=&quot;_blank&quot;&gt; polymorphic relationships &lt;/a&gt;? I am very much interested in using Mongo on a large-scale project that would have a complex schema in SQL land. &lt;/p&gt;
+&lt;p&gt;Yet, the relative simplicity of this exercise makes it hard to reason about Mongo’s limitations. For instance, how would Mongo deal with &lt;a href=&quot;http://guides.rubyonrails.org/association_basics.html#polymorphic-associations&quot; target=&quot;_blank&quot;&gt; polymorphic relationships &lt;/a&gt;? I am very much interested in using Mongo on a large-scale project that would have a complex schema in SQL land. &lt;/p&gt;
 
-&lt;p&gt;Once I&amp;rsquo;ve given that a try, maybe I&amp;rsquo;ll have a better idea on which works better.&lt;/p&gt;
+&lt;p&gt;Once I’ve given that a try, maybe I’ll have a better idea on which works better.&lt;/p&gt;
 
 &lt;p&gt;** &lt;i&gt;B.N. I posted a &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;_blank&quot;&gt; small GitHub repo &lt;/a&gt; for those interested in fooling around with the data and seeing my solution in full.&lt;/i&gt;&lt;/p&gt;
 </description>
@@ -396,19 +398,19 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
     
       <item>
         <title>Isolation v. Collaboration</title>
-        <description>&lt;p&gt;Amidst the great literature of work productivity and self-help books and &lt;a href=&quot;https://twitter.com/HarvardHBS&quot; target=&quot;_blank&quot;&gt;HBS informational nuggets &lt;/a&gt;, I&amp;rsquo;ve found myself at a loss recently to answer a very basic question:&lt;/p&gt;
+        <description>&lt;p&gt;Amidst the great literature of work productivity and self-help books and &lt;a href=&quot;https://twitter.com/HarvardHBS&quot; target=&quot;_blank&quot;&gt;HBS informational nuggets &lt;/a&gt;, I’ve found myself at a loss recently to answer a very basic question:&lt;/p&gt;
 
 &lt;blockquote&gt; Do I produce higher quality and more inspired work in isolation or in collaborating with others? &lt;/blockquote&gt;
 
-&lt;p&gt;This question is admittedly personal and no doubt differs based on (i) the individual and (ii) the nature of the individual&amp;rsquo;s work. Additionally, (i) and (ii) are always changing. Who we are and what we do is constantly in flux, so consequently I would assume that the conditions that lead to our best work are also always in flux.&lt;/p&gt;
+&lt;p&gt;This question is admittedly personal and no doubt differs based on (i) the individual and (ii) the nature of the individual’s work. Additionally, (i) and (ii) are always changing. Who we are and what we do is constantly in flux, so consequently I would assume that the conditions that lead to our best work are also always in flux.&lt;/p&gt;
 
-&lt;p&gt;My dad is a phychiatrist and I am familiar with the basics of Erik Erikson&amp;rsquo;s stages of &lt;a href=&quot;http://en.wikipedia.org/wiki/Erikson%27s_stages_of_psychosocial_development#Love:_Intimacy_vs._Isolation_.28Young_adulthood.2C_20-24.2C_or_20-39_years.29&quot; target=&quot;_blank&quot;&gt;psychosocial development&lt;/a&gt; &lt;i&gt; (N.B. I found Wiki to be a good overview here, but in no way I do endorse it as an accurate representation of Erikson&amp;rsquo;s beliefs &lt;/i&gt;). These stages as articulated by Erikson I view as relevant to my question because they touch on other questions with relevance to the one at hand. In reviewing them for this post, I would argue my question falls somewhere in between Intimacy v. Isolation (&amp;ldquo;Can I Love?&amp;rdquo;, via Wiki) and Generativity v. Stagnation (&amp;ldquo;Can I Make My Life Count?&amp;rdquo;, via the same). &lt;/p&gt;
+&lt;p&gt;My dad is a phychiatrist and I am familiar with the basics of Erik Erikson’s stages of &lt;a href=&quot;http://en.wikipedia.org/wiki/Erikson%27s_stages_of_psychosocial_development#Love:_Intimacy_vs._Isolation_.28Young_adulthood.2C_20-24.2C_or_20-39_years.29&quot; target=&quot;_blank&quot;&gt;psychosocial development&lt;/a&gt; &lt;i&gt; (N.B. I found Wiki to be a good overview here, but in no way I do endorse it as an accurate representation of Erikson’s beliefs &lt;/i&gt;). These stages as articulated by Erikson I view as relevant to my question because they touch on other questions with relevance to the one at hand. In reviewing them for this post, I would argue my question falls somewhere in between Intimacy v. Isolation (“Can I Love?”, via Wiki) and Generativity v. Stagnation (“Can I Make My Life Count?”, via the same). &lt;/p&gt;
 
-&lt;p&gt;Whether collaboration improves work output I think depends on &amp;ldquo;where&amp;rdquo; the individuals collaborating are in the Intimacy v. Isolation stage. Collaboration on large-scale projects are difficult enough - I recommend &lt;a href=&quot;http://www.newyorker.com/magazine/2014/03/03/a-star-in-a-bottle&quot; target=&quot;_blank&quot;&gt; Raffi Khatchadourian&amp;rsquo;s New Yorker article&lt;/a&gt; on the &lt;a href=&quot;http://www.iter.org/&quot; target=&quot;_blank&quot;&gt; International Thermonuclear Experimental Reactor &lt;/a&gt; as evidence. This difficulty would only be enhanced by individuals tentative about forming the type of alliances necessary to collaborate on highly complex projects. &lt;/p&gt;
+&lt;p&gt;Whether collaboration improves work output I think depends on “where” the individuals collaborating are in the Intimacy v. Isolation stage. Collaboration on large-scale projects are difficult enough - I recommend &lt;a href=&quot;http://www.newyorker.com/magazine/2014/03/03/a-star-in-a-bottle&quot; target=&quot;_blank&quot;&gt; Raffi Khatchadourian’s New Yorker article&lt;/a&gt; on the &lt;a href=&quot;http://www.iter.org/&quot; target=&quot;_blank&quot;&gt; International Thermonuclear Experimental Reactor &lt;/a&gt; as evidence. This difficulty would only be enhanced by individuals tentative about forming the type of alliances necessary to collaborate on highly complex projects. &lt;/p&gt;
 
 &lt;p&gt;The Generativity v. Stagnation stage I see as equally important in determining the value of individuals working alone versus working together. Individuals likely to collaborate are ones who see the same type of work as meaningful. In turn, individuals who see their work as meaningful are far more likely to be motivated in moving beyond surface differences (e.g. personality clashes, compensation discrepancies, cultural biases, etc.) to produce high-quality work. &lt;/p&gt;
 
-&lt;p&gt;A modified version of this idea gets thrown around a lot in discussion of &amp;ldquo;high-stakes&amp;rdquo; scenarios, where the argument is people are &amp;ldquo;forced&amp;rdquo; to work together when the stakes are high enough. I think this theory is wrong in that it attempts to attach the word &amp;ldquo;stakes&amp;rdquo; to an &lt;a href=&quot;https://www.youtube.com/watch?v=MqAJ5W2wQH4&quot; target=&quot;blank&quot;&gt; arbitrary spectrum&lt;/a&gt;. One man&amp;rsquo;s stakes are not another&amp;rsquo;s. &lt;/p&gt;
+&lt;p&gt;A modified version of this idea gets thrown around a lot in discussion of “high-stakes” scenarios, where the argument is people are “forced” to work together when the stakes are high enough. I think this theory is wrong in that it attempts to attach the word “stakes” to an &lt;a href=&quot;https://www.youtube.com/watch?v=MqAJ5W2wQH4&quot; target=&quot;blank&quot;&gt; arbitrary spectrum&lt;/a&gt;. One man’s stakes are not another’s. &lt;/p&gt;
 
 &lt;p&gt;However, I agree that individuals who value a project equally and are invested in its success will have fewer hurdles in working together than unaligned individuals. As a result, Generativity v. Stagnation in my mind sits together with Intimacy v. Isolation at the heart of the question I originally posed.&lt;/p&gt;
 
@@ -422,33 +424,34 @@ Concentrate every minute&amp;hellip; on doing what&amp;rsquo;s in front of you w
 
 &lt;p&gt;&lt;strong&gt;Understanding&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Individuals learn at radically different paces and through different mechanisms, and the uniqueness of everyone&amp;rsquo;s learning process calls for isolation when learning new material.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Individuals learn at radically different paces and through different mechanisms, and the uniqueness of everyone’s learning process calls for isolation when learning new material.&lt;/p&gt;
 
-&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - The above is true, and that&amp;rsquo;s why individuals need to collaborate. The average pace of collective learning is &amp;ldquo;faster&amp;rdquo; when &amp;ldquo;faster&amp;rdquo; learners can work with &amp;ldquo;slower&amp;rdquo; ones (&lt;i&gt;N.B. I think fast and slow have an infinite amount of meanings with respect to the word learning, and the quotes are meant to say as much&lt;/i&gt;). &amp;ldquo;Faster&amp;rdquo; learners also are not harmed by teaching just-learned info, as it may lead them to develop deeper understanding of the information as well as correct themselves when their initial understanding may have been flawed. &lt;/p&gt;
+&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - The above is true, and that’s why individuals need to collaborate. The average pace of collective learning is “faster” when “faster” learners can work with “slower” ones (&lt;i&gt;N.B. I think fast and slow have an infinite amount of meanings with respect to the word learning, and the quotes are meant to say as much&lt;/i&gt;). “Faster” learners also are not harmed by teaching just-learned info, as it may lead them to develop deeper understanding of the information as well as correct themselves when their initial understanding may have been flawed. &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Leadership&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - We have no option of appealing to someone else or seeking group consensus when in isolation. Individuals are compelled to promote themselves the arbiter of their own values. Questions like &amp;ldquo;Is this good?&amp;rdquo; and more importantly &amp;ldquo;Is this good enough?&amp;rdquo; are purely decided by the individual.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - We have no option of appealing to someone else or seeking group consensus when in isolation. Individuals are compelled to promote themselves the arbiter of their own values. Questions like “Is this good?” and more importantly “Is this good enough?” are purely decided by the individual.&lt;/p&gt;
 
-&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - A friend recently recommended Dave Hoover&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382&quot; target=&quot;_blank&quot;&gt; Apprenticeship Patterns&lt;/a&gt; and noted that Hoover discusses at length how important it is for young engineers to take on leadership roles in groups as early as possible. Taking on such leadership roles - even if these roles occur on projects that require limited technical expertise - encourages &amp;ldquo;new&amp;rdquo; leaders to see the benefits of a pro-active approach and oftentimes inspires confidence in their own ability to generate valuable ideas.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - A friend recently recommended Dave Hoover’s &lt;a href=&quot;http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382&quot; target=&quot;_blank&quot;&gt; Apprenticeship Patterns&lt;/a&gt; and noted that Hoover discusses at length how important it is for young engineers to take on leadership roles in groups as early as possible. Taking on such leadership roles - even if these roles occur on projects that require limited technical expertise - encourages “new” leaders to see the benefits of a pro-active approach and oftentimes inspires confidence in their own ability to generate valuable ideas.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Meaning&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Formative experiences are made meaningful by having these experiences alone. I watched an incredible &lt;a href=&quot;https://www.youtube.com/watch?v=N0x9gApvuGo&quot; target=&quot;_blank&quot;&gt; documentary &lt;/a&gt; of Albert Einstein on the History Channel a while back that in some respects attempts to argue his unique thinking process was fostered by not being a part of the academic community while working as a patent clerk. Einstein could engage in thought experiments for as long as he pleased in part because he did not have the pressures and responsibilities of a collaborative work environment (consider how often in collaborative work environments you have to relate exactly what you&amp;rsquo;re doing to your collaboraters and show output where output may not exist). &lt;/p&gt;
+&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Formative experiences are made meaningful by having these experiences alone. I watched an incredible &lt;a href=&quot;https://www.youtube.com/watch?v=N0x9gApvuGo&quot; target=&quot;_blank&quot;&gt; documentary &lt;/a&gt; of Albert Einstein on the History Channel a while back that in some respects attempts to argue his unique thinking process was fostered by not being a part of the academic community while working as a patent clerk. Einstein could engage in thought experiments for as long as he pleased in part because he did not have the pressures and responsibilities of a collaborative work environment (consider how often in collaborative work environments you have to relate exactly what you’re doing to your collaboraters and show output where output may not exist). &lt;/p&gt;
 
-&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - Experience has a different type of meaning if we cannot compare, contrast or share it with our peers. Michael Finkel&amp;rsquo;s story &lt;a href=&quot;http://www.gq.com/news-politics/newsmakers/201409/the-last-true-hermit&quot; target=&quot;_blank&quot;&gt; on Christopher Thomas Knight &lt;/a&gt; has garnered a lot of attention this week because (I think) the idea of living in a self-contained vacuum for two plus decades is unfathomable to most human beings. Shared memories, as well as memories that allow us to connect with people, have a different meaning than individual memories, and that in part I think accounts for some of the strong reaction to the story. It would be difficult for most people, myself included, to produce quality work if I did not have that opportunity to share with and collaborate with other people on such work. &lt;/p&gt;
+&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - Experience has a different type of meaning if we cannot compare, contrast or share it with our peers. Michael Finkel’s story &lt;a href=&quot;http://www.gq.com/news-politics/newsmakers/201409/the-last-true-hermit&quot; target=&quot;_blank&quot;&gt; on Christopher Thomas Knight &lt;/a&gt; has garnered a lot of attention this week because (I think) the idea of living in a self-contained vacuum for two plus decades is unfathomable to most human beings. Shared memories, as well as memories that allow us to connect with people, have a different meaning than individual memories, and that in part I think accounts for some of the strong reaction to the story. It would be difficult for most people, myself included, to produce quality work if I did not have that opportunity to share with and collaborate with other people on such work. &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Accountability&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Individuals can create an impossibly high standard for themselves, and I think that&amp;rsquo;s in part a good thing. David Halberstam&amp;rsquo;s &lt;a href=&quot;http://www.amazon.com/Playing-Keeps-Michael-Jordan-World/dp/0767904443&quot; target=&quot;_blank&quot;&gt;Playing for Keeps&lt;/a&gt; is my favorite Jordan (and 90s Bulls) biography. My main takeaway from that book is how Jordan created imaginary enemies in order to fuel his drive for on-court success. I consider this strategy a form of self-accountability, as Jordan made himself accountable for defeating his enemies (real or created) at all costs.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Individuals can create an impossibly high standard for themselves, and I think that’s in part a good thing. David Halberstam’s &lt;a href=&quot;http://www.amazon.com/Playing-Keeps-Michael-Jordan-World/dp/0767904443&quot; target=&quot;_blank&quot;&gt;Playing for Keeps&lt;/a&gt; is my favorite Jordan (and 90s Bulls) biography. My main takeaway from that book is how Jordan created imaginary enemies in order to fuel his drive for on-court success. I consider this strategy a form of self-accountability, as Jordan made himself accountable for defeating his enemies (real or created) at all costs.&lt;/p&gt;
 
 &lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - Alternatively, individuals can deliver parts of themselves to broader group culture, such that cultures become the mixture of many different individuals. Whether groups actually naturally select and reject the best and worst parts of individual cultures is up for debate. &lt;/p&gt;
 
-&lt;p&gt;Yet, accountability in a group environment likely forces people to be accountable for things they wouldn&amp;rsquo;t have thought to be accountable for in an isolated environment. To use the above example, Phil Jackson no doubt passed on the Zen-loving aspects of himself to the aforementioned 90s Bulls teams, and in doing so probably encouraged the members of these teams to feel a spiritual accountability (e.g. meditate every day) different than the Jordanian vision of accountability (e.g. physically train beyond your comfort zone).&lt;/p&gt;
+&lt;p&gt;Yet, accountability in a group environment likely forces people to be accountable for things they wouldn’t have thought to be accountable for in an isolated environment. To use the above example, Phil Jackson no doubt passed on the Zen-loving aspects of himself to the aforementioned 90s Bulls teams, and in doing so probably encouraged the members of these teams to feel a spiritual accountability (e.g. meditate every day) different than the Jordanian vision of accountability (e.g. physically train beyond your comfort zone).&lt;/p&gt;
 
 &lt;p&gt;To those still reading - I have no grand conclusion or formula on how to produce your best work. I have given thought throughout this post as to &lt;i&gt;why&lt;/i&gt; isolation or collaboration &lt;i&gt;could&lt;/i&gt; improve individual performance. And I cannot help but believe performance is enhanced through both individual and collaborative environments - disproportionately working in either one seems to me to be ill-advised, as both can deliver so many unique benefits.&lt;/p&gt;
 
-&lt;p&gt;Additionally, working in both I surmise is in line with Erikson&amp;rsquo;s ideas about confronting new challenges over time that pave the way for more self-debate.&lt;/p&gt;
+&lt;p&gt;Additionally, working in both I surmise is in line with Erikson’s ideas about confronting new challenges over time that pave the way for more self-debate.&lt;/p&gt;
+
 </description>
         <pubDate>Sun, 24 Aug 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/08/24/isolation-v-collaboration/</link>

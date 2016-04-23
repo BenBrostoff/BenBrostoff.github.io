@@ -50,7 +50,7 @@ Andreessen also has recently gone on double digit tweet-sprees about the practic
 By the same token, I think @pmarca's perception of finance may reflect a public perception that lacks basis in reality. Let's look at a recent string of tweets: 
 
 <center>
-![](https://lh4.googleusercontent.com/-ErAcP0pYtv8/U-S7n96eb9I/AAAAAAAAASI/jVT10QbHB6I/w354-h485-no/Screen%2BShot%2B2014-08-08%2Bat%2B7.58.57%2BAM.png)
+<img src="https://lh4.googleusercontent.com/-ErAcP0pYtv8/U-S7n96eb9I/AAAAAAAAASI/jVT10QbHB6I/w354-h485-no/Screen%2BShot%2B2014-08-08%2Bat%2B7.58.57%2BAM.png">
 </center>
 
 Just as most people view social media as an inordinate proportion of the tech space, it's my view that the public focuses far too much on the consequences of TARP and the bailouts of the last recession. When I say "focuses far too much", I mean that people are incorrect to believe that these bailouts continue to have an enormous impact on employee behavior at banks. Even if I were to acknowledge the @pmarca argument that "bailouts are guaranteed", I do not believe this guarantee has large consequences on how banks operate (hold on, let me explain).

@@ -23,7 +23,4 @@ links:
 
 pygments:         true
 permalink:        pretty
-markdown:         redcarpet
-redcarpet:
-  extensions:
-    - smart
+markdown:         kramdown
