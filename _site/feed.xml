@@ -7,6 +7,17 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Devotion to Craft</title>
+        <description>&lt;p&gt;A couple of my favorite things: the documentary &lt;a href=&quot;http://www.rottentomatoes.com/m/meru_2015/&quot; target=&quot;_blank&quot;&gt;Meru&lt;/a&gt;, the essay &lt;a href=&quot;http://www.newyorker.com/magazine/2014/04/21/in-deep-2&quot; target=&quot;_blank&quot;&gt;In Deep&lt;/a&gt;, the 30 for 30s on &lt;a href=&quot;http://espn.go.com/30for30/film?page=into-the-wind&quot; target=&quot;_blank&quot;&gt;Terry Fox&lt;/a&gt; and &lt;a href=&quot;http://espn.go.com/30for30/film?page=the-birth-of-big-air&quot; target=&quot;_blank&quot;&gt;Dave Mirra&lt;/a&gt;. In all of them, there are people who in the truest sense of the words are &lt;em&gt;willing to risk life and limb for their craft&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;That is exceedingly rare in a world where we have all the things we need and more.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 May 2016 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2016/05/08/caring-about-craft/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2016/05/08/caring-about-craft/</guid>
+      </item>
+    
+      <item>
         <title>Reading Code</title>
         <description>&lt;p&gt;I think reading code is the best way to improve as a software engineer.&lt;/p&gt;
 
@@ -394,68 +405,6 @@ Concentrate every minute... on doing what&#39;s in front of you with precise and
         <pubDate>Tue, 26 Aug 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</guid>
-      </item>
-    
-      <item>
-        <title>Isolation v. Collaboration</title>
-        <description>&lt;p&gt;Amidst the great literature of work productivity and self-help books and &lt;a href=&quot;https://twitter.com/HarvardHBS&quot; target=&quot;_blank&quot;&gt;HBS informational nuggets &lt;/a&gt;, I’ve found myself at a loss recently to answer a very basic question:&lt;/p&gt;
-
-&lt;blockquote&gt; Do I produce higher quality and more inspired work in isolation or in collaborating with others? &lt;/blockquote&gt;
-
-&lt;p&gt;This question is admittedly personal and no doubt differs based on (i) the individual and (ii) the nature of the individual’s work. Additionally, (i) and (ii) are always changing. Who we are and what we do is constantly in flux, so consequently I would assume that the conditions that lead to our best work are also always in flux.&lt;/p&gt;
-
-&lt;p&gt;My dad is a phychiatrist and I am familiar with the basics of Erik Erikson’s stages of &lt;a href=&quot;http://en.wikipedia.org/wiki/Erikson%27s_stages_of_psychosocial_development#Love:_Intimacy_vs._Isolation_.28Young_adulthood.2C_20-24.2C_or_20-39_years.29&quot; target=&quot;_blank&quot;&gt;psychosocial development&lt;/a&gt; &lt;i&gt; (N.B. I found Wiki to be a good overview here, but in no way I do endorse it as an accurate representation of Erikson’s beliefs &lt;/i&gt;). These stages as articulated by Erikson I view as relevant to my question because they touch on other questions with relevance to the one at hand. In reviewing them for this post, I would argue my question falls somewhere in between Intimacy v. Isolation (“Can I Love?”, via Wiki) and Generativity v. Stagnation (“Can I Make My Life Count?”, via the same). &lt;/p&gt;
-
-&lt;p&gt;Whether collaboration improves work output I think depends on “where” the individuals collaborating are in the Intimacy v. Isolation stage. Collaboration on large-scale projects are difficult enough - I recommend &lt;a href=&quot;http://www.newyorker.com/magazine/2014/03/03/a-star-in-a-bottle&quot; target=&quot;_blank&quot;&gt; Raffi Khatchadourian’s New Yorker article&lt;/a&gt; on the &lt;a href=&quot;http://www.iter.org/&quot; target=&quot;_blank&quot;&gt; International Thermonuclear Experimental Reactor &lt;/a&gt; as evidence. This difficulty would only be enhanced by individuals tentative about forming the type of alliances necessary to collaborate on highly complex projects. &lt;/p&gt;
-
-&lt;p&gt;The Generativity v. Stagnation stage I see as equally important in determining the value of individuals working alone versus working together. Individuals likely to collaborate are ones who see the same type of work as meaningful. In turn, individuals who see their work as meaningful are far more likely to be motivated in moving beyond surface differences (e.g. personality clashes, compensation discrepancies, cultural biases, etc.) to produce high-quality work. &lt;/p&gt;
-
-&lt;p&gt;A modified version of this idea gets thrown around a lot in discussion of “high-stakes” scenarios, where the argument is people are “forced” to work together when the stakes are high enough. I think this theory is wrong in that it attempts to attach the word “stakes” to an &lt;a href=&quot;https://www.youtube.com/watch?v=MqAJ5W2wQH4&quot; target=&quot;blank&quot;&gt; arbitrary spectrum&lt;/a&gt;. One man’s stakes are not another’s. &lt;/p&gt;
-
-&lt;p&gt;However, I agree that individuals who value a project equally and are invested in its success will have fewer hurdles in working together than unaligned individuals. As a result, Generativity v. Stagnation in my mind sits together with Intimacy v. Isolation at the heart of the question I originally posed.&lt;/p&gt;
-
-&lt;p&gt;My thoughts on these two stages fueled an internal debate I had on working in isolation versus working collaboratively. I have attempted to recount my thoughts as best I can below (the blanket claims you see below are made on purpose - because these claims reflect my thoughts). These thoughts are grouped according to key words that broadly represent my thinking.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Insight&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt;Isolation&lt;/i&gt; - Insight most commonly occurs alone in a state of deep and isolated focus. Introducing others to the insight process creates risk to new insights because of the potential for groupthink and general distraction.&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt;Collaboration&lt;/i&gt; - Individuals working in concert inspire eachother by introducing viewpoints that would not have been introduced had they all worked alone. Further, insights that veer from logic and reason are checked by groups who work together (alternatively, groups may refute insights that do not appear on the surface to be logical and reasoned, but actually are upon closer observation).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Understanding&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Individuals learn at radically different paces and through different mechanisms, and the uniqueness of everyone’s learning process calls for isolation when learning new material.&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - The above is true, and that’s why individuals need to collaborate. The average pace of collective learning is “faster” when “faster” learners can work with “slower” ones (&lt;i&gt;N.B. I think fast and slow have an infinite amount of meanings with respect to the word learning, and the quotes are meant to say as much&lt;/i&gt;). “Faster” learners also are not harmed by teaching just-learned info, as it may lead them to develop deeper understanding of the information as well as correct themselves when their initial understanding may have been flawed. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Leadership&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - We have no option of appealing to someone else or seeking group consensus when in isolation. Individuals are compelled to promote themselves the arbiter of their own values. Questions like “Is this good?” and more importantly “Is this good enough?” are purely decided by the individual.&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - A friend recently recommended Dave Hoover’s &lt;a href=&quot;http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382&quot; target=&quot;_blank&quot;&gt; Apprenticeship Patterns&lt;/a&gt; and noted that Hoover discusses at length how important it is for young engineers to take on leadership roles in groups as early as possible. Taking on such leadership roles - even if these roles occur on projects that require limited technical expertise - encourages “new” leaders to see the benefits of a pro-active approach and oftentimes inspires confidence in their own ability to generate valuable ideas.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Meaning&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Formative experiences are made meaningful by having these experiences alone. I watched an incredible &lt;a href=&quot;https://www.youtube.com/watch?v=N0x9gApvuGo&quot; target=&quot;_blank&quot;&gt; documentary &lt;/a&gt; of Albert Einstein on the History Channel a while back that in some respects attempts to argue his unique thinking process was fostered by not being a part of the academic community while working as a patent clerk. Einstein could engage in thought experiments for as long as he pleased in part because he did not have the pressures and responsibilities of a collaborative work environment (consider how often in collaborative work environments you have to relate exactly what you’re doing to your collaboraters and show output where output may not exist). &lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - Experience has a different type of meaning if we cannot compare, contrast or share it with our peers. Michael Finkel’s story &lt;a href=&quot;http://www.gq.com/news-politics/newsmakers/201409/the-last-true-hermit&quot; target=&quot;_blank&quot;&gt; on Christopher Thomas Knight &lt;/a&gt; has garnered a lot of attention this week because (I think) the idea of living in a self-contained vacuum for two plus decades is unfathomable to most human beings. Shared memories, as well as memories that allow us to connect with people, have a different meaning than individual memories, and that in part I think accounts for some of the strong reaction to the story. It would be difficult for most people, myself included, to produce quality work if I did not have that opportunity to share with and collaborate with other people on such work. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Accountability&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt; Isolation &lt;/i&gt; - Individuals can create an impossibly high standard for themselves, and I think that’s in part a good thing. David Halberstam’s &lt;a href=&quot;http://www.amazon.com/Playing-Keeps-Michael-Jordan-World/dp/0767904443&quot; target=&quot;_blank&quot;&gt;Playing for Keeps&lt;/a&gt; is my favorite Jordan (and 90s Bulls) biography. My main takeaway from that book is how Jordan created imaginary enemies in order to fuel his drive for on-court success. I consider this strategy a form of self-accountability, as Jordan made himself accountable for defeating his enemies (real or created) at all costs.&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt; Collaboration &lt;/i&gt; - Alternatively, individuals can deliver parts of themselves to broader group culture, such that cultures become the mixture of many different individuals. Whether groups actually naturally select and reject the best and worst parts of individual cultures is up for debate. &lt;/p&gt;
-
-&lt;p&gt;Yet, accountability in a group environment likely forces people to be accountable for things they wouldn’t have thought to be accountable for in an isolated environment. To use the above example, Phil Jackson no doubt passed on the Zen-loving aspects of himself to the aforementioned 90s Bulls teams, and in doing so probably encouraged the members of these teams to feel a spiritual accountability (e.g. meditate every day) different than the Jordanian vision of accountability (e.g. physically train beyond your comfort zone).&lt;/p&gt;
-
-&lt;p&gt;To those still reading - I have no grand conclusion or formula on how to produce your best work. I have given thought throughout this post as to &lt;i&gt;why&lt;/i&gt; isolation or collaboration &lt;i&gt;could&lt;/i&gt; improve individual performance. And I cannot help but believe performance is enhanced through both individual and collaborative environments - disproportionately working in either one seems to me to be ill-advised, as both can deliver so many unique benefits.&lt;/p&gt;
-
-&lt;p&gt;Additionally, working in both I surmise is in line with Erikson’s ideas about confronting new challenges over time that pave the way for more self-debate.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 24 Aug 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/08/24/isolation-v-collaboration/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/24/isolation-v-collaboration/</guid>
       </item>
     
   </channel>

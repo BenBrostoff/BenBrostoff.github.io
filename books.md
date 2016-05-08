@@ -63,3 +63,4 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*Team of Rivals*, Doris Kearns Goodwin](http://www.amazon.com/gp/product/B000N2HBSO/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added February 2016
 * [*An Astronaut's Guide to Life on Earth*, Chris Hadfield](http://www.amazon.com/gp/product/B00DTUHIDA/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added February 2016,  **completed April 2016**, <span style="color:green">highly recommend</span>
 * [*The War of Art*, Steven Pressfield](http://www.amazon.com/gp/product/B007A4SDCG/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added April 2016,  **completed April 2016**, <span style="color:green">highly recommend / favorite books list</span>
+* [*The Existential Pleasures of Engineering*, Samuel Florman](http://www.amazon.com/Existential-Pleasures-Engineering-Thomas-Dunne/dp/0312141041), added April 2016
