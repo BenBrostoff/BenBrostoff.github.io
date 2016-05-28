@@ -7,6 +7,51 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Endless Learning</title>
+        <description>&lt;p&gt;There is an infinite amount of knowledge to consume and an average human only lives &lt;a href=&quot;http://www.who.int/gho/mortality_burden_disease/life_tables/situation_trends/en/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;71.4 years&lt;/strong&gt;&lt;/a&gt;. I wanted to write this post to remind myself of 1) why the current landscape for learning is so excellent and 2) strategies that work for mining this landscape for its excellence.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;An Excellent Landscape&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;There are lots of fantastic, thoughtful writers. The amount of superb programming blogs in particular impresses me – &lt;a href=&quot;http://jvns.ca/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Julia Evans&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://geoff.greer.fm/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Geoff Greer&lt;/strong&gt;&lt;/a&gt; are at present my two favorites. &lt;a href=&quot;http://waitbutwhy.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Wait But Why&lt;/strong&gt;&lt;/a&gt; by Tim Urban is basically free books on interesting topics (thanks to my friend Max for showing me this awesome &lt;a href=&quot;http://waitbutwhy.com/2015/05/elon-musk-the-worlds-raddest-man.html&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;4 part WBW series on Elon Musk&lt;/strong&gt;&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The podcasting landscape – since I started listening to podcasts – has never been better. &lt;a href=&quot;http://fourhourworkweek.com/podcast/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Tim Ferriss&lt;/strong&gt;&lt;/a&gt; lands superb guest after superb guest. &lt;a href=&quot;http://www.stuffyoushouldknow.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Stuff You Should Know&lt;/strong&gt;&lt;/a&gt; is an hour learning about brand new stuff. And I’ll always listen to &lt;a href=&quot;https://soundcloud.com/the-bill-simmons-podcast&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Bill Simmons&lt;/strong&gt;&lt;/a&gt; wax poetic on basketball for an hour.&lt;/p&gt;
+
+&lt;p&gt;Netflix promises whatever thing you happen to be interested in. I just watched &lt;a href=&quot;http://www.bbc.co.uk/programmes/b0074t4x&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Planet Earth: Seasonal Forests&lt;/strong&gt;&lt;/a&gt; and learned more about the biosphere than at any point of being an adult.&lt;/p&gt;
+
+&lt;p&gt;I have been consuming these great things in part by abandoning my “traditional” media sources. In high school and college I had various mentors tell me to read the Wall Street Journal religiously – I admit I don’t do that any more.  While that seemed like sound advice at the time, I feel I am learning more by foregoing newspapers. WSJ, NYT and the Boston Globe – the three newspapers that I see lying around most often – seem to have become obsessed with gossipy political stories.&lt;/p&gt;
+
+&lt;p&gt;Books are always what I learn the most from.  Blogs and podcasts lead to strong book recommendations. Greer’s &lt;a href=&quot;http://geoff.greer.fm/2016/01/04/on-learning-c-part-1-k-r/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;four part series on learning C&lt;/strong&gt;&lt;/a&gt; led me to purchase &lt;a href=&quot;http://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628/ref=pd_sim_14_1?ie=UTF8&amp;amp;dpID=41qX6YdIJ7L&amp;amp;dpSrc=sims&amp;amp;preST=_AC_UL320_SR244%2C320_&amp;amp;refRID=1B6FHHVSB9JKW4TVBCMG&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;K&amp;amp;R&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/Computer-Systems-Programmers-Perspective-Edition/dp/0136108040&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Computer Systems: A Programmer’s Perspective&lt;/strong&gt;&lt;/a&gt;. Ferriss’s podcast has been responsible for me reading the following books: &lt;a href=&quot;http://www.amazon.com/Not-Fade-Away-Short-Lived/dp/006073731X&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Not Fade Away&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&quot;http://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Influence&lt;/strong&gt;&lt;/a&gt;, the &lt;a href=&quot;http://www.amazon.com/Art-Learning-Journey-Optimal-Performance/dp/0743277465&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Art of Learning&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/War-Art-Winning-Creative-Battle/dp/1501260626&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;The War of Art&lt;/strong&gt;&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;I’ve been lucky to have fantastic friends who led me to read books that changed my life. &lt;/p&gt;
+
+&lt;p&gt;Chris – thank you for Tony Bramwell’s &lt;a href=&quot;http://www.amazon.com/Magical-Mystery-Tours-Life-Beatles/dp/0312330448&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Magical Mystery Tours&lt;/strong&gt;&lt;/a&gt;. I still have your copy. &lt;/p&gt;
+
+&lt;p&gt;Joseph – a big tip of the hat for &lt;a href=&quot;http://www.amazon.com/Obstacle-Way-Timeless-Turning-Triumph/dp/1591846358&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;The Obstacle is the Way&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Deep Work&lt;/strong&gt;&lt;/a&gt;. I still travel with &lt;a href=&quot;http://www.amazon.com/Meditations-Thrift-Editions-Marcus-Aurelius/dp/048629823X&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Meditations&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dad – thank you for &lt;a href=&quot;http://www.amazon.com/Values-Game-Bill-Bradley/dp/0767904494&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Values of the Game&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Being Selective&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;There is an endless amount of learning to be done, and no better time to do it. I understand the temptation to endlessly bemoan targeted ads and sponsored content and promotional tweets. However, I really believe these things can be easily avoided. For me, here are the strategies that have worked:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Two books per month, at the same time&lt;/em&gt; - I listed this one first because it has easily been the most useful. Since 2014, I have been trying to read at least 20 books per year - you can see &lt;a href=&quot;http://benbrostoff.github.io/books/&quot;&gt;&lt;strong&gt;my progress here&lt;/strong&gt;&lt;/a&gt;. The two per month will get me a little beyond this goal. I try my best to make these two books extremely different so switching between them is interesting. For instance, right now I’m reading Neal Stephenson’s &lt;a href=&quot;https://www.amazon.com/Snow-Crash-Neal-Stephenson-ebook/dp/B000FBJCJE?ie=UTF8&amp;amp;qid=&amp;amp;ref_=tmm_kin_swatch_0&amp;amp;sr=&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Snow Crash&lt;/strong&gt;&lt;/a&gt; and Doris Kearns Goodwin’s &lt;a href=&quot;http://www.amazon.com/Team-Rivals-Political-Abraham-Lincoln/dp/0743270754&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Team of Rivals&lt;/strong&gt;&lt;/a&gt;. The former is a sci-fi thriller that takes place partly in reality and partly in the metaverse, a VR centered manifestation of reality. The characters use a funny, futuristic slang and there’s lots of violence, gore and riffs on computers. The latter (disclaimer: I’ve been reading this on and off since February in part because it’s 944 pages) follows Lincoln’s rise to the presidency through his death, while also simultaneously following the members of his war cabinet - William H. Seward, Salmon P. Chase and Edward Bates. &lt;em&gt;Rivals&lt;/em&gt; in both chronology and tone is the opposite of &lt;em&gt;Snow Crash&lt;/em&gt;, which makes reading them at the same time awesome. And having both on Kindle makes it easy to switch from one to the other.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Twitter selectivety&lt;/em&gt; - I can’t think of many bigger timesinks than scrolling through Twitter. That said, a lot of people I follow from time to time tweet out high quality reads I never would have found myself. For every one of these tweets, maybe five or six occur in between which are less interesting, or require context to even understand (which then requires more scrolling through Twitter). &lt;a href=&quot;https://twitter.com/pmarca&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Marc Andreessen&lt;/strong&gt;&lt;/a&gt; is perhaps the biggest example of this phenomenon. A lot of tools exist for parsing out the good tweets. I built one for myself because I wanted to use Go - &lt;a href=&quot;https://github.com/BenBrostoff/twitter-news&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;my little JSON API&lt;/strong&gt;&lt;/a&gt; finds the top tweets from a user’s last 200 from a couple people I find particularly interesting. &lt;a href=&quot;http://nuzzel.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Nuzzel&lt;/strong&gt;&lt;/a&gt; is the other solution I use, which basically highlights links that multiple people I follow tweet.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Pocket and Rex&lt;/em&gt; - I’ve been using &lt;a href=&quot;https://getpocket.com/a/queue/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Pocket&lt;/strong&gt;&lt;/a&gt; for two years and &lt;a href=&quot;https://itunes.apple.com/us/app/rex-share-recommendations/id965827767?mt=8&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Rex&lt;/strong&gt;&lt;/a&gt; for two months. My Pocket strategy is simple but works well for me - during the weekdays, I pocket a bunch of stuff while I eat lunch at my computer and then read it on Saturday / Sunday mornings. As an aside, Pocket is also good for those times when you come across a Stack Overflow post not really directly related to the thing you’re working on, but nonetheless interesting. If a friend e-mails or texts me a link, I’ll pocket it immediately. Rex, still in its relative infancy as an app, is good because users can only recommend stuff. Said another way, there’s no outlet for debates or vitriol or trolling like on Twitter. As Rex’s CEO helpfully pointed out to me, Rex links are easily Pocketable, and it may have a public API in the future, which would allow for some awesome customization possibilities.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Making some time for daily news&lt;/em&gt; - I enjoy following sports and the stock market on a regular basis, as well as keeping tabs on tech and foreign affairs news (really, anything that is not the 2016 presidentia race). I find headline scanning on ESPN, Bloomberg and Hacker News is generally sufficient to accomplish this task, where I’ll pocket the longer reads if they seem good. I have little cron jobs that allow me to keep up with my &lt;a href=&quot;https://github.com/BenBrostoff/Fantasy-Baseball-Scraper&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;fantasy baseball team&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/BenBrostoff/daily_stock_report&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;stock portfolio&lt;/strong&gt;&lt;/a&gt;. Stuff like this is a good excuse to do some programming with new tools and languages (i.e. no pressure situation).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Conclusion&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Life is short, and reading material is long. I feel a lot more satisfied with my free time since I abandoned newspapers and focused exclusively on good blogs, books and podcasts. Being disciplined with the books I read each month, using Twitter in a highly selective way, and combining Pocket and Rex functionality has helped me discover good material. The daily news I’m interested in I can get through headline scanning and automated web scraping scripts.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 28 May 2016 00:00:00 -0400</pubDate>
+        <link>http://benbrostoff.github.io//2016/05/28/endless-learning/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2016/05/28/endless-learning/</guid>
+      </item>
+    
+      <item>
         <title>Devotion to Craft</title>
         <description>&lt;p&gt;A couple of my favorite things: the documentary &lt;a href=&quot;http://www.rottentomatoes.com/m/meru_2015/&quot; target=&quot;_blank&quot;&gt;Meru&lt;/a&gt;, the essay &lt;a href=&quot;http://www.newyorker.com/magazine/2014/04/21/in-deep-2&quot; target=&quot;_blank&quot;&gt;In Deep&lt;/a&gt;, the 30 for 30s on &lt;a href=&quot;http://espn.go.com/30for30/film?page=into-the-wind&quot; target=&quot;_blank&quot;&gt;Terry Fox&lt;/a&gt; and &lt;a href=&quot;http://espn.go.com/30for30/film?page=the-birth-of-big-air&quot; target=&quot;_blank&quot;&gt;Dave Mirra&lt;/a&gt;. In all of them, there are people who in the truest sense of the words are &lt;em&gt;willing to risk life and limb for their craft&lt;/em&gt;.&lt;/p&gt;
 
@@ -334,77 +379,6 @@ Concentrate every minute... on doing what&#39;s in front of you with precise and
         <pubDate>Sun, 07 Sep 2014 00:00:00 -0400</pubDate>
         <link>http://benbrostoff.github.io//2014/09/07/Closures-in-JS-from-Brad-Dayley/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/09/07/Closures-in-JS-from-Brad-Dayley/</guid>
-      </item>
-    
-      <item>
-        <title>Querying in Mongo with Node</title>
-        <description>&lt;p&gt;I’m in the midst of taking an online course using &lt;a href=&quot;http://www.mongodb.org/&quot; target=&quot;_blank&quot;&gt; MongoDB&lt;/a&gt; through Mongo’s online university entitled &lt;a href=&quot;https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus&quot; target=&quot;_blank&quot;&gt; MongoDB for Node.js Developers&lt;/a&gt; and thought I’d share a few insights here. &lt;/p&gt;
-
-&lt;p&gt;As background, MongoDB is a NoSQL database that is open-source and used by the likes of BuzzFeed, BusinessInsider, Disqus, Expedia, LinkedIn, Sailthru, Electronic Arts, Under Armour, CERN and a growing list of &lt;a href=&quot;https://www.mongodb.org/about/production-deployments/&quot; target=&quot;_blank&quot;&gt; others&lt;/a&gt;. The advantages of NoSQL over SQL frameworks are largely scalabity and performance related. As the name implies, NoSQL databases are schemaless and do not have to work over numerous tables - instead, they generally use documents (similar to a JSON object in Mongo’s case) in place of rows and deep embedding inside documents in place of joins. Notably, the aforementioned companies in many cases still use relational databases, as SQL is still thought to be more usable as database complexity ramps up. &lt;/p&gt;
-
-&lt;p&gt;I don’t profess to have a view on either (Ian White in 2009 laid out the case for Mongo / NoSQL quite nicely &lt;a href=&quot;http://www.businessinsider.com/how-we-use-mongodb-2009-11&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;), but believe it’s important to learn more about both paradigms and form a view over time. In the words of John Carmack: &lt;/p&gt;
-
-&lt;blockquote&gt;If you aren&#39;t sure which way to do something, do it both ways and see which works better.&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nodejs.org/&quot; target=&quot;_blank&quot;&gt; Node.js &lt;/a&gt; is a JavaScript-based platform that, among other things, facilitates building of web applications. Node is built on V8 (Google’s open source JavaScript framework) and part of the ever-increasing body of tools and frameworks that utilize JavaScript. &lt;/p&gt;
-
-&lt;p&gt;I want to cover a basic querying exercise here included in the aforementioned MongoDB course (if you feel so inclined to follow along from here, the below assumes you have Mongo and Node installed). &lt;/p&gt;
-
-&lt;p&gt;In short, I want to provide some possible answers to the following question:&lt;/p&gt;
-
-&lt;blockquote&gt;Given a large CSV file, how would you use MongoDB and Node to import the CSV into Mongo and query it using Mongo in combination with Node?&lt;/blockquote&gt;
-
-&lt;p&gt;Mongo asks you to do exactly that in their online course, where they’ve provided a CSV file full of state-based weather and wind data for one month for Vermont, California, Florida and New Mexico. The CSV contains the temperature, wind speed and various other facts for every single hour for each state over the course of one month. &lt;b&gt;The ask here is to add a boolean field to the database showing whether the temperature recorded in the state was a month high.&lt;/b&gt;&lt;/p&gt;
-
-&lt;p&gt;Before we can begin narrowing down the data based on state and temperature, we have to import it into Mongo in full. The Mongo docs are an excellent place to start and have step-by-step instructions &lt;a href=&quot;http://docs.mongodb.org/manual/reference/program/mongoimport/&quot; target=&quot;_blank&quot;&gt;for importing CSV files &lt;/a&gt; using the Mongo shell (which can be accessed from the command line via the command &lt;code&gt;mongo&lt;/code&gt;). Here’s how I imported the weather data Mongo provided:&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh6.googleusercontent.com/-5IPDMkSr1Ys/U_yzY0KzWzI/AAAAAAAAAUI/JkoTYXE8JY4/w607-h92-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.18.21%2BPM.png&quot; alt=&quot;mongo_data&quot; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;mongoimport&lt;/code&gt; command and relevant arguments here tell Mongo to construct a database called &lt;code&gt;state_weather&lt;/code&gt; with a collection named &lt;code&gt;data&lt;/code&gt; that has the attributes in the CSV header (Day, Time, State, etc.). The two lines below the command confirm the import was successful and that I now have a database with 2,963 “rows” (recall, these are documents / objects in Mongo). &lt;/p&gt;
-
-&lt;p&gt;You can fool around with the data by using the relevant database and running queries in the shell. For those familiar with Rails, this achieves the same purpose as running &lt;code&gt;rails c&lt;/code&gt; in a Rails project and is useful for exploring your database. If I wanted to see the first entry imported, I’d do the following:&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh4.googleusercontent.com/-uXIWtoF6Kfo/U_y0qfhh01I/AAAAAAAAAU0/fjcwYmH6jfk/w435-h343-no/Screen%2BShot%2B2014-08-26%2Bat%2B12.23.23%2BPM.png&quot; alt=&quot;mongo_query&quot; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;With the database populated, we can begin writing a Node program that will log our desired results to the terminal (better yet, you could log them to your browser, but I’ll save that for another time). &lt;/p&gt;
-
-&lt;p&gt;Importantly, you can create variables holding documents in Mongo referred to as cursors. Cursors are easy to iterate through and make code more readable when in Node. In the below example, I create a cursor which has the database data imported previously sorted first by state name and then by temperature. &lt;/p&gt;
-
-&lt;p&gt;Sorting data in Mongo can be achieved through the use of a cursor and the use of the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/cursor.sort/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;sort&lt;/code&gt; method &lt;/a&gt;, which can be called on a cursor (note that I’m now out of the Mongo shell and working in Node - if you want to follow along with all the code, see my &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;blank&quot;&gt; GitHub repo&lt;/a&gt;, also linked at the bottom of this post).:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/1dc63a0d77649f73a02e.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;What’s nice about Mongo is that passing in an array to sort will sort based on the order of the array - in this case, we sort first by alphabetical order and then by temperature. Now that all 2,963 documents are sorted, I can iterate through the cursor and pull out the first entry for each state. I know that this entry represents the month high because of how the cursor was sorted. Every time the state chages, we’ll arrive at the new month high and can add a key-value pair to each document accordingly. This addition of the key-value pairs occurs in the database using the &lt;a href=&quot;http://docs.mongodb.org/manual/reference/method/db.collection.update/&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;update&lt;/code&gt; method &lt;/a&gt; in Mongo. &lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/3c723f970997a707c5a0.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;As you’ll see above, a number of Mongo database methods as they appear in Node take callbacks wherein the parameters you pass in are errors, documents and other related arguments. This in part allows for useful logging of error messages and other information. Further, when executing Mongo functions in Node, it’s necessary to close out of the database to avoid iterating over empty entries; that’s the purpose of lines 3-5 above. &lt;/p&gt;
-
-&lt;p&gt;Finally, with the data modified as desired, we can revise the cursor to only include entries that were month-highs and then iterate and log to the console:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/513873bb0ac012145385.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The resulting output is below:&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh6.googleusercontent.com/-ykdOSUGFR74/U_zZsKjOemI/AAAAAAAAAVw/RXrxYxQoxWY/w558-h82-no/Screen%2BShot%2B2014-08-26%2Bat%2B3.00.52%2BPM.png&quot; alt=&quot;output&quot; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;I found the experience of doing this exercise significantly different from my work in a relational database (where I mostly have used Postgres and ActiveRecord as an ORM). As Ian White notes in the previously linked post, it’s nice to write less abstracted code using Mongo than you would in an ORM. Additionally, the process of writing raw SQL (in the few scenarios you might do so) is often drawn out and frustrating; the &lt;code&gt;find&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt; and other methods Mongo gives you make querying and altering documents relatively easy compared to &lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;WHERE&lt;/code&gt;, &lt;code&gt;HAVING&lt;/code&gt;, etc. in SQL. &lt;/p&gt;
-
-&lt;p&gt;Yet, the relative simplicity of this exercise makes it hard to reason about Mongo’s limitations. For instance, how would Mongo deal with &lt;a href=&quot;http://guides.rubyonrails.org/association_basics.html#polymorphic-associations&quot; target=&quot;_blank&quot;&gt; polymorphic relationships &lt;/a&gt;? I am very much interested in using Mongo on a large-scale project that would have a complex schema in SQL land. &lt;/p&gt;
-
-&lt;p&gt;Once I’ve given that a try, maybe I’ll have a better idea on which works better.&lt;/p&gt;
-
-&lt;p&gt;** &lt;i&gt;B.N. I posted a &lt;a href=&quot;https://github.com/BenBrostoff/Mongo-and-Node-Example&quot; target=&quot;_blank&quot;&gt; small GitHub repo &lt;/a&gt; for those interested in fooling around with the data and seeing my solution in full.&lt;/i&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 26 Aug 2014 00:00:00 -0400</pubDate>
-        <link>http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/08/26/querying-in-mongo-with-node/</guid>
       </item>
     
   </channel>
