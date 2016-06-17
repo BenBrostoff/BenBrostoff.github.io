@@ -69,4 +69,4 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*Open*, Andre Agassi](https://www.amazon.co.uk/Open-Autobiography-Andre-Agassi/dp/0007281439), added June 2016, **completed June 2016**, <span style="color:green">highly recommend</span>
 * [*Edison: A Biography*, Matthew Josephson](https://www.amazon.com/Edison-Biography-Matthew-Josephson/dp/0471548065?ie=UTF8&tag=ryanholnet-20), added June 2016
 * [*How They Succeeded*, Orison Swett Marden](https://www.amazon.com/How-They-Succeeded-Successful-Themselves/dp/1290109826/?tag=ryanholnet-20), added June 2016
-* [*Ego is the Enemy*, Ryan Holiday](https://www.amazon.com/Ego-Enemy-Ryan-Holiday/dp/1591847818), added June 2016
+* [*Ego is the Enemy*, Ryan Holiday](https://www.amazon.com/Ego-Enemy-Ryan-Holiday/dp/1591847818), added June 2016, **completed June 2016**, <span style="color:green">highly recommend</span>
