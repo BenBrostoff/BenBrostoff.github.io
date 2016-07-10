@@ -64,7 +64,7 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*An Astronaut's Guide to Life on Earth*, Chris Hadfield](http://www.amazon.com/gp/product/B00DTUHIDA/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added February 2016,  **completed April 2016**, <span style="color:green">highly recommend</span>
 * [*The War of Art*, Steven Pressfield](http://www.amazon.com/gp/product/B007A4SDCG/ref=dp-kindle-redirect?ie=UTF8&btkr=1), added April 2016,  **completed April 2016**, <span style="color:green">highly recommend / favorite books list</span>
 * [*The Existential Pleasures of Engineering*, Samuel Florman](http://www.amazon.com/Existential-Pleasures-Engineering-Thomas-Dunne/dp/0312141041), added April 2016, **completed May 2016**, <span style="color:green">highly recommend</span>
-* [*Snow Crash*, Neal Stephenson](http://www.amazon.com/Snow-Crash-Neal-Stephenson/dp/1491515058), added May 2016
+* [*Snow Crash*, Neal Stephenson](http://www.amazon.com/Snow-Crash-Neal-Stephenson/dp/1491515058), added May 2016, **completed July 2016**, <span style="color:green">highly recommend</span>
 * [*The Elon Musk Blog Series: Wait But Why*, Tim Urban](https://www.amazon.co.uk/Elon-Musk-Blog-Wait-But-ebook/dp/B01CF5FY4E), added June 2016, **completed June 2016**, <span style="color:green">highly recommend</span>
 * [*Open*, Andre Agassi](https://www.amazon.co.uk/Open-Autobiography-Andre-Agassi/dp/0007281439), added June 2016, **completed June 2016**, <span style="color:green">highly recommend</span>
 * [*Edison: A Biography*, Matthew Josephson](https://www.amazon.com/Edison-Biography-Matthew-Josephson/dp/0471548065?ie=UTF8&tag=ryanholnet-20), added June 2016
