@@ -1,0 +1,7 @@
+jekyll:
+    image: andredumas/github-pages
+    command: serve --watch --force_polling
+    ports:
+        - 80:4000
+    volumes:
+        - .:/site
