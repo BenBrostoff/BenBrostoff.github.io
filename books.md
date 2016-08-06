@@ -71,3 +71,4 @@ I always appreciate when people share their favorite books with me - [Ryan Holid
 * [*How They Succeeded*, Orison Swett Marden](https://www.amazon.com/How-They-Succeeded-Successful-Themselves/dp/1290109826/?tag=ryanholnet-20), added June 2016
 * [*Ego is the Enemy*, Ryan Holiday](https://www.amazon.com/Ego-Enemy-Ryan-Holiday/dp/1591847818), added June 2016, **completed June 2016**, <span style="color:green">highly recommend</span>
 * [*The Inevitable*, Kevin Kelly](https://www.amazon.com/Inevitable-Understanding-Technological-Forces-Future/dp/0525428089), added July 2016, **completed August 2016**, <span style="color:green">highly recommend</span>
+* [*Chaos Monkeys*, Antonio Garcia Martinez](https://www.amazon.com/Chaos-Monkeys-Obscene-Fortune-Failure-ebook/dp/B019MMUAAQ#nav-subnav), added August 2016
