@@ -7,7 +7,7 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>In Praise Of Destructuring Assignment</title>
+        <title>Destructuring Assignment</title>
         <description>&lt;blockquote&gt;
   &lt;blockquote&gt;
 
@@ -97,8 +97,8 @@
 &lt;p&gt;Overall, I’m amazed by how many different use cases ES6’s destructuring syntax has (and I’m sure there’s more to come in ES7). This feature is the rare tool that’s multi-purpose and easy to get the hang of. Moreover, it forces me to think about programming in a different way - looking to the left hand side of a variable assignment for meaning.&lt;/p&gt;
 </description>
         <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/01/02/in-praise-of-destructuring-assignment/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/01/02/in-praise-of-destructuring-assignment/</guid>
+        <link>http://benbrostoff.github.io//2017/01/02/destructuring-assignment/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/01/02/destructuring-assignment/</guid>
       </item>
     
       <item>
