@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Left Hand Side - Destructuring Assignment
+title: The Left Hand Side and Destructuring Assignment
 
 date: 2017-01-02
 ---
