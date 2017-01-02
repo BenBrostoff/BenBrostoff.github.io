@@ -67,14 +67,12 @@ One thing in particular I like about destructuring assignment is that *it makes 
 
 The natural thought process at least for me here is "look to the right hand side for meaning". I see the numbers array and the indices at 2 and 3, and then understand.
 
-<script src="https://gist.github.com/BenBrostoff/d09ea100babb266b1c8b918348faf534.js"></script>
-
 With destructuring, the above can be done as follows:
-
-Now, my thought process becomes "first, look to the left hand side for meaning". I see the square brackets around `a` and understand I need to get the first element of the right hand side. A side benefit is I immediately get that `numbers` is an `Array` with at least three elements too (obviously not guaranteed, but we know that's the intent at least), so destructuring can convey type information too.
 
 <script src="https://gist.github.com/BenBrostoff/600e5c1e6b3e33a420829b3bb3062fd6.js"></script>
 
- As a side note here, Python gets close to allowing you to do this with lists, but will throw a `ValueError: too many values to unpack` if the size of the list does not match the number of variables. 
+Now, my thought process becomes "first, look to the left hand side for meaning". I see the square brackets around `a` and understand I need to get the first element of the right hand side. A side benefit is I immediately get that `numbers` is an `Array` with at least three elements too (obviously not guaranteed, but we know that's the intent at least), so destructuring can convey type information too.
+
+As a side note here, Python gets close to allowing you to do this with lists, but will throw a `ValueError: too many values to unpack` if the size of the list does not match the number of variables. 
     
 Overall, I'm amazed by how many different use cases ES6's destructuring syntax has (and I'm sure there's more to come in ES7). This feature is the rare tool that's multi-purpose and easy to get the hang of. Moreover, it forces me to think about programming in a different way - looking to the left hand side of a variable assignment for meaning.
