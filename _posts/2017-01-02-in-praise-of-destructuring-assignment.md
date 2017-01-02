@@ -1,11 +1,10 @@
 ---
 layout: post
-title: The Left Hand Side: Destructuring Assignment
+title: The Left Hand Side - Destructuring Assignment
 
 date: 2017-01-02
 ---
-
-
+    
 >>
 The foundation of the modern world is developer tools.
 >>
@@ -77,5 +76,5 @@ Now, my thought process becomes "first, look to the left hand side for meaning".
 <script src="https://gist.github.com/BenBrostoff/600e5c1e6b3e33a420829b3bb3062fd6.js"></script>
 
  As a side note here, Python gets close to allowing you to do this with lists, but will throw a `ValueError: too many values to unpack` if the size of the list does not match the number of variables. 
-
+    
 Overall, I'm amazed by how many different use cases ES6's destructuring syntax has (and I'm sure there's more to come in ES7). This feature is the rare tool that's multi-purpose and easy to get the hang of. Moreover, it forces me to think about programming in a different way - looking to the left hand side of a variable assignment for meaning.
