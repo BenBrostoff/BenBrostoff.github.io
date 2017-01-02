@@ -7,6 +7,101 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>In Praise Of Destructuring Assignment</title>
+        <description>&lt;blockquote&gt;
+  &lt;blockquote&gt;
+
+    &lt;p&gt;The foundation of the modern world is developer tools.&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/mxcl/status/619373095199969280?lang=en&quot;&gt;Max Howell&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I think destructuring assignment is one of the most useful tools in the ES6 toolkit. &lt;/p&gt;
+
+&lt;p&gt;First off, a definition of destructuring assignment from the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment&quot;&gt;MDN docs&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+
+    &lt;p&gt;The destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects into distinct variables.&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Said another way, destructuring allows for creation or assignment of variables from parts of arrays or objects. Because it is not the job of developer documentation to sell different features of the API, or promote common use cases (depending on your perspective), I want to take the time to do it here. I find myself using destructuring assignment time and time again for a host of different reasons. &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Imports, Function Arguments and Variables&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This one I think is the most straightforward use case suggested by the docs. Extracting functionality from large Node modules, pulling out object properties from an argument in a function parameter, or creating multiple &lt;code&gt;const&lt;/code&gt;s from an object are all low hanging fruit. What gets interesting is when objects have deeply nested structures and can be destructured. Consider this ridiculous example:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/c30b2ef1f5c4022c6b977ef75c1ac590.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;While I think more nesting levels of destructuring obfuscate code, this technique is really useful when taken with a grain of salt. This usefulness especially shines when using &lt;code&gt;Array&lt;/code&gt; functions like &lt;code&gt;map&lt;/code&gt; and &lt;code&gt;reduce&lt;/code&gt;. Consider the scenario where you get a bunch of database results that have a bunch of properties, some of which have values of type &lt;code&gt;Array&lt;/code&gt;. Maybe the client needs to show all the results but also some aggregations (i.e. for whatever reason, the aggregation occurs outside of the DB).&lt;/p&gt;
+
+&lt;p&gt;A data request like “show me total points scored in the first half by this subset of basketball players” works well with destructuring:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/ae147b4908812281305a40a760f76aaf.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I particularly like how variable naming (&lt;code&gt;firstQ&lt;/code&gt;, &lt;code&gt;secondQ&lt;/code&gt;) can take place in the second function argument of the &lt;code&gt;reduce&lt;/code&gt; function as opposed to in the function itself.&lt;/p&gt;
+
+&lt;p&gt;Speaking of renaming things…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Renaming Things&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Because context so often determines what the purpose of a piece of data is, it makes sense to me to rename the same piece of data depending on context.&lt;/p&gt;
+
+&lt;p&gt;For instance, let’s assume you had some player data from the NBA that looked like this:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/2604218271ca8d8b60577e76be6f8735.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;You then have one function that simply takes in the data for one player and returns their points per game.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/041e34686f448133840c6bc94b95c62f.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;It makes sense to call the argument here &lt;code&gt;pointsPerGame&lt;/code&gt;, as the purpose of this function is simply to get that value. &lt;/p&gt;
+
+&lt;p&gt;In contrast, let’s say you have a function that takes two arguments - data for an individual player and all player data - and then returns the data for all players with more PPG than that player. Here, changing the name &lt;code&gt;pointsPerGame&lt;/code&gt; to &lt;code&gt;ppgThreshold&lt;/code&gt; makes a lot of sense.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/0f2e87a7a72043c17183035ec865272e.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;We can actually go one step further here and destructure and rename the argument in the &lt;code&gt;filter&lt;/code&gt; function for clarity, using &lt;code&gt;playerPpg&lt;/code&gt; instead of &lt;code&gt;player.pointsPerGame&lt;/code&gt;.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/e0b5b1a6c94f58e5a26ae74c33688c89.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Applying Left-to-Right Thinking to Right-To-Left&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One thing in particular I like about destructuring assignment is that &lt;em&gt;it makes your brain reverse how you think about variable assignment&lt;/em&gt;. Pre ES6 destructuring, assigning a variable to the second and third elements of a Javascript array looked something like this:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/d09ea100babb266b1c8b918348faf534.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The natural thought process at least for me here is “look to the right hand side for meaning”. I see the numbers array and the indices at 2 and 3, and then understand.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/d09ea100babb266b1c8b918348faf534.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;With destructuring, the above can be done as follows:&lt;/p&gt;
+
+&lt;p&gt;Now, my thought process becomes “first, look to the left hand side for meaning”. I see the square brackets around &lt;code&gt;a&lt;/code&gt; and understand I need to get the first element of the right hand side. A side benefit is I immediately get that &lt;code&gt;numbers&lt;/code&gt; is an &lt;code&gt;Array&lt;/code&gt; with at least three elements too (obviously not guaranteed, but we know that’s the intent at least), so destructuring can convey type information too.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/600e5c1e6b3e33a420829b3bb3062fd6.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;As a side note here, Python gets close to allowing you to do this with lists, but will throw a &lt;code&gt;ValueError: too many values to unpack&lt;/code&gt; if the size of the list does not match the number of variables. &lt;/p&gt;
+
+&lt;p&gt;Overall, I’m amazed by how many different use cases ES6’s destructuring syntax has (and I’m sure there’s more to come in ES7). This feature is the rare tool that’s multi-purpose and easy to get the hang of. Moreover, it forces me to think about programming in a different way - looking to the left hand side of a variable assignment for meaning.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2017/01/02/in-praise-of-destructuring-assignment/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/01/02/in-praise-of-destructuring-assignment/</guid>
+      </item>
+    
+      <item>
         <title>Endless Learning</title>
         <description>&lt;p&gt;There is an infinite amount of knowledge to consume and an average human only lives &lt;a href=&quot;http://www.who.int/gho/mortality_burden_disease/life_tables/situation_trends/en/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;71.4 years&lt;/strong&gt;&lt;/a&gt;. I wanted to write this post to remind myself of 1) why the current landscape for learning is so excellent and 2) strategies that work for mining this landscape for its excellence.&lt;/p&gt;
 
@@ -343,42 +438,6 @@ Concentrate every minute... on doing what&#39;s in front of you with precise and
         <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2014/09/23/Abstraction/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/09/23/Abstraction/</guid>
-      </item>
-    
-      <item>
-        <title>Callbacks & Closures in JS with Brad Dayley</title>
-        <description>&lt;p&gt;I recently purchased Brad Dayley’s book on the MEAN stack entitled &lt;a href=&quot;http://www.amazon.com/Node-js-MongoDB-AngularJS-Development-Developers/dp/0321995783&quot; target=&quot;_blank&quot;&gt; Node.js, MongoDB and AngularJS Web Development &lt;/a&gt; (there’s also a section on Express, for those wondering about the E).The book is fantastic and Dayley provides a &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development&quot; target=&quot;_blank&quot;&gt; GitHub repo &lt;/a&gt; with the code for all the exercises covered in the book.&lt;/p&gt;
-
-&lt;p&gt;I have always struggled with the idea of callbacks and closures in JavaScript, and fortunately, Dayley is up to the task of walking through them. Callbacks and closures are especially important in Node.js, which, unlike most web-servers (when Node is used as a web-server), is single-threaded and event driven. To use an extended analogy provided in the book, if Node were the host of a party, it would speak to all guests individually and remember to come back to certain conversations after it had attended to other conversations, whereas most web-servers would just chat with everyone at one time. Node’s ability to push events into the background and return to them can act as a powerful advantage.   &lt;/p&gt;
-
-&lt;p&gt;The exercise Dayley uses to demonstrate is one that relies on the &lt;a href=&quot;http://nodejs.org/api/process.html#process_process_nexttick_callback&quot; target=&quot;_blank&quot;&gt; &lt;code&gt;process.nextTick()&lt;/code&gt; &lt;/a&gt; function native to Node. The function takes a callback and tells Node to execute the function on the next event loop. To return to the party analogy, &lt;code&gt;process.nextTick()&lt;/code&gt; schedules conversations with guests only after “earlier”” scheduled conversations have been attended to. I have tried to visually depict these loops in the console in the code below (which is almost wholly copied from Dayley’s &lt;a href=&quot;https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development/blob/master/ch04/callback_closure.js&quot; target=&quot;_blank&quot;&gt; exercise &lt;/a&gt;, with some minor alterations):&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/e4e619df6d4ecbb2f436.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The code above iterates twice through an array of three cars and logs the cars to the console. The key difference here is &lt;i&gt; when &lt;/i&gt; the execution of the function &lt;code&gt;logCar()&lt;/code&gt; nested in the loop in 11-17 occurs, versus the function &lt;code&gt;wrapperFn()&lt;/code&gt; nested in the loop in 19-28. &lt;code&gt;wrapperFn()&lt;/code&gt; calls &lt;code&gt;logCar()&lt;/code&gt; and “wraps” around it - hence the name. &lt;/p&gt;
-
-&lt;p&gt;The wrapper function here makes all the difference. The callback in &lt;code&gt;logCar()&lt;/code&gt; is destined not to execute until the second event loop in the program because it is wrapped in the aforementioned &lt;code&gt;process.nextTick()&lt;/code&gt;. Thus, “first loop” events, like the for loops that begin in 11 and 19,  will occur prior to the callback. &lt;/p&gt;
-
-&lt;p&gt;Because the execution of the callback must occur after the for loops are complete, the only way all the cars can get logged to the console is if the variables passed in as parameters each uniquely represent the three cars. &lt;/p&gt;
-
-&lt;p&gt;In 11-17, the &lt;code&gt;message&lt;/code&gt; parameter &lt;code&gt;logCar()&lt;/code&gt; takes on 13 will appear in the anonymous function always as the final element in the car array: Bugatti. The variable &lt;code&gt;message&lt;/code&gt; serving as the parameter in &lt;code&gt;logCar()&lt;/code&gt; is changing each time through the loop, and by the time the anonymous function uses it on the second event loop, the variable is equal to the final element in the array. In closure terms, &lt;code&gt;logCar()&lt;/code&gt; is the parent function of the anonymous function, and the parameter it passes to the anonymous function changes twice; however, since the callback executes on the second event loop, it is doomed to grab the parameter after the final iteration.&lt;/p&gt;
-
-&lt;p&gt;In contrast, the function &lt;code&gt;wrapperFn()&lt;/code&gt; in 21 does not let cars race by (excuse the pun), instead grabbing them and passing them along to its child functions in 27 when &lt;code&gt;wrapperFn()&lt;/code&gt; is called. As you can see visually via “PARAMETER PASSED 2: “, the message variable is being caught on the first event loop and saved in memory for the second event loop. &lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://lh5.googleusercontent.com/-VQSw0iVAE1w/VAyfjUURN5I/AAAAAAAAAXY/0OA4CB01Q_8/w282-h458-no/Screen%2BShot%2B2014-09-07%2Bat%2B2.09.07%2BPM.png&quot; alt=&quot;callback_clos_output&quot; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The value of closures in this exercise was to close off certain variables from change and give the callback function the information it needed. Because Node (and JavaScript in general) relies heavily on events occurring at different points in time, closures are key to making sure the passage of time will not get in the way of what the programmer intended (at least the way I see it).&lt;/p&gt;
-
-&lt;p&gt;Additionally, I realized while doing this exercise the importance of using closures in conjunction with callbacks to grab information from AJAX requests to bring such information to the client-side. As AJAX requests by definition occur asynchronously, they represent a perfect situation for implementing closures and callbacks.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/bsusensjackson/&quot; target=&quot;_blank&quot;&gt; Brendan Susens-Jackson&lt;/a&gt;, who I worked with on a side project called &lt;a href=&quot;http://ready-reader.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;ReadyReader&lt;/a&gt;, originally explained this idea to me and put it to work on our application. The source code can be found &lt;a href=&quot;https://github.com/woodchucks-2014/ReadyReader&quot;&gt; here&lt;/a&gt;. Brendan helped edit this post, so hats off to him :-).  &lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 07 Sep 2014 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2014/09/07/Closures-in-JS-from-Brad-Dayley/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/09/07/Closures-in-JS-from-Brad-Dayley/</guid>
       </item>
     
   </channel>
