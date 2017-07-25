@@ -7,6 +7,100 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Side Projects - Lessons Learned</title>
+        <description>&lt;p&gt;I am now beginning Month 5 of work on a side project, and wanted to record some things I’ve learned. I specifically wanted to write about side projects because I strongly believe in their ability to help me learn new technologies. My hope is that this post will be useful to both me in the future as I begin work on other side projects, as well as other developers considering starting side projects. Importantly, none of the advice in this post should apply to business critical applications or projects that do not have goals of simply educating the maker.&lt;/p&gt;
+
+&lt;p&gt;This post is centered around &lt;a href=&quot;https://itunes.apple.com/us/app/ipa-intellectual-personal-assistant/id1231802988?mt=8&quot;&gt;Intellectual Personal Assistant&lt;/a&gt;, a currently iOS-only mobile app I began in April. The goal of IPA is to make managing my free-time intellectual pursuits easier - in short, organizing all the books, articles, podcasts and movies I want to read, listen to or watch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Technology 1&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;My biggest piece of advice to myself is to pick the technology you most want to learn (a.k.a. Technology 1) as the founding reason for starting your project. In this way, there is no failure, in the sense that if you’re learning, you’ve already succeeded. I started IPA with the goal of learning a little bit about React Native. In the process, I learned about:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;publishing on the iOS App Store&lt;/li&gt;
+  &lt;li&gt;the Amazon Product and iTunes APIs&lt;/li&gt;
+  &lt;li&gt;Django signals&lt;/li&gt;
+  &lt;li&gt;XCode and Simulator&lt;/li&gt;
+  &lt;li&gt;the React ecosystem&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the same token, I think it’s also important to ship as often as possible and not be overcome by technical debt. At various points I’ve considering doing the following with IPA (and probably will at some point):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;moving the Heroku backend to EC2&lt;/li&gt;
+  &lt;li&gt;making an Android version&lt;/li&gt;
+  &lt;li&gt;making a desktop version&lt;/li&gt;
+  &lt;li&gt;getting Redux into the project&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I haven’t done these things yet, because in my estimation all would significantly push back features I do want to ship by the end of the summer and beyond. Not shipping important features kills momentum on side projects - hence the delays here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Time Management&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I put this one and organization first because I really learned the most in these areas from working on this project. My side projects die if I lose my momentum, and I lose my momentum when I decrease time spent on the side project.&lt;/p&gt;
+
+&lt;p&gt;There’s other obvious cause and effect cycles between time management and project momentum. It becomes easier and easier to change code when you’re exposed to it everyday, and harder and harder if you step away from the codebase for even a week.&lt;/p&gt;
+
+&lt;p&gt;Having a full-time job necessitates that work on side projects occur on weekday mornings or weekends. Weeknights at least for me are simply not possible because of fatigue and the fact that trying to code past 8 pm usually keeps me awake past midnight. While weekends are great for 3+ hour chunks of coding and when I accomplish my largest features, they cannot be relied upon for ensuring side project success for the same reason that cramming for a test rarely works. If you drop all project work during the week, you’re both less familiar with your code by the time the weekend rolls around and less invested in it.&lt;/p&gt;
+
+&lt;p&gt;As a result, I quickly learned the success or failure of IPA would hinge on weekday mornings. To this end, the book that helped me the most when working on IPA was &lt;a href=&quot;https://www.amazon.com/How-Love-Waking-Up-Hands-ebook/dp/B00Y1PUAUK&quot;&gt;How to Love Waking Up&lt;/a&gt;. The title sounds cheesy, but I think the advice contained is worth the $2.99. (Add quote from book)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Organization&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When am I going to do my next release?&lt;/li&gt;
+  &lt;li&gt;Summer timeline v. year timeline v. beyond timeline&lt;/li&gt;
+  &lt;li&gt;What refactoring tasks are high priority? The big ones I have worked on since the start of my project were upgrading &lt;code&gt;react-native&lt;/code&gt; (I started on 0.42), changing my schema to house all content in one table (books, movies, podcasts, etc. used to be separate tables) and changing my navigation library (moving from &lt;code&gt;react-native-deprecated-custom-components&lt;/code&gt; (yes, that is currently the name of the library) to &lt;code&gt;react-navigation&lt;/code&gt;, still a WIP).&lt;/li&gt;
+  &lt;li&gt;Notecard system&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Momentum&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Momentum I have come to realize is the most important variable in whether work is completed on a side project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Learning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I really believe this - you learn the fastest when the stakes are highest. When you are the only author on a code repository, every failure is distinctly your fault. Every bug ties back to a line of code you wrote, or a dependency you created. When a performance bottleneck exists, you created it. When &lt;code&gt;render&lt;/code&gt; is being called way too many times for no apparent reason, that’s on you.&lt;/p&gt;
+
+&lt;p&gt;(bug example - there’s a lot)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UI And Eating Your Own Dog Food&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I try to use IPA as much as possible in all mental states - tired, after a cup of coffee, after a beer. Here’s what I realized quickly about myself (and maybe some of these apply to other users - maybe not):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The app should always offer me something to check on, and that should be front and center when opening the app. For Seeking Alpha, this is stock quotes and articles. For ESPN’s fantasy baseball app, this is my current matchup and the  scores on each category, with quick access to my players and my opponents’ players. For Google Maps, this is a map of where you are and a search bar to input where you’re going.   &lt;/li&gt;
+  &lt;li&gt;I expect every part of a mobile app to react to touch. Any element on the screen that looks touchable needs to do something awesome, and preferably that thing is to get me to another great screen with lots of other cool linking things. As an aside, I think video games have set this precedent, since we’re now all used to constantly moving landscapes and interactive design.&lt;/li&gt;
+  &lt;li&gt;I like to be able to scroll. I find this really satisfying for whatever reason. Non-smooth or cut off scrolling is recognized immediately by users.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Linting, Formatting, Testing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;More important than you think.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;componentDidMount&lt;/code&gt; and rules&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;prettier&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Unused styles&lt;/li&gt;
+  &lt;li&gt;Contract with yourself&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Feedback&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;My family, my girlfriend and a few friends of mine are my hallway feedback testing and production bug detection for IPA. My brother is never afraid to tell me how much IPA sucks (in a good way - he’s even making fake JIRA tickets!). Asking for constant feedback also gets people on your back when you do a few weeks without a release.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Metrics and Accountability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is another way to ensure momentum. What gets measured gets managed, and having week to week graphs is an easy way to do a Sunday evening “state of the app” for yourself. I do the same thing with Map My Run and think this also works well for running.  &lt;/p&gt;
+
+&lt;p&gt;Sam Altman’s &lt;a href=&quot;http://playbook.samaltman.com/&quot;&gt;Startup Playbook&lt;/a&gt; gets into this.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2017/07/31/side-projects/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/07/31/side-projects/</guid>
+      </item>
+    
+      <item>
         <title>Upgrades</title>
         <description>&lt;p&gt;I bought a new MacBook Pro 2016 today, which represents a large upgrade for me. I was on an MBP 2012 before. The performance improvements are remarkable. Just using it today felt like one of those (ever more frequent) times when technology shocks you with how quickly it improves. I got to thinking about how many open source tools just in the last few years have sped up my workflow as a developer:&lt;/p&gt;
 
@@ -394,41 +488,6 @@ Concentrate every minute... on doing what&#39;s in front of you with precise and
         <pubDate>Sun, 28 Dec 2014 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2014/12/28/Resolution/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/12/28/Resolution/</guid>
-      </item>
-    
-      <item>
-        <title>The Internet Is Awesome</title>
-        <description>&lt;p&gt;I spent the great majority of this weekend messing around with a Raspberry Pi I received for my birthday from my dad. Besides being a leading candidate for best present I have ever received, the Pi led me to three great epiphanies:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The internet has exponentially expanded our ability to work alone and without friction costs on projects we enjoy, which in turn has led us to new projects we otherwise never would have taken on&lt;/li&gt;
-  &lt;li&gt;Contributing to the internet is as enjoyable as receiving from it, which encourages people to both consume and create knowledge&lt;/li&gt;
-  &lt;li&gt;All of this bodes well for a knowledge economy&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I think (1) was the most obvious realization for me, so I’ll start there. I am absolutely sure the Rasberry Pi is a project I would have abandoned as a child. I know I would have abandoned it not out of a lack of tenacity or curiousity - I know I would not have been able to find out what to do if I were stuck. To be clear, the Rasberry Pi is meant for children, and the projects I worked on this weekend are embarrassingly kid-oriented (lighting up LED bulbs). Yet, do-it-yourself assembly kits for kids require instruction (think &lt;a href=&quot;http://www.amazon.com/Schylling-Sea-Monkeys-Ocean-Zoo/dp/B001CBZXEE&quot; target=&quot;_blank&quot;&gt; Sea Monkeys&lt;/a&gt;) that might not necessarily be obvious to adults.&lt;/p&gt;
-
-&lt;p&gt;Most every step of the way this weekend on the Raspberry Pi I had no idea what to do and was just referring to some online tutorial or YouTube video (among other things, I learned the UK seems to be the largest producer of Pi-oriented content, perhaps because the Pi was invented there). Parsing through good and bad stuff was fairly easy, and even YouTube comments served as a means of curating material for me:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-b5hljcg0F9g/VIzfI0f-vCI/AAAAAAAAAZU/riSmAtr7-n4/w621-h515-no/Screen%2BShot%2B2014-12-13%2Bat%2B7.50.52%2BPM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I know of no other medium so good at simultaneously offering humor and useful information. &lt;/p&gt;
-
-&lt;p&gt;That brings me to (2). I thank the internet this weekend for giving me the opportunity to SSH into my Pi from my laptop, light up LEDs and not look like an idiot when working with Vi. All these things no doubt better my quality of life, which is why I feel strongly about giving back to the internet through developing software and general knowledge sharing (this blog, I hope). &lt;/p&gt;
-
-&lt;p&gt;And finally, (3). The fact that the Raspberry Pi is aimed at children but that an entire knowledge economy among adults has formed (and continues to grow) makes me optimistic about the future of Planet Earth. In addition to enriching our experience and pushing us to produce good content as knowledge-sharers, the internet leads to wholly unpredictable innovation. When the Pi’s inventors built it to raise computer science interest, I’m not sure they could have envisoned adults &lt;a href=&quot;http://jack.minardi.org/raspberry_pi/make-an-internet-controlled-lamp-with-a-raspberry-pi-and-flask/&quot; target=&quot;_blank&quot;&gt; building web applications to control lights &lt;/a&gt; with a back-end framework developed in 2010. &lt;/p&gt;
-
-&lt;p&gt;The internet has a way of inspiring creative initiatives. As Jack Minardi notes in his blog post linked above:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&quot;NOTE: I am not a Flask or web design expert, so I might not be doing things the correct way. But it wouldn&#39;t be hacking if we knew what we was doing all the time, would it?&quot;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I believe people feel initiative to contribute on the internet and are not burdened by fear of being wrong (a burden that so often rears its ugly in corporate culture and academia). The environment people have created online is conducive to exponential knowledge growth, which is overwhelmingly positive in any knowledge economy. The internet is awesome. I’m excited and proud to be a part of it.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 13 Dec 2014 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2014/12/13/The-Internet-is-Awesome/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/12/13/The-Internet-is-Awesome/</guid>
       </item>
     
   </channel>
