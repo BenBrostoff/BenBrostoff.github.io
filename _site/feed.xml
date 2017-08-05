@@ -7,6 +7,62 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>RTD</title>
+        <description>&lt;p&gt;RTD - Read the Docs. That phrase cuts across industries - I have heard it just as much as a programmer as I did as an investment banker. And while when said verbally, RTD (sometimes RTFD) usually lands with a hint of annoyance, I really believe it’s some of the most important career advice I have ever received.&lt;/p&gt;
+
+&lt;p&gt;I recently was writing some unit tests to check that a small wrapper around the &lt;a href=&quot;https://aws.amazon.com/documentation/ses/&quot;&gt;AWS.SES API&lt;/a&gt; was invoked correctly and logging error messages as expected. Using &lt;a href=&quot;https://github.com/sinonjs/sinon&quot;&gt;&lt;code&gt;sinon&lt;/code&gt;&lt;/a&gt; and the &lt;a href=&quot;https://github.com/dwyl/aws-sdk-mock&quot;&gt;&lt;code&gt;aws-sdk-mock&lt;/code&gt;&lt;/a&gt; library, I had some code that looked like the below to check error handling:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/1cba16104882f0c73609ff105ee39d5d.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;As background, &lt;code&gt;mock&lt;/code&gt; from &lt;code&gt;aws-sdk-mock&lt;/code&gt; takes three arguments, the third of which is a function that, in the case of mocking &lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property&quot;&gt;sendEmail&lt;/a&gt;, takes the email params and a callback. The callback itself takes two arguments - an error message and data from the response.&lt;/p&gt;
+
+&lt;p&gt;I received a comment from my boss on this code review to the effect that every time I was using &lt;code&gt;callsFake&lt;/code&gt;, I could just be using &lt;a href=&quot;http://sinonjs.org/releases/v3.0.0/stubs/&quot;&gt;&lt;code&gt;callsArgWith&lt;/code&gt;&lt;/a&gt;. The &lt;a href=&quot;http://sinonjs.org/releases/v3.0.0/stubs/&quot;&gt;documentation&lt;/a&gt; for &lt;code&gt;callsArgWith&lt;/code&gt; points to &lt;code&gt;callsArg&lt;/code&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;stub.callsArgWith(index, arg1, arg2, …)&lt;/p&gt;
+
+  &lt;p&gt;Like callsArg, but with arguments to pass to the callback.&lt;/p&gt;
+
+  &lt;p&gt;stub.callsArg(index)&lt;/p&gt;
+
+  &lt;p&gt;Causes the stub to call the argument at the provided index as a callback function. stub.callsArg(0); causes the stub to call the first argument as a callback.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;It made sense - my only goal was to fake invoking the callback &lt;code&gt;sendEmail&lt;/code&gt; takes following resolution of the email &lt;code&gt;Promise&lt;/code&gt;. Giving it an error didn’t require passing in a new function to &lt;code&gt;callsFake&lt;/code&gt; - &lt;code&gt;sinon&lt;/code&gt; already offers this functionality:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And because you’re always one click a way in your IDE from &lt;a href=&quot;https://github.com/sinonjs/sinon/blob/master/lib/sinon/default-behaviors.js#L55&quot;&gt;seeing the source&lt;/a&gt; in &lt;code&gt;node_modules&lt;/code&gt;:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/14244abba5cb9ee47dac6884bc862abf.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;after which there’s an easy path to cloning the source repo and after some investigation finding your way to &lt;code&gt;callCallback&lt;/code&gt; in &lt;code&gt;lib/sinon/behavior.js&lt;/code&gt;, which gets the callback using &lt;code&gt;callArgAt&lt;/code&gt; set in the source we looked at, which then takes the &lt;code&gt;callbackArguments&lt;/code&gt; sans the &lt;code&gt;fake&lt;/code&gt; and &lt;code&gt;position&lt;/code&gt; arguments passed in &lt;code&gt;callsArgWith&lt;/code&gt; (note the function signature in the docs differs from what is the source - this is because &lt;a href=&quot;https://github.com/sinonjs/sinon/blob/master/lib/sinon/behavior.js#L204&quot;&gt;&lt;code&gt;addBehavior&lt;/code&gt;&lt;/a&gt; will always add functions to the stub prototype with the first argument being the stub itself).  &lt;/p&gt;
+
+&lt;p&gt;Finally, &lt;a href=&quot;https://github.com/sinonjs/sinon/blob/master/test/stub-test.js#L574&quot;&gt;here’s the test in &lt;code&gt;sinon&lt;/code&gt;&lt;/a&gt;, clearly demonstrating that a callback passed as the second argument to a stub should be able to be passed any argument with &lt;code&gt;callsArgWith&lt;/code&gt;:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/5951ea3710240f413739438620148022.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;In looking at the &lt;code&gt;sinon&lt;/code&gt; docs and then the Amazon SES docs, I realized there was probably an ocean of API functionality I was not taking advantage of. And the only way to find out would be to study and experiment. Which is the fun of being an engineer.&lt;/p&gt;
+
+&lt;p&gt;I bring up this example because I think it illustrates the importance of reading documentation (and even better, source code). I was familiar with &lt;code&gt;callsFake&lt;/code&gt;, so every testing situation looked like a hammer to its nail. This is what happens when API docs are read quickly and with the intent of completing a task. The cost is that robust APIs are used incorrectly, and code that should be short and sweet becomes long and ugly.&lt;/p&gt;
+
+&lt;p&gt;I know this seems obvious, but I wanted to write about it because I know there are different gradients of RTD. In banking, you might read the earnings call transcript but not the 10-Q; only the part of the S-1 with the risks to the business; the first tab of the huge Excel model.&lt;/p&gt;
+
+&lt;p&gt;In programming, there’s cherry-picking documentation; reading the documentation without the source code; starting a project with “getting started” documentation and never revisiting the docs again, and so much more.&lt;/p&gt;
+
+&lt;p&gt;A lot of this can be argued against with allusions to time management principles. How am I supposed to get anything done if I’m reading forty thousands pages of documentation and source code? Obviously, reading all the documentation - especially for something like the AWS SDK - is impossible. But transferring a 3 hour chunk of time from 70 / 30 writing code / reading docs to 65 / 35 writing code / reading docs?&lt;/p&gt;
+
+&lt;p&gt;You might end up improving your code and reading some interesting source code from a great library  &lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2017/08/05/rtd/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/08/05/rtd/</guid>
+      </item>
+    
+      <item>
         <title>Upgrades</title>
         <description>&lt;p&gt;I bought a new MacBook Pro 2016 today, which represents a large upgrade for me. I was on an MBP 2012 before. The performance improvements are remarkable. Just using it today felt like one of those (ever more frequent) times when technology shocks you with how quickly it improves. I got to thinking about how many open source tools just in the last few years have sped up my workflow as a developer:&lt;/p&gt;
 
@@ -394,41 +450,6 @@ Concentrate every minute... on doing what&#39;s in front of you with precise and
         <pubDate>Sun, 28 Dec 2014 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2014/12/28/Resolution/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2014/12/28/Resolution/</guid>
-      </item>
-    
-      <item>
-        <title>The Internet Is Awesome</title>
-        <description>&lt;p&gt;I spent the great majority of this weekend messing around with a Raspberry Pi I received for my birthday from my dad. Besides being a leading candidate for best present I have ever received, the Pi led me to three great epiphanies:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The internet has exponentially expanded our ability to work alone and without friction costs on projects we enjoy, which in turn has led us to new projects we otherwise never would have taken on&lt;/li&gt;
-  &lt;li&gt;Contributing to the internet is as enjoyable as receiving from it, which encourages people to both consume and create knowledge&lt;/li&gt;
-  &lt;li&gt;All of this bodes well for a knowledge economy&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I think (1) was the most obvious realization for me, so I’ll start there. I am absolutely sure the Rasberry Pi is a project I would have abandoned as a child. I know I would have abandoned it not out of a lack of tenacity or curiousity - I know I would not have been able to find out what to do if I were stuck. To be clear, the Rasberry Pi is meant for children, and the projects I worked on this weekend are embarrassingly kid-oriented (lighting up LED bulbs). Yet, do-it-yourself assembly kits for kids require instruction (think &lt;a href=&quot;http://www.amazon.com/Schylling-Sea-Monkeys-Ocean-Zoo/dp/B001CBZXEE&quot; target=&quot;_blank&quot;&gt; Sea Monkeys&lt;/a&gt;) that might not necessarily be obvious to adults.&lt;/p&gt;
-
-&lt;p&gt;Most every step of the way this weekend on the Raspberry Pi I had no idea what to do and was just referring to some online tutorial or YouTube video (among other things, I learned the UK seems to be the largest producer of Pi-oriented content, perhaps because the Pi was invented there). Parsing through good and bad stuff was fairly easy, and even YouTube comments served as a means of curating material for me:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-b5hljcg0F9g/VIzfI0f-vCI/AAAAAAAAAZU/riSmAtr7-n4/w621-h515-no/Screen%2BShot%2B2014-12-13%2Bat%2B7.50.52%2BPM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I know of no other medium so good at simultaneously offering humor and useful information. &lt;/p&gt;
-
-&lt;p&gt;That brings me to (2). I thank the internet this weekend for giving me the opportunity to SSH into my Pi from my laptop, light up LEDs and not look like an idiot when working with Vi. All these things no doubt better my quality of life, which is why I feel strongly about giving back to the internet through developing software and general knowledge sharing (this blog, I hope). &lt;/p&gt;
-
-&lt;p&gt;And finally, (3). The fact that the Raspberry Pi is aimed at children but that an entire knowledge economy among adults has formed (and continues to grow) makes me optimistic about the future of Planet Earth. In addition to enriching our experience and pushing us to produce good content as knowledge-sharers, the internet leads to wholly unpredictable innovation. When the Pi’s inventors built it to raise computer science interest, I’m not sure they could have envisoned adults &lt;a href=&quot;http://jack.minardi.org/raspberry_pi/make-an-internet-controlled-lamp-with-a-raspberry-pi-and-flask/&quot; target=&quot;_blank&quot;&gt; building web applications to control lights &lt;/a&gt; with a back-end framework developed in 2010. &lt;/p&gt;
-
-&lt;p&gt;The internet has a way of inspiring creative initiatives. As Jack Minardi notes in his blog post linked above:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&quot;NOTE: I am not a Flask or web design expert, so I might not be doing things the correct way. But it wouldn&#39;t be hacking if we knew what we was doing all the time, would it?&quot;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I believe people feel initiative to contribute on the internet and are not burdened by fear of being wrong (a burden that so often rears its ugly in corporate culture and academia). The environment people have created online is conducive to exponential knowledge growth, which is overwhelmingly positive in any knowledge economy. The internet is awesome. I’m excited and proud to be a part of it.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 13 Dec 2014 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2014/12/13/The-Internet-is-Awesome/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2014/12/13/The-Internet-is-Awesome/</guid>
       </item>
     
   </channel>
