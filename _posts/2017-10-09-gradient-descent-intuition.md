@@ -19,7 +19,7 @@ Matt Nedrich over at Atomic Object has [an excellent definition of gradient desc
 
 Gradient descent can be thought of as [a synonym for slope](http://mathworld.wolfram.com/Gradient.html). Since slope is rise / run, and a horizontal line has a slope of 0 (0 rise over infinite run), finding the slope at the function's minimum can be thought of as "descending" to a gradient of zero. The name gradient descent makes sense, because once the gradient decent algorithm has run for a given function, the computed parameters will descend the slope at the computed point to zero.
 
-Providing clear examples of the *how* of ML are among the reasons I'm writing this [blog series](http://localhost/2017/09/19/why-ml/), so let's use gradient descent on the following function:
+Providing clear examples of the *how* of ML are among the reasons I'm writing this [blog series](http://benbrostoff.github.io/2017/09/19/why-ml/), so let's use gradient descent on the following function:
 
 `(x - 5) ** 2`
 

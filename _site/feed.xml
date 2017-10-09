@@ -24,7 +24,7 @@
 
 &lt;p&gt;Gradient descent can be thought of as &lt;a href=&quot;http://mathworld.wolfram.com/Gradient.html&quot;&gt;a synonym for slope&lt;/a&gt;. Since slope is rise / run, and a horizontal line has a slope of 0 (0 rise over infinite run), finding the slope at the function’s minimum can be thought of as “descending” to a gradient of zero. The name gradient descent makes sense, because once the gradient decent algorithm has run for a given function, the computed parameters will descend the slope at the computed point to zero.&lt;/p&gt;
 
-&lt;p&gt;Providing clear examples of the &lt;em&gt;how&lt;/em&gt; of ML are among the reasons I’m writing this &lt;a href=&quot;http://localhost/2017/09/19/why-ml/&quot;&gt;blog series&lt;/a&gt;, so let’s use gradient descent on the following function:&lt;/p&gt;
+&lt;p&gt;Providing clear examples of the &lt;em&gt;how&lt;/em&gt; of ML are among the reasons I’m writing this &lt;a href=&quot;http://benbrostoff.github.io/2017/09/19/why-ml/&quot;&gt;blog series&lt;/a&gt;, so let’s use gradient descent on the following function:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;(x - 5) ** 2&lt;/code&gt;&lt;/p&gt;
 
