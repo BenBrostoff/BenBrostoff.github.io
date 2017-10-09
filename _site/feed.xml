@@ -7,6 +7,59 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Gradient Descent Intuition (ML Series, Part 2)</title>
+        <description>&lt;p&gt;How do machines learn?&lt;/p&gt;
+
+&lt;p&gt;One answer is by getting fewer answers wrong over time. One technique for decreasing wrongness is &lt;em&gt;gradient descent&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this post, I want to explore gradient descent as a standalone topic. In the next post in this series, I’ll discuss its relationship with machine learning, and run through a basic example of why gradient descent is useful in helping machines get fewer answers wrong.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gradient Descent - Find The Minimum&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Matt Nedrich over at Atomic Object has &lt;a href=&quot;https://spin.atomicobject.com/2014/06/24/gradient-descent-linear-regression/&quot;&gt;an excellent definition of gradient descent&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;At a theoretical level, gradient descent is an algorithm that minimizes functions. Given a function defined by a set of parameters, gradient descent starts with an initial set of parameter values and iteratively moves toward a set of parameter values that minimize the function. This iterative minimization is achieved using calculus, taking steps in the negative direction of the function gradient.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Gradient descent can be thought of as &lt;a href=&quot;http://mathworld.wolfram.com/Gradient.html&quot;&gt;a synonym for slope&lt;/a&gt;. Since slope is rise / run, and a horizontal line has a slope of 0 (0 rise over infinite run), finding the slope at the function’s minimum can be thought of as “descending” to a gradient of zero. The name gradient descent makes sense, because once the gradient decent algorithm has run for a given function, the computed parameters will descend the slope at the computed point to zero.&lt;/p&gt;
+
+&lt;p&gt;Providing clear examples of the &lt;em&gt;how&lt;/em&gt; of ML are among the reasons I’m writing this &lt;a href=&quot;http://localhost/2017/09/19/why-ml/&quot;&gt;blog series&lt;/a&gt;, so let’s use gradient descent on the following function:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;(x - 5) ** 2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I write this function in this form as opposed to &lt;code&gt;x ** 2 - 10x + 25&lt;/code&gt; because it’s easy to see that the function is minimized at 5. Gradient descent should return &lt;code&gt;5&lt;/code&gt; for &lt;code&gt;x&lt;/code&gt; if the algorithm lives up to its name.&lt;/p&gt;
+
+&lt;p&gt;The gradient descent algorithm itself is all of one line, but importantly requires 1) the derivative (also synonymous with slope) of the function and 2) a small number to descend the gradient. The small number - which we’ll set to &lt;code&gt;0.01&lt;/code&gt; in this example - is necessary because it allows the gradient to move on each iteration of the algorithm. The derivative can be &lt;a href=&quot;https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-rules/ab-diff-negative-fraction-powers/a/power-rule-review&quot;&gt;computed through the power rule&lt;/a&gt;, which I had to review via the provided link from Khan academy. In short, moving the exponent &lt;code&gt;2&lt;/code&gt; down and raising the result to &lt;code&gt;2-1&lt;/code&gt; returns a derivative function of &lt;code&gt;2(x-5) ** 1&lt;/code&gt; or &lt;code&gt;2x - 10&lt;/code&gt;. We now have the parameters necessary to run gradient descent for a few iterations:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/KLzDbCuvj2CsjRRhAt9OSGSwxHdqcAejrr-nmUkTxEEGKmXcpcSlbnuS9ub8U0eDqKubsdmGPNDZPUk=w2782-h1560-rw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What this algorithm does is 1) take the previous minimized value (or start at zero) and 2) subtract the slope function with the previous minimum value passed in, multiplied by the small number.&lt;/p&gt;
+
+&lt;p&gt;And if run for 10,000 iterations or even 100,000 iterations, with &lt;code&gt;0.01&lt;/code&gt; as the small number, &lt;code&gt;x&lt;/code&gt; converges to &lt;code&gt;5&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/AnbRTNoeHSo2QyCEpstm23IWWIIJQ_ERToh29jmy0bfQ2DMrdqBJ3wgx-S4ox3eH-KMNLAw58f9ywwE=w2782-h1560-rw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But what if instead of a small number we used a huge number? What is clear from experimentation is that numbers larger than one will never allow the solution to converge to &lt;code&gt;5&lt;/code&gt;. While a small number of &lt;code&gt;0.99&lt;/code&gt; converges to &lt;code&gt;5&lt;/code&gt;, a small number of &lt;code&gt;1.0&lt;/code&gt; bounces the solution back and forth between &lt;code&gt;10&lt;/code&gt; and &lt;code&gt;0&lt;/code&gt; forever. A couple of iterations in this sequence are instructive:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/qixOuNZNmrKr5oGLeEjK5cv_RQ8lK-PvsNcQ9SApqTxWq42nHUjl0ZVWgHHdw-VMh4KvCGOG0cKUV9w=w2782-h1560-rw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The value selected for the small number is extremely important. Selection of the small number is an example of &lt;em&gt;hyperparamater tuning&lt;/em&gt; in machine learning, which we’ll explore in a later post.&lt;/p&gt;
+
+&lt;p&gt;Please note all the code for this post can be found &lt;a href=&quot;https://github.com/BenBrostoff/ml-series-source&quot;&gt;on my GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why Does Gradient Descent Help Machines Learn?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The small number mentioned above is called the &lt;em&gt;learning rate&lt;/em&gt; in ML contexts, and drives the learning in machine learning. The function the gradient descent algorithm is applied on is the &lt;em&gt;loss function&lt;/em&gt;, where loss is the difference between the prediction made from a machine learning example and actual reality. For example, if an ML model predicted an NFL running back will finish with &lt;code&gt;17&lt;/code&gt; touch downs for the 2016 season and the reality is &lt;code&gt;11&lt;/code&gt;, the loss in this example is &lt;code&gt;6&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the next post, I’m excited to explore an actual application of gradient descent in machine learning.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition/</guid>
+      </item>
+    
+      <item>
         <title>Why I'm Writing About ML (ML Series, Part 1)</title>
         <description>&lt;blockquote&gt;
 
@@ -377,51 +430,6 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
         <pubDate>Sat, 18 Apr 2015 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2015/04/18/Languages/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2015/04/18/Languages/</guid>
-      </item>
-    
-      <item>
-        <title>Resolutions by Type</title>
-        <description>&lt;p&gt;I posted thoughts on &lt;a href=&quot;http://benbrostoff.github.io/2014/12/28/Resolution/&quot; target=&quot;_blank&quot;&gt; improving as a programmer &lt;/a&gt; in 2015 a few days back, but thought I would post my complete resolutions so I can reference them come 12/31/2015. &lt;a href=&quot;http://blog.fogus.me/&quot; target=&quot;_blank&quot;&gt;Fogus&lt;/a&gt; has an awesome tradition on his blog of posting “The best things and stuff of [Year]” going back to 2010, so I think it would be cool to emulate that idea with resolutions and reflections on whether those resolutions were met or not. Here we go, by type: &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Attitude&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Keep this quote in mind every day. From Marcus Aurelius in &lt;a href=&quot;http://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255&quot; target=&quot;_blank&quot;&gt;Meditations&lt;/a&gt;, Book 2.5:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-Concentrate every minute... on doing what&#39;s in front of you with precise and genuine seriousness, tenderly, willingly, with justice. And on freeing yourself from all other distractions. Yes, you can - if you do everything as if it were the last thing you were doing in your life, and stop being aimless, stop letting your emotions override what your mind tells you, stop being hypocritical, self-centered, irritable. You see how few things you have to do to live a satisfying and relevant life?
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Craft&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Program every day&lt;/li&gt;
-  &lt;li&gt;Blog every month with a quality post&lt;/li&gt;
-  &lt;li&gt;Read cover to cover &lt;a href=&quot;http://www.amazon.com/Understanding-Computation-Machines-Impossible-Programs/dp/1449329276&quot; target=&quot;_blank&quot;&gt;Understanding Computation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Study Haskell and Lisp in concert on weekends, under the theory that &lt;a href=&quot;http://lemire.me/blog/archives/2014/12/30/how-to-learn-efficiently/&quot; target=&quot;_blank&quot;&gt;interleaved study trumps mass study&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Review &lt;a href=&quot;https://github.com/thomasahle/sunfish&quot; target=&quot;_blank&quot;&gt;Sunfish&lt;/a&gt; in its entirety and blog on it&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Fitness (Body and Mind)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Eradicate sugar intake, sans social occassions &lt;/li&gt;
-  &lt;li&gt;20 minutes+ of physical activity, 5+ days a week&lt;/li&gt;
-  &lt;li&gt;Meditate 5+ minutes every day  &lt;/li&gt;
-  &lt;li&gt;Read 20+ minutes every day&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Other&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Memorize a 52 card deck in &amp;lt; 5 minutes&lt;/li&gt;
-  &lt;li&gt;Complete the Rubik’s cube in &amp;lt; 5 minutes&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2015/01/01/Resolutions-by-Type/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2015/01/01/Resolutions-by-Type/</guid>
       </item>
     
   </channel>
