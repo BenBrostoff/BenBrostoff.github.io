@@ -38,7 +38,7 @@
 
 &lt;p&gt;And if run for 10,000 iterations or even 100,000 iterations, with &lt;code&gt;0.01&lt;/code&gt; as the small number, &lt;code&gt;x&lt;/code&gt; converges to &lt;code&gt;5&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/AnbRTNoeHSo2QyCEpstm23IWWIIJQ_ERToh29jmy0bfQ2DMrdqBJ3wgx-S4ox3eH-KMNLAw58f9ywwE=w2782-h1560-rw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/iMqQyqNsSkFgMTTQzYTCx9yOinLXPO4gpOMG1TsHCOIwdI-Av3pylWmE6CD9r40POjAIt74dfMKwiEE=w2782-h1560-rw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;But what if instead of a small number we used a huge number? What is clear from experimentation is that numbers larger than one will never allow the solution to converge to &lt;code&gt;5&lt;/code&gt;. While a small number of &lt;code&gt;0.99&lt;/code&gt; converges to &lt;code&gt;5&lt;/code&gt;, a small number of &lt;code&gt;1.0&lt;/code&gt; bounces the solution back and forth between &lt;code&gt;10&lt;/code&gt; and &lt;code&gt;0&lt;/code&gt; forever. A couple of iterations in this sequence are instructive:&lt;/p&gt;
 

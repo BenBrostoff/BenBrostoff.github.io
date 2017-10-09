@@ -33,7 +33,7 @@ What this algorithm does is 1) take the previous minimized value (or start at ze
 
 And if run for 10,000 iterations or even 100,000 iterations, with `0.01` as the small number, `x` converges to `5`.
 
-![](https://lh4.googleusercontent.com/AnbRTNoeHSo2QyCEpstm23IWWIIJQ_ERToh29jmy0bfQ2DMrdqBJ3wgx-S4ox3eH-KMNLAw58f9ywwE=w2782-h1560-rw)
+![](https://lh5.googleusercontent.com/iMqQyqNsSkFgMTTQzYTCx9yOinLXPO4gpOMG1TsHCOIwdI-Av3pylWmE6CD9r40POjAIt74dfMKwiEE=w2782-h1560-rw)
 
 But what if instead of a small number we used a huge number? What is clear from experimentation is that numbers larger than one will never allow the solution to converge to `5`. While a small number of `0.99` converges to `5`, a small number of `1.0` bounces the solution back and forth between `10` and `0` forever. A couple of iterations in this sequence are instructive:
 
