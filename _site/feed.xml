@@ -7,6 +7,25 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Commits Are Not a Proxy for Progress</title>
+        <description>&lt;p&gt;I’m resolving to stop using commits as a measure of progress.&lt;/p&gt;
+
+&lt;p&gt;Generating code is easy. Generating code while understanding every line is hard. This may on the surface seem like an absurd statement, especially if new code has no library dependencies. But native code for a specific language has its own complexities. A recent example I ran into - &lt;a href=&quot;https://stackoverflow.com/questions/21771220/error-handling-with-node-js-streams&quot;&gt;error handling with Node &lt;code&gt;stream&lt;/code&gt;s&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Good writers talk all the time about all the work that comes before and after writing. &lt;a href=&quot;https://tim.blog/2016/05/22/sebastian-junger/&quot;&gt;Sebastian Junger&lt;/a&gt; is insistent on understanding his subject matter as much as possible before putting pen to paper. &lt;a href=&quot;https://www.amazon.com/Writing-10th-Anniversary-Memoir-Craft/dp/1439156816&quot;&gt;Stephen King&lt;/a&gt; urges writers to tear apart their initial and even later drafts as the editing process creates insight. Coding should be no different.&lt;/p&gt;
+
+&lt;p&gt;The before and after work for coding should aim to reduce code generated to as small a volume as possible. This process takes time - time to consider different architectures, &lt;a href=&quot;http://benbrostoff.github.io/2017/08/05/rtd/&quot;&gt;time to read documentation&lt;/a&gt; and time to receive and address feedback. In no way does this time correlate with commits, nor would correlation be desirable. Version control should tell the story of what changed in the code, not the story of someone’s coding process. This is the difference between &lt;code&gt;Adds error handling to batch script&lt;/code&gt; and three commits that are different iterations of error handling.&lt;/p&gt;
+
+&lt;p&gt;What can substitute for commits then as a measure of progress on a project? I see value in tools that track the before and after process, in addition to the actual writing of code. I have found &lt;a href=&quot;https://qotoqot.com/qbserve/&quot;&gt;&lt;code&gt;Qbserve&lt;/code&gt; useful here&lt;/a&gt; - it’s a tool that shows time spent in different applications. Good old-fashioned “software journaling” is another technique I love - I especially enjoyed this &lt;a href=&quot;http://winterflower.github.io/2017/08/17/software-engineering-notebook/&quot;&gt;blog post on it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What gets measured gets managed. Let’s make sure we’re measuring the right things.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2017/11/09/commits-are-not-a-proxy-for-progress/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/11/09/commits-are-not-a-proxy-for-progress/</guid>
+      </item>
+    
+      <item>
         <title>Gradient Descent Intuition (ML Series, Part 2)</title>
         <description>&lt;p&gt;How do machines learn?&lt;/p&gt;
 
@@ -405,31 +424,6 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
         <pubDate>Sun, 23 Aug 2015 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2015/08/23/Automating-Via-Alias-And-Bash/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2015/08/23/Automating-Via-Alias-And-Bash/</guid>
-      </item>
-    
-      <item>
-        <title>Languages and Opinions</title>
-        <description>&lt;p&gt;I find a lot of my preferences often are based on what I’ve been exposed to. If given a choice, I’d prefer to program something in Python rather than in Haskell because I have many, many times more hours of experience in the former. &lt;/p&gt;
-
-&lt;p&gt;The risk of this inevitable correlation between preferences and exposure is that prefences and norms begin to overlap with eachother. An example - while working in Ruby the other day, something along the lines of the following happened:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/7ef3a4056787142b1265.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;I must admit my first reaction here was annoyance with Ruby. This annoyance was a reaction to feeling wronged by the &lt;code&gt;NameError&lt;/code&gt; in front of me. As consolation, I needed to prove the same code would execute in Python, which it did:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/5e261bd7317391c69e74.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Differences in languages like this one seem to me to be the beginnings of endlessly long programming language debates that are always normative in nature - “How should things be?” These debates are where my own preferences are sometimes revealed as my desired norms, and, by extension, my preferred norms are what I have been exposed to. Admittedly, sometimes my preferred norms are a reaction &lt;em&gt;against&lt;/em&gt; what I have been exposed to (perhaps this is more common in general, considering all the complaining about the shortcomings of, say, JavaScript). &lt;/p&gt;
-
-&lt;p&gt;In the above example, there are strong debates on both sides for whether languages should allow local variables declared outside the body of a method to have scope that extends inside the body of a method. Language designers have thought far more about this debate than I have. I am merely a language consumer.&lt;/p&gt;
-
-&lt;p&gt;In a way, until we create tools ourselves, our opinions on existing tools are limited by what we have and have not been exposed to. I can easily see a scenario where, had I needed to fix a troublesome bug related to a scoping issue, I would be equally annoyed that Python did not raise an error on the above example. &lt;/p&gt;
-
-&lt;p&gt;Thus, it seems to me the best way to avoid forming malformed opinions is to gain exposure and make tools.   &lt;/p&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2015 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2015/04/18/Languages/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2015/04/18/Languages/</guid>
       </item>
     
   </channel>
