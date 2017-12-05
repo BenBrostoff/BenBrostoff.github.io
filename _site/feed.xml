@@ -79,6 +79,27 @@
       </item>
     
       <item>
+        <title>Gradient Descent in Simple NN (ML Series, Part 3)</title>
+        <description>&lt;p&gt;This post builds on &lt;a href=&quot;https://benbrostoff.github.io/2017/10/09/gradient-descent-intuition/&quot;&gt;Part II of my ML series&lt;/a&gt; , and explores what role gradient descent plays in a simple neural network (NN).&lt;/p&gt;
+
+&lt;p&gt;I will be working off the simple one layer NN in Andrew Trask’s blog post &lt;a href=&quot;http://iamtrask.github.io/2015/07/12/basic-python-network/&quot;&gt;A Neural Network in 11 Lines of Python (Part I)&lt;/a&gt;. First, I’m going to review part of Andrew’s posts and explain why this network makes a correct prediction give a certain simple pattern. Next, I’ll create a pattern where the network cannot predict the right answer, and attempt to explain why. In both cases, I will refer back to Part II and build on the purpose of gradient descent.&lt;/p&gt;
+
+&lt;p&gt;For those unfamiliar with Andrew’s blog post, here’s a quick overview. Andrew creates a fake dataset where each data point is a Python list of three elements. If the first element is &lt;code&gt;1&lt;/code&gt;, then the data point should be labeled &lt;code&gt;1&lt;/code&gt;. If not, it’s labeled &lt;code&gt;0&lt;/code&gt;. A quick visual overview with all possible 8 examples (assuming each element can only be &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Simple and Working NN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Andrew implements a simple neural network in Python using only &lt;code&gt;numpy&lt;/code&gt; for some basic utility functions (e.g. taking the dot product of two arrays).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Simple and Broken NN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This network breaks when changing the rule for inputs and outputs to follow the pattern below:&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2017/10/09/gradient-descent-in-simple-nn/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/10/09/gradient-descent-in-simple-nn/</guid>
+      </item>
+    
+      <item>
         <title>Why I'm Writing About ML (ML Series, Part 1)</title>
         <description>&lt;blockquote&gt;
 
@@ -399,31 +420,6 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
         <pubDate>Wed, 02 Dec 2015 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2015/12/02/Reading-Code/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2015/12/02/Reading-Code/</guid>
-      </item>
-    
-      <item>
-        <title>Automation Via Aliasing and Bash</title>
-        <description>&lt;p&gt;I’ve been trying to make a concerted effort recently to automate more stuff. Working on a side project or open source project you haven’t touched in a while I’ve found can be annoying to get back into - first navigate to the directory, run a few tasks to set up the DB, install dependencies, pull from master, etc.&lt;/p&gt;
-
-&lt;p&gt;With that in mind, I’ve taken to some aggressive aliasing on a few side projects to get to the fun stuff more quickly. I thought I’d jot down a few interesting takeways from the experience.&lt;/p&gt;
-
-&lt;p&gt;All of the below assume you have a &lt;code&gt;.bash_profile&lt;/code&gt; set up. &lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;On your home setup, it’s worth having aliases to navigate to a project immediately. &lt;/li&gt;
-  &lt;li&gt;For setup tasks, it’s tempting to chain together a bunch of terminal commands with &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;, but bash functions I’ve found make for easier edits in the future and are more elegant as well.
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/398a5ca5397d6a950e64.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;For anything that involves sshing into another machine, it’s nice to alias:
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/dfa397492f727862ccc5.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;Finally, I like having easy access to my &lt;code&gt; .bash_profile &lt;/code&gt;, so it makes sense for me to alias the following:
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/e455104c9d487cfdbb11.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I admit a reasonable knock against aliasing is that when you move over to another machine, you’re a fish out of water. However, I’d like to believe if I take a few minutes every month to review my &lt;code&gt; .bash_profile &lt;/code&gt;, I can partially mitigate this risk.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 23 Aug 2015 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2015/08/23/Automating-Via-Alias-And-Bash/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2015/08/23/Automating-Via-Alias-And-Bash/</guid>
       </item>
     
   </channel>
