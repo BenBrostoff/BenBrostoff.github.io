@@ -5,7 +5,7 @@ title: Gradient Descent in Simple NN (ML Series, Part 3)
 date: 2017-12-06
 ---
 
-*Note: This post is a WIP. I am leaving it up in its current form for feedback, and will continue to update it, hopefully removing this disclaimer within the week (12/6)*
+*Note: This post is a WIP. I am leaving it up in its current form for feedback, and will continue to update it, hopefully removing this disclaimer within the week (12/6).*
 
 This post builds on [Part II of my ML series](https://benbrostoff.github.io/2017/10/09/gradient-descent-intuition/) , and explores what role gradient descent plays in a simple neural network (NN).
 
