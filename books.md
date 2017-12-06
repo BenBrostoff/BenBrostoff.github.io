@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Favorite Books
+permalink: books/
 ---
 
 I always appreciate when people share their favorite books with me. [Ryan Holiday's blog](http://www.ryanholiday.net) and e-mails in particular have provided some fantastic book recommendations. Additionally, [Michael Fogus's](http://blog.fogus.me/) and [Christina Cacioppo's](http://christinacacioppo.com/) blogs inspired me to keep track of books I've finished over the years. I figured I'd do the same here. In no particular order, (because trying to rate a book is akin to trying to rate a poem, [per Dead Poets Society](https://www.youtube.com/watch?v=tpeLSMKNFO4)) here are the books I've most enjoyed.
