@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Commits Are Not a Proxy for Progress
+title: Commits - Not a Proxy for Progress
 
 date: 2017-11-09
 ---

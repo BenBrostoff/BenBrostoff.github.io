@@ -89,7 +89,7 @@
       </item>
     
       <item>
-        <title>Commits Are Not a Proxy for Progress</title>
+        <title>Commits - Not a Proxy for Progress</title>
         <description>&lt;p&gt;I’m resolving to stop using commits as a measure of progress.&lt;/p&gt;
 
 &lt;p&gt;Generating code is easy. Generating code while understanding every line is hard. This may on the surface seem like an absurd statement, especially if new code has no library dependencies. But native code for a specific language has its own complexities. A recent example I ran into - &lt;a href=&quot;https://stackoverflow.com/questions/21771220/error-handling-with-node-js-streams&quot;&gt;error handling with Node &lt;code&gt;stream&lt;/code&gt;s&lt;/a&gt;.&lt;/p&gt;
