@@ -84,8 +84,8 @@
 &lt;p&gt;This network breaks when changing the rule for inputs and outputs.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn/</guid>
+        <link>http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn.html</guid>
       </item>
     
       <item>
@@ -103,8 +103,8 @@
 &lt;p&gt;What gets measured gets managed. Let’s make sure we’re measuring the right things.&lt;/p&gt;
 </description>
         <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/11/09/commits-are-not-a-proxy-for-progress/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/11/09/commits-are-not-a-proxy-for-progress/</guid>
+        <link>http://benbrostoff.github.io//2017/11/09/commits-are-not-a-proxy-for-progress.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/11/09/commits-are-not-a-proxy-for-progress.html</guid>
       </item>
     
       <item>
@@ -156,8 +156,8 @@
 &lt;p&gt;In the next post, I’m excited to explore an actual application of gradient descent in machine learning.&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition/</guid>
+        <link>http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition.html</guid>
       </item>
     
       <item>
@@ -194,8 +194,8 @@
 &lt;p&gt;Here’s to openness and ruthless skepticism.&lt;/p&gt;
 </description>
         <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/09/19/why-ml/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/09/19/why-ml/</guid>
+        <link>http://benbrostoff.github.io//2017/09/19/why-ml.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/09/19/why-ml.html</guid>
       </item>
     
       <item>
@@ -223,9 +223,8 @@
 
 &lt;p&gt;It made sense - my only goal was to fake invoking the callback &lt;code&gt;sendEmail&lt;/code&gt; takes following resolution of the email &lt;code&gt;Promise&lt;/code&gt;. Giving it an error didn’t require passing in a new function to &lt;code&gt;callsFake&lt;/code&gt; - &lt;code&gt;sinon&lt;/code&gt; already offers this functionality:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And because you’re always one click a way in your IDE from &lt;a href=&quot;https://github.com/sinonjs/sinon/blob/master/lib/sinon/default-behaviors.js#L55&quot;&gt;seeing the source&lt;/a&gt; in &lt;code&gt;node_modules&lt;/code&gt;:&lt;/p&gt;
 
@@ -250,8 +249,8 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
 &lt;p&gt;You might end up improving your code and reading some interesting source code from a great library  &lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/08/05/rtd/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/08/05/rtd/</guid>
+        <link>http://benbrostoff.github.io//2017/08/05/rtd.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/08/05/rtd.html</guid>
       </item>
     
       <item>
@@ -290,8 +289,8 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
 &lt;p&gt;So, here’s to publish-only mode, and resolving to be a part of the next decade of upgrades.  &lt;/p&gt;
 </description>
         <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/05/06/upgrades/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/05/06/upgrades/</guid>
+        <link>http://benbrostoff.github.io//2017/05/06/upgrades.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/05/06/upgrades.html</guid>
       </item>
     
       <item>
@@ -383,8 +382,8 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
 &lt;p&gt;Overall, I’m amazed by how many different use cases ES6’s destructuring syntax has (and I’m sure there’s more to come in ES7). This feature is the rare tool that’s multi-purpose and easy to get the hang of. Moreover, it forces me to think about programming in a different way - looking to the left hand side of a variable assignment for meaning.&lt;/p&gt;
 </description>
         <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/01/02/destructuring-assignment/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/01/02/destructuring-assignment/</guid>
+        <link>http://benbrostoff.github.io//2017/01/02/destructuring-assignment.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/01/02/destructuring-assignment.html</guid>
       </item>
     
       <item>
@@ -428,8 +427,8 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
 
 </description>
         <pubDate>Sat, 28 May 2016 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2016/05/28/endless-learning/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2016/05/28/endless-learning/</guid>
+        <link>http://benbrostoff.github.io//2016/05/28/endless-learning.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2016/05/28/endless-learning.html</guid>
       </item>
     
       <item>
@@ -439,8 +438,8 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
 &lt;p&gt;That is exceedingly rare in a world where we have all the things we need and more.&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2016/05/08/caring-about-craft/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2016/05/08/caring-about-craft/</guid>
+        <link>http://benbrostoff.github.io//2016/05/08/caring-about-craft.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2016/05/08/caring-about-craft.html</guid>
       </item>
     
       <item>
@@ -479,8 +478,8 @@ sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
 &lt;p&gt;** I think the original influence for the question above was &lt;a href=&quot;http://www.scotthyoung.com/learnonsteroids/grab/TranscriptFeynman.pdf&quot; target=&quot;_blank&quot;&gt;The Feynman Technique.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 02 Dec 2015 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2015/12/02/Reading-Code/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2015/12/02/Reading-Code/</guid>
+        <link>http://benbrostoff.github.io//2015/12/02/Reading-Code.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2015/12/02/Reading-Code.html</guid>
       </item>
     
   </channel>
