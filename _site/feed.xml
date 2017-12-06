@@ -7,6 +7,88 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Gradient Descent in Simple NN (ML Series, Part 3)</title>
+        <description>&lt;p&gt;&lt;em&gt;Note: This post is a WIP. I am leaving it up in its current form for feedback, and will continue to update it, hopefully removing this disclaimer within the week (12/6)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This post builds on &lt;a href=&quot;https://benbrostoff.github.io/2017/10/09/gradient-descent-intuition/&quot;&gt;Part II of my ML series&lt;/a&gt; , and explores what role gradient descent plays in a simple neural network (NN).&lt;/p&gt;
+
+&lt;p&gt;I will be working off the simple one layer NN in Andrew Trask’s blog post &lt;a href=&quot;http://iamtrask.github.io/2015/07/12/basic-python-network/&quot;&gt;A Neural Network in 11 Lines of Python (Part I)&lt;/a&gt;. First, I’m going to review part of Andrew’s posts and explain why this network makes a correct prediction give a certain simple pattern. Next, I’ll create a pattern where the network cannot predict the right answer, and attempt to explain why. In both cases, I will refer back to Part II and build on the purpose of gradient descent. I will be working with &lt;a href=&quot;https://github.com/BenBrostoff/ml-series-source/blob/master/src/3_gradient_descent_in_practice.ipynb&quot;&gt;this IPython notebook&lt;/a&gt;, and it may help to have it open in a separate window.&lt;/p&gt;
+
+&lt;p&gt;For those unfamiliar with Andrew’s blog post, here’s a quick overview. Andrew creates a fake dataset where each data point is a Python list of three elements. If the first element is &lt;code&gt;1&lt;/code&gt;, then the data point should be labeled &lt;code&gt;1&lt;/code&gt;. If not, it’s labeled &lt;code&gt;0&lt;/code&gt;. A quick visual overview of four example inputs and outputs, which will serve as our training set. Later, we can test the model on the remaining 4 of the eight possible examples of this pattern (2 possibles in each slot -&amp;gt; &lt;code&gt;2**3&lt;/code&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/inputs_and_outputs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Simple and Working NN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Andrew implements a simple neural network in Python using only &lt;code&gt;numpy&lt;/code&gt; for some basic utility functions (e.g. taking the dot product of two arrays via &lt;code&gt;np.dot&lt;/code&gt;). I want to be clear on what the terminology “implements a simple neural network” means here. The only goal of this exercise is to get three weights - one for each slot - that can be used to make a prediction. Neural network in this case just refers to the methodology for getting these weights. Because the technique to obtain these weights uses parts that are named neurons and activations and layers and is loosely modeled to look like groups of neurons firing, the technique as a whole is a neural network.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Step 1: Randomize Weights&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The weights could simply be guessed at. Random guessing does play some role in neural networks (importantly, the guessing is not exactly random and is far beyond the scope of this post), and the initial guess at the final weights leverages &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.random.randn.html&quot;&gt;&lt;code&gt;np.random.randn&lt;/code&gt;&lt;/a&gt;. Note that this network uses &lt;code&gt;np.random.seed(1)&lt;/code&gt; so outputs are consistent. The first guess at the weights computes &lt;code&gt;2 * np.random.random((3, 1)) - 1&lt;/code&gt; - the 2 is simply to scale the weights by 2, which are all between 0 and 1. The &lt;code&gt;-1&lt;/code&gt; then forces any weights that were initialized as less than &lt;code&gt;0.5&lt;/code&gt; to be negative (e.g. &lt;code&gt;2 * 0.4 - 1 == -0.2&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;The first guess at the weights suggests they’re &lt;code&gt;-0.17&lt;/code&gt; (too small), &lt;code&gt;0.44&lt;/code&gt; (too big) and &lt;code&gt;-0.99&lt;/code&gt; (too small). Because we know that the first slot is the only one that matters, the correct weights are &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;0&lt;/code&gt; and &lt;code&gt;0&lt;/code&gt;, or some large number and two small numbers. A neural network &lt;em&gt;should&lt;/em&gt; move the first weight upward, the second weight downward and the third weight upward.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Step 2: Guess&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;What is the output when we guess with the weights? The answer to this question is computed via:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;predictions = np.dot(training_set_inputs, weights)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The output here is a &lt;code&gt;numpy&lt;/code&gt; array of shape &lt;code&gt;(4, 1)&lt;/code&gt; (&lt;code&gt;training_set_inputs&lt;/code&gt; - four examples of three elements - is &lt;code&gt;(4, 3)&lt;/code&gt; and the &lt;code&gt;weights&lt;/code&gt; - three “predictors” - are &lt;code&gt;(3, 1)&lt;/code&gt;). It represents guesses at the four labels given the four examples in the training set. Of course, these guesses - &lt;code&gt;-2.5&lt;/code&gt;, &lt;code&gt;2.74&lt;/code&gt;, &lt;code&gt;2.95&lt;/code&gt;, and &lt;code&gt;-2.73&lt;/code&gt; - are quite far away from the actual labels of &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I want to take a quick second to do some discussion of &lt;code&gt;np.dot&lt;/code&gt;. For those with a linear algebra background, feel free to skip this section; I’m an Economics major so &lt;code&gt;np.dot&lt;/code&gt; has taken me some time to wrap my head around. The &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.dot.html&quot;&gt;documentation&lt;/a&gt; around &lt;code&gt;np.dot&lt;/code&gt; makes it sound deceivingly simply:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Dot product of two arrays. For 2-D arrays it is equivalent to matrix multiplication, and for 1-D arrays to inner product of vectors (without complex conjugation). For N dimensions it is a sum product over the last axis of a and the second-to-last of b:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The matrix math explanation makes the most sense here, and the formula you would apply for matrix math does indeed work:&lt;/p&gt;
+
+&lt;p&gt;That said, I think the intuition here is important - why are we using &lt;code&gt;np.dot&lt;/code&gt;? We know &lt;em&gt;where we want to end up&lt;/em&gt; is four predictions, or a &lt;code&gt;numpy&lt;/code&gt; array of shape &lt;code&gt;(4, 1)&lt;/code&gt;. To get each prediction, we need to apply the weights. Getting the sum weighted prediction would look like the below:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First prediction: &lt;code&gt;0 * -0.17 + 0 * 0.44 + 1 * -0.99 == -0.99&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Second prediction: &lt;code&gt;1  * -0.17 + 1 * 0.44 + 1 * -0.99 == -0.73&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Third prediction: &lt;code&gt;1 * -0.17 + 0 * 0.44 + 1 * -0.99 == -1.17&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Fourth prediction:  &lt;code&gt;0 * -0.17 + 1 * 0.44 + 1 * -0.99 == -0.56&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That is all &lt;code&gt;np.dot&lt;/code&gt; is doing here. &lt;code&gt;predictions&lt;/code&gt; is &lt;code&gt;[[[-0.99977125], [-0.72507825], [-1.16572724], [-0.55912226]]]&lt;/code&gt;. The linear algebra intuition for &lt;code&gt;np.dot&lt;/code&gt; is a little different, and I have found &lt;a href=&quot;https://www.youtube.com/watch?v=kjBOesZCoqc&amp;amp;list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&quot;&gt;3Blue1Brown’s linear algebra series&lt;/a&gt; worth watching here (disclaimer: I’m only four videos through). But at least in my minimal machine learning experience, I have found it more useful to stop thinking about rote learning matrix math formulas and referring back to the predictions intuition.&lt;/p&gt;
+
+&lt;p&gt;A little terminology here - &lt;code&gt;predictions&lt;/code&gt; is really the first hidden layer of the neural network, and also the output layer here as the whole network is only a single input and out layer. In &lt;a href=&quot;https://www.coursera.org/specializations/deep-learning&quot;&gt;Andrew Ng’s deeplearning course&lt;/a&gt;, the step is represented as:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Z1 = W1 * X&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;where Z1 is the output layer, W1 are weights and X is the training inputs.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Step 3: Apply a Non Linearity and Find Error&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;These four numbers from &lt;code&gt;predictions&lt;/code&gt; can now be passed through a non-linearity, or function that does not have the same effect on the output as the input is incremented or decremented. &lt;em&gt;Why&lt;/em&gt; passing &lt;code&gt;predictions&lt;/code&gt; through a non-linearity is important will likely be the subject of another post. For now, I think it’s sufficient to just say that we will pass the four predictions through a function called a sigmoid function that scales them from 0 to 1 and &lt;a href=&quot;http://www.wolframalpha.com/input/?i=sigmoid+function&quot;&gt;looks like the below&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/sigmoid.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Again, in Andrew Ng’s deeplearning course, this looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;A1 = G(Z1)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;where G is the non-linearity (sigmoid function in this example). &lt;code&gt;A1&lt;/code&gt; is called a layer of activations, because the non-linearity is thought to “activate neurons” in the loose brain metaphor.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Step 4: Apply Gradient Descent&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Step 5: Update the Weights&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Step 6: Repeat&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Simple and Broken NN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This network breaks when changing the rule for inputs and outputs.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn/</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn/</guid>
+      </item>
+    
+      <item>
         <title>Commits Are Not a Proxy for Progress</title>
         <description>&lt;p&gt;I’m resolving to stop using commits as a measure of progress.&lt;/p&gt;
 
@@ -76,27 +158,6 @@
         <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition/</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition/</guid>
-      </item>
-    
-      <item>
-        <title>Gradient Descent in Simple NN (ML Series, Part 3)</title>
-        <description>&lt;p&gt;This post builds on &lt;a href=&quot;https://benbrostoff.github.io/2017/10/09/gradient-descent-intuition/&quot;&gt;Part II of my ML series&lt;/a&gt; , and explores what role gradient descent plays in a simple neural network (NN).&lt;/p&gt;
-
-&lt;p&gt;I will be working off the simple one layer NN in Andrew Trask’s blog post &lt;a href=&quot;http://iamtrask.github.io/2015/07/12/basic-python-network/&quot;&gt;A Neural Network in 11 Lines of Python (Part I)&lt;/a&gt;. First, I’m going to review part of Andrew’s posts and explain why this network makes a correct prediction give a certain simple pattern. Next, I’ll create a pattern where the network cannot predict the right answer, and attempt to explain why. In both cases, I will refer back to Part II and build on the purpose of gradient descent.&lt;/p&gt;
-
-&lt;p&gt;For those unfamiliar with Andrew’s blog post, here’s a quick overview. Andrew creates a fake dataset where each data point is a Python list of three elements. If the first element is &lt;code&gt;1&lt;/code&gt;, then the data point should be labeled &lt;code&gt;1&lt;/code&gt;. If not, it’s labeled &lt;code&gt;0&lt;/code&gt;. A quick visual overview with all possible 8 examples (assuming each element can only be &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;):&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A Simple and Working NN&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Andrew implements a simple neural network in Python using only &lt;code&gt;numpy&lt;/code&gt; for some basic utility functions (e.g. taking the dot product of two arrays).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A Simple and Broken NN&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This network breaks when changing the rule for inputs and outputs to follow the pattern below:&lt;/p&gt;
-</description>
-        <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/10/09/gradient-descent-in-simple-nn/</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/10/09/gradient-descent-in-simple-nn/</guid>
       </item>
     
       <item>
