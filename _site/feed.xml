@@ -7,6 +7,65 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Decision Trees Introduction (ML Series, Part 4)</title>
+        <description>&lt;p&gt;In my continuing attempt to automate as much as of my Daily Fantasy Sports lineup creation as possible, I’ve been exploring decision trees. I realized this technique might be valuable after listening to my thought process as it relates to fantasy sports. Generally, I’ll ask myself questions like “Has this player broken 10 rebounds the last 2 games?” or “Is this player consistently getting over 25 minutes per game?”. In addition to removing bias, a decision tree should ask better questions, improve given more data and generate insights over key features in data.&lt;/p&gt;
+
+&lt;p&gt;I want to start off with the simplest possible example I can think of for a decision tree. I’ll use this example as an opportunity to explore the &lt;code&gt;sklearn.tree&lt;/code&gt; module. In a future post, I’ll review in depth how I constructed my DFS basketball decision tree, but you can &lt;a href=&quot;https://github.com/BenBrostoff/draft-kings-learn/blob/master/recipes/classifier.py&quot;&gt;check it out here if you’re interested&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;http://benbrostoff.github.io/2017/12/06/gradient-descent-in-simple-nn-draft.html&quot;&gt;Part III&lt;/a&gt; of my ML blog series, I reviewed how a neural network could be used to classify some data where only one feature mattered. A similar example here I think will be illustrative. I often find it easier to make the example as close to real as possible, so let’s assume we have data on a group of basketball players, and we want to label them &lt;code&gt;0&lt;/code&gt; if they scored under 20 points and &lt;code&gt;1&lt;/code&gt; if they scored over 20 in a game. The three features in the data set are &lt;code&gt;minutes&lt;/code&gt;, &lt;code&gt;age&lt;/code&gt; and &lt;code&gt;height&lt;/code&gt;; let’s assume only &lt;code&gt;minutes&lt;/code&gt; matters. Below is a simple decision tree with a fake dataset:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/e0269da7acd2d3c98859fe9a98e3ed96.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;You can see in the code snippet above that &lt;code&gt;tree.DecisionTreeClassifier&lt;/code&gt; ships with a &lt;code&gt;feature_importances_&lt;/code&gt; that lists the weight of each feature. Because &lt;code&gt;minutes&lt;/code&gt; is the only feature that matters, it’s assigned a weight of &lt;code&gt;1.0&lt;/code&gt;, while the meaningless &lt;code&gt;age&lt;/code&gt; and &lt;code&gt;height&lt;/code&gt; features have a weight of &lt;code&gt;0.0&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The decision tree correctly identifies that if the player players over 30 minutes a game, then they should score over 20 points (disclaimer: this is an unrealistic and oversimplified example). The &lt;code&gt;graphviz&lt;/code&gt; package allows you to visualize this data:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/decision_tree_basic.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The visualization confirms what we know to be true; if a player plays over 30 minutes, they scored over 20 points. The visualization also provides a good means to go over some terminology. The &lt;em&gt;leaf nodes&lt;/em&gt; in the decision tree are the two child-most nodes that place a player in the &amp;gt; or &amp;lt; 20 point baskets; &lt;em&gt;internal nodes&lt;/em&gt; are any non leaf nodes that divide up the data, excluding the top-most node in the tree, which is the &lt;em&gt;root&lt;/em&gt; (note that this example is kind of contrived, since there is just a root node, two leaf nodes and no internal nodes).&lt;/p&gt;
+
+&lt;p&gt;How does &lt;code&gt;DecisionTreeClassifier&lt;/code&gt; actually work under the hood? If you were to manually construct your own decision tree, you would have to select your own root and internal nodes. Those selections would be based on what features you believe to be most valuable in a data set; if you know that minutes are what matter most for player statistics, minutes will be the feature used at your root. In a real basketball data set, a natural starting question would be “Did the player play more than 0 minutes?” &lt;a href=&quot;https://www.youtube.com/watch?v=LDRbO9a6XPU&quot;&gt;In the words of Google’s Josh Gordon&lt;/a&gt;, the best question is the one that reduces the uncertainty the most. If know the player did not play, I can claim with absolute certainty that they scored 0 points.&lt;/p&gt;
+
+&lt;p&gt;The decision tree algorithm makes feature selections like this based on &lt;em&gt;criterion&lt;/em&gt;, which are used to compute the importance of each attribute and then arrive at the right questions to ask. While a human would anecdotally know that good NBA players get 30+ minutes a game, a decision tree would infer it statistically via criterion. I’m going to use &lt;em&gt;Gini impurity&lt;/em&gt; as my criterion of choice here, since that is what &lt;code&gt;DecisionTreeClassifier&lt;/code&gt; uses by default. This is actually configurable via the &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html&quot;&gt;&lt;code&gt;criterion&lt;/code&gt; parameter in &lt;code&gt;sklearn&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;criterion : string, optional (default=”gini”)&lt;br /&gt;
+The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “entropy” for the information gain.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Gini impurity, as the name suggests, is not a desirable quantity, and each node seeks to minimize it. &lt;a href=&quot;https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity&quot;&gt;Via Wikipedia&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is a mouthful, so an example and some code should help. As noted in the wiki definition, Gini impurity is a probability, so its value must be between 0 and 1. If our data set has six players who all scored over 20 points, then only one label exists in the data set, so randomly guessing that label will be correct 100% of the time. Gini impurity is 0, since we’re never wrong. However, if three players scored less than 20 and three scored more, than guessing &amp;gt; 20 would be right half the time, and wrong half the time (as would be &amp;lt; 20). Gini impurity is 0.5 since we’re wrong half the time.&lt;/p&gt;
+
+&lt;p&gt;Josh Gordon implements &lt;code&gt;gini&lt;/code&gt; in the following way, and the two examples work using it:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/4fe00bc9e501e5671e72363ff72a2843.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;A decision tree algorithm will construct the tree such that Gini impurity is most minimized based on the questions asked. You can actually see in the visualization about that impurity is minimized at each node in the tree using exactly the examples in the previous paragraph; in the first node, randomly guessing is wrong 50% of the time; in the leaf nodes, guessing is never wrong. When the data makes perfect sense, so does the tree.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, data is inherently messy, and configuring the tree to work based on the data will be a subject of a future post.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note that the &lt;code&gt;sklearn&lt;/code&gt; source here is &lt;a href=&quot;https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/tree/tree.py#L75&quot;&gt;pretty difficult at least for me to parse&lt;/a&gt; (interesting note - the base class &lt;code&gt;BaseDecisionTree&lt;/code&gt; is also the parent of &lt;code&gt;DecisionTreeRegressor&lt;/code&gt;, which can be used to make floating point number predictions and may be the subject of a future blog post), so I turned to documentation and other writing for the explanations in this blog post. Here’s a summary of the most useful ones I found&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/tree.html&quot;&gt;sklearn docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=eKD5gxPPeY0&quot;&gt;Victor Lavrenko lecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=LDRbO9a6XPU&quot;&gt;Josh Gordon, Decision tree classifier from scratch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/random-forests/tutorials/blob/master/decision_tree.ipynb&quot;&gt;Josh Gordon Jupyter notebook with tree from scratch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;You can find all the code from this post in this &lt;a href=&quot;https://github.com/BenBrostoff/ml-series-source/blob/master/src/4_decision_tree_intro.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/01/27/decision-trees-intro.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/01/27/decision-trees-intro.html</guid>
+      </item>
+    
+      <item>
         <title>Gradient Descent in Simple NN (ML Series, Part 3)</title>
         <description>&lt;p&gt;&lt;em&gt;Note: This post is a WIP. I am leaving it up in its current form for feedback, and will continue to update it, hopefully removing this disclaimer within the week (12/6).&lt;/em&gt;&lt;/p&gt;
 
@@ -440,46 +499,6 @@
         <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2016/05/08/caring-about-craft.html</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2016/05/08/caring-about-craft.html</guid>
-      </item>
-    
-      <item>
-        <title>Reading Code</title>
-        <description>&lt;p&gt;I think reading code is the best way to improve as a software engineer.&lt;/p&gt;
-
-&lt;p&gt;I like lists for standardizing processes with many steps. To this end, I thought I’d make a checklist of things I’ve come to realize are my own best techniques as they relate to reading code. The central question they all get at - &lt;i&gt;If asked to explain and defend every engineering decision made in whatever piece of code I’m reviewing, could I do it?&lt;/i&gt;&lt;/p&gt;
-
-&lt;p&gt;Anyways, the checklist:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Can I run the code successfully on my local environment? If I had to do a bunch of manual configuration, could any of this configuration be automated and checked into source control? If not, does the project Wiki need to be updated to include the manual configuration steps?&lt;/li&gt;
-  &lt;li&gt;Does the code solve the issue or implement the feature it set out to resolve? If it’s tied to a GitHub issue, JIRA ticket, etc., does it satisfy whatever criteria was outlined in the issue or ticket?&lt;/li&gt;
-  &lt;li&gt;Can I hit breakpoints in the code additions and follow a stack trace back to the entry point? &lt;/li&gt;
-  &lt;li&gt;If there is exception handling, can I hit the error cases and see that they’re handled as expected?&lt;/li&gt;
-  &lt;li&gt;Can I differentiate between 1) standard library calls, 2) third-party library calls and 3) internal project calls? (importantly, &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/#imports&quot; target=&quot;_blank&quot;&gt; this list corresponds to the order of imports in PEP-8&lt;/a&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;On standard libary calls - if there are methods I’m not familiar with, did I look at the official docs and find an example case? Did I sandbox the method in the shell and try a few simple test cases? If I’ve never worked with the language, am I developing a familiarity with the types / scoping / syntax, etc?&lt;/li&gt;
-      &lt;li&gt;On third party library calls - same as above, but a few additions. Do I generally understand the point of the library? Does the library have a set of best practices? &lt;/li&gt;
-      &lt;li&gt;If the library is a wrapper around a broader technology (e.g. &lt;a href=&quot;https://pypi.python.org/pypi/elasticsearch-dsl&quot; target=&quot;_blank&quot;&gt;elasticsearch-dsl&lt;/a&gt;), do I know what’s really going on beneath the language wrapper? For instance, if I’m using an API wrapper, can I reproduce what the wrapper is doing via &lt;code&gt;curl&lt;/code&gt;? If the library is totally foreign to me and I’m guessing at what it may do, do I need to purchase an O’Reilly book or spend an hour or so perusing the docs / tutorials / etc.? &lt;/li&gt;
-      &lt;li&gt;One more on libraries - is the library the latest version or an older one? Is the version frozen? Should it be if it’s not?&lt;/li&gt;
-      &lt;li&gt;On internal project calls - are these calls self-explanatory or is there a history around what’s going on I need to be aware of? Have I turned on annotations in whatever IDE I’m using (or &lt;code&gt; git blame &lt;/code&gt; if not using an IDE) and tried to understand the related commits?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If the language I’m working in is dynamically typed, do I have an appreciation for which types are being handled? Am I sight reading or actually setting breakpoints and confirming my intuition is correct?&lt;/li&gt;
-  &lt;li&gt;Would I have done anything differently from an architectural perspective (throwing aside style or organization)? Are there risks in whatever I’m reviewing that the use-case if one-off and will have to be totally ripped out and rebuilt in the future?&lt;/li&gt;
-  &lt;li&gt;If I’m making suggestions, are they actually good ones in that they 1) improve performance, 2) improve readability and 3) allow for easy building on top of whatever I’m reviewing?&lt;/li&gt;
-  &lt;li&gt;If I’m making stylistic suggestions, does the linter need to be changed so it picks them up?&lt;/li&gt;
-  &lt;li&gt;If I’m making organizational suggestions (method extraction, refactoring something into a module, etc.), am I simply shifting pieces around or actually making the project more maintainable in the long-term?&lt;/li&gt;
-  &lt;li&gt;If I see something I really like or find interesting, did I file it away for future reference? Am I making sure to go back to this reference over time and trying to implement the patterns in it?&lt;/li&gt;
-  &lt;li&gt;Do I have a strong understanding of how to deploy this code? What differences need to be taken into account when thinking about non-local environments?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I wrote this list mainly so I could review it for my own reference, but I’d love for it to be useful to other people. I know I’m missing stuff and would love for this post to grow over time - shoot me an email at &lt;a href=&quot;mailto:ben.brostoff@gmail.com&quot;&gt; ben.brostoff@gmail.com&lt;/a&gt; with suggestions.	 &lt;/p&gt;
-
-&lt;p&gt;** I think the original influence for the question above was &lt;a href=&quot;http://www.scotthyoung.com/learnonsteroids/grab/TranscriptFeynman.pdf&quot; target=&quot;_blank&quot;&gt;The Feynman Technique.&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 02 Dec 2015 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2015/12/02/Reading-Code.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2015/12/02/Reading-Code.html</guid>
       </item>
     
   </channel>
