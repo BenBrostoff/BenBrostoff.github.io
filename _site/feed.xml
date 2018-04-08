@@ -7,6 +7,62 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Redux - .dispatch and .subscribe</title>
+        <description>&lt;p&gt;Today’s post will look at what happens on &lt;code&gt;store.dispatch(action)&lt;/code&gt; calls after the &lt;code&gt;dispatch&lt;/code&gt; call invoked in &lt;code&gt;createStore&lt;/code&gt; (discussed in Part I of this Redux mini-series). As a refresher, the code below was generated in Part I.&lt;/p&gt;
+
+&lt;p&gt;Next, I’ll invoke &lt;code&gt;dispatch&lt;/code&gt; on the store.&lt;/p&gt;
+
+&lt;p&gt;** dispatch with no listeners **&lt;/p&gt;
+
+&lt;p&gt;The counter now increments to 2. So what happened here? &lt;code&gt;dispatch&lt;/code&gt; is actually a very short method (26 lines total, including white space), so this blog post will attempt to explain each line. The whole of dispatch is below (recall I’m using Redux &lt;code&gt;3.7.2&lt;/code&gt;):&lt;/p&gt;
+
+&lt;p&gt;I first want to review the commentary above the &lt;code&gt;dispatch&lt;/code&gt; method in the Redux source. Portions of the commentary deal with actions that are &lt;code&gt;Promise&lt;/code&gt;s, which Redux out of the box does not support. I’ll skip those sections for now. The first relevant section is below:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Dispatches an action. It is the only way to trigger a state change.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The &lt;code&gt;reducer&lt;/code&gt; function, used to create the store, will be called with the&lt;br /&gt;
+current state tree and the given &lt;code&gt;action&lt;/code&gt;. Its return value will&lt;br /&gt;
+be considered the &lt;strong&gt;next&lt;/strong&gt; state of the tree, and the change listeners&lt;br /&gt;
+will be notified.&lt;br /&gt;
+&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;So, invoking &lt;code&gt;dispatch&lt;/code&gt; is the only way to trigger a change in the store’s &lt;code&gt;currentState&lt;/code&gt;. &lt;code&gt;dispatch&lt;/code&gt; is invoked with an &lt;code&gt;action&lt;/code&gt; as an argument, which is passed to the reducer originally passed to &lt;code&gt;createStore&lt;/code&gt;. The return value from the reducer is the new &lt;code&gt;currentState&lt;/code&gt; of the tree. The final part of the sentence about change listeners is not yet relevant to the toy application I’m building, so I’ll ignore it for now.&lt;/p&gt;
+
+&lt;p&gt;As previously noted, &lt;code&gt;dispatch&lt;/code&gt; takes an &lt;code&gt;action&lt;/code&gt; as an argument, which should be a POJO (helps with &lt;code&gt;redux-devtools&lt;/code&gt;), needs a type property and cannot be undefined.&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;@param {Object} action A plain object representing “what changed”. It is&lt;br /&gt;
+a good idea to keep actions serializable so you can record and replay user&lt;br /&gt;
+sessions, or use the time travelling &lt;code&gt;redux-devtools&lt;/code&gt;. An action must have&lt;br /&gt;
+a &lt;code&gt;type&lt;/code&gt; property which may not be &lt;code&gt;undefined&lt;/code&gt;. It is a good idea to use&lt;br /&gt;
+string constants for action types.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;The beginning of dispatch just covers these bases and raises errors where appropriate.&lt;/p&gt;
+
+&lt;p&gt;The return value is just the action passed to it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;@returns {Object} For convenience, the same action object you dispatched.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Why this is convenient, I’m not yet sure, but will trust the source for now.&lt;/p&gt;
+
+&lt;p&gt;** dispatch with Listeners **&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/04/08/redux-dispatch-and-subscribe.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/04/08/redux-dispatch-and-subscribe.html</guid>
+      </item>
+    
+      <item>
         <title>Redux - createStore</title>
         <description>&lt;p&gt;I have been using React for about two years now, but have never used Redux for a major project. As I’m on vacation for a few days, I figure this is a great time to start learning Redux without the pressures of daily work. I want to take a different approach to learning frameworks this time around - using a bottom-up approach instead of top-down one. I’m going to review the source code (&lt;a href=&quot;https://github.com/reactjs/redux/tree/v3.7.2&quot;&gt;at tag &lt;code&gt;v3.7.2&lt;/code&gt;&lt;/a&gt;) instead of API docs.&lt;/p&gt;
 
@@ -519,51 +575,6 @@ The function to measure the quality of a split. Supported criteria are “gini�
         <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2017/01/02/destructuring-assignment.html</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2017/01/02/destructuring-assignment.html</guid>
-      </item>
-    
-      <item>
-        <title>Endless Learning</title>
-        <description>&lt;p&gt;There is an infinite amount of knowledge to consume and an average human only lives &lt;a href=&quot;http://www.who.int/gho/mortality_burden_disease/life_tables/situation_trends/en/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;71.4 years&lt;/strong&gt;&lt;/a&gt;. I wanted to write this post to remind myself of 1) why the current landscape for learning is so excellent and 2) strategies that work for mining this landscape for its excellence.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;An Excellent Landscape&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;There are lots of fantastic, thoughtful writers. The amount of superb programming blogs in particular impresses me – &lt;a href=&quot;http://jvns.ca/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Julia Evans&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://geoff.greer.fm/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Geoff Greer&lt;/strong&gt;&lt;/a&gt; are at present my two favorites. &lt;a href=&quot;http://waitbutwhy.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Wait But Why&lt;/strong&gt;&lt;/a&gt; by Tim Urban is basically free books on interesting topics (thanks to my friend Max for showing me this awesome &lt;a href=&quot;http://waitbutwhy.com/2015/05/elon-musk-the-worlds-raddest-man.html&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;4 part WBW series on Elon Musk&lt;/strong&gt;&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;The podcasting landscape – since I started listening to podcasts – has never been better. &lt;a href=&quot;http://fourhourworkweek.com/podcast/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Tim Ferriss&lt;/strong&gt;&lt;/a&gt; lands superb guest after superb guest. &lt;a href=&quot;http://www.stuffyoushouldknow.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Stuff You Should Know&lt;/strong&gt;&lt;/a&gt; is an hour learning about brand new stuff. And I’ll always listen to &lt;a href=&quot;https://soundcloud.com/the-bill-simmons-podcast&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Bill Simmons&lt;/strong&gt;&lt;/a&gt; wax poetic on basketball for an hour.&lt;/p&gt;
-
-&lt;p&gt;Netflix promises whatever thing you happen to be interested in. I just watched &lt;a href=&quot;http://www.bbc.co.uk/programmes/b0074t4x&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Planet Earth: Seasonal Forests&lt;/strong&gt;&lt;/a&gt; and learned more about the biosphere than at any point of being an adult.&lt;/p&gt;
-
-&lt;p&gt;I have been consuming these great things in part by abandoning my “traditional” media sources. In high school and college I had various mentors tell me to read the Wall Street Journal religiously – I admit I don’t do that any more.  While that seemed like sound advice at the time, I feel I am learning more by foregoing newspapers. WSJ, NYT and the Boston Globe – the three newspapers that I see lying around most often – seem to have become obsessed with gossipy political stories.&lt;/p&gt;
-
-&lt;p&gt;Books are always what I learn the most from.  Blogs and podcasts lead to strong book recommendations. Greer’s &lt;a href=&quot;http://geoff.greer.fm/2016/01/04/on-learning-c-part-1-k-r/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;four part series on learning C&lt;/strong&gt;&lt;/a&gt; led me to purchase &lt;a href=&quot;http://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628/ref=pd_sim_14_1?ie=UTF8&amp;amp;dpID=41qX6YdIJ7L&amp;amp;dpSrc=sims&amp;amp;preST=_AC_UL320_SR244%2C320_&amp;amp;refRID=1B6FHHVSB9JKW4TVBCMG&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;K&amp;amp;R&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/Computer-Systems-Programmers-Perspective-Edition/dp/0136108040&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Computer Systems: A Programmer’s Perspective&lt;/strong&gt;&lt;/a&gt;. Ferriss’s podcast has been responsible for me reading the following books: &lt;a href=&quot;http://www.amazon.com/Not-Fade-Away-Short-Lived/dp/006073731X&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Not Fade Away&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&quot;http://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Influence&lt;/strong&gt;&lt;/a&gt;, the &lt;a href=&quot;http://www.amazon.com/Art-Learning-Journey-Optimal-Performance/dp/0743277465&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Art of Learning&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/War-Art-Winning-Creative-Battle/dp/1501260626&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;The War of Art&lt;/strong&gt;&lt;/a&gt;. &lt;/p&gt;
-
-&lt;p&gt;I’ve been lucky to have fantastic friends who led me to read books that changed my life. &lt;/p&gt;
-
-&lt;p&gt;Chris – thank you for Tony Bramwell’s &lt;a href=&quot;http://www.amazon.com/Magical-Mystery-Tours-Life-Beatles/dp/0312330448&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Magical Mystery Tours&lt;/strong&gt;&lt;/a&gt;. I still have your copy. &lt;/p&gt;
-
-&lt;p&gt;Joseph – a big tip of the hat for &lt;a href=&quot;http://www.amazon.com/Obstacle-Way-Timeless-Turning-Triumph/dp/1591846358&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;The Obstacle is the Way&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Deep Work&lt;/strong&gt;&lt;/a&gt;. I still travel with &lt;a href=&quot;http://www.amazon.com/Meditations-Thrift-Editions-Marcus-Aurelius/dp/048629823X&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Meditations&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Dad – thank you for &lt;a href=&quot;http://www.amazon.com/Values-Game-Bill-Bradley/dp/0767904494&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Values of the Game&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Being Selective&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;There is an endless amount of learning to be done, and no better time to do it. I understand the temptation to endlessly bemoan targeted ads and sponsored content and promotional tweets. However, I really believe these things can be easily avoided. For me, here are the strategies that have worked:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Two books per month, at the same time&lt;/em&gt; - I listed this one first because it has easily been the most useful. Since 2014, I have been trying to read at least 20 books per year - you can see &lt;a href=&quot;http://benbrostoff.github.io/books/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;my progress here&lt;/strong&gt;&lt;/a&gt;. The two per month will get me a little beyond this goal. I try my best to make these two books extremely different so switching between them is interesting. For instance, right now I’m reading Neal Stephenson’s &lt;a href=&quot;https://www.amazon.com/Snow-Crash-Neal-Stephenson-ebook/dp/B000FBJCJE?ie=UTF8&amp;amp;qid=&amp;amp;ref_=tmm_kin_swatch_0&amp;amp;sr=&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Snow Crash&lt;/strong&gt;&lt;/a&gt; and Doris Kearns Goodwin’s &lt;a href=&quot;http://www.amazon.com/Team-Rivals-Political-Abraham-Lincoln/dp/0743270754&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Team of Rivals&lt;/strong&gt;&lt;/a&gt;. The former is a sci-fi thriller that takes place partly in reality and partly in the metaverse, a VR centered manifestation of reality. The characters use a funny, futuristic slang and there’s lots of violence, gore and riffs on computers. The latter (disclaimer: I’ve been reading this on and off since February in part because it’s 944 pages) follows Lincoln’s rise to the presidency through his death, while also simultaneously following the members of his war cabinet - William H. Seward, Salmon P. Chase and Edward Bates. &lt;em&gt;Rivals&lt;/em&gt; in both chronology and tone is the opposite of &lt;em&gt;Snow Crash&lt;/em&gt;, which makes reading them at the same time awesome. And having both on Kindle makes it easy to switch from one to the other.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Twitter selectively&lt;/em&gt; - I can’t think of many bigger timesinks than scrolling through Twitter. That said, a lot of people I follow from time to time tweet out high quality reads I never would have found myself. For every one of these tweets, maybe five or six occur in between which are less interesting, or require context to even understand (which then requires more scrolling through Twitter). &lt;a href=&quot;https://twitter.com/pmarca&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Marc Andreessen&lt;/strong&gt;&lt;/a&gt; is perhaps the biggest example of this phenomenon. A lot of tools exist for parsing out the good tweets. I built one for myself because I wanted to use Go - &lt;a href=&quot;https://github.com/BenBrostoff/twitter-news&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;my little JSON API&lt;/strong&gt;&lt;/a&gt; finds the top tweets from a user’s last 200 from a couple people I find particularly interesting. &lt;a href=&quot;http://nuzzel.com/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Nuzzel&lt;/strong&gt;&lt;/a&gt; is the other solution I use, which basically highlights links that multiple people I follow tweet.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Pocket and Rex&lt;/em&gt; - I’ve been using &lt;a href=&quot;https://getpocket.com/a/queue/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Pocket&lt;/strong&gt;&lt;/a&gt; for two years and &lt;a href=&quot;https://itunes.apple.com/us/app/rex-share-recommendations/id965827767?mt=8&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Rex&lt;/strong&gt;&lt;/a&gt; for two months. My Pocket strategy is simple but works well for me - during the weekdays, I pocket a bunch of stuff while I eat lunch at my computer and then read it on Saturday / Sunday mornings. As an aside, Pocket is also good for those times when you come across a Stack Overflow post not really directly related to the thing you’re working on, but nonetheless interesting. If a friend e-mails or texts me a link, I’ll pocket it immediately. Rex, still in its relative infancy as an app, is good because users can only recommend stuff. Said another way, there’s no outlet for debates or vitriol or trolling like on Twitter. As Rex’s CEO, Chris Smith, helpfully pointed out to me, &lt;a href=&quot;https://twitter.com/bmb21/status/731612756843991040&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Rex links are Pocketable, and it may have a public API in the future&lt;/strong&gt;&lt;/a&gt;, which would allow for some awesome customization possibilities.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Making some time for daily news&lt;/em&gt; - I enjoy following sports and the stock market on a regular basis, as well as keeping tabs on tech and foreign affairs news (really, anything that is not the 2016 presidential race). I find headline scanning on ESPN, Bloomberg and Hacker News is generally sufficient to accomplish this task, where I’ll pocket the longer reads if they seem good. I have little cron jobs that allow me to keep up with my &lt;a href=&quot;https://github.com/BenBrostoff/Fantasy-Baseball-Scraper&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;fantasy baseball team&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/BenBrostoff/daily_stock_report&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;stock portfolio&lt;/strong&gt;&lt;/a&gt;. Stuff like this is a good excuse to do some programming with new tools and languages in a no pressure context.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Conclusion&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Life is short, and reading material is long. I feel a lot more satisfied with my free time since I abandoned newspapers and focused exclusively on good blogs, books and podcasts. Being disciplined with the books I read each month, using Twitter in a highly selective way, and combining Pocket and Rex functionality helps me discover good material. The daily news I’m interested in I can get through headline scanning and automated web scraping scripts.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 28 May 2016 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2016/05/28/endless-learning.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2016/05/28/endless-learning.html</guid>
       </item>
     
   </channel>
