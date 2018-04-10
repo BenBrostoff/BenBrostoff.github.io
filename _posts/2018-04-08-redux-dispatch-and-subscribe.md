@@ -2,7 +2,7 @@
 layout: post
 title: Redux - .dispatch
 tags: redux
-date: 2018-04-08
+date: 2018-04-09
 ---
 
 Today's post will look at what happens on `store.dispatch(action)` calls after the `dispatch` call invoked in `createStore` (discussed in Part I of this Redux mini-series). As a refresher, the code below was generated in Part I. I'll I've done is add a call to dispatch to increment my command line counter by 1.

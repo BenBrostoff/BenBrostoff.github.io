@@ -67,9 +67,9 @@ will be notified.&lt;/p&gt;
 
 &lt;p&gt;We’ve done it! This post covers &lt;code&gt;dispatch&lt;/code&gt; without any listeners set. I’ll use the next post to generate listeners via &lt;code&gt;store.subscribe&lt;/code&gt; and analyze what happens in that listeners loop when listeners exist.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/04/08/redux-dispatch-and-subscribe.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/04/08/redux-dispatch-and-subscribe.html</guid>
+        <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/04/09/redux-dispatch-and-subscribe.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/04/09/redux-dispatch-and-subscribe.html</guid>
       </item>
     
       <item>
