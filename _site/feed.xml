@@ -7,55 +7,65 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Redux - .dispatch and .subscribe</title>
-        <description>&lt;p&gt;Today’s post will look at what happens on &lt;code&gt;store.dispatch(action)&lt;/code&gt; calls after the &lt;code&gt;dispatch&lt;/code&gt; call invoked in &lt;code&gt;createStore&lt;/code&gt; (discussed in Part I of this Redux mini-series). As a refresher, the code below was generated in Part I.&lt;/p&gt;
+        <title>Redux - .dispatch</title>
+        <description>&lt;p&gt;Today’s post will look at what happens on &lt;code&gt;store.dispatch(action)&lt;/code&gt; calls after the &lt;code&gt;dispatch&lt;/code&gt; call invoked in &lt;code&gt;createStore&lt;/code&gt; (discussed in Part I of this Redux mini-series). As a refresher, the code below was generated in Part I. I’ll I’ve done is add a call to dispatch to increment my command line counter by 1.&lt;/p&gt;
 
-&lt;p&gt;Next, I’ll invoke &lt;code&gt;dispatch&lt;/code&gt; on the store.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/b52270ab73dd98be56e9a33747f60be9.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;** dispatch with no listeners **&lt;/p&gt;
+&lt;p&gt;The counter now increments to the input number plus 1. So what happened here? &lt;code&gt;dispatch&lt;/code&gt; is actually a very short method (26 lines total, including white space), so this blog post will attempt to explain each line. The whole of dispatch is below (recall I’m using Redux &lt;code&gt;3.7.2&lt;/code&gt;):&lt;/p&gt;
 
-&lt;p&gt;The counter now increments to 2. So what happened here? &lt;code&gt;dispatch&lt;/code&gt; is actually a very short method (26 lines total, including white space), so this blog post will attempt to explain each line. The whole of dispatch is below (recall I’m using Redux &lt;code&gt;3.7.2&lt;/code&gt;):&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/08cb9127085c104a1c7cae02c77a7764.js&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;I first want to review the commentary above the &lt;code&gt;dispatch&lt;/code&gt; method in the Redux source. Portions of the commentary deal with actions that are &lt;code&gt;Promise&lt;/code&gt;s, which Redux out of the box does not support. I’ll skip those sections for now. The first relevant section is below:&lt;/p&gt;
 
 &lt;blockquote&gt;
-
   &lt;p&gt;Dispatches an action. It is the only way to trigger a state change.&lt;/p&gt;
-&lt;/blockquote&gt;
 
-&lt;p&gt;The &lt;code&gt;reducer&lt;/code&gt; function, used to create the store, will be called with the&lt;br /&gt;
+  &lt;p&gt;The &lt;code&gt;reducer&lt;/code&gt; function, used to create the store, will be called with the&lt;br /&gt;
 current state tree and the given &lt;code&gt;action&lt;/code&gt;. Its return value will&lt;br /&gt;
 be considered the &lt;strong&gt;next&lt;/strong&gt; state of the tree, and the change listeners&lt;br /&gt;
-will be notified.&lt;br /&gt;
-&amp;gt;&lt;/p&gt;
+will be notified.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;So, invoking &lt;code&gt;dispatch&lt;/code&gt; is the only way to trigger a change in the store’s &lt;code&gt;currentState&lt;/code&gt;. &lt;code&gt;dispatch&lt;/code&gt; is invoked with an &lt;code&gt;action&lt;/code&gt; as an argument, which is passed to the reducer originally passed to &lt;code&gt;createStore&lt;/code&gt;. The return value from the reducer is the new &lt;code&gt;currentState&lt;/code&gt; of the tree. The final part of the sentence about change listeners is not yet relevant to the toy application I’m building, so I’ll ignore it for now.&lt;/p&gt;
 
 &lt;p&gt;As previously noted, &lt;code&gt;dispatch&lt;/code&gt; takes an &lt;code&gt;action&lt;/code&gt; as an argument, which should be a POJO (helps with &lt;code&gt;redux-devtools&lt;/code&gt;), needs a type property and cannot be undefined.&lt;/p&gt;
 
 &lt;blockquote&gt;
-
-  &lt;p&gt;@param {Object} action A plain object representing “what changed”. It is&lt;br /&gt;
-a good idea to keep actions serializable so you can record and replay user&lt;br /&gt;
-sessions, or use the time travelling &lt;code&gt;redux-devtools&lt;/code&gt;. An action must have&lt;br /&gt;
-a &lt;code&gt;type&lt;/code&gt; property which may not be &lt;code&gt;undefined&lt;/code&gt;. It is a good idea to use&lt;br /&gt;
-string constants for action types.&lt;/p&gt;
-
+  &lt;p&gt;@param {Object} action A plain object representing “what changed”. It is a good idea to keep actions serializable so you can record and replay user sessions, or use the time travelling &lt;code&gt;redux-devtools&lt;/code&gt;. An action must have a &lt;code&gt;type&lt;/code&gt; property which may not be &lt;code&gt;undefined&lt;/code&gt;. It is a good idea to use string constants for action types.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The beginning of dispatch just covers these bases and raises errors where appropriate.&lt;/p&gt;
+&lt;p&gt;The beginning of dispatch just covers these bases and raises errors where appropriate:&lt;/p&gt;
 
-&lt;p&gt;The return value is just the action passed to it:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/6f4faaf4ebcaa0196d175ead31e42a76.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;There’s also a conditional that checks that &lt;code&gt;isDispatching&lt;/code&gt; is &lt;code&gt;truthy&lt;/code&gt;, and raises an error if it is.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/22ac068b76cf22c53e21355d75cdc366.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The reason for this error is to prevent calls to &lt;code&gt;dispatch&lt;/code&gt; from a &lt;code&gt;reducer&lt;/code&gt; (hence the error “Reducers may not dispatch actions.”). Raising this error can be done by passing the store into an action and calling &lt;code&gt;dispatch&lt;/code&gt; from the reducer, like so:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/0e64c47bcfa840ef244671432d60223e.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The next part of &lt;code&gt;dispatch&lt;/code&gt; is a &lt;code&gt;try&lt;/code&gt; / &lt;code&gt;finally&lt;/code&gt; block that sets &lt;code&gt;isDispatching&lt;/code&gt; to true (a variable declared through &lt;code&gt;let&lt;/code&gt; in &lt;code&gt;createStore&lt;/code&gt;), sets &lt;code&gt;currentState&lt;/code&gt; to &lt;code&gt;currentReducer(currentState, action)&lt;/code&gt; (&lt;code&gt;currentState&lt;/code&gt; is also declared via &lt;code&gt;let&lt;/code&gt; in &lt;code&gt;createStore&lt;/code&gt;), and then in the &lt;code&gt;finally&lt;/code&gt; sets &lt;code&gt;isDispatching&lt;/code&gt; back to false. Again, the only usage of &lt;code&gt;isDispatching&lt;/code&gt; is in this function to prevent calling &lt;code&gt;dispatch&lt;/code&gt; in the reducer.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/c5f0b1a92590c4b306dbf7cdf282694e.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The final part of &lt;code&gt;dispatch&lt;/code&gt; before the return statement is to set a &lt;code&gt;listeners&lt;/code&gt; array equal to &lt;code&gt;currentListeners&lt;/code&gt;, which is then set to &lt;code&gt;nextListeners&lt;/code&gt;. Both the &lt;code&gt;*Listeners&lt;/code&gt; variables are declared via &lt;code&gt;let&lt;/code&gt; in &lt;code&gt;createStore&lt;/code&gt;. A &lt;code&gt;for&lt;/code&gt; loop then iterates through the listeners and invokes each one.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/323617a993a2bcfda4a8e77eff829b4f.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;In this toy example, both &lt;code&gt;currentListeners&lt;/code&gt; and &lt;code&gt;nextListeners&lt;/code&gt; are empty arrays, so there are no listeners to invoke.&lt;/p&gt;
+
+&lt;p&gt;The return value is just the &lt;code&gt;action&lt;/code&gt; passed to it:&lt;/p&gt;
 
 &lt;blockquote&gt;
-
   &lt;p&gt;@returns {Object} For convenience, the same action object you dispatched.&lt;/p&gt;
-
 &lt;/blockquote&gt;
 
 &lt;p&gt;Why this is convenient, I’m not yet sure, but will trust the source for now.&lt;/p&gt;
 
-&lt;p&gt;** dispatch with Listeners **&lt;/p&gt;
+&lt;p&gt;We’ve done it! This post covers &lt;code&gt;dispatch&lt;/code&gt; without any listeners set. I’ll use the next post to generate listeners via &lt;code&gt;store.subscribe&lt;/code&gt; and analyze what happens in that listeners loop when listeners exist.&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2018/04/08/redux-dispatch-and-subscribe.html</link>
