@@ -44,6 +44,10 @@ The next part of `dispatch` is a `try` / `finally` block that sets `isDispatchin
 
 <script src="https://gist.github.com/BenBrostoff/c5f0b1a92590c4b306dbf7cdf282694e.js"></script>
 
+Also, if you're wondering why a `try` / `finally` here, the intent is to prevent Redux from never setting `isDispatching` back to `false`. This would prevent the reducer from ever firing again (because of the aforementioned "Reducers may not dispatch actions" error). I actually learned this from looking [at this Redux PR](https://github.com/reactjs/redux/pull/372), and specifically this exchange:
+
+![](https://s3.amazonaws.com/redux-series/why-try-finally.png)
+
 The final part of `dispatch` before the return statement is to set a `listeners` array equal to `currentListeners`, which is then set to `nextListeners`. Both the `*Listeners` variables are declared via `let` in `createStore`. A `for` loop then iterates through the listeners and invokes each one.
 
 <script src="https://gist.github.com/BenBrostoff/323617a993a2bcfda4a8e77eff829b4f.js"></script>

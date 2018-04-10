@@ -51,6 +51,10 @@ will be notified.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/c5f0b1a92590c4b306dbf7cdf282694e.js&quot;&gt;&lt;/script&gt;
 
+&lt;p&gt;Also, if you’re wondering why a &lt;code&gt;try&lt;/code&gt; / &lt;code&gt;finally&lt;/code&gt; here, the intent is to prevent Redux from never setting &lt;code&gt;isDispatching&lt;/code&gt; back to &lt;code&gt;false&lt;/code&gt;. This would prevent the reducer from ever firing again (because of the aforementioned “Reducers may not dispatch actions” error). I actually learned this from looking &lt;a href=&quot;https://github.com/reactjs/redux/pull/372&quot;&gt;at this Redux PR&lt;/a&gt;, and specifically this exchange:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/why-try-finally.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;The final part of &lt;code&gt;dispatch&lt;/code&gt; before the return statement is to set a &lt;code&gt;listeners&lt;/code&gt; array equal to &lt;code&gt;currentListeners&lt;/code&gt;, which is then set to &lt;code&gt;nextListeners&lt;/code&gt;. Both the &lt;code&gt;*Listeners&lt;/code&gt; variables are declared via &lt;code&gt;let&lt;/code&gt; in &lt;code&gt;createStore&lt;/code&gt;. A &lt;code&gt;for&lt;/code&gt; loop then iterates through the listeners and invokes each one.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/323617a993a2bcfda4a8e77eff829b4f.js&quot;&gt;&lt;/script&gt;
