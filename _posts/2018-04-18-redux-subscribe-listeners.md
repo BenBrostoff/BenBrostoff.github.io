@@ -9,7 +9,6 @@ My [last post](http://benbrostoff.github.io/2018/04/09/redux-dispatch-and-subscr
 
 <script src="https://gist.github.com/BenBrostoff/b296bda2b96040d0ec9950a7402d2fe6.js"></script>
 
-
 Let's begin with the documentation for `subscribe` in the source.
 
 > Adds a change listener. It will be called any time an action is dispatched,
@@ -47,9 +46,9 @@ Finally, an `unsubscribe` function is returned, which includes closures from var
 
 <script src="https://gist.github.com/BenBrostoff/6bba11e54f70eb88f5ee88772a8de3ae.js"></script>
 
-The first conditional and empty return is to ensure that calls to `unsubscribe` after the first call do nothing. On the first `unsubscribe` call, `isSubscribed` is set to `false`; afterwards, there is no way to set it back to `true` , since each `subscribe` call creates a separate closure. Calls to `unsubscribe` after the first one bail out as early as possible.
+The first conditional and empty return is to ensure that calls to `unsubscribe` after the first call do nothing. On the first `unsubscribe` call, `isSubscribed` is set to `false`; afterwards, there is no way to set it back to `true`, since each `subscribe` call creates a separate closure. Calls to `unsubscribe` after the first one bail out as early as possible.
 
-Next, Redux again checks if a `dispatch` call is in progress and throws an error if this is the case. The error here is to guard against calling unsubscribe while a reducer is executing. As an aside, this `if isDispatching` and error throwing logic happens three times in the `createStore` source - once in `dispatch` (reducers cannot dispatch actions), once in `getState` (cannot read state while reducer is executing) and once here.
+Next, Redux again checks if a `dispatch` call is in progress and throws an error if this is the case. The error here is to guard against calling unsubscribe while a reducer is executing. As an aside, this `if (isDispatching)` and error throwing logic happens three times in the `createStore` source - once in `dispatch` (reducers cannot dispatch actions), once in `getState` (cannot read state while reducer is executing) and once here.
 
 As alluded to earlier, Redux then sets `isSubscribed` to false, guaranteeing future calls to `unsubscribe` will do nothing.
 
