@@ -7,6 +7,103 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Redux - .subscribe</title>
+        <description>&lt;p&gt;My &lt;a href=&quot;http://benbrostoff.github.io/2018/04/09/redux-dispatch-and-subscribe.html&quot;&gt;last post&lt;/a&gt; explored calling &lt;code&gt;.dispatch&lt;/code&gt; on a Redux store without listeners; in this post, I will add listeners to the toy application we’ve been building in this series and trace the &lt;code&gt;subscribe&lt;/code&gt; source in the process. I’m now using &lt;code&gt;v4.0.0&lt;/code&gt;, which was &lt;a href=&quot;https://github.com/reactjs/redux/releases/tag/v4.0.0&quot;&gt;released on April 16th&lt;/a&gt; - when I started on this series, Redux was on &lt;code&gt;v3.7.2&lt;/code&gt;. To begin our code exploration, I’ll call subscribe on our Redux store and pass in a callback that just logs the state of the store to the console:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/b296bda2b96040d0ec9950a7402d2fe6.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Let’s begin with the documentation for &lt;code&gt;subscribe&lt;/code&gt; in the source.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Adds a change listener. It will be called any time an action is dispatched,&lt;br /&gt;
+and some part of the state tree may potentially have changed. You may then&lt;br /&gt;
+call &lt;code&gt;getState()&lt;/code&gt; to read the current state tree inside the callback.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The next items in the docs before the function signature are about calling &lt;code&gt;dispatch&lt;/code&gt; from a change listener, which we’ll ignore for now since our toy example does not do this. The function signature explains that &lt;code&gt;subscribe&lt;/code&gt; expects a function that will be invoked on every dispatch and returns a function that when invoked will unsubscribe the listener:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@param {Function} listener A callback to be invoked on every dispatch.&lt;br /&gt;
+@returns {Function} A function to remove this change listener.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The full &lt;code&gt;v4.0.0&lt;/code&gt; source  for &lt;code&gt;subscribe&lt;/code&gt; is below. When reading this blog post, it may be useful to split screen and have it open, although I’ll add gists where relevant:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/226d5e7ea1c4ebe1c8b8293ea29ee795.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;As we’ve seen elsewhere in the Redux source, the beginning of the function body is type checking and raising errors if the expectations outlined in the docs are not met. Redux checks to see that &lt;code&gt;listener&lt;/code&gt; is a function and that a &lt;code&gt;store.dispatch&lt;/code&gt; call is not in progress when &lt;code&gt;subscribe&lt;/code&gt; is invoked.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/ff4a896323dd937155bb18766278a7bc.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Two notable things then happen:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/07b04cfde6c65d1cf6da4e09b7280e40.js&quot;&gt;&lt;/script&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Redux sets a variable that will be updated later called &lt;code&gt;isSubscribed&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; - this makes sense from a naming perspective, as we’re subscribing to a function. We’ll come back to this variable when discussing &lt;code&gt;unsubscribe&lt;/code&gt;, which predictably sets it to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A function called &lt;code&gt;ensureCanMutateNextListeners&lt;/code&gt; is called next, which is small despite the long name. All this does is check if two variables declared in &lt;code&gt;createStore&lt;/code&gt; are the same array (and originally they are - &lt;code&gt;let nextListeners = currentListeners&lt;/code&gt; happens on &lt;code&gt;createStore&lt;/code&gt;). If they are, &lt;code&gt;nextListeners&lt;/code&gt; is set equal to a copy of &lt;code&gt;currentListeners&lt;/code&gt; via &lt;code&gt;.slice()&lt;/code&gt;, thereby destroying the equality:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/994b547071145785093b0f1970485df6.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The &lt;code&gt;listener&lt;/code&gt; passed to &lt;code&gt;subscribe&lt;/code&gt; is pushed into the array of &lt;code&gt;nextListeners&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that the Redux docs have numerous references to the term “snapshotting listeners”, and I take that to mean the function &lt;code&gt;ensureCanMutateNextListeners&lt;/code&gt; is serving. The Redux source never adds or removes a listener without first copying &lt;code&gt;currentListeners&lt;/code&gt; if &lt;code&gt;nextListeners&lt;/code&gt; and &lt;code&gt;currentListeners&lt;/code&gt; are a reference to the same value (&lt;code&gt;currentListeners&lt;/code&gt; is assigned to &lt;code&gt;nextListeners&lt;/code&gt; in &lt;code&gt;dispatch&lt;/code&gt; and in &lt;code&gt;createStore&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Finally, an &lt;code&gt;unsubscribe&lt;/code&gt; function is returned, which includes closures from variables from &lt;code&gt;subscribe&lt;/code&gt; and &lt;code&gt;createStore&lt;/code&gt;.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/6bba11e54f70eb88f5ee88772a8de3ae.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The first conditional and empty return is to ensure that calls to &lt;code&gt;unsubscribe&lt;/code&gt; after the first call do nothing. On the first &lt;code&gt;unsubscribe&lt;/code&gt; call, &lt;code&gt;isSubscribed&lt;/code&gt; is set to &lt;code&gt;false&lt;/code&gt;; afterwards, there is no way to set it back to &lt;code&gt;true&lt;/code&gt;, since each &lt;code&gt;subscribe&lt;/code&gt; call creates a separate closure. Calls to &lt;code&gt;unsubscribe&lt;/code&gt; after the first one bail out as early as possible.&lt;/p&gt;
+
+&lt;p&gt;Next, Redux again checks if a &lt;code&gt;dispatch&lt;/code&gt; call is in progress and throws an error if this is the case. The error here is to guard against calling unsubscribe while a reducer is executing. As an aside, this &lt;code&gt;if (isDispatching)&lt;/code&gt; and error throwing logic happens three times in the &lt;code&gt;createStore&lt;/code&gt; source - once in &lt;code&gt;dispatch&lt;/code&gt; (reducers cannot dispatch actions), once in &lt;code&gt;getState&lt;/code&gt; (cannot read state while reducer is executing) and once here.&lt;/p&gt;
+
+&lt;p&gt;As alluded to earlier, Redux then sets &lt;code&gt;isSubscribed&lt;/code&gt; to false, guaranteeing future calls to &lt;code&gt;unsubscribe&lt;/code&gt; will do nothing.&lt;/p&gt;
+
+&lt;p&gt;The meat of &lt;code&gt;unsubscribe&lt;/code&gt; is next:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/974773e6151b28f66e67395cad37abf5.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;We reviewed &lt;code&gt;ensureCanMutateNextListeners()&lt;/code&gt; - this call protects &lt;code&gt;nextListeners&lt;/code&gt; from being mutated by changes to &lt;code&gt;currentListeners&lt;/code&gt;. &lt;code&gt;nextListeners.indexOf(listener)&lt;/code&gt; gets the index in the array of listeners of the listener unsubscribe is tied to. Finally, &lt;code&gt;nextListeners.splice(index, 1)&lt;/code&gt; removes the listener from the &lt;code&gt;nextListeners&lt;/code&gt; array. An example may be helpful.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/32a397577c574c8509020709fc3a918a.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;In the first unsubscribe call, &lt;code&gt;index&lt;/code&gt; is 2 (&lt;code&gt;funcC&lt;/code&gt; is the last listener in an array of three), then 1 (with &lt;code&gt;funcC&lt;/code&gt; removed, &lt;code&gt;funcB&lt;/code&gt; is now the last listener in an array of 2), then 0 (&lt;code&gt;funcA&lt;/code&gt; is the only listener in an array of one). &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice&quot;&gt;&lt;code&gt;splice&lt;/code&gt; is a mutative function&lt;/a&gt; that takes a position as the first argument and how many elements to delete as the second. With &lt;code&gt;unsubscribe&lt;/code&gt;, &lt;code&gt;splice&lt;/code&gt; is deleting the relevant listener at its respective position.&lt;/p&gt;
+
+&lt;p&gt;Now that we’ve reviewed subscribe, we can actually trace what happens on a dispatch with a listener:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/d73da8dd6ad848a2ee5a575d97685b59.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;At the very end of &lt;code&gt;dispatch&lt;/code&gt; (the only remaining line is to return an action), Redux sets &lt;code&gt;currentListeners&lt;/code&gt; to &lt;code&gt;nextListeners&lt;/code&gt; and iterates through the current listeners in the order they were added. Each listener is then invoked with no arguments. It would be easy enough to give the listeners the current &lt;code&gt;action&lt;/code&gt;, but &lt;a href=&quot;https://github.com/reactjs/redux/issues/1057&quot;&gt;per the original author, Dan Abramov,&lt;/a&gt; this is a misuse of the library:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Subscribers should react to the new state, not to what happened.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In summary, the subscribe source:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Checks that the passed argument is a function and that the reducer passed to &lt;code&gt;createStore&lt;/code&gt; is not executing&lt;/li&gt;
+  &lt;li&gt;Pushes the passed listener function to an array of listeners (&lt;code&gt;nextListeners&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Returns an unsubscribe function that can be invoked in order to remove the listener from the array of listener&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;dispatch&lt;/code&gt; then invokes every listener in &lt;code&gt;currentListeners&lt;/code&gt; (which is assigned to &lt;code&gt;nextListeners&lt;/code&gt;). Thus, any function passed to subscribe will be called on &lt;code&gt;dispatch&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;That about wraps up the bulk of &lt;code&gt;createStore&lt;/code&gt;. Note that I skipped some of the API that was not part of Redux in its original 2015 state - &lt;code&gt;replaceReducer&lt;/code&gt; and Redux’s &lt;code&gt;observable&lt;/code&gt; functions were left out here.&lt;/p&gt;
+
+&lt;p&gt;Next, I want to dive into &lt;code&gt;applyMiddleware&lt;/code&gt; and discussing how adding middleware to a Redux store works behind the scenes.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/04/20/redux-subscribe-listeners.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/04/20/redux-subscribe-listeners.html</guid>
+      </item>
+    
+      <item>
         <title>Redux - .dispatch</title>
         <description>&lt;p&gt;Today’s post will look at what happens on &lt;code&gt;store.dispatch(action)&lt;/code&gt; calls after the &lt;code&gt;dispatch&lt;/code&gt; call invoked in &lt;code&gt;createStore&lt;/code&gt; (discussed in Part I of this Redux mini-series). As a refresher, the code below was generated in Part I. I’ll I’ve done is add a call to dispatch to increment my command line counter by 1.&lt;/p&gt;
 
@@ -496,99 +593,6 @@ The function to measure the quality of a split. Supported criteria are “gini�
         <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2017/05/06/upgrades.html</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2017/05/06/upgrades.html</guid>
-      </item>
-    
-      <item>
-        <title>Destructuring Assignment</title>
-        <description>&lt;blockquote&gt;
-  &lt;blockquote&gt;
-
-    &lt;p&gt;The foundation of the modern world is developer tools.&lt;/p&gt;
-
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/mxcl/status/619373095199969280?lang=en&quot;&gt;Max Howell&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I think destructuring assignment is one of the most useful tools in the ES6 toolkit. &lt;/p&gt;
-
-&lt;p&gt;First off, a definition of destructuring assignment from the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment&quot;&gt;MDN docs&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-
-    &lt;p&gt;The destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects into distinct variables.&lt;/p&gt;
-
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Said another way, destructuring allows for creation or assignment of variables from parts of arrays or objects. Because it is not the job of developer documentation to sell different features of the API, or promote common use cases (depending on your perspective), I want to take the time to do it here. I find myself using destructuring assignment time and time again for a host of different reasons. &lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Imports, Function Arguments and Variables&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This one I think is the most straightforward use case suggested by the docs. Extracting functionality from large Node modules, pulling out object properties from an argument in a function parameter, or creating multiple &lt;code&gt;const&lt;/code&gt;s from an object are all low hanging fruit. What gets interesting is when objects have deeply nested structures and can be destructured. Consider this ridiculous example:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/c30b2ef1f5c4022c6b977ef75c1ac590.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;While I think more nesting levels of destructuring obfuscate code, this technique is really useful when taken with a grain of salt. This usefulness especially shines when using &lt;code&gt;Array&lt;/code&gt; functions like &lt;code&gt;map&lt;/code&gt; and &lt;code&gt;reduce&lt;/code&gt;. Consider the scenario where you get a bunch of database results that have a bunch of properties, some of which have values of type &lt;code&gt;Array&lt;/code&gt;. Maybe the client needs to show all the results but also some aggregations (i.e. for whatever reason, the aggregation occurs outside of the DB).&lt;/p&gt;
-
-&lt;p&gt;A data request like “show me total points scored in the first half by this subset of basketball players” works well with destructuring:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/ae147b4908812281305a40a760f76aaf.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;I particularly like how variable naming (&lt;code&gt;firstQ&lt;/code&gt;, &lt;code&gt;secondQ&lt;/code&gt;) can take place in the second function argument of the &lt;code&gt;reduce&lt;/code&gt; function as opposed to in the function itself.&lt;/p&gt;
-
-&lt;p&gt;Speaking of renaming things…&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Renaming Things&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Because context so often determines what the purpose of a piece of data is, it makes sense to me to rename the same piece of data depending on context.&lt;/p&gt;
-
-&lt;p&gt;For instance, let’s assume you had some player data from the NBA that looked like this:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/2604218271ca8d8b60577e76be6f8735.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;You then have one function that simply takes in the data for one player and returns their points per game.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/041e34686f448133840c6bc94b95c62f.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;It makes sense to call the argument here &lt;code&gt;pointsPerGame&lt;/code&gt;, as the purpose of this function is simply to get that value. &lt;/p&gt;
-
-&lt;p&gt;In contrast, let’s say you have a function that takes two arguments - data for an individual player and all player data - and then returns the data for all players with more PPG than that player. Here, changing the name &lt;code&gt;pointsPerGame&lt;/code&gt; to &lt;code&gt;ppgThreshold&lt;/code&gt; makes a lot of sense.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/0f2e87a7a72043c17183035ec865272e.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;We can actually go one step further here and destructure and rename the argument in the &lt;code&gt;filter&lt;/code&gt; function for clarity, using &lt;code&gt;playerPpg&lt;/code&gt; instead of &lt;code&gt;player.pointsPerGame&lt;/code&gt;.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/e0b5b1a6c94f58e5a26ae74c33688c89.js&quot;&gt;&lt;/script&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Applying Left-to-Right Thinking to Right-To-Left&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One thing in particular I like about destructuring assignment is that &lt;em&gt;it makes your brain reverse how you think about variable assignment&lt;/em&gt;. Pre ES6 destructuring, assigning a variable to the second and third elements of a Javascript array looked something like this:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/d09ea100babb266b1c8b918348faf534.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The natural thought process at least for me here is “look to the right hand side for meaning”. I see the numbers array and the indices at 2 and 3, and then understand.&lt;/p&gt;
-
-&lt;p&gt;With destructuring, the above can be done as follows:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/600e5c1e6b3e33a420829b3bb3062fd6.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Now, my thought process becomes “first, look to the left hand side for meaning”. I see the square brackets around &lt;code&gt;a&lt;/code&gt; and understand I need to get the first element of the right hand side. A side benefit is I immediately get that &lt;code&gt;numbers&lt;/code&gt; is an &lt;code&gt;Array&lt;/code&gt; with at least three elements too (obviously not guaranteed, but we know that’s the intent at least), so destructuring can convey type information too.&lt;/p&gt;
-
-&lt;p&gt;As a side note here, Python gets close to allowing you to do this with lists, but will throw a &lt;code&gt;ValueError: too many values to unpack&lt;/code&gt; if the size of the list does not match the number of variables. &lt;/p&gt;
-
-&lt;p&gt;Overall, I’m amazed by how many different use cases ES6’s destructuring syntax has (and I’m sure there’s more to come in ES7). This feature is the rare tool that’s multi-purpose and easy to get the hang of. Moreover, it forces me to think about programming in a different way - looking to the left hand side of a variable assignment for meaning.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/01/02/destructuring-assignment.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/01/02/destructuring-assignment.html</guid>
       </item>
     
   </channel>
