@@ -7,6 +7,26 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Adjustments</title>
+        <description>&lt;p&gt;If there’s one thing I got out of being a competitive swimmer through high school, it’s that your body always adjusts to the water temperature.&lt;/p&gt;
+
+&lt;p&gt;Water can be high 50s and it will feel fine after 15 seconds of swimming. Yet, people who don’t fully get in – who test it endlessly – will either take 10 extra minutes to get in (which is a lifetime in a swimming workout) or not go in at all. This is why swimmers jump right in.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If we do not adjust to new business requirements, new frameworks, new DSLs and the passage of time, we are failing our stakeholders&lt;/em&gt;. Moreover, if we do not make it a responsibility to place ourselves in new conditions that are more challenging than our current ones, we are failing ourselves.&lt;/p&gt;
+
+&lt;p&gt;The reason new conditions are challenging is precisely because they are &lt;em&gt;new&lt;/em&gt;. Something like transitioning a company from a REST to a GraphQL API will be initially challenging because of a lack of experience with GraphQL. Raising financing for a first-time founder will be hard because he or she is formally pitching the company for the first time. Negotiating with a new client, adjusting to an unfamiliar codebase, completing a triathlon - all are hard not because of any inherent hardness, but because the activities are unfamiliar.&lt;/p&gt;
+
+&lt;p&gt;So, the actionable takeaway of all this for me it that facing the unfamiliar should be done as soon as possible. The unfamiliar will become familiar with time.&lt;/p&gt;
+
+&lt;p&gt;We decide when that transition happens.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/08/11/adjustments.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/08/11/adjustments.html</guid>
+      </item>
+    
+      <item>
         <title>Redux - .subscribe</title>
         <description>&lt;p&gt;My &lt;a href=&quot;http://benbrostoff.github.io/2018/04/09/redux-dispatch-and-subscribe.html&quot;&gt;last post&lt;/a&gt; explored calling &lt;code&gt;.dispatch&lt;/code&gt; on a Redux store without listeners; in this post, I will add listeners to the toy application we’ve been building in this series and trace the &lt;code&gt;subscribe&lt;/code&gt; source in the process. I’m now using &lt;code&gt;v4.0.0&lt;/code&gt;, which was &lt;a href=&quot;https://github.com/reactjs/redux/releases/tag/v4.0.0&quot;&gt;released on April 16th&lt;/a&gt; - when I started on this series, Redux was on &lt;code&gt;v3.7.2&lt;/code&gt;. To begin our code exploration, I’ll call subscribe on our Redux store and pass in a callback that just logs the state of the store to the console:&lt;/p&gt;
 
@@ -553,46 +573,6 @@ The function to measure the quality of a split. Supported criteria are “gini�
         <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2017/08/05/rtd.html</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2017/08/05/rtd.html</guid>
-      </item>
-    
-      <item>
-        <title>Upgrades</title>
-        <description>&lt;p&gt;I bought a new MacBook Pro 2016 today, which represents a large upgrade for me. I was on an MBP 2012 before. The performance improvements are remarkable. Just using it today felt like one of those (ever more frequent) times when technology shocks you with how quickly it improves. I got to thinking about how many open source tools just in the last few years have sped up my workflow as a developer:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Docker&lt;/li&gt;
-  &lt;li&gt;Anaconda&lt;/li&gt;
-  &lt;li&gt;Jupyter notebooks&lt;/li&gt;
-  &lt;li&gt;ES6 (especially &lt;code&gt;async / await&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;yarn&lt;/li&gt;
-  &lt;li&gt;React and React Native&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the last decade (almost half decade), at some point one of these things did not exist. I could not envision myself living without any one of them now.&lt;/p&gt;
-
-&lt;p&gt;As someone who uses a lot of open source tools, I feel very privileged. I am the beneficiary of frequent upgrades. When I need to debug someone else’s library, it’s generally not too terrible, and almost half the time there’s a robust conversation on GitHub about the exact issue I’m having. The other half of the time, I’m probably using the API incorrectly. Being a developer is fun because nothing stays broken for that long.&lt;/p&gt;
-
-&lt;p&gt;But yes, more things do break, and complexity increases. That’s a given. And Hacker News, reddit and Twitter will remind you ad nauseam that everything is terrible and you’re part of the problem.&lt;/p&gt;
-
-&lt;p&gt;I sometimes worry that these channels have become so vocal that they’re discouraging would-be makers from contributing. &lt;a href=&quot;https://www.kennethreitz.org/essays/the-reality-of-developer-burnout&quot;&gt;Kenneth Reitz wrote recently about publish-only mode&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-
-    &lt;p&gt;I didn’t want to lose what I valued most about my position within our community — being able to influence the world I cared so much about. So, I unfollowed everyone on Twitter. Every single person. I stopped paying attention to tech trends and reading hacker news. I went into publish-only mode.&lt;/p&gt;
-
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I continue to find these words inspirational, because I think they’re more relevant than ever. The open source ecosystem is meant to be lived in and improved. To the extent that developers can adopt improved software with as little friction as possible, I believe the world becomes a better place.&lt;/p&gt;
-
-&lt;p&gt;I was reminded today that software and hardware improvements can really impact human life in a positive way. I want to help bring upgrades into the open source ecosystem as much as I can. And the road to upgrades lies in &lt;a href=&quot;https://www.amazon.com/dp/B00X47ZVXM/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&quot;&gt;deep work&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;So, here’s to publish-only mode, and resolving to be a part of the next decade of upgrades.  &lt;/p&gt;
-</description>
-        <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/05/06/upgrades.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/05/06/upgrades.html</guid>
       </item>
     
   </channel>
