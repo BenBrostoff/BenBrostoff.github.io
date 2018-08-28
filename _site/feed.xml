@@ -7,6 +7,42 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Planning Time for Internal Users</title>
+        <description>&lt;p&gt;The data exposed in a customer-facing UI is not the data internal users care about.&lt;/p&gt;
+
+&lt;p&gt;Yet, this data forms the basis for the abstractions developers create. Easy-to-use APIs and GUIs generally expose the data the customer can access. Exposing data not exposed to the customer — think user behavior, hyper-granular statistics captured by IoT equipment, growth rates over specific time periods — is not easy.&lt;/p&gt;
+
+&lt;p&gt;The APIs, GUIs and abstractions dedicated to customer-facing data are rarely usable for internal data. This is a problem because internal users often have greater and more immediate data needs than customers. These users deserve as much attention as customers.&lt;/p&gt;
+
+&lt;p&gt;Why? Internal data should be easy to access and analyze because it contains time-sensitive information about a company’s customers and its products that hold the key to growth. If internal users at a company can easily access data over any time period, they can determine customer behavior in response to changes in the product. Some real-world examples of data internal to a company revealing information essential to company strategy:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Buzzfeed shows &lt;a href=&quot;http://www.niemanlab.org/2017/09/buzzfeeds-strategy-for-getting-content-to-do-well-on-all-platforms-adaptation-and-a-lot-of-ab-testing/&quot;&gt;different titles and thumbnail art to different users&lt;/a&gt; for the same story, tracking the traffic from the different versions to optimize what it publishes&lt;/li&gt;
+  &lt;li&gt;Intuit runs &lt;a href=&quot;https://www.fastcompany.com/3020699/why-intuit-founder-scott-cook-wants-you-to-stop-listening-to-your-boss&quot;&gt;real-world experiments within its products&lt;/a&gt; and pursues or abandons ideas based on the results&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.gigaspaces.com/amazon-found-every-100ms-of-latency-cost-them-1-in-sales/&quot;&gt;Amazon actively maps the relationship between site speed and sales&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Eric Ries refers to this concept as completing a feedback loop in the shortest possible amount of time and argues it is the key to how quickly a start-up can grow in &lt;a href=&quot;https://www.amazon.com/dp/B004J4XGN6/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&quot;&gt;The Lean Startup&lt;/a&gt;. Investment in internal data is an investment in the customer.&lt;/p&gt;
+
+&lt;p&gt;The internal data needs of a company change not on a Scrum schedule, but on a minute-to-minute or even second-to-second schedule. This is especially true in industries like fintech (think flash crash) and automotive (think actual crash), where being able to capture what happened in the space of a few milliseconds can save a company.&lt;/p&gt;
+
+&lt;p&gt;Ability to analyze your data will determine the fate of your start-up. This is the number one reason to invest time in making data easier to share and analyze.&lt;/p&gt;
+
+&lt;p&gt;How much time is enough time for teams to invest? 15 minutes is a start that could lead to perpetual gains. If you’re a Scrum Master, organize a short meeting with the developers who interact with your databases and business analysts who generate the most inbound. You can pre-wire this meeting by asking the business analysts to generate a list of their biggest pain points. You can ask the developers what they could do in one hour or less to start addressing these pain points. Something as simple as a cron job that e-mails internal users key data or a CSV that can feed pivot tables is a useful outcome from this meeting.&lt;/p&gt;
+
+&lt;p&gt;If this meeting proves valuable, consider making it recurring and using it as a basis for small to medium-sized tasks that can be pulled in each sprint. When I’ve done similar exercises at previous companies, the first data-access related meeting has led to a host of issues being identified and even resolved in one day. In one instance, a co-worker who needed access to test data (only used internally) asked if there was any way he could periodically get data for one specific query. My company at the time had a GraphQL API with graphiql exposed in the test environment; I was able to give my co-worker graphiql access, and he was writing queries just with the GraphQL docs as a guide in 5 minutes.&lt;/p&gt;
+
+&lt;p&gt;How much time will good data tooling save? Possibly years. Building internal data tools is no different than building features in that it is an investment in customer success. Buzzfeed, Intuit and Amazon in the examples above all used internal data to drive customer acquisition and retention. Additionally, strong data tooling impacts employee retention as business analysts expect data to be easy to access and analyze, and developers expect that their schedule to be free of fire-drills.&lt;/p&gt;
+
+&lt;p&gt;Investments in improving data tooling pay long-term dividends. Finding time for them this sprint — and not three months into the product backlog — matters as much as building the product.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/08/28/internal-users.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/08/28/internal-users.html</guid>
+      </item>
+    
+      <item>
         <title>Adjustments</title>
         <description>&lt;p&gt;If there’s one thing I got out of being a competitive swimmer through high school, it’s that your body always adjusts to the water temperature.&lt;/p&gt;
 
@@ -518,61 +554,6 @@ The function to measure the quality of a split. Supported criteria are “gini�
         <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2017/09/19/why-ml.html</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2017/09/19/why-ml.html</guid>
-      </item>
-    
-      <item>
-        <title>RTD</title>
-        <description>&lt;p&gt;RTD - Read the Docs. That phrase cuts across industries - I have heard it just as much as a programmer as I did as an investment banker. And while when said verbally, RTD (sometimes RTFD) usually lands with a hint of annoyance, I really believe it’s some of the most important career advice I have ever received.&lt;/p&gt;
-
-&lt;p&gt;I recently was writing some unit tests to check that a small wrapper around the &lt;a href=&quot;https://aws.amazon.com/documentation/ses/&quot;&gt;AWS.SES API&lt;/a&gt; was invoked correctly and logging error messages as expected. Using &lt;a href=&quot;https://github.com/sinonjs/sinon&quot;&gt;&lt;code&gt;sinon&lt;/code&gt;&lt;/a&gt; and the &lt;a href=&quot;https://github.com/dwyl/aws-sdk-mock&quot;&gt;&lt;code&gt;aws-sdk-mock&lt;/code&gt;&lt;/a&gt; library, I had some code that looked like the below to check error handling:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/1cba16104882f0c73609ff105ee39d5d.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;As background, &lt;code&gt;mock&lt;/code&gt; from &lt;code&gt;aws-sdk-mock&lt;/code&gt; takes three arguments, the third of which is a function that, in the case of mocking &lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property&quot;&gt;sendEmail&lt;/a&gt;, takes the email params and a callback. The callback itself takes two arguments - an error message and data from the response.&lt;/p&gt;
-
-&lt;p&gt;I received a comment from my boss on this code review to the effect that every time I was using &lt;code&gt;callsFake&lt;/code&gt;, I could just be using &lt;a href=&quot;http://sinonjs.org/releases/v3.0.0/stubs/&quot;&gt;&lt;code&gt;callsArgWith&lt;/code&gt;&lt;/a&gt;. The &lt;a href=&quot;http://sinonjs.org/releases/v3.0.0/stubs/&quot;&gt;documentation&lt;/a&gt; for &lt;code&gt;callsArgWith&lt;/code&gt; points to &lt;code&gt;callsArg&lt;/code&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;stub.callsArgWith(index, arg1, arg2, …)&lt;/p&gt;
-
-  &lt;p&gt;Like callsArg, but with arguments to pass to the callback.&lt;/p&gt;
-
-  &lt;p&gt;stub.callsArg(index)&lt;/p&gt;
-
-  &lt;p&gt;Causes the stub to call the argument at the provided index as a callback function. stub.callsArg(0); causes the stub to call the first argument as a callback.&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;It made sense - my only goal was to fake invoking the callback &lt;code&gt;sendEmail&lt;/code&gt; takes following resolution of the email &lt;code&gt;Promise&lt;/code&gt;. Giving it an error didn’t require passing in a new function to &lt;code&gt;callsFake&lt;/code&gt; - &lt;code&gt;sinon&lt;/code&gt; already offers this functionality:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sendEmailStub = sandbox.stub().callsArgWith(1, new Error());
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And because you’re always one click a way in your IDE from &lt;a href=&quot;https://github.com/sinonjs/sinon/blob/master/lib/sinon/default-behaviors.js#L55&quot;&gt;seeing the source&lt;/a&gt; in &lt;code&gt;node_modules&lt;/code&gt;:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/14244abba5cb9ee47dac6884bc862abf.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;after which there’s an easy path to cloning the source repo and after some investigation finding your way to &lt;code&gt;callCallback&lt;/code&gt; in &lt;code&gt;lib/sinon/behavior.js&lt;/code&gt;, which gets the callback using &lt;code&gt;callArgAt&lt;/code&gt; set in the source we looked at, which then takes the &lt;code&gt;callbackArguments&lt;/code&gt; sans the &lt;code&gt;fake&lt;/code&gt; and &lt;code&gt;position&lt;/code&gt; arguments passed in &lt;code&gt;callsArgWith&lt;/code&gt; (note the function signature in the docs differs from what is the source - this is because &lt;a href=&quot;https://github.com/sinonjs/sinon/blob/master/lib/sinon/behavior.js#L204&quot;&gt;&lt;code&gt;addBehavior&lt;/code&gt;&lt;/a&gt; will always add functions to the stub prototype with the first argument being the stub itself).  &lt;/p&gt;
-
-&lt;p&gt;Finally, &lt;a href=&quot;https://github.com/sinonjs/sinon/blob/master/test/stub-test.js#L574&quot;&gt;here’s the test in &lt;code&gt;sinon&lt;/code&gt;&lt;/a&gt;, clearly demonstrating that a callback passed as the second argument to a stub should be able to be passed any argument with &lt;code&gt;callsArgWith&lt;/code&gt;:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/5951ea3710240f413739438620148022.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;In looking at the &lt;code&gt;sinon&lt;/code&gt; docs and then the Amazon SES docs, I realized there was probably an ocean of API functionality I was not taking advantage of. And the only way to find out would be to study and experiment. Which is the fun of being an engineer.&lt;/p&gt;
-
-&lt;p&gt;I bring up this example because I think it illustrates the importance of reading documentation (and even better, source code). I was familiar with &lt;code&gt;callsFake&lt;/code&gt;, so every testing situation looked like a nail to its hammer. This is what happens when API docs are read quickly and with the intent of completing a task. The cost is that robust APIs are used incorrectly, and code that should be short and sweet becomes long and ugly.&lt;/p&gt;
-
-&lt;p&gt;I know this seems obvious, but I wanted to write about it because I know there are different gradients of RTD. In banking, you might read the earnings call transcript but not the 10-Q; only the part of the S-1 with the risks to the business; the first tab of the huge Excel model.&lt;/p&gt;
-
-&lt;p&gt;In programming, there’s cherry-picking documentation; reading the documentation without the source code; starting a project with “getting started” documentation and never revisiting the docs again, and so much more.&lt;/p&gt;
-
-&lt;p&gt;A lot of this can be argued against with allusions to time management principles. How am I supposed to get anything done if I’m reading forty thousands pages of documentation and source code? Obviously, reading all the documentation - especially for something like the AWS SDK - is impossible. But transferring a 3 hour chunk of time from 70 / 30 writing code / reading docs to 65 / 35 writing code / reading docs?&lt;/p&gt;
-
-&lt;p&gt;You might end up improving your code and reading some interesting source code from a great library  &lt;/p&gt;
-</description>
-        <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/08/05/rtd.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/08/05/rtd.html</guid>
       </item>
     
   </channel>
