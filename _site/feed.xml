@@ -7,6 +7,51 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Guesses and Information</title>
+        <description>&lt;p&gt;Learning from your wrong guesses is fundamentally different than learning from mistakes. In this post, I’ll explore why playing the board game Mastermind has given me a strong appreciation for the power of wrong guessing.&lt;/p&gt;
+
+&lt;p&gt;First, I want to clearly differentiate between mistakes and guessing wrong. Mistakes can be avoided by logical thinking. For example, it’s a mistake to play casino games because they have negative expected value. You will lose money if you play on a long enough time horizon.&lt;/p&gt;
+
+&lt;p&gt;Guessing about the state of the world isn’t a mistake; in fact, it’s something I believe we should do as often as possible. Guessing is necessary because it is often the only device we can use to gain information.&lt;/p&gt;
+
+&lt;p&gt;This idea presented itself while playing Mastermind with one of my buddies this week. For those unfamiliar with the game, two players face off where one creates an ordered sequence of four pegs (which can be six different colors), and the other player guesses to find the combo. The guesser on each guess is given the number of exact peg guesses correct (right color, right place) and number of color guesses correct (right color, wrong place). In this way, the guesser gains information on every guess. As an aside, Donald Knuth developed an algorithm to determine the pattern in &lt;a href=&quot;http://www.cs.uni.edu/~wallingf/teaching/cs3530/resources/knuth-mastermind.pdf&quot;&gt;at most five guesses&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you think Mastermind is easy for the guesser, you’re not wrong. Each turn gets you closer to the four peg combo, and not solving the game in the eight allotted guesses (depending on what version you’re playing) most likely means you failed to use available information to your advantage.&lt;/p&gt;
+
+&lt;p&gt;That said, it’s possible and likely to regress on the number of correct scores from turn to turn. Consider this scenario:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/guess-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the first turn, the guesser is elated when they are given feedback of three exactly correct guesses. But which ones? It’s statistically unlikely on the second turn to &lt;em&gt;not&lt;/em&gt; regress. You have to guess about the state of the world because it’s impossible to know which three were correct.&lt;/p&gt;
+
+&lt;p&gt;Here’s a good second guess:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/guess-2a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The guesser scores a “worse” score here, with only two right-color, right-position and one right-color, wrong-position, but has extracted valuable information:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Red is clearly a wrong color (or else they would get four scoring pegs)&lt;/li&gt;
+  &lt;li&gt;One of the blue pegs is in the wrong position (or else they would have equaled the previous score)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From here, aiming to get the color scheme correct (by continually swapping out the red peg for other colors until the scoring changes) and getting the position correct (by moving the three blue pegs to different positions until three are correct again) are the clear strategies. Guessing wrong has delivered this information.&lt;/p&gt;
+
+&lt;p&gt;This idea to me is the central lesson of Mastermind that extends to so many other areas of life: When we are most wrong, we have extracted more useful information than when we are close to right. The reason I think this is the case is that being close to right does not necessarily deliver any information on &lt;em&gt;why&lt;/em&gt; we are close to right.&lt;/p&gt;
+
+&lt;p&gt;Flat-out wrongness at least shows you nothing is working; rightness forces you to guess on the factors that led to success. In this way, being right may not deliver useful information.&lt;/p&gt;
+
+&lt;p&gt;Human psychology unfortunately is not conducive to embracing this lesson. Being right makes me feel smart and wrong makes me feel stupid. Hence, guessing right is dangerous because we may extract information that had nothing to do with being right. Guessing wrong makes it easy to abandon a venture because we just assume we have no potential to succeed due to some genetic or personal failure. In reality, there is no skill to guessing, so we should de-personalize successes and failures where luck plays a key role.&lt;/p&gt;
+
+&lt;p&gt;The lesson here I think is to keep guessing after initial success to reject or confirm the &lt;em&gt;why&lt;/em&gt; of the right guess. Similarly, with wrong guesses, instead of writing ourselves off, our energy should be focused on extracting as much information as possible from the experience.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 17 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/11/17/guesses-and-information.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/11/17/guesses-and-information.html</guid>
+      </item>
+    
+      <item>
         <title>Planning Time for Internal Users</title>
         <description>&lt;p&gt;The data exposed in a customer-facing UI is not the data internal users care about.&lt;/p&gt;
 
@@ -516,44 +561,6 @@ The function to measure the quality of a split. Supported criteria are “gini�
         <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition.html</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition.html</guid>
-      </item>
-    
-      <item>
-        <title>Why I'm Writing About ML (ML Series, Part 1)</title>
-        <description>&lt;blockquote&gt;
-
-  &lt;p&gt;At the heart of science is an essential balance between two seemingly contradictory attitudes - an openness to new ideas, no matter how bizarre or counterintuitive, and the most ruthlessly skeptical scrutiny of all ideas, old and new.&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;Carl Sagan, &lt;a href=&quot;https://www.amazon.com/Demon-Haunted-World-Science-Candle-Dark/dp/0345409469&quot;&gt;The Demon-Haunted World&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;I know of no better tool than writing to explore my own understanding of technical subjects. After years of reading about machine learning in the press, programmer blogs and from technology leaders of our time, I want to investigate ML on my own terms. This investigation may take months or years or, based on how quickly the field is changing, forever - I’m not sure. What I can say is that my goal in writing a multi-part series is no less than what Sagan describes in the above quote. I intend to be both open to extraordinary claims about machine learning and simultaneously skeptical.&lt;/p&gt;
-
-&lt;p&gt;The value I believe I can add in writing this series is in infusing each post with as much illustrative code as possible. I want to explore not only programming libraries, but the cloud services that allow library code to be run with GPU enabled computing power. While I have been extraordinarily influenced by previous explorations of ML like Tim Urban’s &lt;a href=&quot;https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html&quot;&gt;AI Revolution Series&lt;/a&gt;, these posts are going to be technical and experiment heavy.&lt;/p&gt;
-
-&lt;p&gt;I want to answer for myself not only &lt;em&gt;why&lt;/em&gt; machine learning works, but also the various &lt;em&gt;hows&lt;/em&gt;. I will try to approach as much as I can from first principles in answering &lt;em&gt;why&lt;/em&gt; machine learning is effective. Where ML relies on ideas from linear algebra and calculus, I promise to explore these fields as well. On the subject of &lt;em&gt;how&lt;/em&gt; machine learning works today, I want to start first with as few libraries as possible, and then move slowly into popular libraries like &lt;code&gt;TensorFlow&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;What these posts will &lt;em&gt;not&lt;/em&gt; do is engage in futurism discussions or projections of what machine learning could do. I am going to stay focused on what machine learning &lt;em&gt;can do at present&lt;/em&gt;. Any demonstrations of machine learning capabilities I’ll post on GitHub. As someone with no formal ML background, I encourage anyone (un)lucky enough to be reading these posts to raise issues and provide guidance on what I could be doing better.&lt;/p&gt;
-
-&lt;p&gt;Along the way, I’ll be diving into the following resources. I’ll add to this list as this series takes shape:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Andrew Ng’s deep neural network &lt;a href=&quot;https://www.coursera.org/specializations/deep-learning&quot;&gt;Coursera specialization&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Sebastian Raschka’s &lt;a href=&quot;https://www.amazon.com/Python-Machine-Learning-Sebastian-Raschka-ebook/dp/B00YSILNL0&quot;&gt;Python Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Finally, I want to manage expectations about how often I’ll be posting in this series and post lengths. &lt;a href=&quot;https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692&quot;&gt;Deep Work&lt;/a&gt; is one of my favorite books, and in the spirit of Cal Newport’s suggestion to budget deep work hours to projects, I intend to devote 3-5 hours of deep work per week to this project. In terms of length, these posts might be short or long depending on the idea being explored. I have set a short-term goal of posting once per week for the next 5 weeks; after that, I’ll evaluate the quality of those posts and make improvements for the next ones.&lt;/p&gt;
-
-&lt;p&gt;I’m excited to get started. If these posts can change my own opinion on machine learning, than they were worth doing. If anyone else reads them, it’s an added bonus.&lt;/p&gt;
-
-&lt;p&gt;Here’s to openness and ruthless skepticism.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/09/19/why-ml.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/09/19/why-ml.html</guid>
       </item>
     
   </channel>
