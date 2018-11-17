@@ -39,5 +39,3 @@ Flat-out wrongness at least shows you nothing is working; rightness forces you t
 Human psychology unfortunately is not conducive to embracing this lesson. Being right makes me feel smart and wrong makes me feel stupid. Hence, guessing right is dangerous because we may extract information that had nothing to do with being right. Guessing wrong makes it easy to abandon a venture because we just assume we have no potential to succeed due to some genetic or personal failure. In reality, there is no skill to guessing, so we should de-personalize successes and failures where luck plays a key role.
 
 The lesson here I think is to keep guessing after initial success to reject or confirm the *why* of the right guess. Similarly, with wrong guesses, instead of writing ourselves off, our energy should be focused on extracting as much information as possible from the experience.
-
-
