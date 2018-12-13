@@ -11,9 +11,6 @@ links:
     url:          /about
   - name:         Book Recos
     url:          /books
-  - name:         Inspirations
-    url:          http://benbrostoff.herokuapp.com/
-    external:     true
   - name:         Email
     url:          mailto:ben.brostoff@gmail.com
     external:     true
