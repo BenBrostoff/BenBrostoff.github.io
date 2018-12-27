@@ -7,6 +7,155 @@
     <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Stop Resulting</title>
+        <description>&lt;p&gt;In 2018, the best lesson I learned was to stop creating narratives based on results.&lt;/p&gt;
+
+&lt;p&gt;Creating a narrative based on results is what former professional poker player and World Series of Poker Champion Annie Duke calls “resulting” in her book &lt;a href=&quot;https://www.amazon.com/Thinking-Bets-Making-Smarter-Decisions-ebook/dp/B074DG9LQF&quot;&gt;Thinking In Bets&lt;/a&gt;. One example Duke returns to throughout the book is some poker players’ tendency to use the results of a hand to evaluate the decisions that took place during it.&lt;/p&gt;
+
+&lt;p&gt;Players that fall into the trap of resulting often want to preserve a narrative that emphasizes their own (assumed) above-average skill. These players believe decisions made if they won a big hand were skill and not luck-based. Conversely, to preserve this narrative, these same players assume their losses were luck and not skill-based.&lt;/p&gt;
+
+&lt;p&gt;In reality, luck plays a role in the outcome of any individual poker hand. As Duke notes in the book, if a player is 80% favored to win a hand before more cards are placed on the table, the same player losing the hand once all cards are out is not wrong, but part of the 20% chance another player wins.&lt;/p&gt;
+
+&lt;p&gt;The outcome of a hand like that isn’t part of a narrative, but part of a statistical distribution. The player who lost the hand needs to place their decision to play before cards came out in the context of the 80%, and the one who won should recognize they only had a 20% chance of victory in the pre-flop situation.&lt;/p&gt;
+
+&lt;p&gt;Resulters ignore or manipulate this context in order to draw a lesson from an outcome that fits a narrative. Resulting is clearly detrimental to learning because it fails to consider significant portions of the why behind decisions — views of uncertainty at the time the decision was made, and whether those views were accurate.&lt;/p&gt;
+
+&lt;p&gt;My opinion — based on my own life — is that most junior and mid-level jobs prepare people to be resulters. The jobs I had early out of college involved implementing well defined specs in code (ex. hide the button when the user isn’t authorized) or making template-based Excel models (ex. reduce the cash flow 20% in the stress test). Quality of work was easy to measure — the code or the model did what was expected.&lt;/p&gt;
+
+&lt;p&gt;The outcomes in the businesses I worked at were also easy to measure (whether I was looking at the right outcomes is for another blog post). Looking at user traffic or deals won or capital raised at what valuation was the scoreboard to me. So, my logical conclusion most times until this year was:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If I execute well, my company will have a higher probability of success&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now, this may come off as controversial, but for the majority of jobs at the majority of companies, I believe this statement to be wrong. Most people at companies execute ideas created by others and execute them fairly well. Based on the ever-improving quality of tools in finance and web development — the two industries I’m most familiar with — good execution is becoming easier and easier.&lt;/p&gt;
+
+&lt;p&gt;When was the last time you saw a start-up that did not have a flashy looking product or an impressive demo (signs of great execution)? Yet the statistics are clear — most start-ups fail. Clearly, execution isn’t the whole story, or success would be more common. It may not even be positively correlated with success, as evidenced by start-ups where unpolished prototypes representing a pivot saved the day, supplanting polished existing products.&lt;/p&gt;
+
+&lt;p&gt;I started my own software consulting business this year and gained an appreciation for the impact of confusing process and outcomes. My first introduction to this idea was getting clients. Working through a combination of LinkedIn, AngelList, HN’s Who’s Hiring, networking events and friends and family, I found some introductory calls would go swimmingly and others would be a complete failure.&lt;/p&gt;
+
+&lt;p&gt;My actions before the calls were the same — same research process, same introduction, mostly same pitch (with some tweaks over time as I learned more).&lt;/p&gt;
+
+&lt;p&gt;I initially equated the bad outcomes to lack of skill and the good ones to skill, but over time it became clear that companies have varying degrees of acceptance to contracting. Some companies I encountered only had developers that were contractors; others only had full-time developers. There was no easy way to gain this information without doing the call in the first place.&lt;/p&gt;
+
+&lt;p&gt;I now accept based on the data I’ve gathered that the percentage of companies willing to hire contractors for the services I provide is probably below 25%. This is not to say I haven’t tanked calls and performed well on others; it’s just that I hear the “we generally don’t hire contractors” line or some variation of it 75% of the time. Some of these companies can still be convinced, but the odds of success are far lower than a company with previous positive experiences with contractors.&lt;/p&gt;
+
+&lt;p&gt;Another example — early in my search for clients, I found a majority of companies asking for help with devops, specifically Kubernetes. I had to pass on these opportunities as my Kubernetes experience is minimal. I became concerned that the only consulting opportunities might involve Kubernetes, despite the fact that the sample size at that point was probably five 30 minute discussions.&lt;/p&gt;
+
+&lt;p&gt;I can say now with a full year of calls under my belt that help with Kubernetes or devops tasks represents a small proportion of the consulting asks I get. The spike in asks at the beginning was the result of a small sample size. Deriving information from this sample was ill-advised and a classic example of &lt;a href=&quot;https://medium.com/@bmb21/stop-tape-watching-f188df01b9b7&quot;&gt;watching the tape&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Rejections by companies or opportunities I decline because I can’t help I used to see as a personal failure, and sometimes still do. But I think this is an insidious form of resulting that will hurt my business long-term, just as assuming knowledge of one JavaScript framework will be worth just as much today as it is in three years. Deep diving into whatever technology is popular or continually using the same tools can both be harmful when driven by knee-jerk interpretation of results. Execution without constant evaluation of what is being executed is, as discussed in Naval Ravikant’s recent podcast with Kapil Gupta, &lt;a href=&quot;https://startupboy.com/2018/12/25/the-truth-about-hard-work/&quot;&gt;hard work for hard work’s sake&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Changes in priorities and plans are evidence that leaders of a business are evaluating the probabilities of success for different strategies, be it correctly or incorrectly. Importantly, this view is different from what I used to believe. It used to hugely frustrate me when I worked on some complicated interface for months only for it be thrown away. I would attribute the code churn to bad communication between sales and engineering — an execution failure. Perhaps this explanation is accurate some of the time. Plans also change because new information forces strategy changes.&lt;/p&gt;
+
+&lt;p&gt;Resulters blame execution and bad decisions for why certain strategies don’t pan out. They fail to recognize that their evaluation is based on outcomes. The execution was good if the sales person made the sale; the decision to play the hand was bad if the player lost the hand.&lt;/p&gt;
+
+&lt;p&gt;Figuring out what needs to be done I now believe is a process that requires viewing process and outcomes separately. The risk of tying good and bad outcomes to skill through a narrative is rejecting useful strategies and embracing harmful ones. In 2019, I want to eliminate this risk by separating process and outcomes.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/12/27/biggest-lesson-2018.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/12/27/biggest-lesson-2018.html</guid>
+      </item>
+    
+      <item>
+        <title>EV is Everything</title>
+        <description>&lt;p&gt;Expected value (EV) is the best mental model I know of for decision making. In this post, I want to explain how EV has begun to guide much of my decision making about the future.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is EV?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First, let’s back up and give a broad overview of what expected value is and why it’s important. EV &lt;a href=&quot;https://www.google.com/search?q=expected+value&quot;&gt;per Google&lt;/a&gt; is “a predicted value of a variable, calculated as the sum of all possible values each multiplied by the probability of its occurrence.” I interpret this as a wordy way of saying EV is the chance something will happen multiplied by the payoff if it does happen.&lt;/p&gt;
+
+&lt;p&gt;A coin flip is the easiest example to start with here, so if I offer you $10 if a coin turns heads, the EV is $5 (50% * $10, the outcome where heads comes up, plus 50% * 0, the outcome where tails comes up).&lt;/p&gt;
+
+&lt;p&gt;This coin flip is what I’ve seen many people refer to as +EV, meaning the expected value is positive. This game worst case leaves you with the world unchanged half the time, and best case puts $10 in your pocket half the time. You should play this game forever because the average return is $5.&lt;/p&gt;
+
+&lt;p&gt;However, let’s assume it costs $6 to play the game. In this case, the game is -EV; in the win case, EV is $2 in the winning case (50% * (10–6)) and -$3 in the losing case (50% * -6), so total EV is 2–3, or -$1. You should never play this game because the average return is -$1.&lt;/p&gt;
+
+&lt;p&gt;In this simple coin flip example, notice the lever we changed to change the EV: what it costs to play the game. Paying anything more than $5 makes the above a -EV game. The other lever we have as the game makers is changing the odds.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The same EV does not mean the same game odds&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We can get to the same $5 and -$1 EV above using an unfair coin and different payoffs. If the coin has a 90% chance of turning up heads, a $5 EV is betting on heads with a ~$5.56 payoff ($5.56 * 0.9 === $5). The -$1 EV is charging $5 to play the game with the same payout (0.9 * (5.56–5) + -5 * 0.1 ~== -1). While the EV of both games is the same as in the first example, having a 50% chance of winning $10 is very different from a 90% chance of winning $5.55. Additionally, paying $5 to play the game is different from paying $6 — with higher dollar amounts, a 20% increase in the cost to play will price many people out.&lt;/p&gt;
+
+&lt;p&gt;I think this idea becomes even more clear for games with longer shot odds. I was at a casino for Thanksgiving and had to wait an hour for the next available poker table, so I played roulette to pass the time. I was surprised to see the number of players simply placing bet after bet on a single number. Roulette offers a 36:1 payout on a single number hitting when the actual probability is 38:1. This is a negative EV game as a result. Let’s assume you have $190 to invest in 38 roulette turns at $5 each. If you’re comfortable with the 36% chance of losing your investment completely and 37% chance of losing 5% of your investment, there are some huge payoffs at low percentages.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/p_v_r_extreme.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Note that you can see the spreadsheet I used to make all graphs in this post &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1pcN1fYHKB-woSJFYbOqKhfuzvBEqNw4R0TGY_zAg3ng/edit?usp=sharing&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Moreover, you also have the opportunity to walk away any time you hit the number and reduce that $190 expenditure. To put this in perspective, if your number hits 2 times in a row ((1/38)², or ~0.07% chance), you’ve only put $15 at risk and won $335 for a 22.3x return. You should still never play roulette; it’s a negative EV game (-$10 in the example above).&lt;/p&gt;
+
+&lt;p&gt;Let’s contrast this with a more even-odds approach to roulette. The EV is still the same (-$10), but the return profile of investing 5 bucks each on 38 turns looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/p_v_r.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I did not see anyone playing this particular roulette strategy, presumably because no one wants to play 38 turns to win or lose up anywhere between 0 and $100 more than ⅔ of the time. It’s more attractive for most players to have a low probability of a huge payout than a near 50% probability of a small payout. I actually asked my brother about this idea and he had a telling quote:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;My expectation is that I’ll lose some set amount of money I already decided on or win a lot of money at a casino. Winning a little bit of money isn’t why people go.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;But real life is more complicated&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As with pretty much every probability example that gets presented to people, the easy response about why it’s non-applicable to real life is that real life is complicated. Nassim Nicholas Taleb, Jonathan Bales and others have written about two types of EV, so I’ll overview both. I’m going to call these hard EV and soft EV:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Hard EV&lt;/em&gt; — EV you can confidently calculate that depends on some physics laws that are random (gravity and other forces move a roulette ball to its position — as a side note, Claude Shannon attempted to calculate the position of a roulette ball and bet based on the expected position by using some radar-gun like devices hidden beneath his clothes at casinos — this is detailed in the great book &lt;a href=&quot;https://www.amazon.com/Fortunes-Formula-Scientific-Betting-Casinos-ebook/dp/B000SBTWNC/ref=sr_1_1?ie=UTF8&amp;amp;qid=1543171941&amp;amp;sr=8-1&amp;amp;keywords=fortune%27s+formula&quot;&gt;Fortune’s Formula&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Soft EV&lt;/em&gt; — EV based on human events. Sports books, insurance companies, banks and others that price odds impacted by humans back into EVs by seeing what people bet when they offer opening odds on different events&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I believe the principles of dealing with hard EV are applicable to soft EV, as long as we admit that our attempts to price soft EV accurately are going to fail. When those attempts do fail, we can use the information gained to price EV more accurately next time. &lt;a href=&quot;https://medium.com/@bmb21/the-value-of-wrong-and-right-guesses-998a62bfc142&quot;&gt;My recent post on Mastermind&lt;/a&gt; explores this idea. Moreover, failed attempts to price EV can lead us to pursue +EV generating projects, which is at the heart of the next idea I want to discuss.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fight for every last scrap of EV&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyone who has played casino games has definitely done the thing where you go “If only that thing didn’t exist, this would be a great game.” This thought is really just expressing that casinos always do at least one thing in games they offer that makes the game -EV. This is the green 0 and 00 in roulette, the rules around when the dealer hits in blackjack, the programming logic in when slot machines pay out, etc. Casinos are acutely aware of this fact and will actually offer scraps of EV to high rollers or improved odds when they first open.&lt;/p&gt;
+
+&lt;p&gt;So, if a small change in odds or payoffs make hard EV games worth playing, I think the same is no less true for soft EV. As someone who has been around start-ups the majority of their career, I have come to believe this is the only thing start-ups do; continually search for +EV activities.&lt;/p&gt;
+
+&lt;p&gt;Let’s consider a simple start-up that sells widgets to OEMs that make some part of manufacturing more efficient (maybe it’s an IoT device with machine-learning capabilities or something). The company may estimate there is a 60% chance some big tech company comes in and manufactures the devices for 30% cheaper. They then can start to price how much they should raise in capital to get their devices to be 30% cheaper.&lt;/p&gt;
+
+&lt;p&gt;To continue this example, the company could also decide to try to move the goalposts on the 60% chance. They could partner with a big tech company and build in contract language that prevents them from manufacturing competing devices; they could create their own operating system or hardware to make the device harder to replicate; they could decide to migrate out of the widget business because raising capital is too expensive relative to their EV guesstimate.&lt;/p&gt;
+
+&lt;p&gt;Just like small changes in casino odds make the games worth playing, start-ups making small changes completely change what is +EV and what is -EV. With soft EV, human actions can wildly change odds and payoffs, so in my mental model I equate new projects and strategies at start-ups to casinos changing the odds and payoffs. From a career perspective, how well start-ups manage EV is how I evaluate whether I want to stay or go; if the odds are continually moving toward a place where the game is worth playing, stay; if not, go.&lt;/p&gt;
+
+&lt;p&gt;But then how do you evaluate how people manage EV?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Drop your state-of-the-world evaluations for first principles, especially for long-shots&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s a story Nassim Nicholas Taleb tells often about how he was at a meeting where traders at his firm said what they thought would happen in the market. Taleb expresses his opinion, and one of his colleagues ask why his portfolio isn’t positioned that way. Taleb responds that what he thinks is irrelevant; all that matters is what the market is mispricing.&lt;/p&gt;
+
+&lt;p&gt;I think a reasonable approach to evaluating soft EV — and how people / companies manage it — is to 1) forget what you think you know about the opportunity associated with EV and 2) try to price it from a first principles perspective. (1) improves the odds you stop working off a false collection of EVs. (2) forces creation of a new collection of EVs.&lt;/p&gt;
+
+&lt;p&gt;Doing both 1) and 2) may lead to surprising conclusions, which leads me to my next point; unpopular stuff is most likely to be mispriced.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;When in doubt, prefer low information EV to high information EV&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I remember in grade school social studies learning about the concept of the catch-up effect. The catch up effect says that developing countries will grow faster than developed countries because there are easier gains to be made for the developing countries. A developing country for instance may realize a huge benefit from an infrastructure project that connects two cities; a developed country will have less of these opportunities because that same project was already completed. That infrastructure project may be a percentage point or more of GDP growth for the developing country. The developed country has no comparable way of boosting its GDP, so the developing country is likely to catch up in standard of living, median income, etc. over time.&lt;/p&gt;
+
+&lt;p&gt;I think there is a real catch-up effect that exists for “cold” versus “hot” industries. Cold industries are what I consider to be businesses that are not getting attention from the media and very few people are playing in. You are unlikely to find lots of white papers or blogs on it online. In order to find information, you are probably going to have to read forums or maybe even (gasp!) pick up the phone and call someone.&lt;/p&gt;
+
+&lt;p&gt;Hot industries are going to be reported on by most tech blogs, have a lot of capital coming in and have highly trained players that are pricing EV like their career depends on it. There are probably a few dozen best-selling books that talk about how the future is going to radically change because of Industry X.&lt;/p&gt;
+
+&lt;p&gt;Cold industries are low information industries precisely because they’re “cold” — not popular. Hot industries are saturated with market entrants and information because they’re hot. Low information means more mispricings, because information is the only way we can calculate EV. Without information, we don’t know payoffs or probabilities.&lt;/p&gt;
+
+&lt;p&gt;When viewed this way, I think the catch-up effect of cold industries relative to hot industries is real. I believe it’s a strong argument for playing in cold industries. When I’ve argued this point, I’m often told that I’m a contrarian. I actually think that’s an unfair characterization, because contrarian implies that you just like choosing the opposite way the crowd is going. Instead, I think letting EV serve as a mental model for decision-making leads to contrarian viewpoints. Having contrarian viewpoints is a goal worth pursuing because the future can and will have moments where low-information, cold industries become high(er) information, hot industries.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EV is everything because the future is uncertain&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Being told you’re a contrarian is a good sign you’re pursuing a EV+ opportunity. We already know the world does not price EV perfectly (that casino was super-crowded on Thanksgiving no less) and has a built-in bias for what’s hot at the moment.&lt;/p&gt;
+
+&lt;p&gt;EV+ opportunities are easier to come by in low information industries because there are fewer tools to know payoffs or odds. Said another way, it’s easier to scrap for EV because there are more scraps. When the future turns in a “crazy” way (or just a way the crowd didn’t expect), cold industries are more likely to rise and hot industries to fall because the crowd predicted something that did not happen. The contrarians are then better positioned for the future; the contrarians thus become what’s hot; and the cycle continues.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tim.blog/2018/09/25/howard-marks/&quot;&gt;Investor Howard Marks said in a recent podcast&lt;/a&gt; with Tim Ferriss that knowing where we are in the investment cycle is among the keys to calling the market correctly. Just like the investment cycle (boom and bust, high and low leverage), the EV cycle (hot and cold industries, high and low information) is part of the world we live in.&lt;/p&gt;
+
+&lt;p&gt;I’m not certain what the future holds, but I know an EV-based view of it will lead to different conclusions than alternatives.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://benbrostoff.github.io//2018/11/25/ev-is-everything.html</link>
+        <guid isPermaLink="true">http://benbrostoff.github.io//2018/11/25/ev-is-everything.html</guid>
+      </item>
+    
+      <item>
         <title>Guesses and Information</title>
         <description>&lt;p&gt;Learning from your wrong guesses is fundamentally different than learning from mistakes. In this post, I’ll explore why playing the board game Mastermind has given me a strong appreciation for the power of wrong guessing.&lt;/p&gt;
 
@@ -488,78 +637,6 @@ The function to measure the quality of a split. Supported criteria are “gini�
         <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
         <link>http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn-draft.html</link>
         <guid isPermaLink="true">http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn-draft.html</guid>
-      </item>
-    
-      <item>
-        <title>Commits - Not a Proxy for Progress</title>
-        <description>&lt;p&gt;I’m resolving to stop using commits as a measure of progress.&lt;/p&gt;
-
-&lt;p&gt;Generating code is easy. Generating code while understanding every line is hard. This may on the surface seem like an absurd statement, especially if new code has no library dependencies. But native code for a specific language has its own complexities. A recent example I ran into - &lt;a href=&quot;https://stackoverflow.com/questions/21771220/error-handling-with-node-js-streams&quot;&gt;error handling with Node &lt;code&gt;stream&lt;/code&gt;s&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Good writers talk all the time about all the work that comes before and after writing. &lt;a href=&quot;https://tim.blog/2016/05/22/sebastian-junger/&quot;&gt;Sebastian Junger&lt;/a&gt; is insistent on understanding his subject matter as much as possible before putting pen to paper. &lt;a href=&quot;https://www.amazon.com/Writing-10th-Anniversary-Memoir-Craft/dp/1439156816&quot;&gt;Stephen King&lt;/a&gt; urges writers to tear apart their initial and even later drafts as the editing process creates insight. Coding should be no different.&lt;/p&gt;
-
-&lt;p&gt;The before and after work for coding should aim to reduce code generated to as small a volume as possible. This process takes time - time to consider different architectures, &lt;a href=&quot;http://benbrostoff.github.io/2017/08/05/rtd/&quot;&gt;time to read documentation&lt;/a&gt; and time to receive and address feedback. In no way does this time correlate with commits, nor would correlation be desirable. Version control should tell the story of what changed in the code, not the story of someone’s coding process. This is the difference between &lt;code&gt;Adds error handling to batch script&lt;/code&gt; and three commits that are different iterations of error handling.&lt;/p&gt;
-
-&lt;p&gt;What can substitute for commits then as a measure of progress on a project? I see value in tools that track the before and after process, in addition to the actual writing of code. I have found &lt;a href=&quot;https://qotoqot.com/qbserve/&quot;&gt;&lt;code&gt;Qbserve&lt;/code&gt; useful here&lt;/a&gt; - it’s a tool that shows time spent in different applications. Good old-fashioned “software journaling” is another technique I love - I especially enjoyed this &lt;a href=&quot;http://winterflower.github.io/2017/08/17/software-engineering-notebook/&quot;&gt;blog post on it&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What gets measured gets managed. Let’s make sure we’re measuring the right things.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/11/09/commits-are-not-a-proxy-for-progress.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/11/09/commits-are-not-a-proxy-for-progress.html</guid>
-      </item>
-    
-      <item>
-        <title>Gradient Descent Intuition (ML Series, Part 2)</title>
-        <description>&lt;p&gt;How do machines learn?&lt;/p&gt;
-
-&lt;p&gt;One answer is by getting fewer answers wrong over time. One technique for decreasing wrongness is &lt;em&gt;gradient descent&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;In this post, I want to explore gradient descent as a standalone topic. In the next post in this series, I’ll discuss its relationship with machine learning, and run through a basic example of why gradient descent is useful in helping machines get fewer answers wrong.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Gradient Descent - Find The Minimum&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Matt Nedrich over at Atomic Object has &lt;a href=&quot;https://spin.atomicobject.com/2014/06/24/gradient-descent-linear-regression/&quot;&gt;an excellent definition of gradient descent&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;At a theoretical level, gradient descent is an algorithm that minimizes functions. Given a function defined by a set of parameters, gradient descent starts with an initial set of parameter values and iteratively moves toward a set of parameter values that minimize the function. This iterative minimization is achieved using calculus, taking steps in the negative direction of the function gradient.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Gradient descent can be thought of as &lt;a href=&quot;http://mathworld.wolfram.com/Gradient.html&quot;&gt;a synonym for slope&lt;/a&gt;. Since slope is rise / run, and a horizontal line has a slope of 0 (0 rise over infinite run), finding the slope at the function’s minimum can be thought of as “descending” to a gradient of zero. The name gradient descent makes sense, because once the gradient decent algorithm has run for a given function, the computed parameters will descend the slope at the computed point to zero.&lt;/p&gt;
-
-&lt;p&gt;Providing clear examples of the &lt;em&gt;how&lt;/em&gt; of ML are among the reasons I’m writing this &lt;a href=&quot;http://benbrostoff.github.io/2017/09/19/why-ml/&quot;&gt;blog series&lt;/a&gt;, so let’s use gradient descent on the following function:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(x - 5) ** 2&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;I write this function in this form as opposed to &lt;code&gt;x ** 2 - 10x + 25&lt;/code&gt; because it’s easy to see that the function is minimized at 5. Gradient descent should return &lt;code&gt;5&lt;/code&gt; for &lt;code&gt;x&lt;/code&gt; if the algorithm lives up to its name.&lt;/p&gt;
-
-&lt;p&gt;The gradient descent algorithm itself is all of one line, but importantly requires 1) the derivative (also synonymous with slope) of the function and 2) a small number to descend the gradient. The small number - which we’ll set to &lt;code&gt;0.01&lt;/code&gt; in this example - is necessary because it allows the gradient to move on each iteration of the algorithm. The derivative can be &lt;a href=&quot;https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-rules/ab-diff-negative-fraction-powers/a/power-rule-review&quot;&gt;computed through the power rule&lt;/a&gt;, which I had to review via the provided link from Khan academy. In short, moving the exponent &lt;code&gt;2&lt;/code&gt; down and raising the result to &lt;code&gt;2-1&lt;/code&gt; returns a derivative function of &lt;code&gt;2(x-5) ** 1&lt;/code&gt; or &lt;code&gt;2x - 10&lt;/code&gt;. We now have the parameters necessary to run gradient descent for a few iterations:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/first_iterations.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;What this algorithm does is 1) take the previous minimized value (or start at zero) and 2) subtract the slope function with the previous minimum value passed in, multiplied by the small number.&lt;/p&gt;
-
-&lt;p&gt;And if run for 10,000 iterations or even 100,000 iterations, with &lt;code&gt;0.01&lt;/code&gt; as the small number, &lt;code&gt;x&lt;/code&gt; converges to &lt;code&gt;5&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/converge.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;But what if instead of a small number we used a huge number? What is clear from experimentation is that numbers larger than one will never allow the solution to converge to &lt;code&gt;5&lt;/code&gt;. While a small number of &lt;code&gt;0.99&lt;/code&gt; converges to &lt;code&gt;5&lt;/code&gt;, a small number of &lt;code&gt;1.0&lt;/code&gt; bounces the solution back and forth between &lt;code&gt;10&lt;/code&gt; and &lt;code&gt;0&lt;/code&gt; forever. A couple of iterations in this sequence are instructive:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/bad_learning_rate.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The value selected for the small number is extremely important. Selection of the small number is an example of &lt;em&gt;hyperparamater tuning&lt;/em&gt; in machine learning, which we’ll explore in a later post.&lt;/p&gt;
-
-&lt;p&gt;Please note all the code for this post can be found &lt;a href=&quot;https://github.com/BenBrostoff/ml-series-source&quot;&gt;on my GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Why Does Gradient Descent Help Machines Learn?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The small number mentioned above is called the &lt;em&gt;learning rate&lt;/em&gt; in ML contexts, and drives the learning in machine learning. The function the gradient descent algorithm is applied on is the &lt;em&gt;loss function&lt;/em&gt;, where loss is the difference between the prediction made from a machine learning example and actual reality. For example, if an ML model predicted an NFL running back will finish with &lt;code&gt;17&lt;/code&gt; touch downs for the 2016 season and the reality is &lt;code&gt;11&lt;/code&gt;, the loss in this example is &lt;code&gt;6&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the next post, I’m excited to explore an actual application of gradient descent in machine learning.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/10/09/gradient-descent-intuition.html</guid>
       </item>
     
   </channel>
