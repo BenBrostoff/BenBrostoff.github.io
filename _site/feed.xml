@@ -3,8 +3,8 @@
   <channel>
     <title>Ben Brostoff</title>
     <description></description>
-    <link>http://benbrostoff.github.io/</link>
-    <atom:link href="http://benbrostoff.github.io//feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://0.0.0.0:4000</link>
+    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Stop Resulting</title>
@@ -53,8 +53,8 @@
 &lt;p&gt;Figuring out what needs to be done I now believe is a process that requires viewing process and outcomes separately. The risk of tying good and bad outcomes to skill through a narrative is rejecting useful strategies and embracing harmful ones. In 2019, I want to eliminate this risk by separating process and outcomes.&lt;/p&gt;
 </description>
         <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/12/27/biggest-lesson-2018.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/12/27/biggest-lesson-2018.html</guid>
+        <link>http://0.0.0.0:4000/2018/12/27/biggest-lesson-2018.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/12/27/biggest-lesson-2018.html</guid>
       </item>
     
       <item>
@@ -151,8 +151,8 @@
 &lt;p&gt;I’m not certain what the future holds, but I know an EV-based view of it will lead to different conclusions than alternatives.&lt;/p&gt;
 </description>
         <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/11/25/ev-is-everything.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/11/25/ev-is-everything.html</guid>
+        <link>http://0.0.0.0:4000/2018/11/25/ev-is-everything.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/11/25/ev-is-everything.html</guid>
       </item>
     
       <item>
@@ -195,8 +195,8 @@
 &lt;p&gt;The lesson here I think is to keep guessing after initial success to reject or confirm the &lt;em&gt;why&lt;/em&gt; of the right guess. Similarly, with wrong guesses, instead of writing ourselves off, our energy should be focused on extracting as much information as possible from the experience.&lt;/p&gt;
 </description>
         <pubDate>Sat, 17 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/11/17/guesses-and-information.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/11/17/guesses-and-information.html</guid>
+        <link>http://0.0.0.0:4000/2018/11/17/guesses-and-information.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/11/17/guesses-and-information.html</guid>
       </item>
     
       <item>
@@ -231,8 +231,8 @@
 
 </description>
         <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/08/28/internal-users.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/08/28/internal-users.html</guid>
+        <link>http://0.0.0.0:4000/2018/08/28/internal-users.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/08/28/internal-users.html</guid>
       </item>
     
       <item>
@@ -251,36 +251,36 @@
 
 </description>
         <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/08/11/adjustments.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/08/11/adjustments.html</guid>
+        <link>http://0.0.0.0:4000/2018/08/11/adjustments.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/08/11/adjustments.html</guid>
       </item>
     
       <item>
         <title>Redux - .subscribe</title>
-        <description>&lt;p&gt;My &lt;a href=&quot;http://benbrostoff.github.io/2018/04/09/redux-dispatch-and-subscribe.html&quot;&gt;last post&lt;/a&gt; explored calling &lt;code&gt;.dispatch&lt;/code&gt; on a Redux store without listeners; in this post, I will add listeners to the toy application we’ve been building in this series and trace the &lt;code&gt;subscribe&lt;/code&gt; source in the process. I’m now using &lt;code&gt;v4.0.0&lt;/code&gt;, which was &lt;a href=&quot;https://github.com/reactjs/redux/releases/tag/v4.0.0&quot;&gt;released on April 16th&lt;/a&gt; - when I started on this series, Redux was on &lt;code&gt;v3.7.2&lt;/code&gt;. To begin our code exploration, I’ll call subscribe on our Redux store and pass in a callback that just logs the state of the store to the console:&lt;/p&gt;
+        <description>&lt;p&gt;My &lt;a href=&quot;http://benbrostoff.github.io/2018/04/09/redux-dispatch-and-subscribe.html&quot;&gt;last post&lt;/a&gt; explored calling &lt;code class=&quot;highlighter-rouge&quot;&gt;.dispatch&lt;/code&gt; on a Redux store without listeners; in this post, I will add listeners to the toy application we’ve been building in this series and trace the &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; source in the process. I’m now using &lt;code class=&quot;highlighter-rouge&quot;&gt;v4.0.0&lt;/code&gt;, which was &lt;a href=&quot;https://github.com/reactjs/redux/releases/tag/v4.0.0&quot;&gt;released on April 16th&lt;/a&gt; - when I started on this series, Redux was on &lt;code class=&quot;highlighter-rouge&quot;&gt;v3.7.2&lt;/code&gt;. To begin our code exploration, I’ll call subscribe on our Redux store and pass in a callback that just logs the state of the store to the console:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/b296bda2b96040d0ec9950a7402d2fe6.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Let’s begin with the documentation for &lt;code&gt;subscribe&lt;/code&gt; in the source.&lt;/p&gt;
+&lt;p&gt;Let’s begin with the documentation for &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; in the source.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Adds a change listener. It will be called any time an action is dispatched,&lt;br /&gt;
-and some part of the state tree may potentially have changed. You may then&lt;br /&gt;
-call &lt;code&gt;getState()&lt;/code&gt; to read the current state tree inside the callback.&lt;/p&gt;
+  &lt;p&gt;Adds a change listener. It will be called any time an action is dispatched,
+and some part of the state tree may potentially have changed. You may then
+call &lt;code class=&quot;highlighter-rouge&quot;&gt;getState()&lt;/code&gt; to read the current state tree inside the callback.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The next items in the docs before the function signature are about calling &lt;code&gt;dispatch&lt;/code&gt; from a change listener, which we’ll ignore for now since our toy example does not do this. The function signature explains that &lt;code&gt;subscribe&lt;/code&gt; expects a function that will be invoked on every dispatch and returns a function that when invoked will unsubscribe the listener:&lt;/p&gt;
+&lt;p&gt;The next items in the docs before the function signature are about calling &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; from a change listener, which we’ll ignore for now since our toy example does not do this. The function signature explains that &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; expects a function that will be invoked on every dispatch and returns a function that when invoked will unsubscribe the listener:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;@param {Function} listener A callback to be invoked on every dispatch.&lt;br /&gt;
+  &lt;p&gt;@param {Function} listener A callback to be invoked on every dispatch.
 @returns {Function} A function to remove this change listener.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The full &lt;code&gt;v4.0.0&lt;/code&gt; source  for &lt;code&gt;subscribe&lt;/code&gt; is below. When reading this blog post, it may be useful to split screen and have it open, although I’ll add gists where relevant:&lt;/p&gt;
+&lt;p&gt;The full &lt;code class=&quot;highlighter-rouge&quot;&gt;v4.0.0&lt;/code&gt; source  for &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; is below. When reading this blog post, it may be useful to split screen and have it open, although I’ll add gists where relevant:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/226d5e7ea1c4ebe1c8b8293ea29ee795.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;As we’ve seen elsewhere in the Redux source, the beginning of the function body is type checking and raising errors if the expectations outlined in the docs are not met. Redux checks to see that &lt;code&gt;listener&lt;/code&gt; is a function and that a &lt;code&gt;store.dispatch&lt;/code&gt; call is not in progress when &lt;code&gt;subscribe&lt;/code&gt; is invoked.&lt;/p&gt;
+&lt;p&gt;As we’ve seen elsewhere in the Redux source, the beginning of the function body is type checking and raising errors if the expectations outlined in the docs are not met. Redux checks to see that &lt;code class=&quot;highlighter-rouge&quot;&gt;listener&lt;/code&gt; is a function and that a &lt;code class=&quot;highlighter-rouge&quot;&gt;store.dispatch&lt;/code&gt; call is not in progress when &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; is invoked.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/ff4a896323dd937155bb18766278a7bc.js&quot;&gt;&lt;/script&gt;
 
@@ -290,44 +290,44 @@ call &lt;code&gt;getState()&lt;/code&gt; to read the current state tree inside t
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Redux sets a variable that will be updated later called &lt;code&gt;isSubscribed&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; - this makes sense from a naming perspective, as we’re subscribing to a function. We’ll come back to this variable when discussing &lt;code&gt;unsubscribe&lt;/code&gt;, which predictably sets it to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;Redux sets a variable that will be updated later called &lt;code class=&quot;highlighter-rouge&quot;&gt;isSubscribed&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; - this makes sense from a naming perspective, as we’re subscribing to a function. We’ll come back to this variable when discussing &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt;, which predictably sets it to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;A function called &lt;code&gt;ensureCanMutateNextListeners&lt;/code&gt; is called next, which is small despite the long name. All this does is check if two variables declared in &lt;code&gt;createStore&lt;/code&gt; are the same array (and originally they are - &lt;code&gt;let nextListeners = currentListeners&lt;/code&gt; happens on &lt;code&gt;createStore&lt;/code&gt;). If they are, &lt;code&gt;nextListeners&lt;/code&gt; is set equal to a copy of &lt;code&gt;currentListeners&lt;/code&gt; via &lt;code&gt;.slice()&lt;/code&gt;, thereby destroying the equality:&lt;/p&gt;
+    &lt;p&gt;A function called &lt;code class=&quot;highlighter-rouge&quot;&gt;ensureCanMutateNextListeners&lt;/code&gt; is called next, which is small despite the long name. All this does is check if two variables declared in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; are the same array (and originally they are - &lt;code class=&quot;highlighter-rouge&quot;&gt;let nextListeners = currentListeners&lt;/code&gt; happens on &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;). If they are, &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; is set equal to a copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; via &lt;code class=&quot;highlighter-rouge&quot;&gt;.slice()&lt;/code&gt;, thereby destroying the equality:&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/994b547071145785093b0f1970485df6.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;The &lt;code&gt;listener&lt;/code&gt; passed to &lt;code&gt;subscribe&lt;/code&gt; is pushed into the array of &lt;code&gt;nextListeners&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;listener&lt;/code&gt; passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; is pushed into the array of &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Note that the Redux docs have numerous references to the term “snapshotting listeners”, and I take that to mean the function &lt;code&gt;ensureCanMutateNextListeners&lt;/code&gt; is serving. The Redux source never adds or removes a listener without first copying &lt;code&gt;currentListeners&lt;/code&gt; if &lt;code&gt;nextListeners&lt;/code&gt; and &lt;code&gt;currentListeners&lt;/code&gt; are a reference to the same value (&lt;code&gt;currentListeners&lt;/code&gt; is assigned to &lt;code&gt;nextListeners&lt;/code&gt; in &lt;code&gt;dispatch&lt;/code&gt; and in &lt;code&gt;createStore&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Note that the Redux docs have numerous references to the term “snapshotting listeners”, and I take that to mean the function &lt;code class=&quot;highlighter-rouge&quot;&gt;ensureCanMutateNextListeners&lt;/code&gt; is serving. The Redux source never adds or removes a listener without first copying &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; if &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; are a reference to the same value (&lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; is assigned to &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; and in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;).&lt;/p&gt;
 
-&lt;p&gt;Finally, an &lt;code&gt;unsubscribe&lt;/code&gt; function is returned, which includes closures from variables from &lt;code&gt;subscribe&lt;/code&gt; and &lt;code&gt;createStore&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Finally, an &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; function is returned, which includes closures from variables from &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/6bba11e54f70eb88f5ee88772a8de3ae.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;The first conditional and empty return is to ensure that calls to &lt;code&gt;unsubscribe&lt;/code&gt; after the first call do nothing. On the first &lt;code&gt;unsubscribe&lt;/code&gt; call, &lt;code&gt;isSubscribed&lt;/code&gt; is set to &lt;code&gt;false&lt;/code&gt;; afterwards, there is no way to set it back to &lt;code&gt;true&lt;/code&gt;, since each &lt;code&gt;subscribe&lt;/code&gt; call creates a separate closure. Calls to &lt;code&gt;unsubscribe&lt;/code&gt; after the first one bail out as early as possible.&lt;/p&gt;
+&lt;p&gt;The first conditional and empty return is to ensure that calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; after the first call do nothing. On the first &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; call, &lt;code class=&quot;highlighter-rouge&quot;&gt;isSubscribed&lt;/code&gt; is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;; afterwards, there is no way to set it back to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;, since each &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; call creates a separate closure. Calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; after the first one bail out as early as possible.&lt;/p&gt;
 
-&lt;p&gt;Next, Redux again checks if a &lt;code&gt;dispatch&lt;/code&gt; call is in progress and throws an error if this is the case. The error here is to guard against calling unsubscribe while a reducer is executing. As an aside, this &lt;code&gt;if (isDispatching)&lt;/code&gt; and error throwing logic happens three times in the &lt;code&gt;createStore&lt;/code&gt; source - once in &lt;code&gt;dispatch&lt;/code&gt; (reducers cannot dispatch actions), once in &lt;code&gt;getState&lt;/code&gt; (cannot read state while reducer is executing) and once here.&lt;/p&gt;
+&lt;p&gt;Next, Redux again checks if a &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; call is in progress and throws an error if this is the case. The error here is to guard against calling unsubscribe while a reducer is executing. As an aside, this &lt;code class=&quot;highlighter-rouge&quot;&gt;if (isDispatching)&lt;/code&gt; and error throwing logic happens three times in the &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; source - once in &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; (reducers cannot dispatch actions), once in &lt;code class=&quot;highlighter-rouge&quot;&gt;getState&lt;/code&gt; (cannot read state while reducer is executing) and once here.&lt;/p&gt;
 
-&lt;p&gt;As alluded to earlier, Redux then sets &lt;code&gt;isSubscribed&lt;/code&gt; to false, guaranteeing future calls to &lt;code&gt;unsubscribe&lt;/code&gt; will do nothing.&lt;/p&gt;
+&lt;p&gt;As alluded to earlier, Redux then sets &lt;code class=&quot;highlighter-rouge&quot;&gt;isSubscribed&lt;/code&gt; to false, guaranteeing future calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; will do nothing.&lt;/p&gt;
 
-&lt;p&gt;The meat of &lt;code&gt;unsubscribe&lt;/code&gt; is next:&lt;/p&gt;
+&lt;p&gt;The meat of &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; is next:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/974773e6151b28f66e67395cad37abf5.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;We reviewed &lt;code&gt;ensureCanMutateNextListeners()&lt;/code&gt; - this call protects &lt;code&gt;nextListeners&lt;/code&gt; from being mutated by changes to &lt;code&gt;currentListeners&lt;/code&gt;. &lt;code&gt;nextListeners.indexOf(listener)&lt;/code&gt; gets the index in the array of listeners of the listener unsubscribe is tied to. Finally, &lt;code&gt;nextListeners.splice(index, 1)&lt;/code&gt; removes the listener from the &lt;code&gt;nextListeners&lt;/code&gt; array. An example may be helpful.&lt;/p&gt;
+&lt;p&gt;We reviewed &lt;code class=&quot;highlighter-rouge&quot;&gt;ensureCanMutateNextListeners()&lt;/code&gt; - this call protects &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; from being mutated by changes to &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners.indexOf(listener)&lt;/code&gt; gets the index in the array of listeners of the listener unsubscribe is tied to. Finally, &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners.splice(index, 1)&lt;/code&gt; removes the listener from the &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; array. An example may be helpful.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/32a397577c574c8509020709fc3a918a.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;In the first unsubscribe call, &lt;code&gt;index&lt;/code&gt; is 2 (&lt;code&gt;funcC&lt;/code&gt; is the last listener in an array of three), then 1 (with &lt;code&gt;funcC&lt;/code&gt; removed, &lt;code&gt;funcB&lt;/code&gt; is now the last listener in an array of 2), then 0 (&lt;code&gt;funcA&lt;/code&gt; is the only listener in an array of one). &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice&quot;&gt;&lt;code&gt;splice&lt;/code&gt; is a mutative function&lt;/a&gt; that takes a position as the first argument and how many elements to delete as the second. With &lt;code&gt;unsubscribe&lt;/code&gt;, &lt;code&gt;splice&lt;/code&gt; is deleting the relevant listener at its respective position.&lt;/p&gt;
+&lt;p&gt;In the first unsubscribe call, &lt;code class=&quot;highlighter-rouge&quot;&gt;index&lt;/code&gt; is 2 (&lt;code class=&quot;highlighter-rouge&quot;&gt;funcC&lt;/code&gt; is the last listener in an array of three), then 1 (with &lt;code class=&quot;highlighter-rouge&quot;&gt;funcC&lt;/code&gt; removed, &lt;code class=&quot;highlighter-rouge&quot;&gt;funcB&lt;/code&gt; is now the last listener in an array of 2), then 0 (&lt;code class=&quot;highlighter-rouge&quot;&gt;funcA&lt;/code&gt; is the only listener in an array of one). &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;splice&lt;/code&gt; is a mutative function&lt;/a&gt; that takes a position as the first argument and how many elements to delete as the second. With &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;splice&lt;/code&gt; is deleting the relevant listener at its respective position.&lt;/p&gt;
 
 &lt;p&gt;Now that we’ve reviewed subscribe, we can actually trace what happens on a dispatch with a listener:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/d73da8dd6ad848a2ee5a575d97685b59.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;At the very end of &lt;code&gt;dispatch&lt;/code&gt; (the only remaining line is to return an action), Redux sets &lt;code&gt;currentListeners&lt;/code&gt; to &lt;code&gt;nextListeners&lt;/code&gt; and iterates through the current listeners in the order they were added. Each listener is then invoked with no arguments. It would be easy enough to give the listeners the current &lt;code&gt;action&lt;/code&gt;, but &lt;a href=&quot;https://github.com/reactjs/redux/issues/1057&quot;&gt;per the original author, Dan Abramov,&lt;/a&gt; this is a misuse of the library:&lt;/p&gt;
+&lt;p&gt;At the very end of &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; (the only remaining line is to return an action), Redux sets &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; and iterates through the current listeners in the order they were added. Each listener is then invoked with no arguments. It would be easy enough to give the listeners the current &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt;, but &lt;a href=&quot;https://github.com/reactjs/redux/issues/1057&quot;&gt;per the original author, Dan Abramov,&lt;/a&gt; this is a misuse of the library:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Subscribers should react to the new state, not to what happened.&lt;/p&gt;
@@ -336,78 +336,78 @@ call &lt;code&gt;getState()&lt;/code&gt; to read the current state tree inside t
 &lt;p&gt;In summary, the subscribe source:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Checks that the passed argument is a function and that the reducer passed to &lt;code&gt;createStore&lt;/code&gt; is not executing&lt;/li&gt;
-  &lt;li&gt;Pushes the passed listener function to an array of listeners (&lt;code&gt;nextListeners&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Checks that the passed argument is a function and that the reducer passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; is not executing&lt;/li&gt;
+  &lt;li&gt;Pushes the passed listener function to an array of listeners (&lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;Returns an unsubscribe function that can be invoked in order to remove the listener from the array of listener&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;dispatch&lt;/code&gt; then invokes every listener in &lt;code&gt;currentListeners&lt;/code&gt; (which is assigned to &lt;code&gt;nextListeners&lt;/code&gt;). Thus, any function passed to subscribe will be called on &lt;code&gt;dispatch&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; then invokes every listener in &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; (which is assigned to &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt;). Thus, any function passed to subscribe will be called on &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;That about wraps up the bulk of &lt;code&gt;createStore&lt;/code&gt;. Note that I skipped some of the API that was not part of Redux in its original 2015 state - &lt;code&gt;replaceReducer&lt;/code&gt; and Redux’s &lt;code&gt;observable&lt;/code&gt; functions were left out here.&lt;/p&gt;
+&lt;p&gt;That about wraps up the bulk of &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;. Note that I skipped some of the API that was not part of Redux in its original 2015 state - &lt;code class=&quot;highlighter-rouge&quot;&gt;replaceReducer&lt;/code&gt; and Redux’s &lt;code class=&quot;highlighter-rouge&quot;&gt;observable&lt;/code&gt; functions were left out here.&lt;/p&gt;
 
-&lt;p&gt;Next, I want to dive into &lt;code&gt;applyMiddleware&lt;/code&gt; and discussing how adding middleware to a Redux store works behind the scenes.&lt;/p&gt;
+&lt;p&gt;Next, I want to dive into &lt;code class=&quot;highlighter-rouge&quot;&gt;applyMiddleware&lt;/code&gt; and discussing how adding middleware to a Redux store works behind the scenes.&lt;/p&gt;
 </description>
         <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/04/20/redux-subscribe-listeners.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/04/20/redux-subscribe-listeners.html</guid>
+        <link>http://0.0.0.0:4000/2018/04/20/redux-subscribe-listeners.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/20/redux-subscribe-listeners.html</guid>
       </item>
     
       <item>
         <title>Redux - .dispatch</title>
-        <description>&lt;p&gt;Today’s post will look at what happens on &lt;code&gt;store.dispatch(action)&lt;/code&gt; calls after the &lt;code&gt;dispatch&lt;/code&gt; call invoked in &lt;code&gt;createStore&lt;/code&gt; (discussed in Part I of this Redux mini-series). As a refresher, the code below was generated in Part I. I’ll I’ve done is add a call to dispatch to increment my command line counter by 1.&lt;/p&gt;
+        <description>&lt;p&gt;Today’s post will look at what happens on &lt;code class=&quot;highlighter-rouge&quot;&gt;store.dispatch(action)&lt;/code&gt; calls after the &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; call invoked in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; (discussed in Part I of this Redux mini-series). As a refresher, the code below was generated in Part I. I’ll I’ve done is add a call to dispatch to increment my command line counter by 1.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/b52270ab73dd98be56e9a33747f60be9.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;The counter now increments to the input number plus 1. So what happened here? &lt;code&gt;dispatch&lt;/code&gt; is actually a very short method (26 lines total, including white space), so this blog post will attempt to explain each line. The whole of dispatch is below (recall I’m using Redux &lt;code&gt;3.7.2&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;The counter now increments to the input number plus 1. So what happened here? &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is actually a very short method (26 lines total, including white space), so this blog post will attempt to explain each line. The whole of dispatch is below (recall I’m using Redux &lt;code class=&quot;highlighter-rouge&quot;&gt;3.7.2&lt;/code&gt;):&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/08cb9127085c104a1c7cae02c77a7764.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;I first want to review the commentary above the &lt;code&gt;dispatch&lt;/code&gt; method in the Redux source. Portions of the commentary deal with actions that are &lt;code&gt;Promise&lt;/code&gt;s, which Redux out of the box does not support. I’ll skip those sections for now. The first relevant section is below:&lt;/p&gt;
+&lt;p&gt;I first want to review the commentary above the &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; method in the Redux source. Portions of the commentary deal with actions that are &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise&lt;/code&gt;s, which Redux out of the box does not support. I’ll skip those sections for now. The first relevant section is below:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Dispatches an action. It is the only way to trigger a state change.&lt;/p&gt;
 
-  &lt;p&gt;The &lt;code&gt;reducer&lt;/code&gt; function, used to create the store, will be called with the&lt;br /&gt;
-current state tree and the given &lt;code&gt;action&lt;/code&gt;. Its return value will&lt;br /&gt;
-be considered the &lt;strong&gt;next&lt;/strong&gt; state of the tree, and the change listeners&lt;br /&gt;
+  &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; function, used to create the store, will be called with the
+current state tree and the given &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt;. Its return value will
+be considered the &lt;strong&gt;next&lt;/strong&gt; state of the tree, and the change listeners
 will be notified.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;So, invoking &lt;code&gt;dispatch&lt;/code&gt; is the only way to trigger a change in the store’s &lt;code&gt;currentState&lt;/code&gt;. &lt;code&gt;dispatch&lt;/code&gt; is invoked with an &lt;code&gt;action&lt;/code&gt; as an argument, which is passed to the reducer originally passed to &lt;code&gt;createStore&lt;/code&gt;. The return value from the reducer is the new &lt;code&gt;currentState&lt;/code&gt; of the tree. The final part of the sentence about change listeners is not yet relevant to the toy application I’m building, so I’ll ignore it for now.&lt;/p&gt;
+&lt;p&gt;So, invoking &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is the only way to trigger a change in the store’s &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is invoked with an &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt; as an argument, which is passed to the reducer originally passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;. The return value from the reducer is the new &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; of the tree. The final part of the sentence about change listeners is not yet relevant to the toy application I’m building, so I’ll ignore it for now.&lt;/p&gt;
 
-&lt;p&gt;As previously noted, &lt;code&gt;dispatch&lt;/code&gt; takes an &lt;code&gt;action&lt;/code&gt; as an argument, which should be a POJO (helps with &lt;code&gt;redux-devtools&lt;/code&gt;), needs a type property and cannot be undefined.&lt;/p&gt;
+&lt;p&gt;As previously noted, &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; takes an &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt; as an argument, which should be a POJO (helps with &lt;code class=&quot;highlighter-rouge&quot;&gt;redux-devtools&lt;/code&gt;), needs a type property and cannot be undefined.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;@param {Object} action A plain object representing “what changed”. It is a good idea to keep actions serializable so you can record and replay user sessions, or use the time travelling &lt;code&gt;redux-devtools&lt;/code&gt;. An action must have a &lt;code&gt;type&lt;/code&gt; property which may not be &lt;code&gt;undefined&lt;/code&gt;. It is a good idea to use string constants for action types.&lt;/p&gt;
+  &lt;p&gt;@param {Object} action A plain object representing “what changed”. It is a good idea to keep actions serializable so you can record and replay user sessions, or use the time travelling &lt;code class=&quot;highlighter-rouge&quot;&gt;redux-devtools&lt;/code&gt;. An action must have a &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; property which may not be &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;. It is a good idea to use string constants for action types.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;The beginning of dispatch just covers these bases and raises errors where appropriate:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/6f4faaf4ebcaa0196d175ead31e42a76.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;There’s also a conditional that checks that &lt;code&gt;isDispatching&lt;/code&gt; is &lt;code&gt;truthy&lt;/code&gt;, and raises an error if it is.&lt;/p&gt;
+&lt;p&gt;There’s also a conditional that checks that &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;truthy&lt;/code&gt;, and raises an error if it is.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/22ac068b76cf22c53e21355d75cdc366.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;The reason for this error is to prevent calls to &lt;code&gt;dispatch&lt;/code&gt; from a &lt;code&gt;reducer&lt;/code&gt; (hence the error “Reducers may not dispatch actions.”). Raising this error can be done by passing the store into an action and calling &lt;code&gt;dispatch&lt;/code&gt; from the reducer, like so:&lt;/p&gt;
+&lt;p&gt;The reason for this error is to prevent calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; from a &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; (hence the error “Reducers may not dispatch actions.”). Raising this error can be done by passing the store into an action and calling &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; from the reducer, like so:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/0e64c47bcfa840ef244671432d60223e.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;The next part of &lt;code&gt;dispatch&lt;/code&gt; is a &lt;code&gt;try&lt;/code&gt; / &lt;code&gt;finally&lt;/code&gt; block that sets &lt;code&gt;isDispatching&lt;/code&gt; to true (a variable declared through &lt;code&gt;let&lt;/code&gt; in &lt;code&gt;createStore&lt;/code&gt;), sets &lt;code&gt;currentState&lt;/code&gt; to &lt;code&gt;currentReducer(currentState, action)&lt;/code&gt; (&lt;code&gt;currentState&lt;/code&gt; is also declared via &lt;code&gt;let&lt;/code&gt; in &lt;code&gt;createStore&lt;/code&gt;), and then in the &lt;code&gt;finally&lt;/code&gt; sets &lt;code&gt;isDispatching&lt;/code&gt; back to false. Again, the only usage of &lt;code&gt;isDispatching&lt;/code&gt; is in this function to prevent calling &lt;code&gt;dispatch&lt;/code&gt; in the reducer.&lt;/p&gt;
+&lt;p&gt;The next part of &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is a &lt;code class=&quot;highlighter-rouge&quot;&gt;try&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;finally&lt;/code&gt; block that sets &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; to true (a variable declared through &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;), sets &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;currentReducer(currentState, action)&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; is also declared via &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;), and then in the &lt;code class=&quot;highlighter-rouge&quot;&gt;finally&lt;/code&gt; sets &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; back to false. Again, the only usage of &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; is in this function to prevent calling &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; in the reducer.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/c5f0b1a92590c4b306dbf7cdf282694e.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Also, if you’re wondering why a &lt;code&gt;try&lt;/code&gt; / &lt;code&gt;finally&lt;/code&gt; here, the intent is to prevent Redux from never setting &lt;code&gt;isDispatching&lt;/code&gt; back to &lt;code&gt;false&lt;/code&gt;. This would prevent the reducer from ever firing again (because of the aforementioned “Reducers may not dispatch actions” error). I actually learned this from looking &lt;a href=&quot;https://github.com/reactjs/redux/pull/372&quot;&gt;at this Redux PR&lt;/a&gt;, and specifically this exchange:&lt;/p&gt;
+&lt;p&gt;Also, if you’re wondering why a &lt;code class=&quot;highlighter-rouge&quot;&gt;try&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;finally&lt;/code&gt; here, the intent is to prevent Redux from never setting &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; back to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;. This would prevent the reducer from ever firing again (because of the aforementioned “Reducers may not dispatch actions” error). I actually learned this from looking &lt;a href=&quot;https://github.com/reactjs/redux/pull/372&quot;&gt;at this Redux PR&lt;/a&gt;, and specifically this exchange:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/why-try-finally.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The final part of &lt;code&gt;dispatch&lt;/code&gt; before the return statement is to set a &lt;code&gt;listeners&lt;/code&gt; array equal to &lt;code&gt;currentListeners&lt;/code&gt;, which is then set to &lt;code&gt;nextListeners&lt;/code&gt;. Both the &lt;code&gt;*Listeners&lt;/code&gt; variables are declared via &lt;code&gt;let&lt;/code&gt; in &lt;code&gt;createStore&lt;/code&gt;. A &lt;code&gt;for&lt;/code&gt; loop then iterates through the listeners and invokes each one.&lt;/p&gt;
+&lt;p&gt;The final part of &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; before the return statement is to set a &lt;code class=&quot;highlighter-rouge&quot;&gt;listeners&lt;/code&gt; array equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt;, which is then set to &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt;. Both the &lt;code class=&quot;highlighter-rouge&quot;&gt;*Listeners&lt;/code&gt; variables are declared via &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;. A &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop then iterates through the listeners and invokes each one.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/323617a993a2bcfda4a8e77eff829b4f.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;In this toy example, both &lt;code&gt;currentListeners&lt;/code&gt; and &lt;code&gt;nextListeners&lt;/code&gt; are empty arrays, so there are no listeners to invoke.&lt;/p&gt;
+&lt;p&gt;In this toy example, both &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; are empty arrays, so there are no listeners to invoke.&lt;/p&gt;
 
-&lt;p&gt;The return value is just the &lt;code&gt;action&lt;/code&gt; passed to it:&lt;/p&gt;
+&lt;p&gt;The return value is just the &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt; passed to it:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;@returns {Object} For convenience, the same action object you dispatched.&lt;/p&gt;
@@ -415,20 +415,20 @@ will be notified.&lt;/p&gt;
 
 &lt;p&gt;Why this is convenient, I’m not yet sure, but will trust the source for now.&lt;/p&gt;
 
-&lt;p&gt;We’ve done it! This post covers &lt;code&gt;dispatch&lt;/code&gt; without any listeners set. I’ll use the next post to generate listeners via &lt;code&gt;store.subscribe&lt;/code&gt; and analyze what happens in that listeners loop when listeners exist.&lt;/p&gt;
+&lt;p&gt;We’ve done it! This post covers &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; without any listeners set. I’ll use the next post to generate listeners via &lt;code class=&quot;highlighter-rouge&quot;&gt;store.subscribe&lt;/code&gt; and analyze what happens in that listeners loop when listeners exist.&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/04/09/redux-dispatch-and-subscribe.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/04/09/redux-dispatch-and-subscribe.html</guid>
+        <link>http://0.0.0.0:4000/2018/04/09/redux-dispatch-and-subscribe.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/09/redux-dispatch-and-subscribe.html</guid>
       </item>
     
       <item>
         <title>Redux - createStore</title>
-        <description>&lt;p&gt;I have been using React for about two years now, but have never used Redux for a major project. As I’m on vacation for a few days, I figure this is a great time to start learning Redux without the pressures of daily work. I want to take a different approach to learning frameworks this time around - using a bottom-up approach instead of top-down one. I’m going to review the source code (&lt;a href=&quot;https://github.com/reactjs/redux/tree/v3.7.2&quot;&gt;at tag &lt;code&gt;v3.7.2&lt;/code&gt;&lt;/a&gt;) instead of API docs.&lt;/p&gt;
+        <description>&lt;p&gt;I have been using React for about two years now, but have never used Redux for a major project. As I’m on vacation for a few days, I figure this is a great time to start learning Redux without the pressures of daily work. I want to take a different approach to learning frameworks this time around - using a bottom-up approach instead of top-down one. I’m going to review the source code (&lt;a href=&quot;https://github.com/reactjs/redux/tree/v3.7.2&quot;&gt;at tag &lt;code class=&quot;highlighter-rouge&quot;&gt;v3.7.2&lt;/code&gt;&lt;/a&gt;) instead of API docs.&lt;/p&gt;
 
 &lt;p&gt;In my early experiments with Redux, I was delighted to find no frontend framework is necessary. Redux can be used in a Node project without issue, although that was obviously not the intent of Dan Abramov and its authors. Because experimenting outside of the browser leads to fewer distractions - no consideration of the DOM or browser APIs is necessary - this blog series will use a command-line app in Node as the project that invokes Redux.&lt;/p&gt;
 
-&lt;p&gt;This blog post will focus on Redux’s &lt;code&gt;createStore&lt;/code&gt;, and use a dumb counter command line application to discuss the Redux store. &lt;code&gt;createStore&lt;/code&gt; only requires one argument (&lt;code&gt;reducer&lt;/code&gt;), and can optionally take a &lt;code&gt;preloadedState&lt;/code&gt; and &lt;code&gt;enhancer&lt;/code&gt;. Today, I’m only going to pass the required &lt;code&gt;reducer&lt;/code&gt; argument to &lt;code&gt;createStore&lt;/code&gt;. The Redux source code describes this argument as follows:&lt;/p&gt;
+&lt;p&gt;This blog post will focus on Redux’s &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;, and use a dumb counter command line application to discuss the Redux store. &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; only requires one argument (&lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt;), and can optionally take a &lt;code class=&quot;highlighter-rouge&quot;&gt;preloadedState&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;enhancer&lt;/code&gt;. Today, I’m only going to pass the required &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; argument to &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;. The Redux source code describes this argument as follows:&lt;/p&gt;
 
 &lt;blockquote&gt;
 
@@ -436,92 +436,92 @@ will be notified.&lt;/p&gt;
 
 &lt;/blockquote&gt;
 
-&lt;p&gt;And what does &lt;code&gt;createStore&lt;/code&gt; return? &lt;/p&gt;
+&lt;p&gt;And what does &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; return?&lt;/p&gt;
 
 &lt;blockquote&gt;
 
-  &lt;p&gt;Creates a Redux store that holds the state tree.&lt;br /&gt;
-The only way to change the data in the store is to call &lt;code&gt;dispatch()&lt;/code&gt; on it.&lt;/p&gt;
+  &lt;p&gt;Creates a Redux store that holds the state tree.
+The only way to change the data in the store is to call &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch()&lt;/code&gt; on it.&lt;/p&gt;
 
 &lt;/blockquote&gt;
 
-&lt;p&gt;Let’s trace the source code with only the &lt;code&gt;reducer&lt;/code&gt; argument. &lt;code&gt;createStore&lt;/code&gt; first checks that &lt;code&gt;reducer&lt;/code&gt; is a function. Not passing a &lt;code&gt;reducer&lt;/code&gt; that’s a function throws an error:&lt;/p&gt;
+&lt;p&gt;Let’s trace the source code with only the &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; argument. &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; first checks that &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; is a function. Not passing a &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; that’s a function throws an error:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;gt; const { createStore } = require(&#39;redux&#39;);
-&amp;gt; createStore();
-Error: Expected the reducer to be a function.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'redux'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Expected&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reducer&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;That makes sense, as no function means no way to input a state tree and output a new state tree.&lt;/p&gt;
 
-&lt;p&gt;The source then initializes 5 variables via &lt;code&gt;let&lt;/code&gt; - meaning these variables can be set to different values without error - and 6 functions. I plan to eventually review all of these in future posts, but for now I’ll simply discuss what happens when &lt;code&gt;createStore&lt;/code&gt; is invoked. After declaration of these variables and functions, a call to &lt;code&gt;dispatch&lt;/code&gt; is made (&lt;code&gt;dispatch({ type: ActionTypes.INIT })&lt;/code&gt;) before the function returns an object. The comment above the initial dispatch reads as follows:&lt;/p&gt;
+&lt;p&gt;The source then initializes 5 variables via &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; - meaning these variables can be set to different values without error - and 6 functions. I plan to eventually review all of these in future posts, but for now I’ll simply discuss what happens when &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; is invoked. After declaration of these variables and functions, a call to &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is made (&lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch({ type: ActionTypes.INIT })&lt;/code&gt;) before the function returns an object. The comment above the initial dispatch reads as follows:&lt;/p&gt;
 
 &lt;blockquote&gt;
 
-  &lt;p&gt;// When a store is created, an “INIT” action is dispatched so that every&lt;br /&gt;
-// reducer returns their initial state. This effectively populates&lt;br /&gt;
+  &lt;p&gt;// When a store is created, an “INIT” action is dispatched so that every
+// reducer returns their initial state. This effectively populates
 // the initial state tree.&lt;/p&gt;
 
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code&gt;ActionTypes.INIT&lt;/code&gt; is the string &lt;code&gt;@@redux/INIT&lt;/code&gt; (note that in the &lt;code&gt;4&lt;/code&gt;+ releases this also includes a randomly generated alphanumeric string, like &lt;code&gt;3.o.k.a.q.1.v.5.x.q.s.b.6.r.d.i.y.6.6.r&lt;/code&gt;). The Redux source notes about these action types:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ActionTypes.INIT&lt;/code&gt; is the string &lt;code class=&quot;highlighter-rouge&quot;&gt;@@redux/INIT&lt;/code&gt; (note that in the &lt;code class=&quot;highlighter-rouge&quot;&gt;4&lt;/code&gt;+ releases this also includes a randomly generated alphanumeric string, like &lt;code class=&quot;highlighter-rouge&quot;&gt;3.o.k.a.q.1.v.5.x.q.s.b.6.r.d.i.y.6.6.r&lt;/code&gt;). The Redux source notes about these action types:&lt;/p&gt;
 
 &lt;blockquote&gt;
 
-  &lt;p&gt;These are private action types reserved by Redux.&lt;br /&gt;
-For any unknown actions, you must return the current state.&lt;br /&gt;
-If the current state is undefined, you must return the initial state.&lt;br /&gt;
+  &lt;p&gt;These are private action types reserved by Redux.
+For any unknown actions, you must return the current state.
+If the current state is undefined, you must return the initial state.
 Do not reference these action types directly in your code.&lt;/p&gt;
 
 &lt;/blockquote&gt;
 
-&lt;p&gt;I don’t expect my code to be familiar with the action type &lt;code&gt;@@redux/INIT&lt;/code&gt;, so my &lt;code&gt;reducer&lt;/code&gt; should return the initial state on first call and current state on subsequent calls - this makes sense, as the code comment before the first &lt;code&gt;dispatch&lt;/code&gt; says its purpose is for every reducer to return its initial state.&lt;/p&gt;
+&lt;p&gt;I don’t expect my code to be familiar with the action type &lt;code class=&quot;highlighter-rouge&quot;&gt;@@redux/INIT&lt;/code&gt;, so my &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; should return the initial state on first call and current state on subsequent calls - this makes sense, as the code comment before the first &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; says its purpose is for every reducer to return its initial state.&lt;/p&gt;
 
-&lt;p&gt;This first &lt;code&gt;dispatch&lt;/code&gt; call can be seen when creating a Redux store. I’ve set a breakpoint on my simple reducer within &lt;code&gt;createStore&lt;/code&gt;, and here’s what the first invocation looks like:&lt;/p&gt;
+&lt;p&gt;This first &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; call can be seen when creating a Redux store. I’ve set a breakpoint on my simple reducer within &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;, and here’s what the first invocation looks like:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/createStore-first-dispatch.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;My store is ready to be returned following this dispatch call. The returned object has 5 keys (&lt;code&gt;dispatch&lt;/code&gt;, &lt;code&gt;subscribe&lt;/code&gt;, &lt;code&gt;getState&lt;/code&gt;, &lt;code&gt;replaceReducer&lt;/code&gt;, and a &lt;code&gt;Symbol(observable&lt;/code&gt;), all of which have function values. &lt;/p&gt;
+&lt;p&gt;My store is ready to be returned following this dispatch call. The returned object has 5 keys (&lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;getState&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;replaceReducer&lt;/code&gt;, and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Symbol(observable&lt;/code&gt;), all of which have function values.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;getState&lt;/code&gt; is a simple function that just returns &lt;code&gt;currentState&lt;/code&gt; (one of the aforementioned declared variables that is referenced by the other functions). On the &lt;code&gt;dispatch&lt;/code&gt; call in &lt;code&gt;createStore&lt;/code&gt;, &lt;code&gt;currentState&lt;/code&gt; is set to the result from invoking the reducer passed to &lt;code&gt;createStore&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;getState&lt;/code&gt; is a simple function that just returns &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; (one of the aforementioned declared variables that is referenced by the other functions). On the &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; call in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; is set to the result from invoking the reducer passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/current-state-and-reducer.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Based on what we know about &lt;code&gt;createStore&lt;/code&gt;, writing a simple command line app that asks for a number from user input and logs it the console is simple enough:&lt;/p&gt;
+&lt;p&gt;Based on what we know about &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;, writing a simple command line app that asks for a number from user input and logs it the console is simple enough:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/563190c9c17e99c6c031260514f5c215.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;In the next post, I want to discuss &lt;code&gt;dispatch&lt;/code&gt; calls after the initial one and &lt;code&gt;subscribe&lt;/code&gt;. I’ll explore these Redux features by building the command line app out to allow decrementing, incrementing, multiplying and dividing numbers from user input.&lt;/p&gt;
+&lt;p&gt;In the next post, I want to discuss &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; calls after the initial one and &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt;. I’ll explore these Redux features by building the command line app out to allow decrementing, incrementing, multiplying and dividing numbers from user input.&lt;/p&gt;
 </description>
         <pubDate>Sat, 07 Apr 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/04/07/redux-create-store.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/04/07/redux-create-store.html</guid>
+        <link>http://0.0.0.0:4000/2018/04/07/redux-create-store.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/07/redux-create-store.html</guid>
       </item>
     
       <item>
         <title>Decision Trees Introduction (ML Series, Part 4)</title>
         <description>&lt;p&gt;In my continuing attempt to automate as much as of my Daily Fantasy Sports lineup creation as possible, I’ve been exploring decision trees. I realized this technique might be valuable after listening to my thought process as it relates to fantasy sports. Generally, I’ll ask myself questions like “Has this player broken 10 rebounds the last 2 games?” or “Is this player consistently getting over 25 minutes per game?”. In addition to removing bias, a decision tree should ask better questions, improve given more data and generate insights over key features in data.&lt;/p&gt;
 
-&lt;p&gt;I want to start off with the simplest possible example I can think of for a decision tree. I’ll use this example as an opportunity to explore the &lt;code&gt;sklearn.tree&lt;/code&gt; module. In a future post, I’ll review in depth how I constructed my DFS basketball decision tree, but you can &lt;a href=&quot;https://github.com/BenBrostoff/draft-kings-learn/blob/master/recipes/classifier.py&quot;&gt;check it out here if you’re interested&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I want to start off with the simplest possible example I can think of for a decision tree. I’ll use this example as an opportunity to explore the &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn.tree&lt;/code&gt; module. In a future post, I’ll review in depth how I constructed my DFS basketball decision tree, but you can &lt;a href=&quot;https://github.com/BenBrostoff/draft-kings-learn/blob/master/recipes/classifier.py&quot;&gt;check it out here if you’re interested&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In &lt;a href=&quot;http://benbrostoff.github.io/2017/12/06/gradient-descent-in-simple-nn-draft.html&quot;&gt;Part III&lt;/a&gt; of my ML blog series, I reviewed how a neural network could be used to classify some data where only one feature mattered. A similar example here I think will be illustrative. I often find it easier to make the example as close to real as possible, so let’s assume we have data on a group of basketball players, and we want to label them &lt;code&gt;0&lt;/code&gt; if they scored under 20 points and &lt;code&gt;1&lt;/code&gt; if they scored over 20 in a game. The three features in the data set are &lt;code&gt;minutes&lt;/code&gt;, &lt;code&gt;age&lt;/code&gt; and &lt;code&gt;height&lt;/code&gt;; let’s assume only &lt;code&gt;minutes&lt;/code&gt; matters. Below is a simple decision tree with a fake dataset:&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;http://benbrostoff.github.io/2017/12/06/gradient-descent-in-simple-nn-draft.html&quot;&gt;Part III&lt;/a&gt; of my ML blog series, I reviewed how a neural network could be used to classify some data where only one feature mattered. A similar example here I think will be illustrative. I often find it easier to make the example as close to real as possible, so let’s assume we have data on a group of basketball players, and we want to label them &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; if they scored under 20 points and &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; if they scored over 20 in a game. The three features in the data set are &lt;code class=&quot;highlighter-rouge&quot;&gt;minutes&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;height&lt;/code&gt;; let’s assume only &lt;code class=&quot;highlighter-rouge&quot;&gt;minutes&lt;/code&gt; matters. Below is a simple decision tree with a fake dataset:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/e0269da7acd2d3c98859fe9a98e3ed96.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;You can see in the code snippet above that &lt;code&gt;tree.DecisionTreeClassifier&lt;/code&gt; ships with a &lt;code&gt;feature_importances_&lt;/code&gt; that lists the weight of each feature. Because &lt;code&gt;minutes&lt;/code&gt; is the only feature that matters, it’s assigned a weight of &lt;code&gt;1.0&lt;/code&gt;, while the meaningless &lt;code&gt;age&lt;/code&gt; and &lt;code&gt;height&lt;/code&gt; features have a weight of &lt;code&gt;0.0&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can see in the code snippet above that &lt;code class=&quot;highlighter-rouge&quot;&gt;tree.DecisionTreeClassifier&lt;/code&gt; ships with a &lt;code class=&quot;highlighter-rouge&quot;&gt;feature_importances_&lt;/code&gt; that lists the weight of each feature. Because &lt;code class=&quot;highlighter-rouge&quot;&gt;minutes&lt;/code&gt; is the only feature that matters, it’s assigned a weight of &lt;code class=&quot;highlighter-rouge&quot;&gt;1.0&lt;/code&gt;, while the meaningless &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;height&lt;/code&gt; features have a weight of &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;The decision tree correctly identifies that if the player players over 30 minutes a game, then they should score over 20 points (disclaimer: this is an unrealistic and oversimplified example). The &lt;code&gt;graphviz&lt;/code&gt; package allows you to visualize this data:&lt;/p&gt;
+&lt;p&gt;The decision tree correctly identifies that if the player players over 30 minutes a game, then they should score over 20 points (disclaimer: this is an unrealistic and oversimplified example). The &lt;code class=&quot;highlighter-rouge&quot;&gt;graphviz&lt;/code&gt; package allows you to visualize this data:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/decision_tree_basic.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The visualization confirms what we know to be true; if a player plays over 30 minutes, they scored over 20 points. The visualization also provides a good means to go over some terminology. The &lt;em&gt;leaf nodes&lt;/em&gt; in the decision tree are the two child-most nodes that place a player in the &amp;gt; or &amp;lt; 20 point baskets; &lt;em&gt;internal nodes&lt;/em&gt; are any non leaf nodes that divide up the data, excluding the top-most node in the tree, which is the &lt;em&gt;root&lt;/em&gt; (note that this example is kind of contrived, since there is just a root node, two leaf nodes and no internal nodes).&lt;/p&gt;
 
-&lt;p&gt;How does &lt;code&gt;DecisionTreeClassifier&lt;/code&gt; actually work under the hood? If you were to manually construct your own decision tree, you would have to select your own root and internal nodes. Those selections would be based on what features you believe to be most valuable in a data set; if you know that minutes are what matter most for player statistics, minutes will be the feature used at your root. In a real basketball data set, a natural starting question would be “Did the player play more than 0 minutes?” &lt;a href=&quot;https://www.youtube.com/watch?v=LDRbO9a6XPU&quot;&gt;In the words of Google’s Josh Gordon&lt;/a&gt;, the best question is the one that reduces the uncertainty the most. If know the player did not play, I can claim with absolute certainty that they scored 0 points.&lt;/p&gt;
+&lt;p&gt;How does &lt;code class=&quot;highlighter-rouge&quot;&gt;DecisionTreeClassifier&lt;/code&gt; actually work under the hood? If you were to manually construct your own decision tree, you would have to select your own root and internal nodes. Those selections would be based on what features you believe to be most valuable in a data set; if you know that minutes are what matter most for player statistics, minutes will be the feature used at your root. In a real basketball data set, a natural starting question would be “Did the player play more than 0 minutes?” &lt;a href=&quot;https://www.youtube.com/watch?v=LDRbO9a6XPU&quot;&gt;In the words of Google’s Josh Gordon&lt;/a&gt;, the best question is the one that reduces the uncertainty the most. If know the player did not play, I can claim with absolute certainty that they scored 0 points.&lt;/p&gt;
 
-&lt;p&gt;The decision tree algorithm makes feature selections like this based on &lt;em&gt;criterion&lt;/em&gt;, which are used to compute the importance of each attribute and then arrive at the right questions to ask. While a human would anecdotally know that good NBA players get 30+ minutes a game, a decision tree would infer it statistically via criterion. I’m going to use &lt;em&gt;Gini impurity&lt;/em&gt; as my criterion of choice here, since that is what &lt;code&gt;DecisionTreeClassifier&lt;/code&gt; uses by default. This is actually configurable via the &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html&quot;&gt;&lt;code&gt;criterion&lt;/code&gt; parameter in &lt;code&gt;sklearn&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;The decision tree algorithm makes feature selections like this based on &lt;em&gt;criterion&lt;/em&gt;, which are used to compute the importance of each attribute and then arrive at the right questions to ask. While a human would anecdotally know that good NBA players get 30+ minutes a game, a decision tree would infer it statistically via criterion. I’m going to use &lt;em&gt;Gini impurity&lt;/em&gt; as my criterion of choice here, since that is what &lt;code class=&quot;highlighter-rouge&quot;&gt;DecisionTreeClassifier&lt;/code&gt; uses by default. This is actually configurable via the &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;criterion&lt;/code&gt; parameter in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;criterion : string, optional (default=”gini”)&lt;br /&gt;
+  &lt;p&gt;criterion : string, optional (default=”gini”)
 The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “entropy” for the information gain.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -533,7 +533,7 @@ The function to measure the quality of a split. Supported criteria are “gini�
 
 &lt;p&gt;This is a mouthful, so an example and some code should help. As noted in the wiki definition, Gini impurity is a probability, so its value must be between 0 and 1. If our data set has six players who all scored over 20 points, then only one label exists in the data set, so randomly guessing that label will be correct 100% of the time. Gini impurity is 0, since we’re never wrong. However, if three players scored less than 20 and three scored more, than guessing &amp;gt; 20 would be right half the time, and wrong half the time (as would be &amp;lt; 20). Gini impurity is 0.5 since we’re wrong half the time.&lt;/p&gt;
 
-&lt;p&gt;Josh Gordon implements &lt;code&gt;gini&lt;/code&gt; in the following way, and the two examples work using it:&lt;/p&gt;
+&lt;p&gt;Josh Gordon implements &lt;code class=&quot;highlighter-rouge&quot;&gt;gini&lt;/code&gt; in the following way, and the two examples work using it:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/BenBrostoff/4fe00bc9e501e5671e72363ff72a2843.js&quot;&gt;&lt;/script&gt;
 
@@ -541,7 +541,7 @@ The function to measure the quality of a split. Supported criteria are “gini�
 
 &lt;p&gt;Unfortunately, data is inherently messy, and configuring the tree to work based on the data will be a subject of a future post.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Note that the &lt;code&gt;sklearn&lt;/code&gt; source here is &lt;a href=&quot;https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/tree/tree.py#L75&quot;&gt;pretty difficult at least for me to parse&lt;/a&gt; (interesting note - the base class &lt;code&gt;BaseDecisionTree&lt;/code&gt; is also the parent of &lt;code&gt;DecisionTreeRegressor&lt;/code&gt;, which can be used to make floating point number predictions and may be the subject of a future blog post), so I turned to documentation and other writing for the explanations in this blog post. Here’s a summary of the most useful ones I found&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note that the &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; source here is &lt;a href=&quot;https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/tree/tree.py#L75&quot;&gt;pretty difficult at least for me to parse&lt;/a&gt; (interesting note - the base class &lt;code class=&quot;highlighter-rouge&quot;&gt;BaseDecisionTree&lt;/code&gt; is also the parent of &lt;code class=&quot;highlighter-rouge&quot;&gt;DecisionTreeRegressor&lt;/code&gt;, which can be used to make floating point number predictions and may be the subject of a future blog post), so I turned to documentation and other writing for the explanations in this blog post. Here’s a summary of the most useful ones I found&lt;/em&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/tree.html&quot;&gt;sklearn docs&lt;/a&gt;&lt;/li&gt;
@@ -553,8 +553,8 @@ The function to measure the quality of a split. Supported criteria are “gini�
 &lt;p&gt;&lt;em&gt;You can find all the code from this post in this &lt;a href=&quot;https://github.com/BenBrostoff/ml-series-source/blob/master/src/4_decision_tree_intro.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2018/01/27/decision-trees-intro.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2018/01/27/decision-trees-intro.html</guid>
+        <link>http://0.0.0.0:4000/2018/01/27/decision-trees-intro.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2018/01/27/decision-trees-intro.html</guid>
       </item>
     
       <item>
@@ -565,29 +565,29 @@ The function to measure the quality of a split. Supported criteria are “gini�
 
 &lt;p&gt;I will be working off the simple one layer NN in Andrew Trask’s blog post &lt;a href=&quot;http://iamtrask.github.io/2015/07/12/basic-python-network/&quot;&gt;A Neural Network in 11 Lines of Python (Part I)&lt;/a&gt;. First, I’m going to review part of Andrew’s posts and explain why this network makes a correct prediction give a certain simple pattern. Next, I’ll create a pattern where the network cannot predict the right answer, and attempt to explain why. In both cases, I will refer back to Part II and build on the purpose of gradient descent. I will be working with &lt;a href=&quot;https://github.com/BenBrostoff/ml-series-source/blob/master/src/3_gradient_descent_in_practice.ipynb&quot;&gt;this IPython notebook&lt;/a&gt;, and it may help to have it open in a separate window.&lt;/p&gt;
 
-&lt;p&gt;For those unfamiliar with Andrew’s blog post, here’s a quick overview. Andrew creates a fake dataset where each data point is a Python list of three elements. If the first element is &lt;code&gt;1&lt;/code&gt;, then the data point should be labeled &lt;code&gt;1&lt;/code&gt;. If not, it’s labeled &lt;code&gt;0&lt;/code&gt;. A quick visual overview of four example inputs and outputs, which will serve as our training set. Later, we can test the model on the remaining 4 of the eight possible examples of this pattern (2 possibles in each slot -&amp;gt; &lt;code&gt;2**3&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;For those unfamiliar with Andrew’s blog post, here’s a quick overview. Andrew creates a fake dataset where each data point is a Python list of three elements. If the first element is &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;, then the data point should be labeled &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;. If not, it’s labeled &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;. A quick visual overview of four example inputs and outputs, which will serve as our training set. Later, we can test the model on the remaining 4 of the eight possible examples of this pattern (2 possibles in each slot -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;2**3&lt;/code&gt;):&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/inputs_and_outputs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;A Simple and Working NN&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Andrew implements a simple neural network in Python using only &lt;code&gt;numpy&lt;/code&gt; for some basic utility functions (e.g. taking the dot product of two arrays via &lt;code&gt;np.dot&lt;/code&gt;). I want to be clear on what the terminology “implements a simple neural network” means here. The only goal of this exercise is to get three weights - one for each slot - that can be used to make a prediction. Neural network in this case just refers to the methodology for getting these weights. Because the technique to obtain these weights uses parts that are named neurons and activations and layers and is loosely modeled to look like groups of neurons firing, the technique as a whole is a neural network.&lt;/p&gt;
+&lt;p&gt;Andrew implements a simple neural network in Python using only &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; for some basic utility functions (e.g. taking the dot product of two arrays via &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt;). I want to be clear on what the terminology “implements a simple neural network” means here. The only goal of this exercise is to get three weights - one for each slot - that can be used to make a prediction. Neural network in this case just refers to the methodology for getting these weights. Because the technique to obtain these weights uses parts that are named neurons and activations and layers and is loosely modeled to look like groups of neurons firing, the technique as a whole is a neural network.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Step 1: Randomize Weights&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;The weights could simply be guessed at. Random guessing does play some role in neural networks (importantly, the guessing is not exactly random and is far beyond the scope of this post), and the initial guess at the final weights leverages &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.random.randn.html&quot;&gt;&lt;code&gt;np.random.randn&lt;/code&gt;&lt;/a&gt;. Note that this network uses &lt;code&gt;np.random.seed(1)&lt;/code&gt; so outputs are consistent. The first guess at the weights computes &lt;code&gt;2 * np.random.random((3, 1)) - 1&lt;/code&gt; - the 2 is simply to scale the weights by 2, which are all between 0 and 1. The &lt;code&gt;-1&lt;/code&gt; then forces any weights that were initialized as less than &lt;code&gt;0.5&lt;/code&gt; to be negative (e.g. &lt;code&gt;2 * 0.4 - 1 == -0.2&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;The weights could simply be guessed at. Random guessing does play some role in neural networks (importantly, the guessing is not exactly random and is far beyond the scope of this post), and the initial guess at the final weights leverages &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.random.randn.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;np.random.randn&lt;/code&gt;&lt;/a&gt;. Note that this network uses &lt;code class=&quot;highlighter-rouge&quot;&gt;np.random.seed(1)&lt;/code&gt; so outputs are consistent. The first guess at the weights computes &lt;code class=&quot;highlighter-rouge&quot;&gt;2 * np.random.random((3, 1)) - 1&lt;/code&gt; - the 2 is simply to scale the weights by 2, which are all between 0 and 1. The &lt;code class=&quot;highlighter-rouge&quot;&gt;-1&lt;/code&gt; then forces any weights that were initialized as less than &lt;code class=&quot;highlighter-rouge&quot;&gt;0.5&lt;/code&gt; to be negative (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;2 * 0.4 - 1 == -0.2&lt;/code&gt;).&lt;/p&gt;
 
-&lt;p&gt;The first guess at the weights suggests they’re &lt;code&gt;-0.17&lt;/code&gt; (too small), &lt;code&gt;0.44&lt;/code&gt; (too big) and &lt;code&gt;-0.99&lt;/code&gt; (too small). Because we know that the first slot is the only one that matters, the correct weights are &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;0&lt;/code&gt; and &lt;code&gt;0&lt;/code&gt;, or some large number and two small numbers. A neural network &lt;em&gt;should&lt;/em&gt; move the first weight upward, the second weight downward and the third weight upward.&lt;/p&gt;
+&lt;p&gt;The first guess at the weights suggests they’re &lt;code class=&quot;highlighter-rouge&quot;&gt;-0.17&lt;/code&gt; (too small), &lt;code class=&quot;highlighter-rouge&quot;&gt;0.44&lt;/code&gt; (too big) and &lt;code class=&quot;highlighter-rouge&quot;&gt;-0.99&lt;/code&gt; (too small). Because we know that the first slot is the only one that matters, the correct weights are &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;, or some large number and two small numbers. A neural network &lt;em&gt;should&lt;/em&gt; move the first weight upward, the second weight downward and the third weight upward.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Step 2: Guess&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;What is the output when we guess with the weights? The answer to this question is computed via:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;predictions = np.dot(training_set_inputs, weights)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;predictions = np.dot(training_set_inputs, weights)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;The output here is a &lt;code&gt;numpy&lt;/code&gt; array of shape &lt;code&gt;(4, 1)&lt;/code&gt; (&lt;code&gt;training_set_inputs&lt;/code&gt; - four examples of three elements - is &lt;code&gt;(4, 3)&lt;/code&gt; and the &lt;code&gt;weights&lt;/code&gt; - three “predictors” - are &lt;code&gt;(3, 1)&lt;/code&gt;). It represents guesses at the four labels given the four examples in the training set. Of course, these guesses - &lt;code&gt;-2.5&lt;/code&gt;, &lt;code&gt;2.74&lt;/code&gt;, &lt;code&gt;2.95&lt;/code&gt;, and &lt;code&gt;-2.73&lt;/code&gt; - are quite far away from the actual labels of &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The output here is a &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; array of shape &lt;code class=&quot;highlighter-rouge&quot;&gt;(4, 1)&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;training_set_inputs&lt;/code&gt; - four examples of three elements - is &lt;code class=&quot;highlighter-rouge&quot;&gt;(4, 3)&lt;/code&gt; and the &lt;code class=&quot;highlighter-rouge&quot;&gt;weights&lt;/code&gt; - three “predictors” - are &lt;code class=&quot;highlighter-rouge&quot;&gt;(3, 1)&lt;/code&gt;). It represents guesses at the four labels given the four examples in the training set. Of course, these guesses - &lt;code class=&quot;highlighter-rouge&quot;&gt;-2.5&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2.74&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2.95&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;-2.73&lt;/code&gt; - are quite far away from the actual labels of &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;I want to take a quick second to do some discussion of &lt;code&gt;np.dot&lt;/code&gt;. For those with a linear algebra background, feel free to skip this section; I’m an Economics major so &lt;code&gt;np.dot&lt;/code&gt; has taken me some time to wrap my head around. The &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.dot.html&quot;&gt;documentation&lt;/a&gt; around &lt;code&gt;np.dot&lt;/code&gt; makes it sound deceivingly simply:&lt;/p&gt;
+&lt;p&gt;I want to take a quick second to do some discussion of &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt;. For those with a linear algebra background, feel free to skip this section; I’m an Economics major so &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt; has taken me some time to wrap my head around. The &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.dot.html&quot;&gt;documentation&lt;/a&gt; around &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt; makes it sound deceivingly simply:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Dot product of two arrays. For 2-D arrays it is equivalent to matrix multiplication, and for 1-D arrays to inner product of vectors (without complex conjugation). For N dimensions it is a sum product over the last axis of a and the second-to-last of b:&lt;/p&gt;
@@ -595,34 +595,34 @@ The function to measure the quality of a split. Supported criteria are “gini�
 
 &lt;p&gt;The matrix math explanation makes the most sense here, and the formula you would apply for matrix math does indeed work:&lt;/p&gt;
 
-&lt;p&gt;That said, I think the intuition here is important - why are we using &lt;code&gt;np.dot&lt;/code&gt;? We know &lt;em&gt;where we want to end up&lt;/em&gt; is four predictions, or a &lt;code&gt;numpy&lt;/code&gt; array of shape &lt;code&gt;(4, 1)&lt;/code&gt;. To get each prediction, we need to apply the weights. Getting the sum weighted prediction would look like the below:&lt;/p&gt;
+&lt;p&gt;That said, I think the intuition here is important - why are we using &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt;? We know &lt;em&gt;where we want to end up&lt;/em&gt; is four predictions, or a &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; array of shape &lt;code class=&quot;highlighter-rouge&quot;&gt;(4, 1)&lt;/code&gt;. To get each prediction, we need to apply the weights. Getting the sum weighted prediction would look like the below:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;First prediction: &lt;code&gt;0 * -0.17 + 0 * 0.44 + 1 * -0.99 == -0.99&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Second prediction: &lt;code&gt;1  * -0.17 + 1 * 0.44 + 1 * -0.99 == -0.73&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Third prediction: &lt;code&gt;1 * -0.17 + 0 * 0.44 + 1 * -0.99 == -1.17&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Fourth prediction:  &lt;code&gt;0 * -0.17 + 1 * 0.44 + 1 * -0.99 == -0.56&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;First prediction: &lt;code class=&quot;highlighter-rouge&quot;&gt;0 * -0.17 + 0 * 0.44 + 1 * -0.99 == -0.99&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Second prediction: &lt;code class=&quot;highlighter-rouge&quot;&gt;1  * -0.17 + 1 * 0.44 + 1 * -0.99 == -0.73&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Third prediction: &lt;code class=&quot;highlighter-rouge&quot;&gt;1 * -0.17 + 0 * 0.44 + 1 * -0.99 == -1.17&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Fourth prediction:  &lt;code class=&quot;highlighter-rouge&quot;&gt;0 * -0.17 + 1 * 0.44 + 1 * -0.99 == -0.56&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;That is all &lt;code&gt;np.dot&lt;/code&gt; is doing here. &lt;code&gt;predictions&lt;/code&gt; is &lt;code&gt;[[[-0.99977125], [-0.72507825], [-1.16572724], [-0.55912226]]]&lt;/code&gt;. The linear algebra intuition for &lt;code&gt;np.dot&lt;/code&gt; is a little different, and I have found &lt;a href=&quot;https://www.youtube.com/watch?v=kjBOesZCoqc&amp;amp;list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&quot;&gt;3Blue1Brown’s linear algebra series&lt;/a&gt; worth watching here (disclaimer: I’m only four videos through). But at least in my minimal machine learning experience, I have found it more useful to stop thinking about rote learning matrix math formulas and referring back to the predictions intuition.&lt;/p&gt;
+&lt;p&gt;That is all &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt; is doing here. &lt;code class=&quot;highlighter-rouge&quot;&gt;predictions&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;[[[-0.99977125], [-0.72507825], [-1.16572724], [-0.55912226]]]&lt;/code&gt;. The linear algebra intuition for &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt; is a little different, and I have found &lt;a href=&quot;https://www.youtube.com/watch?v=kjBOesZCoqc&amp;amp;list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&quot;&gt;3Blue1Brown’s linear algebra series&lt;/a&gt; worth watching here (disclaimer: I’m only four videos through). But at least in my minimal machine learning experience, I have found it more useful to stop thinking about rote learning matrix math formulas and referring back to the predictions intuition.&lt;/p&gt;
 
-&lt;p&gt;A little terminology here - &lt;code&gt;predictions&lt;/code&gt; is really the first hidden layer of the neural network, and also the output layer here as the whole network is only a single input and out layer. In &lt;a href=&quot;https://www.coursera.org/specializations/deep-learning&quot;&gt;Andrew Ng’s deeplearning course&lt;/a&gt;, the step is represented as:&lt;/p&gt;
+&lt;p&gt;A little terminology here - &lt;code class=&quot;highlighter-rouge&quot;&gt;predictions&lt;/code&gt; is really the first hidden layer of the neural network, and also the output layer here as the whole network is only a single input and out layer. In &lt;a href=&quot;https://www.coursera.org/specializations/deep-learning&quot;&gt;Andrew Ng’s deeplearning course&lt;/a&gt;, the step is represented as:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;Z1 = W1 * X&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Z1 = W1 * X&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;where Z1 is the output layer, W1 are weights and X is the training inputs.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Step 3: Apply a Non Linearity and Find Error&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;These four numbers from &lt;code&gt;predictions&lt;/code&gt; can now be passed through a non-linearity, or function that does not have the same effect on the output as the input is incremented or decremented. &lt;em&gt;Why&lt;/em&gt; passing &lt;code&gt;predictions&lt;/code&gt; through a non-linearity is important will likely be the subject of another post. For now, I think it’s sufficient to just say that we will pass the four predictions through a function called a sigmoid function that scales them from 0 to 1 and &lt;a href=&quot;http://www.wolframalpha.com/input/?i=sigmoid+function&quot;&gt;looks like the below&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;These four numbers from &lt;code class=&quot;highlighter-rouge&quot;&gt;predictions&lt;/code&gt; can now be passed through a non-linearity, or function that does not have the same effect on the output as the input is incremented or decremented. &lt;em&gt;Why&lt;/em&gt; passing &lt;code class=&quot;highlighter-rouge&quot;&gt;predictions&lt;/code&gt; through a non-linearity is important will likely be the subject of another post. For now, I think it’s sufficient to just say that we will pass the four predictions through a function called a sigmoid function that scales them from 0 to 1 and &lt;a href=&quot;http://www.wolframalpha.com/input/?i=sigmoid+function&quot;&gt;looks like the below&lt;/a&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/sigmoid.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Again, in Andrew Ng’s deeplearning course, this looks like:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;A1 = G(Z1)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;A1 = G(Z1)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;where G is the non-linearity (sigmoid function in this example). &lt;code&gt;A1&lt;/code&gt; is called a layer of activations, because the non-linearity is thought to “activate neurons” in the loose brain metaphor.&lt;/p&gt;
+&lt;p&gt;where G is the non-linearity (sigmoid function in this example). &lt;code class=&quot;highlighter-rouge&quot;&gt;A1&lt;/code&gt; is called a layer of activations, because the non-linearity is thought to “activate neurons” in the loose brain metaphor.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Step 4: Apply Gradient Descent&lt;/em&gt;&lt;/p&gt;
 
@@ -635,8 +635,8 @@ The function to measure the quality of a split. Supported criteria are “gini�
 &lt;p&gt;This network breaks when changing the rule for inputs and outputs.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
-        <link>http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn-draft.html</link>
-        <guid isPermaLink="true">http://benbrostoff.github.io//2017/12/06/gradient-descent-in-simple-nn-draft.html</guid>
+        <link>http://0.0.0.0:4000/2017/12/06/gradient-descent-in-simple-nn-draft.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2017/12/06/gradient-descent-in-simple-nn-draft.html</guid>
       </item>
     
   </channel>
