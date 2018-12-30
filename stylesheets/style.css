@@ -361,17 +361,19 @@ img {
 .paging .right {
   margin-left: 320px; }
 
-.tag {
+#tag {
   margin-top: 4px;
-  border: solid;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+#tag a {
+  color: white;
+  font-size: 10px;
   background: #269;
   border-radius: 3px;
-  padding-left: 8px;
-  padding-right: 7px;
-  display: inline-block;
-  font-size: 10px;
-  border-width: 1px;
-  color: white;
+  padding: 3px;
+  margin-right: 2px;
 }
 
 
