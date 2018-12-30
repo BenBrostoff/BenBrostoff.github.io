@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Isolation v. Collaboration
-
+tags: general
 date: 2014-08-24
 ---
 Amidst the great literature of work productivity and self-help books and <a href="https://twitter.com/HarvardHBS" target="_blank">HBS informational nuggets </a>, I've found myself at a loss recently to answer a very basic question:

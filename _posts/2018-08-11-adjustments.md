@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adjustments
-tags: adjusting
+tags: general
 date: 2018-08-11
 ---
 

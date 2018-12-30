@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Languages and Opinions
-
+tags: technical
 date: 2015-04-18
 ---
 I find a lot of my preferences often are based on what I've been exposed to. If given a choice, I'd prefer to program something in Python rather than in Haskell because I have many, many times more hours of experience in the former. 

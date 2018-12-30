@@ -1,7 +1,7 @@
 ---
 layout: post
 title: EV is Everything
-tags: data
+tags: general decision-making
 date: 2018-11-25
 ---
 

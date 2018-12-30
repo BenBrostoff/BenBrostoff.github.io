@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stop Resulting
-tags: data
+tags: general decision-making
 date: 2018-12-27
 ---
 

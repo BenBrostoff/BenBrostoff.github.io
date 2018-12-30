@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redux - .dispatch
-tags: redux
+tags: technical
 date: 2018-04-09
 ---
 

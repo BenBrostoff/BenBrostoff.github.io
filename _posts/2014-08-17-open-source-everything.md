@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open-Source Everything**
-
+tags: general
 date: 2014-08-17
 ---
 <blockquote>He published his first novel, <a href="http://www.amazon.com/Pebble-Sky-Isaac-Asimov/dp/0765319136" target="_blank" >Pebble in the Sky</a>, in 1950. An immensely prolific author who penned nearly 500 books, he published influential sci-fi works like <a href="http://www.amazon.com/I-Robot-The-Series/dp/0553294385" target="_blank"> I, Robot </a> and the <a href="http://www.amazon.com/Foundation-Isaac-Asimov/dp/0553293354" target="_blank"> Foundation trilogy</a>, as well as books in a variety of other genres. Asimov died in New York City on April 6, 1992.</blockquote>

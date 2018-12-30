@@ -55,13 +55,13 @@ img {
   color: #8f8f8f; }
 
 .colour-1 {
-  color: #cc9944; }
+  color: #c94; }
 
 .colour-2 {
   color: #925; }
 
 .colour-3 {
-  color: #448844; }
+  color: #484; }
 
 .text-big {
   font-size: 24px;
@@ -310,7 +310,7 @@ section.post, section > p {
   section.post li p, section > p li p {
     margin-bottom: 5px; }
 
-.highlighter-rouge {
+.highlight {
   margin: 0;
   padding: 0; }
 
@@ -321,8 +321,7 @@ pre {
   line-height: 1.2em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 13px 0; }
+  box-sizing: border-box; }
 
 code {
   font-size: 13px;
@@ -361,3 +360,21 @@ img {
   margin-left: -340px; }
 .paging .right {
   margin-left: 320px; }
+
+#tag {
+  margin-top: 4px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+#tag a {
+  color: white;
+  font-size: 10px;
+  background: #269;
+  border-radius: 3px;
+  padding: 3px;
+  margin-right: 2px;
+}
+
+
+/*# sourceMappingURL=style.css.map */

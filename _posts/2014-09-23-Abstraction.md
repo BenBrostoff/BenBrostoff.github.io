@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Abstraction
-
+tags: general
 date: 2014-09-23
 ---
 

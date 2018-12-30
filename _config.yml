@@ -9,6 +9,8 @@ google_analytics: UA-51453428-1
 links:
   - name:         About
     url:          /about
+  - name:         Posts
+    url:          /
   - name:         Book Recos
     url:          /books
   - name:         Email

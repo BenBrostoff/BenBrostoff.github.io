@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Automation Via Aliasing and Bash
-
+tags: technical
 date: 2015-08-23
 ---
 I've been trying to make a concerted effort recently to automate more stuff. Working on a side project or open source project you haven't touched in a while I've found can be annoying to get back into - first navigate to the directory, run a few tasks to set up the DB, install dependencies, pull from master, etc.

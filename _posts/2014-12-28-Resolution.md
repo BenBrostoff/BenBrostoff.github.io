@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resolution
-
+tags: general
 date: 2014-12-28
 ---
 *Update (4/5/2015) - Matt Might has a fantastic article on his blog on this same subject. <a href="http://matt.might.net/articles/programmers-resolutions/" target="_blank" > Here it is </a>*.

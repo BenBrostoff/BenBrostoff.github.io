@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Guesses and Information
-tags: data
+tags: general decision-making
 date: 2018-11-17
 ---
 

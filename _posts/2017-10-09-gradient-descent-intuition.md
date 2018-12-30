@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gradient Descent Intuition (ML Series, Part 2)
-
+tags: technical data-science
 date: 2017-10-09
 ---
 
