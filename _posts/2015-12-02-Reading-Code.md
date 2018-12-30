@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reading Code
-
+tags: technical
 date: 2015-12-02
 ---
 I think reading code is the best way to improve as a software engineer.

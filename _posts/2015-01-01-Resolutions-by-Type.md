@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resolutions by Type
-
+tags: general
 date: 2015-01-01
 ---
 

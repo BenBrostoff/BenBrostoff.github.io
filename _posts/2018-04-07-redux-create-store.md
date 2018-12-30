@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redux - createStore
-tags: redux
+tags: technical
 date: 2018-04-07
 ---
 

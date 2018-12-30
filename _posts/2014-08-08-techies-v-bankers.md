@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Highly Entertaining Spat
-
+tags: technical
 date: 2014-08-08
 ---
 

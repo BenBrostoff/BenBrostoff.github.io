@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gradient Descent in Simple NN (ML Series, Part 3)
-
+tags: technical
 date: 2017-12-06
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Devotion to Craft
-
+tags: general
 date: 2016-05-08
 ---
 

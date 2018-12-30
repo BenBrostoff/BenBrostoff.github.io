@@ -337,6 +337,11 @@ code {
   *display: inline;
   *vertical-align: auto; }
 
+tag {
+  color: green;
+  margin-left: 8px;
+}
+
 img {
   max-width: 100%; }
   img.half {

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Planning Time for Internal Users
-tags: planning
+tags: general
 date: 2018-08-28
 ---
 
