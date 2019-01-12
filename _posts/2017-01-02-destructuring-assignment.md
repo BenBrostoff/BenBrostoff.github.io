@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Destructuring Assignment
-tags: technical
+tags: technical javascript
 date: 2017-01-02
 ---
     

@@ -7,6 +7,90 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Exploring TypeScript Generics</title>
+        <description>&lt;p&gt;I’ve been using TypeScript on several projects and wanted to jot down some quick thoughts on generics. To be clear, generics are not a new programming language construct and existed in languages liked C# and Java decades before TypeScript. That said, I find generics interesting in the context of TypeScript because I see and use them so often.&lt;/p&gt;
+
+&lt;p&gt;First, what are generics? I think of generics as a way to represent types without explicitly defining a type. A generic type is generic in that it’s like a function parameter- able to represent anything. Also like a parameter in a function, its value can be passed as an argument (via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;SomeType&amp;gt;&lt;/code&gt;) and referenced throughout the body of the function. This quality is one of many reasons generics are more powerful than simply using the &lt;code class=&quot;highlighter-rouge&quot;&gt;any&lt;/code&gt; type. &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/generics.html&quot;&gt;The official TypeScript docs on generics&lt;/a&gt; are an excellent resource on when to use generics, and I highly recommend them.&lt;/p&gt;
+
+&lt;p&gt;Below are some use cases for generics I’ve found helpful.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Promises&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In TypeScript, promises can be initialized such that they “lock” a generic into a type:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/promise.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Microsoft/TypeScript/blob/master/lib/lib.es2015.promise.d.ts#L33&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise&lt;/code&gt; source&lt;/a&gt; makes the warning above possible. IDEs use the source to determine that the callback in the promise constructor must return something of type &lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;PromiseLike&amp;lt;T&amp;gt;&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt; in this case is number. Note that PromiseLike here is a &lt;a href=&quot;https://github.com/Microsoft/TypeScript/blob/master/lib/lib.es5.d.ts#L1376-L1384&quot;&gt;separate type&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the case of promises, I find generics useful because I can gain an understanding of what an async function resolves to without having to look at source code. Consider the following non-TypeScript example:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/fa6a4b370cfe1292d3e9db98b96860c6.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Now check out the TypeScript equivalent:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/a77c068e8e8d41191d434077b95cff8e.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Only in the second example can the developer know with some confidence that the promise resolves to a &lt;code class=&quot;highlighter-rouge&quot;&gt;UserProfile&lt;/code&gt; (well, or &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;PromiseLike&amp;lt;UserProfile&amp;gt;&lt;/code&gt;). Without TypeScript, it’s necessary to look at the function definition and the return value. Even then, the name &lt;code class=&quot;highlighter-rouge&quot;&gt;lookupProfile&lt;/code&gt; may be inaccurate depending on how it was implemented; TypeScript at least will fail to compile if the type returned is not a &lt;code class=&quot;highlighter-rouge&quot;&gt;UserProfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Importantly, code changes in &lt;code class=&quot;highlighter-rouge&quot;&gt;lookupProfile&lt;/code&gt; are nicely handled by TypeScript generics. Let’s say the function can return an admin profile or a user profile - you can simply adjust the type to &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise&amp;lt;UserProfile | AdminProfile&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;React Components&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;React.SFC&lt;/code&gt; - React’s stateless functional component - has a type definition like the below:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/dd9ae512d7d7eb26368e8f88a750ceda.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;In the above, the type parameter is also passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;propTypes&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;defaultProps&lt;/code&gt; through &lt;code class=&quot;highlighter-rouge&quot;&gt;ValidationMap&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Partial&lt;/code&gt;, respectively, which also take generic arguments.&lt;/p&gt;
+
+&lt;p&gt;Writing components without TypeScript might look like this:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/199b5d3097ef775243743a5392c51760.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;And now with TypeScript:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/9af73129bd46ac462f3f74987dbffaeb.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;While using &lt;code class=&quot;highlighter-rouge&quot;&gt;PropTypes&lt;/code&gt; is a perfectly valid option here and will offer some of the same benefits as TypeScript, you can still run a React application with components that are missing required props; it will just crash at runtime.&lt;/p&gt;
+
+&lt;p&gt;With TypeScript, this error will happen at compile time, saving time and possibly a production bug that would never have been caught until users found it. Better yet, it offers a useful error message to developers who violate the component spec - let’s say in the case of a typo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Type ‘{ message1: number; }’ is not assignable to type ‘IntrinsicAttributes &amp;amp; SomeProps &amp;amp; { children?: ReactNode; }’.
+  Property ‘message1’ does not exist on type ‘IntrinsicAttributes &amp;amp; SomeProps &amp;amp; { children?: ReactNode; }’.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Again, &lt;em&gt;this error is not raised in the non-TypeScript case&lt;/em&gt;. The React component still renders and the div just has no text.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apollo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Apollo client uses generics frequently throughout the result. I only highlight &lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt; and the HOC &lt;code class=&quot;highlighter-rouge&quot;&gt;graphql&lt;/code&gt; in this discussion, but rest assured generics are heavily used in the Apollo codebase.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt; (&lt;a href=&quot;https://github.com/apollographql/apollo-client/blob/master/packages/apollo-client/src/core/types.ts#L19-L25&quot;&gt;source here&lt;/a&gt;, returned from a query or mutation) takes a generic that describes data in a graphql response. The generic argument gets passed to the data property on the Apollo result. The advantages of this type are similar to the advantages of TypeScript promises (it actually acts as the &lt;a href=&quot;https://github.com/apollographql/apollo-client/blob/master/packages/apollo-client/src/ApolloClient.ts#L274&quot;&gt;generic argument&lt;/a&gt; a promise accepts).&lt;/p&gt;
+
+&lt;p&gt;I’ve used Apollo without TypeScript and remember being frustrated with seeing different components extract different parts of &lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt; - some components would utilize &lt;code class=&quot;highlighter-rouge&quot;&gt;loading&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;networkStatus&lt;/code&gt;, and / or &lt;code class=&quot;highlighter-rouge&quot;&gt;errors&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; especially was a difficult property to work with because knowing its shape - at least for me - generally required logging a response.&lt;/p&gt;
+
+&lt;p&gt;TypeScript makes this logging unnecessary (well, less necessary - to be clear it’s impossible to know what the server will send back at compile time). Apollo provides a &lt;a href=&quot;https://codesandbox.io/s/github/apollographql/apollo-link-rest/tree/master/examples/typescript&quot;&gt;code sandbox&lt;/a&gt; here with a great example, part of which is copied in a gist below. Note that this example doesn’t actually use ApolloQueryResult and instead uses a similar prop from react-apollo that &lt;a href=&quot;https://github.com/apollographql/react-apollo/blob/apollo-client-2.0/src/types.ts#L66-L69&quot;&gt;gets added from &lt;code class=&quot;highlighter-rouge&quot;&gt;ChildProps&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/4e544db73630b6e488b58bca8272c930.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;graphql&lt;/code&gt; higher order component &lt;a href=&quot;https://github.com/apollographql/react-apollo/blob/master/src/graphql.tsx#L10-L31&quot;&gt;accepts two generic arguments&lt;/a&gt;, one of which describes the data from &lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt;, and the other which describes the props passed to the component being wrapped by the higher order function.The graphql HOC takes the advantages described with &lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt; and React component and combines them. It’s now obvious what the graphql server should be returning as well as what props the wrapped component expects.&lt;/p&gt;
+
+&lt;p&gt;Side note - one interesting thing I found out about &lt;code class=&quot;highlighter-rouge&quot;&gt;ChildProps&lt;/code&gt; while researching this post is that it takes in two generics and from its constructor returns an &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/advanced-types.html&quot;&gt;intersection&lt;/a&gt; of types. This is a use case of generics that is extremely powerful; creating types that can intersect, unionize or do anything with multiple types to create new types.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;My brother and I have a multi-year debate going on about the value of code comments. I am a comment minimalist for many reasons, but the existence of type systems is the main point I fall back on. Compile time checks and good error messages in my opinion are a much better explanation of code than long comments.&lt;/p&gt;
+
+&lt;p&gt;Generics offer the reusablity, type assertions and ease of understanding that comments cannot replicate. Most importantly, comments cannot prevent a class of bugs that could have been prevented at compile time.&lt;/p&gt;
+
+&lt;p&gt;Generics make creation and reusability of types easy. The ability to create types that produce other types saves you a lot of typing - pardon the pun.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2019/01/12/exploring-typescript-generics.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/01/12/exploring-typescript-generics.html</guid>
+      </item>
+    
+      <item>
         <title>Stop Resulting</title>
         <description>&lt;p&gt;In 2018, the best lesson I learned was to stop creating narratives based on results.&lt;/p&gt;
 
@@ -555,88 +639,6 @@ The function to measure the quality of a split. Supported criteria are “gini�
         <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
         <link>http://0.0.0.0:4000/2018/01/27/decision-trees-intro.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2018/01/27/decision-trees-intro.html</guid>
-      </item>
-    
-      <item>
-        <title>Gradient Descent in Simple NN (ML Series, Part 3)</title>
-        <description>&lt;p&gt;&lt;em&gt;Note: This post is a WIP. I am leaving it up in its current form for feedback, and will continue to update it, hopefully removing this disclaimer within the week (12/6).&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This post builds on &lt;a href=&quot;https://benbrostoff.github.io/2017/10/09/gradient-descent-intuition/&quot;&gt;Part II of my ML series&lt;/a&gt; , and explores what role gradient descent plays in a simple neural network (NN).&lt;/p&gt;
-
-&lt;p&gt;I will be working off the simple one layer NN in Andrew Trask’s blog post &lt;a href=&quot;http://iamtrask.github.io/2015/07/12/basic-python-network/&quot;&gt;A Neural Network in 11 Lines of Python (Part I)&lt;/a&gt;. First, I’m going to review part of Andrew’s posts and explain why this network makes a correct prediction give a certain simple pattern. Next, I’ll create a pattern where the network cannot predict the right answer, and attempt to explain why. In both cases, I will refer back to Part II and build on the purpose of gradient descent. I will be working with &lt;a href=&quot;https://github.com/BenBrostoff/ml-series-source/blob/master/src/3_gradient_descent_in_practice.ipynb&quot;&gt;this IPython notebook&lt;/a&gt;, and it may help to have it open in a separate window.&lt;/p&gt;
-
-&lt;p&gt;For those unfamiliar with Andrew’s blog post, here’s a quick overview. Andrew creates a fake dataset where each data point is a Python list of three elements. If the first element is &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;, then the data point should be labeled &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;. If not, it’s labeled &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;. A quick visual overview of four example inputs and outputs, which will serve as our training set. Later, we can test the model on the remaining 4 of the eight possible examples of this pattern (2 possibles in each slot -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;2**3&lt;/code&gt;):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/inputs_and_outputs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A Simple and Working NN&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Andrew implements a simple neural network in Python using only &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; for some basic utility functions (e.g. taking the dot product of two arrays via &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt;). I want to be clear on what the terminology “implements a simple neural network” means here. The only goal of this exercise is to get three weights - one for each slot - that can be used to make a prediction. Neural network in this case just refers to the methodology for getting these weights. Because the technique to obtain these weights uses parts that are named neurons and activations and layers and is loosely modeled to look like groups of neurons firing, the technique as a whole is a neural network.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Step 1: Randomize Weights&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The weights could simply be guessed at. Random guessing does play some role in neural networks (importantly, the guessing is not exactly random and is far beyond the scope of this post), and the initial guess at the final weights leverages &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.random.randn.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;np.random.randn&lt;/code&gt;&lt;/a&gt;. Note that this network uses &lt;code class=&quot;highlighter-rouge&quot;&gt;np.random.seed(1)&lt;/code&gt; so outputs are consistent. The first guess at the weights computes &lt;code class=&quot;highlighter-rouge&quot;&gt;2 * np.random.random((3, 1)) - 1&lt;/code&gt; - the 2 is simply to scale the weights by 2, which are all between 0 and 1. The &lt;code class=&quot;highlighter-rouge&quot;&gt;-1&lt;/code&gt; then forces any weights that were initialized as less than &lt;code class=&quot;highlighter-rouge&quot;&gt;0.5&lt;/code&gt; to be negative (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;2 * 0.4 - 1 == -0.2&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;The first guess at the weights suggests they’re &lt;code class=&quot;highlighter-rouge&quot;&gt;-0.17&lt;/code&gt; (too small), &lt;code class=&quot;highlighter-rouge&quot;&gt;0.44&lt;/code&gt; (too big) and &lt;code class=&quot;highlighter-rouge&quot;&gt;-0.99&lt;/code&gt; (too small). Because we know that the first slot is the only one that matters, the correct weights are &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;, or some large number and two small numbers. A neural network &lt;em&gt;should&lt;/em&gt; move the first weight upward, the second weight downward and the third weight upward.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Step 2: Guess&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;What is the output when we guess with the weights? The answer to this question is computed via:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;predictions = np.dot(training_set_inputs, weights)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The output here is a &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; array of shape &lt;code class=&quot;highlighter-rouge&quot;&gt;(4, 1)&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;training_set_inputs&lt;/code&gt; - four examples of three elements - is &lt;code class=&quot;highlighter-rouge&quot;&gt;(4, 3)&lt;/code&gt; and the &lt;code class=&quot;highlighter-rouge&quot;&gt;weights&lt;/code&gt; - three “predictors” - are &lt;code class=&quot;highlighter-rouge&quot;&gt;(3, 1)&lt;/code&gt;). It represents guesses at the four labels given the four examples in the training set. Of course, these guesses - &lt;code class=&quot;highlighter-rouge&quot;&gt;-2.5&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2.74&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2.95&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;-2.73&lt;/code&gt; - are quite far away from the actual labels of &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I want to take a quick second to do some discussion of &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt;. For those with a linear algebra background, feel free to skip this section; I’m an Economics major so &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt; has taken me some time to wrap my head around. The &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.dot.html&quot;&gt;documentation&lt;/a&gt; around &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt; makes it sound deceivingly simply:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Dot product of two arrays. For 2-D arrays it is equivalent to matrix multiplication, and for 1-D arrays to inner product of vectors (without complex conjugation). For N dimensions it is a sum product over the last axis of a and the second-to-last of b:&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The matrix math explanation makes the most sense here, and the formula you would apply for matrix math does indeed work:&lt;/p&gt;
-
-&lt;p&gt;That said, I think the intuition here is important - why are we using &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt;? We know &lt;em&gt;where we want to end up&lt;/em&gt; is four predictions, or a &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; array of shape &lt;code class=&quot;highlighter-rouge&quot;&gt;(4, 1)&lt;/code&gt;. To get each prediction, we need to apply the weights. Getting the sum weighted prediction would look like the below:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;First prediction: &lt;code class=&quot;highlighter-rouge&quot;&gt;0 * -0.17 + 0 * 0.44 + 1 * -0.99 == -0.99&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Second prediction: &lt;code class=&quot;highlighter-rouge&quot;&gt;1  * -0.17 + 1 * 0.44 + 1 * -0.99 == -0.73&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Third prediction: &lt;code class=&quot;highlighter-rouge&quot;&gt;1 * -0.17 + 0 * 0.44 + 1 * -0.99 == -1.17&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Fourth prediction:  &lt;code class=&quot;highlighter-rouge&quot;&gt;0 * -0.17 + 1 * 0.44 + 1 * -0.99 == -0.56&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;That is all &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt; is doing here. &lt;code class=&quot;highlighter-rouge&quot;&gt;predictions&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;[[[-0.99977125], [-0.72507825], [-1.16572724], [-0.55912226]]]&lt;/code&gt;. The linear algebra intuition for &lt;code class=&quot;highlighter-rouge&quot;&gt;np.dot&lt;/code&gt; is a little different, and I have found &lt;a href=&quot;https://www.youtube.com/watch?v=kjBOesZCoqc&amp;amp;list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&quot;&gt;3Blue1Brown’s linear algebra series&lt;/a&gt; worth watching here (disclaimer: I’m only four videos through). But at least in my minimal machine learning experience, I have found it more useful to stop thinking about rote learning matrix math formulas and referring back to the predictions intuition.&lt;/p&gt;
-
-&lt;p&gt;A little terminology here - &lt;code class=&quot;highlighter-rouge&quot;&gt;predictions&lt;/code&gt; is really the first hidden layer of the neural network, and also the output layer here as the whole network is only a single input and out layer. In &lt;a href=&quot;https://www.coursera.org/specializations/deep-learning&quot;&gt;Andrew Ng’s deeplearning course&lt;/a&gt;, the step is represented as:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Z1 = W1 * X&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;where Z1 is the output layer, W1 are weights and X is the training inputs.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Step 3: Apply a Non Linearity and Find Error&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;These four numbers from &lt;code class=&quot;highlighter-rouge&quot;&gt;predictions&lt;/code&gt; can now be passed through a non-linearity, or function that does not have the same effect on the output as the input is incremented or decremented. &lt;em&gt;Why&lt;/em&gt; passing &lt;code class=&quot;highlighter-rouge&quot;&gt;predictions&lt;/code&gt; through a non-linearity is important will likely be the subject of another post. For now, I think it’s sufficient to just say that we will pass the four predictions through a function called a sigmoid function that scales them from 0 to 1 and &lt;a href=&quot;http://www.wolframalpha.com/input/?i=sigmoid+function&quot;&gt;looks like the below&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/sigmoid.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Again, in Andrew Ng’s deeplearning course, this looks like:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;A1 = G(Z1)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;where G is the non-linearity (sigmoid function in this example). &lt;code class=&quot;highlighter-rouge&quot;&gt;A1&lt;/code&gt; is called a layer of activations, because the non-linearity is thought to “activate neurons” in the loose brain metaphor.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Step 4: Apply Gradient Descent&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Step 5: Update the Weights&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Step 6: Repeat&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A Simple and Broken NN&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This network breaks when changing the rule for inputs and outputs.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2017/12/06/gradient-descent-in-simple-nn-draft.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2017/12/06/gradient-descent-in-simple-nn-draft.html</guid>
       </item>
     
   </channel>

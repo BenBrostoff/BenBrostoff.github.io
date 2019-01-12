@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Querying in Mongo with Node
-tags: technical
+tags: technical javascript
 date: 2014-08-26
 ---
 I'm in the midst of taking an online course using <a href="http://www.mongodb.org/" target="_blank"> MongoDB</a> through Mongo's online university entitled <a href="https://university.mongodb.com/courses/10gen/M101JS/2014_Aug/syllabus" target="_blank"> MongoDB for Node.js Developers</a> and thought I'd share a few insights here. 
