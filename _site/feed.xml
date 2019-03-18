@@ -7,6 +7,138 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>AWS Explained to Shareholders From a Developer</title>
+        <description>&lt;p&gt;There has been significant discussion recently around the following revelation in &lt;a href=&quot;https://www.sec.gov/Archives/edgar/data/1759509/000119312519059849/d633517ds1.htm&quot;&gt;Lyft’s S1&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In January 2019, we entered into an addendum to our commercial agreement with AWS, pursuant to which we committed to spend an aggregate of at least $300 million between January 2019 and December 2021 on AWS services. If we fail to meet the minimum purchase commitment during any year, we may be required to pay the difference, which could adversely affect our financial condition and results of operations.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Many reactions I’ve seen to this post have expressed surprised at this dollar amount and suggested Lyft should build their own data center (&lt;a href=&quot;https://twitter.com/MohapatraHemant/status/1102401615263223809&quot;&gt;which was nicely rebutted here&lt;/a&gt;) or switch to another cloud provider.&lt;/p&gt;
+
+&lt;p&gt;In addition, AWS CEO Andy Jassy &lt;a href=&quot;https://www.cnbc.com/2019/02/28/aws-ceo-andy-jassy-its-really-easy-to-lower-prices.html&quot;&gt;was recently on Mad Money&lt;/a&gt; and revealed AWS has a $30 billion run rate. The CNBC article on the appearance notes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AWS has become a crucial part of Amazon’s overall business. In 2018, the unit generated $25.66 billion in revenue, or 11 percent of Amazon’s total sales, up from 10 percent of overall revenue in 2017. Growth at AWS accelerated to 47 percent last year from 43 percent in 2017.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Most significantly, Jassy readily admitted to constant price decreases over the years in the various AWS product offerings:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“It’s actually really easy to lower prices,” Jassy told Jim Cramer on CNBC’s “Mad Money” on Thursday. “It’s much harder to be able to afford to lower prices.” In the past decade, AWS has cut prices 70 times, he said.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This appearance, combined with Lyft’s S1, have sparked various attempts to value AWS as a standalone business, determine the extent of AWS’ competition, size the total cloud market, etc. Jassy’s comments also have worried shareholders that AWS margins could materially decline.&lt;/p&gt;
+
+&lt;p&gt;This post is an attempt to offer some thoughts on AWS spend from a developer perspective. Lost in much of the financial analysis of AWS is how developers use it on a day-to-day basis. This piece of information is important in doing financial analysis because it can offer insights into the costs of switching cloud providers and Amazon’s probability of retaining customers. I’m not suggesting this post could be used to quantify retention rates or market share, but that some of the information may be a good starting point in terms of how financial modelers think about AWS’ business.&lt;/p&gt;
+
+&lt;p&gt;As background, I’m a developer who owns my own consulting company and have worked with a variety of clients that have unique AWS setups. Each client has unique tech needs based on their unique business models and growth stage. Each one picked AWS as their cloud provider.&lt;/p&gt;
+
+&lt;p&gt;Notably, not a single one has ever seriously raised the issue of AWS pricing or wanting to switch to Google Cloud Platform (GCP), Microsoft Azure or another service. Again, this is solely my experience, but from a developer perspective, many solutions to problems discussed on blogs, at conferences or in person assume that AWS is the default cloud platform and speak about solutions with a specific set of AWS services in mind. This is the strength of the ecosystem at work.&lt;/p&gt;
+
+&lt;p&gt;As an example, serverless architectures have recently become quite popular in the developer community. Serverless is a term that means from a cost perspective fees come in when useful “work” is occurring on a server rather than when time is elapsing. As it pertains to AWS, this is the difference between using an EC2 instance (a service that is priced per unit of time depending on the server specs) and &lt;a href=&quot;https://aws.amazon.com/lambda/&quot;&gt;AWS Lambda&lt;/a&gt; (a service that is priced closer to per unit of work (ex. per request)).&lt;/p&gt;
+
+&lt;p&gt;Many developers when they talk about serverless architectures are usually talking about AWS Lambda. It’s very common to hear suggestions to the effect of “And you could write a Lambda task to do such-and-such and then…” AWS has made Lambda easy to pair with a number of its 100+ services, allowing developers to schedule Lambda tasks to occur immediately after file uploads to a specific S3 bucket (its storage service), entry of an item into SQS (its queuing service) or even specific patterns in Cloudwatch (its logging service). Serverless is as much a discussion about AWS as it is the broad idea of paying per unit of work and not per unit of time.&lt;/p&gt;
+
+&lt;p&gt;Indeed, AWS is aware of this discussion and plays into the developer enthusiasm for serverless. Let’s look at an example directly from Amazon’s docs on serverless architectures:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/aws_infra_advertising.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To be clear here — to develop a simple weather app, AWS is suggesting pulling in four different AWS services — S3, API Gateway, Lambda and DynamoDB. Code will have to be written for each service and their interactions monitored. The costs will have to be tracked and made understandable for business stakeholders. This setup may even need to be rebuilt several times as the needs of the weather app become more clear.&lt;/p&gt;
+
+&lt;p&gt;The paragraph above may seem crazy to you, but rest assured it is actually less crazy than real life. Only four AWS services seems pretty low in the context of apps I’ve worked on.&lt;/p&gt;
+
+&lt;p&gt;I make this point to demonstrate that AWS is deeply ingrained in developer culture and becoming more deeply ingrained. It is a staple of how developers think about scaling operations and has entered developer lexicon for the foreseeable future.&lt;/p&gt;
+
+&lt;p&gt;Changes in AWS change how developers think about the future and what’s possible. A release of a new AWS service or change to an existing service will trigger thousands of blog posts, training seminars and discussions. As a result, AWS exerts control over the future of software, and by extension its cost, performance and maintainability.&lt;/p&gt;
+
+&lt;p&gt;Going back to the example of Lyft, I take issue with analysis that hones in on the $300 million AWS bill when the more important consequence is the complexity associated with this bill. Notice how Lyft never breaks down the spend itself. Is it serverless or server-based? Which AWS services make up the majority of the spend? How much time do Lyft developers currently spend writing code around AWS, and what would be the cost to switch platforms?&lt;/p&gt;
+
+&lt;p&gt;As a result, I seriously question analysis that attempts to treat AWS spend as a per-transaction rake for Amazon. Credit card scanners are a commodity and not a core piece of company infrastructure heavily customized by full-time employees.&lt;/p&gt;
+
+&lt;p&gt;While companies can and do model AWS costs with good accuracy, what I doubt is modeled nearly as well is the amount of time developers spend customizing and tuning AWS services. I’ve spent hundreds of hours in total reading AWS documentation, blog posts, source code from libraries that use AWS, talking to AWS sales reps and reading AWS message boards. It’s a key part of my job and I’m often hired with my knowledge of AWS specifically in mind.&lt;/p&gt;
+
+&lt;p&gt;To underscore that AWS is not a commodity, I want to offer some more details on the costs in developer time of switching to another cloud provider.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Security&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The subject of security on AWS is enormous; there is a &lt;a href=&quot;https://d1.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf&quot;&gt;74 page whitepaper on it&lt;/a&gt;. There are consulting shops that specialize in this subject and charge absurd amounts of money to review your security stack. AWS’ security model requires knowledge of their &lt;a href=&quot;https://aws.amazon.com/iam/&quot;&gt;Identity and Access Management&lt;/a&gt; service and the security settings associated with each service (this could be security rules for EC2 or read/write permissions on S3). Rebuilding this security model in another platform would be non-trivial.&lt;/p&gt;
+
+&lt;p&gt;Additionally, if your company has government clients, then storing their data in the cloud will require &lt;a href=&quot;https://aws.amazon.com/compliance/fedramp/&quot;&gt;FedRAMP&lt;/a&gt; certifications. The AWS docs note:&lt;/p&gt;
+
+&lt;p&gt;Cloud service providers who want to offer their products and services to the US government must demonstrate FedRAMP compliance.&lt;/p&gt;
+
+&lt;p&gt;Any company running their own data center would have to separately apply for these certifications, which can take in excess of a year to get. AWS is certified for most of its core offerings. Security within organizations, between organizations, between organizations and consumers and organizations and the government is handled in a unique way by AWS, further de-commoditizing it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I think the average non-developer would be shocked if they searched a company codebase for references to AWS. I’ve yet to see a codebase that does not pull in a variety of AWS libraries and structures significant amounts of code around how these libraries work. Changing all this code would be non-trivial and would definitely require significant re-writes that would pull developers off feature work. This is not find-and-replace.&lt;/p&gt;
+
+&lt;p&gt;There is even a robust ecosystem of companies that write code that target the various AWS services and make money off it. Heroku (a Y Combinator funded company that was purchased by Salesforce in 2010) runs many of its servers on AWS. Heroku is the middleman between thousands of companies and AWS. Many code registries tap into AWS to pull down third-party code. These same registries may also rely on Heroku or AWS middlemen. Even if a company switches its own cloud infrastructure to another provider, there is most likely still an AWS dependency in the code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Developer Workflow&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Much of what a developer does day to day in my experience involves using various AWS services. Some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reviewing logs or performance metrics to determine the exact circumstances in place when a bug, outage or other event occurred. Developers can use this information to better determine the cause of the event&lt;/li&gt;
+  &lt;li&gt;Monitoring, downloading or manipulating images, video, audio or other files internal users or customers uploaded into S3 (recall this is Amazon’s Simple Storage Service). S3 also can be used to host entire websites; in this case, the code for the website itself is hosted on S3&lt;/li&gt;
+  &lt;li&gt;Creating, updating or deleting security rules to protect a company’s digital assets. One example of this is the inbound and outbound security rules on an EC2 instance (said another way, a server) that determine which IP or IP ranges the server can receive data from or send data to. Depending on their seniority or job responsibilities, developers may also be responsible for managing other developers’ permissions on various AWS services (the relevant AWS service here is the aforementioned IAM)&lt;/li&gt;
+  &lt;li&gt;Configuring services that drive some critical part of a company’s product. AWS has services for machine learning, video games, the internet of things and even satellites. Each has hundreds if not thousands of dials you can turn for your specific use case
+Jeff Bezos in a &lt;a href=&quot;https://www.youtube.com/watch?v=6nKfFHuouzA&quot;&gt;2008 presentation&lt;/a&gt; to a Y Combinator batch overviews a number of real world AWS use cases. This video is definitely worth a watch if you’re interested in how Bezos views AWS’ value add (notably, he speaks in depth about Blue Origin’s use of AWS)
+All of these tasks to some degree require familiarity with the AWS UI and how to achieve certain tasks (this is mockingly known as “click-ops” in some circles). Devs would need to retrain themselves in all these tasks, some of which would no longer exist or exist in very different forms to accommodate a switch.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, when the UI becomes cumbersome, developers will automate repetitive tasks through the AWS &lt;a href=&quot;https://aws.amazon.com/cli/&quot;&gt;Command Line Interface&lt;/a&gt; (CLI), which also requires significant research and practice to get productive in. The cost of a switch from a developer workflow is to uproot how developers interact with the cloud from the browser and within code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hiring&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In my experiences as both an interviewer and interviewee, AWS has been a key part of hiring. I’m not judging whether this is right or wrong, but rather commenting that interviewers have asked me about it and interviewees have brought it up unprompted. There is an &lt;a href=&quot;https://aws.amazon.com/certification/&quot;&gt;AWS Certification program&lt;/a&gt; and I’ve been asked whether I’m certified and seen certs listed on resumes I’ve reviewed. Choosing GCP or Azure as your company’s cloud provider will likely increase the amount of time it takes for an average developer to come in and get comfortable with the company’s cloud setup.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In closing, I want to offer my thoughts on two questions that I think are extremely relevant for analyzing AWS spend and valuing AWS as a business.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Are cloud services a commodity?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Absolutely not. Here’s the definition of commodity from Merriam-Webster (note I’m using the third definition, which I think most applies to economics):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A good or service whose wide availability typically leads to smaller profit margins and diminishes the importance of factors (such as brand name) other than price&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I do not believe cloud services in very specific forms with very specific interactions — like the aforementioned weather app AWS services — are a commodity. That said, GCP has tried its best to map each AWS service one-to-one with its own.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/gcp_comp.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m not convinced at all that migrating is as simple as consulting this table and writing the migration to go from one service to the other.&lt;/p&gt;
+
+&lt;p&gt;Building the aforementioned weather app in the way AWS recommends requires knowledge of four specific services. Yes, these services could be in part replicated with GCP or Azure, but it would take significant time and effort to rebuild it and there’s no guarantee the cost-savings would be significant. For commoditized goods, switching suppliers is trivial. From a code perspective, this is find-and-replace. Switching cloud services is anything but find-and-replace.&lt;/p&gt;
+
+&lt;p&gt;Were this not true, I don’t think AWS’ competitors would author comprehensive guides on migrations. If you google “migrate aws to google cloud”, here are the first four results that come up:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/migration_search.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Google clearly has skin in the game and has spent time and money promoting the idea that switching is possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Is it worth switching from AWS to another cloud provider to save money or starting a company and using another cloud provider?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I did some research on migrating from AWS to GCP and what I found confirmed that this is a difficult undertaking. It’s notable here that complete migrations are not always the best choice for most companies — some companies are diversifying their cloud providers and picking the right tool for the right job. There is no doubt in my mind some Azure or GCP services make more sense than their AWS equivalents for specific companies in specific situations. That said, an 100% migration likely entails spending lots of times in areas where performance and cost improvement would be minimal. Some cloud services to be fair are commodities — how much of an improvement is your company going to get from moving from AWS Simple Storage Service to Google Cloud Storage?&lt;/p&gt;
+
+&lt;p&gt;For new companies, I tend to think cost-cutting is less important than product-market fit. Discovering product-market fit is going to be easier with a cloud provider that has a rich ecosystem of libraries and documentation, as well as a large potential talent pool for working with those services.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, I think more discussions about margin compression and market share at AWS need to take into account what a critical role AWS plays in the day-to-day life of developers. Margin compression in part assumes that commoditization drives down prices — I’ve tried to rebut the idea here that AWS services are commodities. I’ve also tried to demonstrate that switching providers is non-trivial. When migrations do happen, they may be piecemeal and not complete infrastructure changes.&lt;/p&gt;
+
+&lt;p&gt;Modeling cash flows requires making significant assumptions even for the most simple of businesses. AWS is as complicated a business as it is a product, and I would caution current and future shareholders against unfounded assumptions.&lt;/p&gt;
+
+&lt;p&gt;Disclaimer: I am an AMZN, GOOGL and MSFT shareholder. I am an AWS, GCP and Azure customer.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2019/03/11/aws-for-shareholders.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/03/11/aws-for-shareholders.html</guid>
+      </item>
+    
+      <item>
         <title>Exploring TypeScript Generics</title>
         <description>&lt;p&gt;I’ve been using TypeScript on several projects and wanted to jot down some quick thoughts on generics. To be clear, generics are not a new programming language construct and existed in languages liked C# and Java decades before TypeScript. That said, I find generics interesting in the context of TypeScript because I see and use them so often.&lt;/p&gt;
 
@@ -580,65 +712,6 @@ Do not reference these action types directly in your code.&lt;/p&gt;
         <pubDate>Sat, 07 Apr 2018 00:00:00 +0000</pubDate>
         <link>http://0.0.0.0:4000/2018/04/07/redux-create-store.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/07/redux-create-store.html</guid>
-      </item>
-    
-      <item>
-        <title>Decision Trees Introduction (ML Series, Part 4)</title>
-        <description>&lt;p&gt;In my continuing attempt to automate as much as of my Daily Fantasy Sports lineup creation as possible, I’ve been exploring decision trees. I realized this technique might be valuable after listening to my thought process as it relates to fantasy sports. Generally, I’ll ask myself questions like “Has this player broken 10 rebounds the last 2 games?” or “Is this player consistently getting over 25 minutes per game?”. In addition to removing bias, a decision tree should ask better questions, improve given more data and generate insights over key features in data.&lt;/p&gt;
-
-&lt;p&gt;I want to start off with the simplest possible example I can think of for a decision tree. I’ll use this example as an opportunity to explore the &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn.tree&lt;/code&gt; module. In a future post, I’ll review in depth how I constructed my DFS basketball decision tree, but you can &lt;a href=&quot;https://github.com/BenBrostoff/draft-kings-learn/blob/master/recipes/classifier.py&quot;&gt;check it out here if you’re interested&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In &lt;a href=&quot;http://benbrostoff.github.io/2017/12/06/gradient-descent-in-simple-nn-draft.html&quot;&gt;Part III&lt;/a&gt; of my ML blog series, I reviewed how a neural network could be used to classify some data where only one feature mattered. A similar example here I think will be illustrative. I often find it easier to make the example as close to real as possible, so let’s assume we have data on a group of basketball players, and we want to label them &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; if they scored under 20 points and &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; if they scored over 20 in a game. The three features in the data set are &lt;code class=&quot;highlighter-rouge&quot;&gt;minutes&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;height&lt;/code&gt;; let’s assume only &lt;code class=&quot;highlighter-rouge&quot;&gt;minutes&lt;/code&gt; matters. Below is a simple decision tree with a fake dataset:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/e0269da7acd2d3c98859fe9a98e3ed96.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;You can see in the code snippet above that &lt;code class=&quot;highlighter-rouge&quot;&gt;tree.DecisionTreeClassifier&lt;/code&gt; ships with a &lt;code class=&quot;highlighter-rouge&quot;&gt;feature_importances_&lt;/code&gt; that lists the weight of each feature. Because &lt;code class=&quot;highlighter-rouge&quot;&gt;minutes&lt;/code&gt; is the only feature that matters, it’s assigned a weight of &lt;code class=&quot;highlighter-rouge&quot;&gt;1.0&lt;/code&gt;, while the meaningless &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;height&lt;/code&gt; features have a weight of &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The decision tree correctly identifies that if the player players over 30 minutes a game, then they should score over 20 points (disclaimer: this is an unrealistic and oversimplified example). The &lt;code class=&quot;highlighter-rouge&quot;&gt;graphviz&lt;/code&gt; package allows you to visualize this data:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ml-blog-series/decision_tree_basic.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The visualization confirms what we know to be true; if a player plays over 30 minutes, they scored over 20 points. The visualization also provides a good means to go over some terminology. The &lt;em&gt;leaf nodes&lt;/em&gt; in the decision tree are the two child-most nodes that place a player in the &amp;gt; or &amp;lt; 20 point baskets; &lt;em&gt;internal nodes&lt;/em&gt; are any non leaf nodes that divide up the data, excluding the top-most node in the tree, which is the &lt;em&gt;root&lt;/em&gt; (note that this example is kind of contrived, since there is just a root node, two leaf nodes and no internal nodes).&lt;/p&gt;
-
-&lt;p&gt;How does &lt;code class=&quot;highlighter-rouge&quot;&gt;DecisionTreeClassifier&lt;/code&gt; actually work under the hood? If you were to manually construct your own decision tree, you would have to select your own root and internal nodes. Those selections would be based on what features you believe to be most valuable in a data set; if you know that minutes are what matter most for player statistics, minutes will be the feature used at your root. In a real basketball data set, a natural starting question would be “Did the player play more than 0 minutes?” &lt;a href=&quot;https://www.youtube.com/watch?v=LDRbO9a6XPU&quot;&gt;In the words of Google’s Josh Gordon&lt;/a&gt;, the best question is the one that reduces the uncertainty the most. If know the player did not play, I can claim with absolute certainty that they scored 0 points.&lt;/p&gt;
-
-&lt;p&gt;The decision tree algorithm makes feature selections like this based on &lt;em&gt;criterion&lt;/em&gt;, which are used to compute the importance of each attribute and then arrive at the right questions to ask. While a human would anecdotally know that good NBA players get 30+ minutes a game, a decision tree would infer it statistically via criterion. I’m going to use &lt;em&gt;Gini impurity&lt;/em&gt; as my criterion of choice here, since that is what &lt;code class=&quot;highlighter-rouge&quot;&gt;DecisionTreeClassifier&lt;/code&gt; uses by default. This is actually configurable via the &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;criterion&lt;/code&gt; parameter in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;criterion : string, optional (default=”gini”)
-The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “entropy” for the information gain.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Gini impurity, as the name suggests, is not a desirable quantity, and each node seeks to minimize it. &lt;a href=&quot;https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity&quot;&gt;Via Wikipedia&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is a mouthful, so an example and some code should help. As noted in the wiki definition, Gini impurity is a probability, so its value must be between 0 and 1. If our data set has six players who all scored over 20 points, then only one label exists in the data set, so randomly guessing that label will be correct 100% of the time. Gini impurity is 0, since we’re never wrong. However, if three players scored less than 20 and three scored more, than guessing &amp;gt; 20 would be right half the time, and wrong half the time (as would be &amp;lt; 20). Gini impurity is 0.5 since we’re wrong half the time.&lt;/p&gt;
-
-&lt;p&gt;Josh Gordon implements &lt;code class=&quot;highlighter-rouge&quot;&gt;gini&lt;/code&gt; in the following way, and the two examples work using it:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/4fe00bc9e501e5671e72363ff72a2843.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;A decision tree algorithm will construct the tree such that Gini impurity is most minimized based on the questions asked. You can actually see in the visualization about that impurity is minimized at each node in the tree using exactly the examples in the previous paragraph; in the first node, randomly guessing is wrong 50% of the time; in the leaf nodes, guessing is never wrong. When the data makes perfect sense, so does the tree.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, data is inherently messy, and configuring the tree to work based on the data will be a subject of a future post.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note that the &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; source here is &lt;a href=&quot;https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/tree/tree.py#L75&quot;&gt;pretty difficult at least for me to parse&lt;/a&gt; (interesting note - the base class &lt;code class=&quot;highlighter-rouge&quot;&gt;BaseDecisionTree&lt;/code&gt; is also the parent of &lt;code class=&quot;highlighter-rouge&quot;&gt;DecisionTreeRegressor&lt;/code&gt;, which can be used to make floating point number predictions and may be the subject of a future blog post), so I turned to documentation and other writing for the explanations in this blog post. Here’s a summary of the most useful ones I found&lt;/em&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/tree.html&quot;&gt;sklearn docs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=eKD5gxPPeY0&quot;&gt;Victor Lavrenko lecture&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=LDRbO9a6XPU&quot;&gt;Josh Gordon, Decision tree classifier from scratch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/random-forests/tutorials/blob/master/decision_tree.ipynb&quot;&gt;Josh Gordon Jupyter notebook with tree from scratch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;You can find all the code from this post in this &lt;a href=&quot;https://github.com/BenBrostoff/ml-series-source/blob/master/src/4_decision_tree_intro.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2018/01/27/decision-trees-intro.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/01/27/decision-trees-intro.html</guid>
       </item>
     
   </channel>

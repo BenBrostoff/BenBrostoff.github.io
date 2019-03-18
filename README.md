@@ -7,3 +7,9 @@ docker-compose up -d
 ```
 
 If using boot-2-docker, should be available at IP from <code>docker-machine ip default</code>.
+
+Generating tags:
+
+```
+python tag_gen.py
+```
