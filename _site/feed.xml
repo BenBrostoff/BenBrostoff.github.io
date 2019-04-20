@@ -7,6 +7,45 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>ESG Investing Skepticism</title>
+        <description>&lt;p&gt;&lt;em&gt;Note: I want to credit &lt;a href=&quot;https://www.aqr.com/Insights/Perspectives/Virtue-is-its-Own-Reward-Or-One-Mans-Ceiling-is-Another-Mans-Floor&quot;&gt;Cliff Asness&lt;/a&gt; and the folks over at &lt;a href=&quot;https://diligent-dollar.com/2018/07/18/why-do-sin-stocks-outperform/&quot;&gt;Diligent Dollar&lt;/a&gt; for many of the ideas in this post.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve been reading about Environmental, Social and Corporate Governance (ESG) investing recently and I think the topic has such widespread consensus support it’s worth taking a more skeptical approach. First - a quick disclaimer: I am still a supporter of ESG investing and as a rule of thumb will not invest in companies that I’m not morally aligned with. That said, I don’t think ESG investing is the most effective mechanism to promote companies with positive missions, and I think in some cases it can have the opposite effect of what investors intend.&lt;/p&gt;
+
+&lt;p&gt;The reason for my ESG skepticism is that changing asset prices – what ESG does – is very different than changing company cash flows. The impact of changing asset prices based on criterion other than cash flow has unknowable effects. ESG allocates capital based on the murky notion of environmental or social responsibility, which is impossible to measure. For instance, is it responsible to sell carbon credits to polluting companies? Is it responsible to invest in nascent technologies that have unproven economics but could have some positive environmental impact? Measuring ESG goodness is hard.&lt;/p&gt;
+
+&lt;p&gt;A quick overview of how ESG investing changes asset prices. Investors who support ESG-causes invest in ESG equities and therefore increase the price of these stocks. Conversely, they either don’t buy the stock of or even short anti-ESG equities, stagnating or driving down these equity prices. The same thing could also happen with bonds, warrants or other financial instruments companies use to raise capital.&lt;/p&gt;
+
+&lt;p&gt;Importantly, changing these asset prices does impact companies’ ability to raise capital. Higher stock prices mean companies can raise more equity for the same amount of shares. Higher stock prices thus decrease a company’s cost of equity, which along with cost of debt is used to determine its cost of capital.&lt;/p&gt;
+
+&lt;p&gt;If you believe corporate finance theory plays out in the real world, companies will only invest in projects that have a higher return than their cost of capital. Not doing this means they lose money on projects. Take a look at the little example below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/cash-flows-example.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/12pxr7ZRNVKK2wZ04EEAfGFL90_EZho_nFXWdFFcsJSY/edit?usp=sharing&quot;&gt;Spreadsheet link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Assuming cash flow is re-invested each year, cost of funds going from 10% to 20% makes a 5 year project that returns 25% go to -25%.&lt;/p&gt;
+
+&lt;p&gt;ESG investing lowers the cost of capital for ESG companies and increases it for anti-ESG ones. As a result, more projects now look attractive for “good” companies and less projects are worth investing in for “bad” companies.&lt;/p&gt;
+
+&lt;p&gt;So what could happen as a result of the changed cost of capital across the board? ESG companies will take more risk since their hurdle rate is lower. In a best case scenario, the added risk plays out well and these companies see their returns exceed the low cost of capital. In the worst case scenario, these risk-on projects bear no fruit and companies waste the capital they raised. Investors lose trust and the ESG halo effect disappears. As an aside, depending on who you talk to this scenario has already played out - check out discussions about &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Green_Bubble&quot;&gt;The Green Bubble&lt;/a&gt; and implosions of scores of green-energy companies.&lt;/p&gt;
+
+&lt;p&gt;On the other side, anti-ESG companies will invest in fewer projects given a higher cost of capital. Cash from earnings as a result will have fewer places to go. It’s even possible it will have no projects to go to, in which case management can keep it on balance sheet or return it to shareholders via dividends or buybacks. Again, depending on who you talk to, this has already happened with public tobacco companies. These companies generally have significantly-higher-than-average dividends and free cash flow yields. Several of them have even &lt;a href=&quot;https://diligent-dollar.com/2018/07/18/why-do-sin-stocks-outperform/&quot;&gt;significantly outperformed&lt;/a&gt; relative to market averages.&lt;/p&gt;
+
+&lt;p&gt;One more note on anti-ESG companies - as long as there are investors who don’t mind investing in anti-ESG companies, depressing their stock prices always opens the door to such investors buying assets for pennies on the dollar and taking them private. These investors then can take the cash flow from the assets and use them for whatever causes they want. Said another way, artificially depressing anti-ESG asset prices opens the door for investors to come in and make outsized profits.&lt;/p&gt;
+
+&lt;p&gt;So do I have a better proposal for promoting ESG causes than ESG investing? It’s easier said than done, but I think targeting cash flow directly is the best way to reward ESG companies and punish anti-ESG companies in the long run. At a consumer and investor level, this is as simple as deciding to not buy goods or services from anti-ESG and buy as much as possible from pro-ESG. If you’re a supplier, consultant or someone who sells to companies,  it’s discounting your ESG customers. These behaviors are guaranteed to impact the bottom lines of companies as opposed to changing their cost of capital. Better yet, they change the return rate on existing and new projects in a way not tied to the market (cost of equity and debt are both linked to market forces).&lt;/p&gt;
+
+&lt;p&gt;Think of it this way - if a project returns -1% instead of 5%, no cost of funds will justify it. The way to get bad companies to face this -1% is to stop buying their products and make them face higher costs for their inputs. Conversely, if a project returns 10% instead of 5%, suddenly a cost of funds of up to 9% and change is acceptable. ESG companies now can access all types of new capital since their expected return from available projects is higher.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, I’m less supportive at this point of writing blank checks to ESG-companies than I am of buying products that were made in a socially and environmentally responsible manner. ESG investing is a very blunt instrument for changing how companies do business compared to the sharp instrument of changes in customer and supplier behavior.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2019/04/20/esg-investing.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/04/20/esg-investing.html</guid>
+      </item>
+    
+      <item>
         <title>AWS Explained to Shareholders From a Developer</title>
         <description>&lt;p&gt;There has been significant discussion recently around the following revelation in &lt;a href=&quot;https://www.sec.gov/Archives/edgar/data/1759509/000119312519059849/d633517ds1.htm&quot;&gt;Lyft’s S1&lt;/a&gt;:&lt;/p&gt;
 
@@ -636,82 +675,6 @@ will be notified.&lt;/p&gt;
         <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
         <link>http://0.0.0.0:4000/2018/04/09/redux-dispatch-and-subscribe.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/09/redux-dispatch-and-subscribe.html</guid>
-      </item>
-    
-      <item>
-        <title>Redux - createStore</title>
-        <description>&lt;p&gt;I have been using React for about two years now, but have never used Redux for a major project. As I’m on vacation for a few days, I figure this is a great time to start learning Redux without the pressures of daily work. I want to take a different approach to learning frameworks this time around - using a bottom-up approach instead of top-down one. I’m going to review the source code (&lt;a href=&quot;https://github.com/reactjs/redux/tree/v3.7.2&quot;&gt;at tag &lt;code class=&quot;highlighter-rouge&quot;&gt;v3.7.2&lt;/code&gt;&lt;/a&gt;) instead of API docs.&lt;/p&gt;
-
-&lt;p&gt;In my early experiments with Redux, I was delighted to find no frontend framework is necessary. Redux can be used in a Node project without issue, although that was obviously not the intent of Dan Abramov and its authors. Because experimenting outside of the browser leads to fewer distractions - no consideration of the DOM or browser APIs is necessary - this blog series will use a command-line app in Node as the project that invokes Redux.&lt;/p&gt;
-
-&lt;p&gt;This blog post will focus on Redux’s &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;, and use a dumb counter command line application to discuss the Redux store. &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; only requires one argument (&lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt;), and can optionally take a &lt;code class=&quot;highlighter-rouge&quot;&gt;preloadedState&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;enhancer&lt;/code&gt;. Today, I’m only going to pass the required &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; argument to &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;. The Redux source code describes this argument as follows:&lt;/p&gt;
-
-&lt;blockquote&gt;
-
-  &lt;p&gt;@param {Function} reducer A function that returns the next state tree, given the current state tree and the action to handle.&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;And what does &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; return?&lt;/p&gt;
-
-&lt;blockquote&gt;
-
-  &lt;p&gt;Creates a Redux store that holds the state tree.
-The only way to change the data in the store is to call &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch()&lt;/code&gt; on it.&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;Let’s trace the source code with only the &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; argument. &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; first checks that &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; is a function. Not passing a &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; that’s a function throws an error:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'redux'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Expected&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reducer&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That makes sense, as no function means no way to input a state tree and output a new state tree.&lt;/p&gt;
-
-&lt;p&gt;The source then initializes 5 variables via &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; - meaning these variables can be set to different values without error - and 6 functions. I plan to eventually review all of these in future posts, but for now I’ll simply discuss what happens when &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; is invoked. After declaration of these variables and functions, a call to &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is made (&lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch({ type: ActionTypes.INIT })&lt;/code&gt;) before the function returns an object. The comment above the initial dispatch reads as follows:&lt;/p&gt;
-
-&lt;blockquote&gt;
-
-  &lt;p&gt;// When a store is created, an “INIT” action is dispatched so that every
-// reducer returns their initial state. This effectively populates
-// the initial state tree.&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ActionTypes.INIT&lt;/code&gt; is the string &lt;code class=&quot;highlighter-rouge&quot;&gt;@@redux/INIT&lt;/code&gt; (note that in the &lt;code class=&quot;highlighter-rouge&quot;&gt;4&lt;/code&gt;+ releases this also includes a randomly generated alphanumeric string, like &lt;code class=&quot;highlighter-rouge&quot;&gt;3.o.k.a.q.1.v.5.x.q.s.b.6.r.d.i.y.6.6.r&lt;/code&gt;). The Redux source notes about these action types:&lt;/p&gt;
-
-&lt;blockquote&gt;
-
-  &lt;p&gt;These are private action types reserved by Redux.
-For any unknown actions, you must return the current state.
-If the current state is undefined, you must return the initial state.
-Do not reference these action types directly in your code.&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;I don’t expect my code to be familiar with the action type &lt;code class=&quot;highlighter-rouge&quot;&gt;@@redux/INIT&lt;/code&gt;, so my &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; should return the initial state on first call and current state on subsequent calls - this makes sense, as the code comment before the first &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; says its purpose is for every reducer to return its initial state.&lt;/p&gt;
-
-&lt;p&gt;This first &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; call can be seen when creating a Redux store. I’ve set a breakpoint on my simple reducer within &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;, and here’s what the first invocation looks like:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/createStore-first-dispatch.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;My store is ready to be returned following this dispatch call. The returned object has 5 keys (&lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;getState&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;replaceReducer&lt;/code&gt;, and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Symbol(observable&lt;/code&gt;), all of which have function values.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;getState&lt;/code&gt; is a simple function that just returns &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; (one of the aforementioned declared variables that is referenced by the other functions). On the &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; call in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; is set to the result from invoking the reducer passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/current-state-and-reducer.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Based on what we know about &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;, writing a simple command line app that asks for a number from user input and logs it the console is simple enough:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/563190c9c17e99c6c031260514f5c215.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;In the next post, I want to discuss &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; calls after the initial one and &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt;. I’ll explore these Redux features by building the command line app out to allow decrementing, incrementing, multiplying and dividing numbers from user input.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 07 Apr 2018 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2018/04/07/redux-create-store.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/07/redux-create-store.html</guid>
       </item>
     
   </channel>
