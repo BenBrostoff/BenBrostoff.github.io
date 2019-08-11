@@ -7,6 +7,47 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>React's act</title>
+        <description>&lt;p&gt;One challenge of writing React tests is knowing where you are in the component lifecycle. Is the component mounted? In the middle of a state update? Has it received props? Answering these questions determines what the tester should assert. Through a colleague at work, I recently found React &lt;code class=&quot;highlighter-rouge&quot;&gt;16.9&lt;/code&gt; includes an &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; function that can take an &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; callback.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; itself, however - which stands for the &lt;a href=&quot;http://wiki.c2.com/?ArrangeActAssert&quot;&gt;Arrange-Act-Assert testing pattern&lt;/a&gt; existed far before &lt;code class=&quot;highlighter-rouge&quot;&gt;16.9&lt;/code&gt;, and allows you to guarantee all state updates have completed before making assertions on a component. &lt;a href=&quot;https://reactjs.org/docs/testing-recipes.html&quot;&gt;From the docs&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When writing UI tests, tasks like rendering, user events, or data fetching can be considered as “units” of interaction with a user interface. React provides a helper called act() that makes sure all updates related to these “units” have been processed and applied to the DOM before you make any assertions…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I recommend the aforementioned &lt;a href=&quot;https://reactjs.org/docs/testing-recipes.html&quot;&gt;testing recipes&lt;/a&gt; page for a full walkthrough of &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; examples as well as &lt;a href=&quot;https://github.com/threepointone/react-act-examples/blob/master/sync.md&quot;&gt;Sunil Pai’s examples&lt;/a&gt; - Sunil originally authored the &lt;a href=&quot;https://github.com/facebook/react/pull/14853/files&quot;&gt;PR&lt;/a&gt; that acted &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt;. For this blog post, I want to walk through a simple example that will show the potential value of this testing utility.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note - all examples below can be found in this &lt;a href=&quot;https://codesandbox.io/s/1-react-act-use-4ke1t?fontsize=14&amp;amp;previewwindow=tests&quot;&gt;CodeSandbox&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s start with a sync &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt;. Consider a component with just a &lt;code class=&quot;highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; call that sets a value on the component:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/34a93255596772fa1942757359ff371d.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The difference between using &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; and not using &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; is the test waiting on the callback inside &lt;code class=&quot;highlighter-rouge&quot;&gt;useEffect&lt;/code&gt;:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/934bb121200a78227578967b1a85494d.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; act - again, newly released in React &lt;code class=&quot;highlighter-rouge&quot;&gt;16.9&lt;/code&gt; - allows you to wait on promises to resolve and state updates to complete.&lt;/p&gt;
+
+&lt;p&gt;Here’s what an async component might look like…&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/c652ac47b58bc3402d80887459f9ba26.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;…and the differences between sync and async &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt;.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/BenBrostoff/1b13a6b1da5b3294864bd257f924480e.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Importantly, &lt;code class=&quot;highlighter-rouge&quot;&gt;enzyme&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;react-testing-library&lt;/code&gt; are already pulling &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; into their API and have means of accessing it (or should have in the future), so if you’re using either library, the above boilerplate isn’t necessary. That said, I found it useful to go through this exercise to get a sense of how &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; works.&lt;/p&gt;
+
+&lt;p&gt;I’m extremely excited React offers this utility - it’s extremely useful in fixing things like intermittently failing tests that rely on promises resolving in some fixed amount of time (which hopefully never existed in your test suite anyways). React testing forces you to understand the lifecycle of your components and how they handle state. &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; is a great way to enhance that understanding.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2019/08/11/react-act-as-valuable-testing-tool.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/08/11/react-act-as-valuable-testing-tool.html</guid>
+      </item>
+    
+      <item>
         <title>ESG Investing Skepticism</title>
         <description>&lt;p&gt;&lt;em&gt;Note: I want to credit &lt;a href=&quot;https://www.aqr.com/Insights/Perspectives/Virtue-is-its-Own-Reward-Or-One-Mans-Ceiling-is-Another-Mans-Floor&quot;&gt;Cliff Asness&lt;/a&gt; and the folks over at &lt;a href=&quot;https://diligent-dollar.com/2018/07/18/why-do-sin-stocks-outperform/&quot;&gt;Diligent Dollar&lt;/a&gt; for many of the ideas in this post.&lt;/em&gt;&lt;/p&gt;
 
@@ -605,76 +646,6 @@ call &lt;code class=&quot;highlighter-rouge&quot;&gt;getState()&lt;/code&gt; to 
         <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
         <link>http://0.0.0.0:4000/2018/04/20/redux-subscribe-listeners.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/20/redux-subscribe-listeners.html</guid>
-      </item>
-    
-      <item>
-        <title>Redux - .dispatch</title>
-        <description>&lt;p&gt;Today’s post will look at what happens on &lt;code class=&quot;highlighter-rouge&quot;&gt;store.dispatch(action)&lt;/code&gt; calls after the &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; call invoked in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; (discussed in Part I of this Redux mini-series). As a refresher, the code below was generated in Part I. I’ll I’ve done is add a call to dispatch to increment my command line counter by 1.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/b52270ab73dd98be56e9a33747f60be9.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The counter now increments to the input number plus 1. So what happened here? &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is actually a very short method (26 lines total, including white space), so this blog post will attempt to explain each line. The whole of dispatch is below (recall I’m using Redux &lt;code class=&quot;highlighter-rouge&quot;&gt;3.7.2&lt;/code&gt;):&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/08cb9127085c104a1c7cae02c77a7764.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;I first want to review the commentary above the &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; method in the Redux source. Portions of the commentary deal with actions that are &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise&lt;/code&gt;s, which Redux out of the box does not support. I’ll skip those sections for now. The first relevant section is below:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Dispatches an action. It is the only way to trigger a state change.&lt;/p&gt;
-
-  &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; function, used to create the store, will be called with the
-current state tree and the given &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt;. Its return value will
-be considered the &lt;strong&gt;next&lt;/strong&gt; state of the tree, and the change listeners
-will be notified.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So, invoking &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is the only way to trigger a change in the store’s &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is invoked with an &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt; as an argument, which is passed to the reducer originally passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;. The return value from the reducer is the new &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; of the tree. The final part of the sentence about change listeners is not yet relevant to the toy application I’m building, so I’ll ignore it for now.&lt;/p&gt;
-
-&lt;p&gt;As previously noted, &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; takes an &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt; as an argument, which should be a POJO (helps with &lt;code class=&quot;highlighter-rouge&quot;&gt;redux-devtools&lt;/code&gt;), needs a type property and cannot be undefined.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;@param {Object} action A plain object representing “what changed”. It is a good idea to keep actions serializable so you can record and replay user sessions, or use the time travelling &lt;code class=&quot;highlighter-rouge&quot;&gt;redux-devtools&lt;/code&gt;. An action must have a &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; property which may not be &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;. It is a good idea to use string constants for action types.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The beginning of dispatch just covers these bases and raises errors where appropriate:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/6f4faaf4ebcaa0196d175ead31e42a76.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;There’s also a conditional that checks that &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;truthy&lt;/code&gt;, and raises an error if it is.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/22ac068b76cf22c53e21355d75cdc366.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The reason for this error is to prevent calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; from a &lt;code class=&quot;highlighter-rouge&quot;&gt;reducer&lt;/code&gt; (hence the error “Reducers may not dispatch actions.”). Raising this error can be done by passing the store into an action and calling &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; from the reducer, like so:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/0e64c47bcfa840ef244671432d60223e.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The next part of &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; is a &lt;code class=&quot;highlighter-rouge&quot;&gt;try&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;finally&lt;/code&gt; block that sets &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; to true (a variable declared through &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;), sets &lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;currentReducer(currentState, action)&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;currentState&lt;/code&gt; is also declared via &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;), and then in the &lt;code class=&quot;highlighter-rouge&quot;&gt;finally&lt;/code&gt; sets &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; back to false. Again, the only usage of &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; is in this function to prevent calling &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; in the reducer.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/c5f0b1a92590c4b306dbf7cdf282694e.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Also, if you’re wondering why a &lt;code class=&quot;highlighter-rouge&quot;&gt;try&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;finally&lt;/code&gt; here, the intent is to prevent Redux from never setting &lt;code class=&quot;highlighter-rouge&quot;&gt;isDispatching&lt;/code&gt; back to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;. This would prevent the reducer from ever firing again (because of the aforementioned “Reducers may not dispatch actions” error). I actually learned this from looking &lt;a href=&quot;https://github.com/reactjs/redux/pull/372&quot;&gt;at this Redux PR&lt;/a&gt;, and specifically this exchange:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/why-try-finally.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The final part of &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; before the return statement is to set a &lt;code class=&quot;highlighter-rouge&quot;&gt;listeners&lt;/code&gt; array equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt;, which is then set to &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt;. Both the &lt;code class=&quot;highlighter-rouge&quot;&gt;*Listeners&lt;/code&gt; variables are declared via &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;. A &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop then iterates through the listeners and invokes each one.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/323617a993a2bcfda4a8e77eff829b4f.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;In this toy example, both &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; are empty arrays, so there are no listeners to invoke.&lt;/p&gt;
-
-&lt;p&gt;The return value is just the &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt; passed to it:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;@returns {Object} For convenience, the same action object you dispatched.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Why this is convenient, I’m not yet sure, but will trust the source for now.&lt;/p&gt;
-
-&lt;p&gt;We’ve done it! This post covers &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; without any listeners set. I’ll use the next post to generate listeners via &lt;code class=&quot;highlighter-rouge&quot;&gt;store.subscribe&lt;/code&gt; and analyze what happens in that listeners loop when listeners exist.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2018/04/09/redux-dispatch-and-subscribe.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/09/redux-dispatch-and-subscribe.html</guid>
       </item>
     
   </channel>
