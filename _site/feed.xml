@@ -7,6 +7,44 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>The Group Effect</title>
+        <description>&lt;p&gt;I first read about the Group Effect in Matt Fitzgerald’s book &lt;a href=&quot;https://www.amazon.com/How-Bad-You-Want-Psychology/dp/1937715418&quot;&gt;&lt;em&gt;How Badly Do You Want It&lt;/em&gt;&lt;/a&gt;, a collection of stories about endurance athletes who overcame incredible odds. &lt;a href=&quot;https://mensrunninguk.co.uk/top-feature/the-group-effect/&quot;&gt;Fitzgerald summarizes&lt;/a&gt; the group effect below:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The tiny of island of Cuba has captured 67 Olympics medals in the sport of boxing since 1968, more than any other country. Germany has finished either first, second or third in 13 of the last 16 World Cups. Nations that dominate a particular sport share one basic characteristic: their people are crazy for that sport. To put it in a formula: national dominance of a sport is a function of the scope and intensity of its citizens’ participation in it. If enormous numbers of a nation’s people participate in a sport, that nation is certain to do quite well in global competition. Sociologist John Bruhn dubbed this phenomenon the group effect. The psychobiological model of endurance performance explains how it works in the context of sports like running.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;According to this model, any factor that reduces the amount of effort an athlete perceives at a given level of exercise intensity will enhance performance. When people work together, their brains release greater amounts of mood-lifting, discomfort- suppressing endorphins than they do when the same task is undertaken alone. Consequently, endurance athletes perceive less effort and perform better when training and racing cooperatively than they do alone. The group effect is not something that has to be acquired. It is a coping skill that exists latently in everyone, ready to be activated by the right situation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I am a believer that the group effect is real. In sports and work settings, I believe my perception of effort has been positively impacted by being in groups. Difficult tasks feel less difficult for me when there is a social element to these tasks. The shared experience of running or pair programming, for instance, makes fatigue and complexity easier to deal with because you have one or more people to share it with.&lt;/p&gt;
+
+&lt;p&gt;Realizing the benefits of the group effect requires a group to exist. For various reasons, there may not be a group for the thing you want to improve at. And even if there is, it may not practice the thing together. An example of this group-but-not-group-effect situation would be an engineering culture where the pull request culture is to sight-read and press approve or make some small comments. Software engineer group-effect from my experience only comes from two or more people running code together and experimenting with the effects of small and large changes in an in-person setting. Said another way, just because a group does the same thing doesn’t mean they do it together.&lt;/p&gt;
+
+&lt;p&gt;I think it’s possible that when people talk about culture, they’re actually referring to a result of the group effect. My experience has been that a culture is positive for me when 1) everyone feels comfortable, 2) everyone feels they are improving and 3) everyone feels they are adding value. The group effect directly addresses (2) - per the article above, people “perceive less effort and perform better between when training… cooperatively than when they do alone.”&lt;/p&gt;
+
+&lt;p&gt;In a way, (3) is an extension of (2), because if everyone is improving, everyone (potentially) feels that just by virtue of showing up and putting in effort, they’re adding to each team member’s success. With regard to (1), I’m not sure what group dynamics need to arise in order for everyone to feel comfortable. I do think that spending more time together generally improves relationships between people, so more group effect may lead to more comfort in being a part of the group.&lt;/p&gt;
+
+&lt;p&gt;Knowing the group effect exists is an argument for introducing it when possible. Yes, some activities are probably easier when performed solo. Pair-programming often feels less efficient to me than solo-programming, but I also don’t think efficiency is a proxy for consistency or resistance against quitting. Some of my biggest breakthroughs in projects have come from good pair programming sessions. There’s a place for both, and neither should be ignored or said to be always better than the other.&lt;/p&gt;
+
+&lt;p&gt;Some potential ways in software and sports to introduce the group effect:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;For code reviews - moving code reviews to in-person, interactive Q&amp;amp;A sessions, where the reviewer runs the code and explores all possible code paths alongside the author&lt;/li&gt;
+  &lt;li&gt;For any endurance race - finding someone or group of people doing the same race on a similar timeline and training together on at least a weekly cadence&lt;/li&gt;
+  &lt;li&gt;For spiking on a new technology or language - meeting weekly or more to pair-program, review useful resources and discuss difficult concepts&lt;/li&gt;
+  &lt;li&gt;For improving an athletic weakness - finding someone with the same weakness (ex. backstroke is weakest stroke for an individual medley swimmer, swimmer sees improving backstroke as easiest way to faster time) and crafting group training plan to make weakness strength&lt;/li&gt;
+  &lt;li&gt;For changing a major issue in a codebase - devoting one or two days of the week to talk about the issue, brainstorm solutions and prototype solutions (through pair-programming) together. Importantly, the solution here would be group-created versus individual-created, which in my opinion is one reason resistance crops up for good ideas on introducing new patterns into a codebase and deprecating old patterns&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At the very least, I think it’s worth exploring whether the group effect will work in domains that have traditionally been one-person activities.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2019/09/15/the-group-effect.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/09/15/the-group-effect.html</guid>
+      </item>
+    
+      <item>
         <title>React's act</title>
         <description>&lt;p&gt;One challenge of writing React tests is knowing where you are in the component lifecycle. Is the component mounted? In the middle of a state update? Has it received props? Answering these questions determines what the tester should assert. Through a colleague at work, I recently found React &lt;code class=&quot;highlighter-rouge&quot;&gt;16.9&lt;/code&gt; includes an &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; function that can take an &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; callback.&lt;/p&gt;
 
@@ -549,103 +587,6 @@ All of these tasks to some degree require familiarity with the AWS UI and how to
         <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
         <link>http://0.0.0.0:4000/2018/08/11/adjustments.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2018/08/11/adjustments.html</guid>
-      </item>
-    
-      <item>
-        <title>Redux - .subscribe</title>
-        <description>&lt;p&gt;My &lt;a href=&quot;http://benbrostoff.github.io/2018/04/09/redux-dispatch-and-subscribe.html&quot;&gt;last post&lt;/a&gt; explored calling &lt;code class=&quot;highlighter-rouge&quot;&gt;.dispatch&lt;/code&gt; on a Redux store without listeners; in this post, I will add listeners to the toy application we’ve been building in this series and trace the &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; source in the process. I’m now using &lt;code class=&quot;highlighter-rouge&quot;&gt;v4.0.0&lt;/code&gt;, which was &lt;a href=&quot;https://github.com/reactjs/redux/releases/tag/v4.0.0&quot;&gt;released on April 16th&lt;/a&gt; - when I started on this series, Redux was on &lt;code class=&quot;highlighter-rouge&quot;&gt;v3.7.2&lt;/code&gt;. To begin our code exploration, I’ll call subscribe on our Redux store and pass in a callback that just logs the state of the store to the console:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/b296bda2b96040d0ec9950a7402d2fe6.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Let’s begin with the documentation for &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; in the source.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Adds a change listener. It will be called any time an action is dispatched,
-and some part of the state tree may potentially have changed. You may then
-call &lt;code class=&quot;highlighter-rouge&quot;&gt;getState()&lt;/code&gt; to read the current state tree inside the callback.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The next items in the docs before the function signature are about calling &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; from a change listener, which we’ll ignore for now since our toy example does not do this. The function signature explains that &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; expects a function that will be invoked on every dispatch and returns a function that when invoked will unsubscribe the listener:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;@param {Function} listener A callback to be invoked on every dispatch.
-@returns {Function} A function to remove this change listener.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The full &lt;code class=&quot;highlighter-rouge&quot;&gt;v4.0.0&lt;/code&gt; source  for &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; is below. When reading this blog post, it may be useful to split screen and have it open, although I’ll add gists where relevant:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/226d5e7ea1c4ebe1c8b8293ea29ee795.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;As we’ve seen elsewhere in the Redux source, the beginning of the function body is type checking and raising errors if the expectations outlined in the docs are not met. Redux checks to see that &lt;code class=&quot;highlighter-rouge&quot;&gt;listener&lt;/code&gt; is a function and that a &lt;code class=&quot;highlighter-rouge&quot;&gt;store.dispatch&lt;/code&gt; call is not in progress when &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; is invoked.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/ff4a896323dd937155bb18766278a7bc.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Two notable things then happen:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/07b04cfde6c65d1cf6da4e09b7280e40.js&quot;&gt;&lt;/script&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Redux sets a variable that will be updated later called &lt;code class=&quot;highlighter-rouge&quot;&gt;isSubscribed&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; - this makes sense from a naming perspective, as we’re subscribing to a function. We’ll come back to this variable when discussing &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt;, which predictably sets it to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A function called &lt;code class=&quot;highlighter-rouge&quot;&gt;ensureCanMutateNextListeners&lt;/code&gt; is called next, which is small despite the long name. All this does is check if two variables declared in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; are the same array (and originally they are - &lt;code class=&quot;highlighter-rouge&quot;&gt;let nextListeners = currentListeners&lt;/code&gt; happens on &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;). If they are, &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; is set equal to a copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; via &lt;code class=&quot;highlighter-rouge&quot;&gt;.slice()&lt;/code&gt;, thereby destroying the equality:&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/994b547071145785093b0f1970485df6.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;listener&lt;/code&gt; passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; is pushed into the array of &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Note that the Redux docs have numerous references to the term “snapshotting listeners”, and I take that to mean the function &lt;code class=&quot;highlighter-rouge&quot;&gt;ensureCanMutateNextListeners&lt;/code&gt; is serving. The Redux source never adds or removes a listener without first copying &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; if &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; are a reference to the same value (&lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; is assigned to &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; and in &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;Finally, an &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; function is returned, which includes closures from variables from &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/6bba11e54f70eb88f5ee88772a8de3ae.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The first conditional and empty return is to ensure that calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; after the first call do nothing. On the first &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; call, &lt;code class=&quot;highlighter-rouge&quot;&gt;isSubscribed&lt;/code&gt; is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;; afterwards, there is no way to set it back to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;, since each &lt;code class=&quot;highlighter-rouge&quot;&gt;subscribe&lt;/code&gt; call creates a separate closure. Calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; after the first one bail out as early as possible.&lt;/p&gt;
-
-&lt;p&gt;Next, Redux again checks if a &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; call is in progress and throws an error if this is the case. The error here is to guard against calling unsubscribe while a reducer is executing. As an aside, this &lt;code class=&quot;highlighter-rouge&quot;&gt;if (isDispatching)&lt;/code&gt; and error throwing logic happens three times in the &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; source - once in &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; (reducers cannot dispatch actions), once in &lt;code class=&quot;highlighter-rouge&quot;&gt;getState&lt;/code&gt; (cannot read state while reducer is executing) and once here.&lt;/p&gt;
-
-&lt;p&gt;As alluded to earlier, Redux then sets &lt;code class=&quot;highlighter-rouge&quot;&gt;isSubscribed&lt;/code&gt; to false, guaranteeing future calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; will do nothing.&lt;/p&gt;
-
-&lt;p&gt;The meat of &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt; is next:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/974773e6151b28f66e67395cad37abf5.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;We reviewed &lt;code class=&quot;highlighter-rouge&quot;&gt;ensureCanMutateNextListeners()&lt;/code&gt; - this call protects &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; from being mutated by changes to &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners.indexOf(listener)&lt;/code&gt; gets the index in the array of listeners of the listener unsubscribe is tied to. Finally, &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners.splice(index, 1)&lt;/code&gt; removes the listener from the &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; array. An example may be helpful.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/32a397577c574c8509020709fc3a918a.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;In the first unsubscribe call, &lt;code class=&quot;highlighter-rouge&quot;&gt;index&lt;/code&gt; is 2 (&lt;code class=&quot;highlighter-rouge&quot;&gt;funcC&lt;/code&gt; is the last listener in an array of three), then 1 (with &lt;code class=&quot;highlighter-rouge&quot;&gt;funcC&lt;/code&gt; removed, &lt;code class=&quot;highlighter-rouge&quot;&gt;funcB&lt;/code&gt; is now the last listener in an array of 2), then 0 (&lt;code class=&quot;highlighter-rouge&quot;&gt;funcA&lt;/code&gt; is the only listener in an array of one). &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;splice&lt;/code&gt; is a mutative function&lt;/a&gt; that takes a position as the first argument and how many elements to delete as the second. With &lt;code class=&quot;highlighter-rouge&quot;&gt;unsubscribe&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;splice&lt;/code&gt; is deleting the relevant listener at its respective position.&lt;/p&gt;
-
-&lt;p&gt;Now that we’ve reviewed subscribe, we can actually trace what happens on a dispatch with a listener:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/d73da8dd6ad848a2ee5a575d97685b59.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;At the very end of &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; (the only remaining line is to return an action), Redux sets &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt; and iterates through the current listeners in the order they were added. Each listener is then invoked with no arguments. It would be easy enough to give the listeners the current &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt;, but &lt;a href=&quot;https://github.com/reactjs/redux/issues/1057&quot;&gt;per the original author, Dan Abramov,&lt;/a&gt; this is a misuse of the library:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Subscribers should react to the new state, not to what happened.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In summary, the subscribe source:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Checks that the passed argument is a function and that the reducer passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt; is not executing&lt;/li&gt;
-  &lt;li&gt;Pushes the passed listener function to an array of listeners (&lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;Returns an unsubscribe function that can be invoked in order to remove the listener from the array of listener&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt; then invokes every listener in &lt;code class=&quot;highlighter-rouge&quot;&gt;currentListeners&lt;/code&gt; (which is assigned to &lt;code class=&quot;highlighter-rouge&quot;&gt;nextListeners&lt;/code&gt;). Thus, any function passed to subscribe will be called on &lt;code class=&quot;highlighter-rouge&quot;&gt;dispatch&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;That about wraps up the bulk of &lt;code class=&quot;highlighter-rouge&quot;&gt;createStore&lt;/code&gt;. Note that I skipped some of the API that was not part of Redux in its original 2015 state - &lt;code class=&quot;highlighter-rouge&quot;&gt;replaceReducer&lt;/code&gt; and Redux’s &lt;code class=&quot;highlighter-rouge&quot;&gt;observable&lt;/code&gt; functions were left out here.&lt;/p&gt;
-
-&lt;p&gt;Next, I want to dive into &lt;code class=&quot;highlighter-rouge&quot;&gt;applyMiddleware&lt;/code&gt; and discussing how adding middleware to a Redux store works behind the scenes.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2018/04/20/redux-subscribe-listeners.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/04/20/redux-subscribe-listeners.html</guid>
       </item>
     
   </channel>
