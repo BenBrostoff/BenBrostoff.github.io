@@ -7,6 +7,75 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Strategies for Long Projects</title>
+        <description>&lt;p&gt;I’m in the middle of three multi-month to a year projects right now:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Writing a book&lt;/li&gt;
+  &lt;li&gt;Running a marathon&lt;/li&gt;
+  &lt;li&gt;Building a new API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each I started months ago and have found brutally difficult in unique ways. For each, progress is often times non-visible and the visible progress is incremental. Running is frequently an exercise in watching your pace go up and down with no discernible reason for the zigs and zags. Many days feel like regressions. Direction can and will change - in writing my book, I’ve changed the plot significantly three different times. Each resulted in a substantial rewrite. Project goals are often moving targets. As is the case with almost everything, unexpected obstacles crop up that you didn’t forecast. Software is a living example here - when you have dependencies (and what software project doesn’t?), changes in those dependencies are changes you must adjust to.&lt;/p&gt;
+
+&lt;p&gt;The saving grace here is that simply putting in the hours usually moves you closer to the goal. Failure is higher probability when time or effort on a project decreases. As a result, I think time budgeting and attitude make an enormous difference. Most of the ideas below deal with one or both. As I like to point out in all of my blog posts that prescribe behavior, the below is stuff that has worked for me and your mileage may vary. Here we go:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Relentless, irrational optimism is the only attitude that works&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Something that seems trivial turns out to be nearly impossible. Mile 5 of a 20 mile run hurts like heck. A third party library massively changed its API. That programming language feature you were confident would resolve your issue doesn’t behave the way the docs said. Unexpected events are going to happen, and while you can’t control these events, you can control your response to them.&lt;/p&gt;
+
+&lt;p&gt;“In the space between stimulus (whap happens) and response, lies our freedom to choose,” &lt;a href=&quot;https://www.goodreads.com/quotes/459654-in-the-space-between-stimulus-what-happens-and-how-we&quot;&gt;writes Stephen Covey&lt;/a&gt;. Taking the time to craft your response when an unexpected event occurs is the opportunity to frame that event as opposed to letting that event frame you. I can’t stress how important I think this idea is - a bad reaction to new information can kill a project in its tracks. I look back on a few of the side projects I’ve stopped working on because I found some library or business that was doing the same thing. In retrospect, I understand that markets can have a large number of competing participants (check out the 10 different rent-a-cars near any major airport). It’s human nature to react negatively to information that isn’t congruent with our expectations. Taking time to respond to new information in addition to expecting the unexpected are strong defenses against negativity.&lt;/p&gt;
+
+&lt;p&gt;Moreover, I believe that choosing to feel something can make you feel that way even if the feeling is artificially manufactured. What I mean by this is that when someone asks us to label how we feel, the label we select is based on how we physically feel at the moment. But what if you said the exact opposite of how you actually felt? Is it possible the re-labeling could become reality? This seems absurd on the face of it, but my experience has been that re-labeling works and causes an actual physical response.&lt;/p&gt;
+
+&lt;p&gt;Of course, taking time and choosing a response is only part of the equation. The other part is infusing such responses with optimism, even if the optimism is a little irrational. I’m not advocating here for pie in the sky optimism - I’ll never run a sub four minute mile. What I am advocating for is optimism that represents a reasonable and possible outcome, even if a few things would have to fall into place for that outcome to happen. After all, our negative responses generally &lt;em&gt;assume&lt;/em&gt; a few things would have to happen for that outcome to play out, so it’s fair to make assumptions on the upside.&lt;/p&gt;
+
+&lt;p&gt;As an example, let’s assume some third party you rely on changed its API and is deprecating the old API in a month. A negative response would implicitly assume that the required changes would take X days and just cause churn in the codebase. A positive response might assume Y days (&amp;lt; X) and that the new API included performance and other improvements AND that doing this refactor could be the subject of a blog post or tech talk that could be used to recruit great engineers or land consulting contracts.&lt;/p&gt;
+
+&lt;p&gt;For the relentless optimist, every setback is 1) never as bad as it seems on the surface and 2) an opportunity in disguise. This view is healthier than the alternative, which is guaranteed to sap energy and fail to identify opportunities embedded in the unexpected event.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Documenting each day shows progress that would otherwise be hidden&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CHANGELOG&lt;/code&gt;s in software are great. They serve as a living document that traces the life of a project. It answers the question “What have the maintainers of this project been doing?” A personal changelog or journal can answer these same questions and prevent the negative feelings that can arise from feeling that a project is going nowhere.&lt;/p&gt;
+
+&lt;p&gt;The reason these feelings arise can be that we just forget the past. For software, I’ve found this is often the time it takes to learn a new technology or understand the source code from a project you’re expected to contribute to. Both take significant time, but once you’ve acquired the skills, it then becomes easy to say “Why did &lt;taskX&gt; take me so long?&quot; Personal changelogs I think should be extremely detailed and include things like:&lt;/taskX&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Spent five hours going through source of repo Y and looking at Stack Overflow and documentation. Tried and failed several times to refactor code - got some cryptic errors with a stack trace I didn’t understand. Finally talked to Bob and found out some this is expected behavior and the workaround is to use a forked version of library XYZ AND to set some environment variables to specific values. This isn’t documented anywhere, so I took the time to document it. Still working on refactoring code.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The fact of the matter is that starting a project is extremely difficult - perhaps more difficult than the middle and end stages of long projects. Learning new things and creating new ideas and patterns requires time, often far more time than implementing the ideas and pattern.&lt;/p&gt;
+
+&lt;p&gt;When a project is a group project, this time might even have some multiplier on it. &lt;em&gt;Agreeing&lt;/em&gt; on new patterns and ideas is perhaps no less difficult than thinking of those ideas and patterns in the first place. A mentor of mine also showed me recently that new groups often regress a bit in the early stages of forming new practices and adjusting to each others’ work patterns - &lt;a href=&quot;https://en.wikipedia.org/wiki/Tuckman%27s_stages_of_group_development&quot;&gt;these stages are called “forming” and “storming”&lt;/a&gt;. Group dynamics take time to get right.&lt;/p&gt;
+
+&lt;p&gt;Changelogs are a way to document things that are easy to forget. When I get discouraged at the pace of a project, looking at my changelog / journal often helps me understand why things have played out the way they have.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Compounding matters a lot&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Compounding generally is discussed in a financial context where interest accrues interest. For software, the equivalent here is developer tools you took time to write being used by you and your teams (code gen, scripts, deploy orchestration, etc.). For running, it’s increasing your V02max and being able to sustain the same effort for a longer time. In each case, the initial time investment saves time down the line and results in new opportunities that may save even more time. Time saved results in new work that saves more time that results in more new work and so on. This is a positive feedback loop.&lt;/p&gt;
+
+&lt;p&gt;David Goggins in his book &lt;a href=&quot;https://www.amazon.com/Cant-Hurt-Me-Master-Your/dp/1544512287&quot;&gt;&lt;em&gt;Can’t Hurt Me&lt;/em&gt;&lt;/a&gt; talks about a memory bank that can be drawn on in times of adversity (or really any time). For each obstacle conquered in pursuit of your goal, you have created a memory that can help you overcome future obstacles. I’ve found this most evident in running - continually doing long runs has made it easier to push through pain. “I can’t believe I have four miles to go” over time has slowly become “I only have four miles to go”. The memory bank re-frames what mileage means. Just like compound interest, positive memories help accrue more positive memories which accrue more positive memories. Some athletes call this “building a base”. The base sets what is normal. By continually increasing the floor that is normal behavior, long-term projects can deliver compounding.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Finding the time means being extremely defensive of your time&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Time is finite. It can be uncomfortable to accept this and act as a fierce guardian of your own time, as doing so may include declining social invitations. I recommend watching &lt;a href=&quot;https://www.youtube.com/watch?v=arj7oStGLkU&quot;&gt;Tim Urban’s TED talk&lt;/a&gt; on procrastination. Tim envisions time as a series of 10 minutes blocks - giving up any of those blocks mean that block is lost forever.&lt;/p&gt;
+
+&lt;p&gt;I think when I’ve talked about this point with friends and family, their reaction is that doing this means becoming an anti-social hermit and making some tradeoff that’s harmful to you. That hasn’t been my experience when I’ve acted in defense of my long-term projects. In fact, &lt;em&gt;not&lt;/em&gt; acting in defense of my long-term projects has felt harmful to me. Falling behind on a project that’s important to me introduces feelings of guilt and frustration.&lt;/p&gt;
+
+&lt;p&gt;Importantly, I think life’s many priorities can be balanced with long-term projects. It has been written that Walter Isaacson wrote many of his books on vacations with friends and family. He would slip away for a few hours at a time, and no one really noticed. He had a great time on these vacations and it seems like nobody was negatively impacted by his small absences.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I wanted to conclude by saying I truly believe long-term projects can lead to transformative returns, even if they fail. Trying to run a marathon, for instance, has brought me into contact with dozens of runners at work and in a running club I go to I probably never would’ve met otherwise. Meeting these runners has led to relationships that have helped me on non-running projects. It’s obviously helped me a ton with my running. I think I’ve witnessed first hand that ambitious projects generate supportive responses from people - on the marathon, the book and the new API, countless people have offered their support, and I’ve been glad to take it.&lt;/p&gt;
+
+&lt;p&gt;I want to encourage myself and anyone reading this to keep trying things that are hard and take a long time. It will be tempting to quit, but overcoming that temptation could be the best decision you ever make.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2019/09/28/long-projects.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/09/28/long-projects.html</guid>
+      </item>
+    
+      <item>
         <title>The Group Effect</title>
         <description>&lt;p&gt;I first read about the Group Effect in Matt Fitzgerald’s book &lt;a href=&quot;https://www.amazon.com/How-Bad-You-Want-Psychology/dp/1937715418&quot;&gt;&lt;em&gt;How Badly Do You Want It&lt;/em&gt;&lt;/a&gt;, a collection of stories about endurance athletes who overcame incredible odds. &lt;a href=&quot;https://mensrunninguk.co.uk/top-feature/the-group-effect/&quot;&gt;Fitzgerald summarizes&lt;/a&gt; the group effect below:&lt;/p&gt;
 
@@ -567,26 +636,6 @@ All of these tasks to some degree require familiarity with the AWS UI and how to
         <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
         <link>http://0.0.0.0:4000/2018/08/28/internal-users.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2018/08/28/internal-users.html</guid>
-      </item>
-    
-      <item>
-        <title>Adjustments</title>
-        <description>&lt;p&gt;If there’s one thing I got out of being a competitive swimmer through high school, it’s that your body always adjusts to the water temperature.&lt;/p&gt;
-
-&lt;p&gt;Water can be high 50s and it will feel fine after 15 seconds of swimming. Yet, people who don’t fully get in – who test it endlessly – will either take 10 extra minutes to get in (which is a lifetime in a swimming workout) or not go in at all. This is why swimmers jump right in.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;If we do not adjust to new business requirements, new frameworks, new DSLs and the passage of time, we are failing our stakeholders&lt;/em&gt;. Moreover, if we do not make it a responsibility to place ourselves in new conditions that are more challenging than our current ones, we are failing ourselves.&lt;/p&gt;
-
-&lt;p&gt;The reason new conditions are challenging is precisely because they are &lt;em&gt;new&lt;/em&gt;. Something like transitioning a company from a REST to a GraphQL API will be initially challenging because of a lack of experience with GraphQL. Raising financing for a first-time founder will be hard because he or she is formally pitching the company for the first time. Negotiating with a new client, adjusting to an unfamiliar codebase, completing a triathlon - all are hard not because of any inherent hardness, but because the activities are unfamiliar.&lt;/p&gt;
-
-&lt;p&gt;So, the actionable takeaway of all this for me it that facing the unfamiliar should be done as soon as possible. The unfamiliar will become familiar with time.&lt;/p&gt;
-
-&lt;p&gt;We decide when that transition happens.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2018/08/11/adjustments.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/08/11/adjustments.html</guid>
       </item>
     
   </channel>

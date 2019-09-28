@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: about/
 ---
-I am an independent consultant currently working on several projects in the healthcare, consumer and data-analytics spaces.
+I am a software engineer at [Indigo Ag](https://www.indigoag.com/) (we're hiring!). On the side, I consult on a few projects and have experience in the healthcare, consumer and data-analytics spaces.
 
 Professionally, I mostly work in Python and JavaScript (server and client-side). I care deeply about improving as a programmer and am always looking for opportunities to learn something new.
 
