@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM ubuntu
 MAINTAINER Ben Brostoff
 
 RUN apt-get update
