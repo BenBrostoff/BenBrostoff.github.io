@@ -7,6 +7,69 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>The Right Set of Primitives</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;There are no silver bullets&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’m not sure who came up with this phrase, but recently I find myself using it and hearing close friends use it. Climbing, software engineering, business, investing, daily fantasy sports - whatever the discipline, there are too many galaxies in the massive universe of skills for each discipline to ever master. Importantly, each discipline has an expanding universe of skills to consider, especially in dynamic fields like software and investing where what once worked no longer works.&lt;/p&gt;
+
+&lt;p&gt;I find the “no silver bullet” reminder both frustrating and thoughtful as someone who values continual improvement. It’s frustrating that getting better at something isn’t as simple as putting in reps; it’s thoughtful in that I sense the veracity of the argument - I have never found getting better at anything to be a linear process. At almost any sustained period of working hard at something, there are periods that seem like regression and periods of exponential improvement. Why is this? Well, there are no silver bullets.&lt;/p&gt;
+
+&lt;p&gt;The related concept I often hear on the subject of no-silver-bullets is about strong principles. Sure, the argument goes, there are no silver bullets, but there are general principles that can be used to make any situation work. I’m a huge fan of Ray Dalio’s book &lt;a href=&quot;https://www.amazon.com/Principles-Life-Work-Ray-Dalio/dp/1501124021&quot;&gt;Principles&lt;/a&gt;, but I do not see these principles or any principles as able to address every potential problem in every discipline.&lt;/p&gt;
+
+&lt;p&gt;In software there’s a related term - &lt;em&gt;the right set of primitives&lt;/em&gt;. I often hear this in relation to libraries that expose a bare minimum of building blocks that developers can build off of. I’ve even used the term when discussing &lt;a href=&quot;https://github.com/BenBrostoff/draftfast&quot;&gt;my own library for daily fantasy sports optimization&lt;/a&gt;. For &lt;code class=&quot;highlighter-rouge&quot;&gt;draftfast&lt;/code&gt;, the primitives are things like &lt;code class=&quot;highlighter-rouge&quot;&gt;Player&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Roster&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;LineupConstraint&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Stack&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;RuleSet&lt;/code&gt;. The goal in building a good library in my opinion is to make the API surface extremely small while supporting nearly everything a developer would want to do related to your library’s stated mission (yes, this is not easy and likely impossible). This makes it easy for the developer to basically memorize your API and write their own code on top of it.&lt;/p&gt;
+
+&lt;p&gt;Primitives and principles are related because both &lt;em&gt;seem&lt;/em&gt; like something real and substantial when in fact they’re just made up concepts by people. Something like a library component is generally just a wrapper around another set of primitives, which is using a programming language under the hood, which is using another compiler and programming language, etc (said another way, more and more primitives underneath the primitives).&lt;/p&gt;
+
+&lt;p&gt;In non-software worlds, rules like “find companies with low EV/EBITDA ratios” is an abstracted mental model for more in-the-weeds ways of looking at cash flow, supply and demand for equities and company capital structure. EV/EBITDA is not really an investing “primitive” - EV and EBITDA themselves are just wrappers around traditional accounting practices (depreciation schedules for instance are core to EBITDA and made up by humans). Primitives and principles aren’t really useful if the goal is to find the smallest atom-like building block for a thing - they’re useful if they help people better understand the building blocks of complicated concepts.&lt;/p&gt;
+
+&lt;p&gt;I think any primitives or principles that are popular today took a long time to come into existence. Primitives and principles both change all the time - to me, easy examples here are front-end JavaScript frameworks and guidelines around nutrition. Both change massively over a handful of years (the food pyramid’s rise and fall, ways of interacting with the DOM in front-end land). There are no silver bullets for creating primitives that last, except for maybe continual trial and error and experimentation to achieve repeatable results.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Dec 2019 00:00:00 -0600</pubDate>
+        <link>http://0.0.0.0:4000/2019/12/01/the-right-set-of-primitives.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/12/01/the-right-set-of-primitives.html</guid>
+      </item>
+    
+      <item>
+        <title>Counterintuitive Techniques</title>
+        <description>&lt;p&gt;Watching &lt;a href=&quot;https://www.nationalgeographic.com/films/free-solo/&quot;&gt;&lt;em&gt;Free Solo&lt;/em&gt;&lt;/a&gt; earlier this year inspired me to sign up for a rock-climbing gym in March. What I’ve learned since then that has most helped my climbing is contrary to how my mind wants to think about climbing. Mainly, footwork and positioning are the foundation for solving hard bouldering problems.&lt;/p&gt;
+
+&lt;p&gt;To this day, my first instinct is to rely on holds through overgripping and leverage upper body strength. This is an anti-pattern in climbing - overgripping is called overgripping for a reason. The evidence of this anti-pattern greets me every day at my gym, where  I regularly see eight year old kids ascending V6s and beyond without breaking a sweat while I struggle to make it up soft V3s. Strength clearly is not a force multiplier in this sport.&lt;/p&gt;
+
+&lt;p&gt;While I’m still a newbie climber, whatever gains I have made I owe to improvements in foot usage that led to better positioning that led to efficiency gains. The hardest bouldering problems I’ve solved have never required me to hold onto some hold for dear life or do something super athletic. They have been exercises in strange foot positions that better distributed body weight so that the problem has felt 10x easier following the foot adjustment. One rock climbing technique called flagging allows you to use a free-hanging foot to counter body weight on an upward move - no hold is required. The foot simply uses the wall for balance. I never would’ve thought of this move on my own and had to see it done hundreds of times before starting to get it.&lt;/p&gt;
+
+&lt;p&gt;I want to label this example and others like it counterintuive techniques. I think of a counterintuitive technique as any method of problem solving that does not seem logical but has efficiency gains that make it completely necessary for solving a problem. The book &lt;a href=&quot;https://www.amazon.com/Alchemy-Curious-Science-Creating-Business/dp/006238841X&quot;&gt;Alchemy&lt;/a&gt; is full of them - Alchemy generally argues that the most (on the surface) logical techniques for marketing and running businesses are not effective because of a mismatch between how humans are wired and what seems rational to humans. What’s interesting here is that the book is full of citations of psychological studies and explorations of the human mind - the title Alchemy only comes from the fact that the ideas in the book (ex. ads with cute animals often have a larger ROI than major product improvements) seem absurd on the surface.&lt;/p&gt;
+
+&lt;p&gt;This idea I also think is powerful when applied to building software. The one I have had the most experience in recently is architecture planning and documentation. Both do not require writing code. Logically, it seems like writing code is the fastest way to build software. Yet, I’m finding that creating parallel work streams and strong API contracts only can happen when the upfront work of writing out schemas, API examples (with the underlying methods unimplemented) and box and flow diagrams is done. These documents once written last forever and will likely stay open in separate windows for reference as engineers build parts of the final product. In retrospect, this technique seems obvious - how would you build a house without a blueprint? - but the culture of measuring project progress by lines of code and GitHub activity remains unfortunately a staple of our industry.&lt;/p&gt;
+
+&lt;p&gt;Counterintuitive techniques are easy to adapt once and then forget. Unlike intuitive techniques (ex. use TODO lists, follow routines, write unit tests, don’t climb up without grabbing onto something), counterintuitive techniques have to be remembered and willpower is required to use them (ex. clean up your TODO list, break routine if not effective, stop writing unit tests that have no value, you don’t need a good hold to climb up if you have solid footing). Said another way, they’re not free or easy to adopt and that’s why they’re useful. Like being a contrarian in the market, counterintuitive techniques are most likely to not be in use by a lot of people, so it follows there are the most gains to be had from adopting them.&lt;/p&gt;
+
+&lt;p&gt;As a final note here, I think counterintuive techniques because they’re hard to find require deliberate practice. Sometimes it helps me to have this practice happen in a non-pressure situation, as my natural instincts would take over in a pressure situation. It’s easy to start overgripping on a hard bouldering problem to feel safe. On an easy route, flagging is easier to practice since falling is low probability. Practice needs to happen first where failure feels acceptable.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 31 Oct 2019 00:00:00 -0500</pubDate>
+        <link>http://0.0.0.0:4000/2019/10/31/counterintuive-signals.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/10/31/counterintuive-signals.html</guid>
+      </item>
+    
+      <item>
+        <title>Focus and the Office</title>
+        <description>&lt;p&gt;I’ve been thinking recently about the conditions necessary to produce great work. These conditions differ per person and may seem inconsequential when listed out. Standing versus sitting desk, light versus dark room, background noise versus complete silence, online versus offline - are these responsible for work quality?&lt;/p&gt;
+
+&lt;p&gt;Most of my posts end up reading like Economist articles without the great writing - by this I mean that I always take a middle position toward complicated questions. Here though, I know I wholeheartedly believe that the conditions to produce high quality work are specific per person and require work to replicate. I don’t think it’s chance that so many authors retreat to cabins in the woods or mountain settings to write books. Setting oneself up for success in focusing and then delivering something great requires knowing oneself. When am I distracted? When am I completely in the zone?&lt;/p&gt;
+
+&lt;p&gt;What’s interesting to me is that “working from home” - which really means working from a place someone believes gives them the best chance of work success, a place that isn’t necessarily home - is the only avenue most workplaces allow for people to optimize their own environments. Even the best crafted office is going to have some opinions built into it. These opinions are one or a group of people’s view on what makes a great office, and it’s obvious these views are all over the place. I have worked in open office plans, cubicle-based offices and offices where there were no desks and people sat on beanbags and couches. I believe in everything there is no silver bullet, but there really is no silver bullet to office environment perfection. Everyone is different, and it’s impossible to make an office work for everyone.&lt;/p&gt;
+
+&lt;p&gt;Environment hugely influences focus, which hugely influences great work. Why do we so often assume a one-size fits all for environment? The common reason I hear is that people need to be able to meet in person and communicate as clearly as possible. If that’s true, why not have meetings in person and then let people do deep work that requires focus where ever they want?&lt;/p&gt;
+
+&lt;p&gt;To be clear, this is not a pro remote-work article. Rather, it’s a suggestion that we all think more critically about the environmental conditions per person that lead to success.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Oct 2019 00:00:00 -0500</pubDate>
+        <link>http://0.0.0.0:4000/2019/10/30/focus.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2019/10/30/focus.html</guid>
+      </item>
+    
+      <item>
         <title>Strategies for Long Projects</title>
         <description>&lt;p&gt;I’m in the middle of three multi-month to a year projects right now:&lt;/p&gt;
 
@@ -70,7 +133,7 @@
 
 &lt;p&gt;I want to encourage myself and anyone reading this to keep trying things that are hard and take a long time. It will be tempting to quit, but overcoming that temptation could be the best decision you ever make.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 28 Sep 2019 00:00:00 -0500</pubDate>
         <link>http://0.0.0.0:4000/2019/09/28/long-projects.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/09/28/long-projects.html</guid>
       </item>
@@ -108,7 +171,7 @@
 
 &lt;p&gt;At the very least, I think it’s worth exploring whether the group effect will work in domains that have traditionally been one-person activities.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 15 Sep 2019 00:00:00 -0500</pubDate>
         <link>http://0.0.0.0:4000/2019/09/15/the-group-effect.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/09/15/the-group-effect.html</guid>
       </item>
@@ -149,7 +212,7 @@
 
 &lt;p&gt;I’m extremely excited React offers this utility - it’s extremely useful in fixing things like intermittently failing tests that rely on promises resolving in some fixed amount of time (which hopefully never existed in your test suite anyways). React testing forces you to understand the lifecycle of your components and how they handle state. &lt;code class=&quot;highlighter-rouge&quot;&gt;act&lt;/code&gt; is a great way to enhance that understanding.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 11 Aug 2019 00:00:00 -0500</pubDate>
         <link>http://0.0.0.0:4000/2019/08/11/react-act-as-valuable-testing-tool.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/08/11/react-act-as-valuable-testing-tool.html</guid>
       </item>
@@ -188,7 +251,7 @@
 
 &lt;p&gt;In conclusion, I’m less supportive at this point of writing blank checks to ESG-companies than I am of buying products that were made in a socially and environmentally responsible manner. ESG investing is a very blunt instrument for changing how companies do business compared to the sharp instrument of changes in customer and supplier behavior.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 20 Apr 2019 00:00:00 -0500</pubDate>
         <link>http://0.0.0.0:4000/2019/04/20/esg-investing.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/04/20/esg-investing.html</guid>
       </item>
@@ -320,7 +383,7 @@ All of these tasks to some degree require familiarity with the AWS UI and how to
 
 &lt;p&gt;Disclaimer: I am an AMZN, GOOGL and MSFT shareholder. I am an AWS, GCP and Azure customer.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 11 Mar 2019 00:00:00 -0500</pubDate>
         <link>http://0.0.0.0:4000/2019/03/11/aws-for-shareholders.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/03/11/aws-for-shareholders.html</guid>
       </item>
@@ -404,7 +467,7 @@ All of these tasks to some degree require familiarity with the AWS UI and how to
 
 &lt;p&gt;Generics make creation and reusability of types easy. The ability to create types that produce other types saves you a lot of typing - pardon the pun.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 12 Jan 2019 00:00:00 -0600</pubDate>
         <link>http://0.0.0.0:4000/2019/01/12/exploring-typescript-generics.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/01/12/exploring-typescript-generics.html</guid>
       </item>
@@ -455,187 +518,9 @@ All of these tasks to some degree require familiarity with the AWS UI and how to
 
 &lt;p&gt;Figuring out what needs to be done I now believe is a process that requires viewing process and outcomes separately. The risk of tying good and bad outcomes to skill through a narrative is rejecting useful strategies and embracing harmful ones. In 2019, I want to eliminate this risk by separating process and outcomes.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 27 Dec 2018 00:00:00 -0600</pubDate>
         <link>http://0.0.0.0:4000/2018/12/27/biggest-lesson-2018.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2018/12/27/biggest-lesson-2018.html</guid>
-      </item>
-    
-      <item>
-        <title>EV is Everything</title>
-        <description>&lt;p&gt;Expected value (EV) is the best mental model I know of for decision making. In this post, I want to explain how EV has begun to guide much of my decision making about the future.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What is EV?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;First, let’s back up and give a broad overview of what expected value is and why it’s important. EV &lt;a href=&quot;https://www.google.com/search?q=expected+value&quot;&gt;per Google&lt;/a&gt; is “a predicted value of a variable, calculated as the sum of all possible values each multiplied by the probability of its occurrence.” I interpret this as a wordy way of saying EV is the chance something will happen multiplied by the payoff if it does happen.&lt;/p&gt;
-
-&lt;p&gt;A coin flip is the easiest example to start with here, so if I offer you $10 if a coin turns heads, the EV is $5 (50% * $10, the outcome where heads comes up, plus 50% * 0, the outcome where tails comes up).&lt;/p&gt;
-
-&lt;p&gt;This coin flip is what I’ve seen many people refer to as +EV, meaning the expected value is positive. This game worst case leaves you with the world unchanged half the time, and best case puts $10 in your pocket half the time. You should play this game forever because the average return is $5.&lt;/p&gt;
-
-&lt;p&gt;However, let’s assume it costs $6 to play the game. In this case, the game is -EV; in the win case, EV is $2 in the winning case (50% * (10–6)) and -$3 in the losing case (50% * -6), so total EV is 2–3, or -$1. You should never play this game because the average return is -$1.&lt;/p&gt;
-
-&lt;p&gt;In this simple coin flip example, notice the lever we changed to change the EV: what it costs to play the game. Paying anything more than $5 makes the above a -EV game. The other lever we have as the game makers is changing the odds.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The same EV does not mean the same game odds&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;We can get to the same $5 and -$1 EV above using an unfair coin and different payoffs. If the coin has a 90% chance of turning up heads, a $5 EV is betting on heads with a ~$5.56 payoff ($5.56 * 0.9 === $5). The -$1 EV is charging $5 to play the game with the same payout (0.9 * (5.56–5) + -5 * 0.1 ~== -1). While the EV of both games is the same as in the first example, having a 50% chance of winning $10 is very different from a 90% chance of winning $5.55. Additionally, paying $5 to play the game is different from paying $6 — with higher dollar amounts, a 20% increase in the cost to play will price many people out.&lt;/p&gt;
-
-&lt;p&gt;I think this idea becomes even more clear for games with longer shot odds. I was at a casino for Thanksgiving and had to wait an hour for the next available poker table, so I played roulette to pass the time. I was surprised to see the number of players simply placing bet after bet on a single number. Roulette offers a 36:1 payout on a single number hitting when the actual probability is 38:1. This is a negative EV game as a result. Let’s assume you have $190 to invest in 38 roulette turns at $5 each. If you’re comfortable with the 36% chance of losing your investment completely and 37% chance of losing 5% of your investment, there are some huge payoffs at low percentages.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/p_v_r_extreme.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(Note that you can see the spreadsheet I used to make all graphs in this post &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1pcN1fYHKB-woSJFYbOqKhfuzvBEqNw4R0TGY_zAg3ng/edit?usp=sharing&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Moreover, you also have the opportunity to walk away any time you hit the number and reduce that $190 expenditure. To put this in perspective, if your number hits 2 times in a row ((1/38)², or ~0.07% chance), you’ve only put $15 at risk and won $335 for a 22.3x return. You should still never play roulette; it’s a negative EV game (-$10 in the example above).&lt;/p&gt;
-
-&lt;p&gt;Let’s contrast this with a more even-odds approach to roulette. The EV is still the same (-$10), but the return profile of investing 5 bucks each on 38 turns looks like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/p_v_r.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I did not see anyone playing this particular roulette strategy, presumably because no one wants to play 38 turns to win or lose up anywhere between 0 and $100 more than ⅔ of the time. It’s more attractive for most players to have a low probability of a huge payout than a near 50% probability of a small payout. I actually asked my brother about this idea and he had a telling quote:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;My expectation is that I’ll lose some set amount of money I already decided on or win a lot of money at a casino. Winning a little bit of money isn’t why people go.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;But real life is more complicated&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;As with pretty much every probability example that gets presented to people, the easy response about why it’s non-applicable to real life is that real life is complicated. Nassim Nicholas Taleb, Jonathan Bales and others have written about two types of EV, so I’ll overview both. I’m going to call these hard EV and soft EV:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Hard EV&lt;/em&gt; — EV you can confidently calculate that depends on some physics laws that are random (gravity and other forces move a roulette ball to its position — as a side note, Claude Shannon attempted to calculate the position of a roulette ball and bet based on the expected position by using some radar-gun like devices hidden beneath his clothes at casinos — this is detailed in the great book &lt;a href=&quot;https://www.amazon.com/Fortunes-Formula-Scientific-Betting-Casinos-ebook/dp/B000SBTWNC/ref=sr_1_1?ie=UTF8&amp;amp;qid=1543171941&amp;amp;sr=8-1&amp;amp;keywords=fortune%27s+formula&quot;&gt;Fortune’s Formula&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Soft EV&lt;/em&gt; — EV based on human events. Sports books, insurance companies, banks and others that price odds impacted by humans back into EVs by seeing what people bet when they offer opening odds on different events&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I believe the principles of dealing with hard EV are applicable to soft EV, as long as we admit that our attempts to price soft EV accurately are going to fail. When those attempts do fail, we can use the information gained to price EV more accurately next time. &lt;a href=&quot;https://medium.com/@bmb21/the-value-of-wrong-and-right-guesses-998a62bfc142&quot;&gt;My recent post on Mastermind&lt;/a&gt; explores this idea. Moreover, failed attempts to price EV can lead us to pursue +EV generating projects, which is at the heart of the next idea I want to discuss.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Fight for every last scrap of EV&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Anyone who has played casino games has definitely done the thing where you go “If only that thing didn’t exist, this would be a great game.” This thought is really just expressing that casinos always do at least one thing in games they offer that makes the game -EV. This is the green 0 and 00 in roulette, the rules around when the dealer hits in blackjack, the programming logic in when slot machines pay out, etc. Casinos are acutely aware of this fact and will actually offer scraps of EV to high rollers or improved odds when they first open.&lt;/p&gt;
-
-&lt;p&gt;So, if a small change in odds or payoffs make hard EV games worth playing, I think the same is no less true for soft EV. As someone who has been around start-ups the majority of their career, I have come to believe this is the only thing start-ups do; continually search for +EV activities.&lt;/p&gt;
-
-&lt;p&gt;Let’s consider a simple start-up that sells widgets to OEMs that make some part of manufacturing more efficient (maybe it’s an IoT device with machine-learning capabilities or something). The company may estimate there is a 60% chance some big tech company comes in and manufactures the devices for 30% cheaper. They then can start to price how much they should raise in capital to get their devices to be 30% cheaper.&lt;/p&gt;
-
-&lt;p&gt;To continue this example, the company could also decide to try to move the goalposts on the 60% chance. They could partner with a big tech company and build in contract language that prevents them from manufacturing competing devices; they could create their own operating system or hardware to make the device harder to replicate; they could decide to migrate out of the widget business because raising capital is too expensive relative to their EV guesstimate.&lt;/p&gt;
-
-&lt;p&gt;Just like small changes in casino odds make the games worth playing, start-ups making small changes completely change what is +EV and what is -EV. With soft EV, human actions can wildly change odds and payoffs, so in my mental model I equate new projects and strategies at start-ups to casinos changing the odds and payoffs. From a career perspective, how well start-ups manage EV is how I evaluate whether I want to stay or go; if the odds are continually moving toward a place where the game is worth playing, stay; if not, go.&lt;/p&gt;
-
-&lt;p&gt;But then how do you evaluate how people manage EV?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Drop your state-of-the-world evaluations for first principles, especially for long-shots&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There’s a story Nassim Nicholas Taleb tells often about how he was at a meeting where traders at his firm said what they thought would happen in the market. Taleb expresses his opinion, and one of his colleagues ask why his portfolio isn’t positioned that way. Taleb responds that what he thinks is irrelevant; all that matters is what the market is mispricing.&lt;/p&gt;
-
-&lt;p&gt;I think a reasonable approach to evaluating soft EV — and how people / companies manage it — is to 1) forget what you think you know about the opportunity associated with EV and 2) try to price it from a first principles perspective. (1) improves the odds you stop working off a false collection of EVs. (2) forces creation of a new collection of EVs.&lt;/p&gt;
-
-&lt;p&gt;Doing both 1) and 2) may lead to surprising conclusions, which leads me to my next point; unpopular stuff is most likely to be mispriced.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;When in doubt, prefer low information EV to high information EV&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I remember in grade school social studies learning about the concept of the catch-up effect. The catch up effect says that developing countries will grow faster than developed countries because there are easier gains to be made for the developing countries. A developing country for instance may realize a huge benefit from an infrastructure project that connects two cities; a developed country will have less of these opportunities because that same project was already completed. That infrastructure project may be a percentage point or more of GDP growth for the developing country. The developed country has no comparable way of boosting its GDP, so the developing country is likely to catch up in standard of living, median income, etc. over time.&lt;/p&gt;
-
-&lt;p&gt;I think there is a real catch-up effect that exists for “cold” versus “hot” industries. Cold industries are what I consider to be businesses that are not getting attention from the media and very few people are playing in. You are unlikely to find lots of white papers or blogs on it online. In order to find information, you are probably going to have to read forums or maybe even (gasp!) pick up the phone and call someone.&lt;/p&gt;
-
-&lt;p&gt;Hot industries are going to be reported on by most tech blogs, have a lot of capital coming in and have highly trained players that are pricing EV like their career depends on it. There are probably a few dozen best-selling books that talk about how the future is going to radically change because of Industry X.&lt;/p&gt;
-
-&lt;p&gt;Cold industries are low information industries precisely because they’re “cold” — not popular. Hot industries are saturated with market entrants and information because they’re hot. Low information means more mispricings, because information is the only way we can calculate EV. Without information, we don’t know payoffs or probabilities.&lt;/p&gt;
-
-&lt;p&gt;When viewed this way, I think the catch-up effect of cold industries relative to hot industries is real. I believe it’s a strong argument for playing in cold industries. When I’ve argued this point, I’m often told that I’m a contrarian. I actually think that’s an unfair characterization, because contrarian implies that you just like choosing the opposite way the crowd is going. Instead, I think letting EV serve as a mental model for decision-making leads to contrarian viewpoints. Having contrarian viewpoints is a goal worth pursuing because the future can and will have moments where low-information, cold industries become high(er) information, hot industries.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;EV is everything because the future is uncertain&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Being told you’re a contrarian is a good sign you’re pursuing a EV+ opportunity. We already know the world does not price EV perfectly (that casino was super-crowded on Thanksgiving no less) and has a built-in bias for what’s hot at the moment.&lt;/p&gt;
-
-&lt;p&gt;EV+ opportunities are easier to come by in low information industries because there are fewer tools to know payoffs or odds. Said another way, it’s easier to scrap for EV because there are more scraps. When the future turns in a “crazy” way (or just a way the crowd didn’t expect), cold industries are more likely to rise and hot industries to fall because the crowd predicted something that did not happen. The contrarians are then better positioned for the future; the contrarians thus become what’s hot; and the cycle continues.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tim.blog/2018/09/25/howard-marks/&quot;&gt;Investor Howard Marks said in a recent podcast&lt;/a&gt; with Tim Ferriss that knowing where we are in the investment cycle is among the keys to calling the market correctly. Just like the investment cycle (boom and bust, high and low leverage), the EV cycle (hot and cold industries, high and low information) is part of the world we live in.&lt;/p&gt;
-
-&lt;p&gt;I’m not certain what the future holds, but I know an EV-based view of it will lead to different conclusions than alternatives.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2018/11/25/ev-is-everything.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/11/25/ev-is-everything.html</guid>
-      </item>
-    
-      <item>
-        <title>Guesses and Information</title>
-        <description>&lt;p&gt;Learning from your wrong guesses is fundamentally different than learning from mistakes. In this post, I’ll explore why playing the board game Mastermind has given me a strong appreciation for the power of wrong guessing.&lt;/p&gt;
-
-&lt;p&gt;First, I want to clearly differentiate between mistakes and guessing wrong. Mistakes can be avoided by logical thinking. For example, it’s a mistake to play casino games because they have negative expected value. You will lose money if you play on a long enough time horizon.&lt;/p&gt;
-
-&lt;p&gt;Guessing about the state of the world isn’t a mistake; in fact, it’s something I believe we should do as often as possible. Guessing is necessary because it is often the only device we can use to gain information.&lt;/p&gt;
-
-&lt;p&gt;This idea presented itself while playing Mastermind with one of my buddies this week. For those unfamiliar with the game, two players face off where one creates an ordered sequence of four pegs (which can be six different colors), and the other player guesses to find the combo. The guesser on each guess is given the number of exact peg guesses correct (right color, right place) and number of color guesses correct (right color, wrong place). In this way, the guesser gains information on every guess. As an aside, Donald Knuth developed an algorithm to determine the pattern in &lt;a href=&quot;http://www.cs.uni.edu/~wallingf/teaching/cs3530/resources/knuth-mastermind.pdf&quot;&gt;at most five guesses&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you think Mastermind is easy for the guesser, you’re not wrong. Each turn gets you closer to the four peg combo, and not solving the game in the eight allotted guesses (depending on what version you’re playing) most likely means you failed to use available information to your advantage.&lt;/p&gt;
-
-&lt;p&gt;That said, it’s possible and likely to regress on the number of correct scores from turn to turn. Consider this scenario:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/guess-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;On the first turn, the guesser is elated when they are given feedback of three exactly correct guesses. But which ones? It’s statistically unlikely on the second turn to &lt;em&gt;not&lt;/em&gt; regress. You have to guess about the state of the world because it’s impossible to know which three were correct.&lt;/p&gt;
-
-&lt;p&gt;Here’s a good second guess:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/redux-series/guess-2a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The guesser scores a “worse” score here, with only two right-color, right-position and one right-color, wrong-position, but has extracted valuable information:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Red is clearly a wrong color (or else they would get four scoring pegs)&lt;/li&gt;
-  &lt;li&gt;One of the blue pegs is in the wrong position (or else they would have equaled the previous score)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;From here, aiming to get the color scheme correct (by continually swapping out the red peg for other colors until the scoring changes) and getting the position correct (by moving the three blue pegs to different positions until three are correct again) are the clear strategies. Guessing wrong has delivered this information.&lt;/p&gt;
-
-&lt;p&gt;This idea to me is the central lesson of Mastermind that extends to so many other areas of life: When we are most wrong, we have extracted more useful information than when we are close to right. The reason I think this is the case is that being close to right does not necessarily deliver any information on &lt;em&gt;why&lt;/em&gt; we are close to right.&lt;/p&gt;
-
-&lt;p&gt;Flat-out wrongness at least shows you nothing is working; rightness forces you to guess on the factors that led to success. In this way, being right may not deliver useful information.&lt;/p&gt;
-
-&lt;p&gt;Human psychology unfortunately is not conducive to embracing this lesson. Being right makes me feel smart and wrong makes me feel stupid. Hence, guessing right is dangerous because we may extract information that had nothing to do with being right. Guessing wrong makes it easy to abandon a venture because we just assume we have no potential to succeed due to some genetic or personal failure. In reality, there is no skill to guessing, so we should de-personalize successes and failures where luck plays a key role.&lt;/p&gt;
-
-&lt;p&gt;The lesson here I think is to keep guessing after initial success to reject or confirm the &lt;em&gt;why&lt;/em&gt; of the right guess. Similarly, with wrong guesses, instead of writing ourselves off, our energy should be focused on extracting as much information as possible from the experience.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 17 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2018/11/17/guesses-and-information.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/11/17/guesses-and-information.html</guid>
-      </item>
-    
-      <item>
-        <title>Planning Time for Internal Users</title>
-        <description>&lt;p&gt;The data exposed in a customer-facing UI is not the data internal users care about.&lt;/p&gt;
-
-&lt;p&gt;Yet, this data forms the basis for the abstractions developers create. Easy-to-use APIs and GUIs generally expose the data the customer can access. Exposing data not exposed to the customer — think user behavior, hyper-granular statistics captured by IoT equipment, growth rates over specific time periods — is not easy.&lt;/p&gt;
-
-&lt;p&gt;The APIs, GUIs and abstractions dedicated to customer-facing data are rarely usable for internal data. This is a problem because internal users often have greater and more immediate data needs than customers. These users deserve as much attention as customers.&lt;/p&gt;
-
-&lt;p&gt;Why? Internal data should be easy to access and analyze because it contains time-sensitive information about a company’s customers and its products that hold the key to growth. If internal users at a company can easily access data over any time period, they can determine customer behavior in response to changes in the product. Some real-world examples of data internal to a company revealing information essential to company strategy:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Buzzfeed shows &lt;a href=&quot;http://www.niemanlab.org/2017/09/buzzfeeds-strategy-for-getting-content-to-do-well-on-all-platforms-adaptation-and-a-lot-of-ab-testing/&quot;&gt;different titles and thumbnail art to different users&lt;/a&gt; for the same story, tracking the traffic from the different versions to optimize what it publishes&lt;/li&gt;
-  &lt;li&gt;Intuit runs &lt;a href=&quot;https://www.fastcompany.com/3020699/why-intuit-founder-scott-cook-wants-you-to-stop-listening-to-your-boss&quot;&gt;real-world experiments within its products&lt;/a&gt; and pursues or abandons ideas based on the results&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.gigaspaces.com/amazon-found-every-100ms-of-latency-cost-them-1-in-sales/&quot;&gt;Amazon actively maps the relationship between site speed and sales&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Eric Ries refers to this concept as completing a feedback loop in the shortest possible amount of time and argues it is the key to how quickly a start-up can grow in &lt;a href=&quot;https://www.amazon.com/dp/B004J4XGN6/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&quot;&gt;The Lean Startup&lt;/a&gt;. Investment in internal data is an investment in the customer.&lt;/p&gt;
-
-&lt;p&gt;The internal data needs of a company change not on a Scrum schedule, but on a minute-to-minute or even second-to-second schedule. This is especially true in industries like fintech (think flash crash) and automotive (think actual crash), where being able to capture what happened in the space of a few milliseconds can save a company.&lt;/p&gt;
-
-&lt;p&gt;Ability to analyze your data will determine the fate of your start-up. This is the number one reason to invest time in making data easier to share and analyze.&lt;/p&gt;
-
-&lt;p&gt;How much time is enough time for teams to invest? 15 minutes is a start that could lead to perpetual gains. If you’re a Scrum Master, organize a short meeting with the developers who interact with your databases and business analysts who generate the most inbound. You can pre-wire this meeting by asking the business analysts to generate a list of their biggest pain points. You can ask the developers what they could do in one hour or less to start addressing these pain points. Something as simple as a cron job that e-mails internal users key data or a CSV that can feed pivot tables is a useful outcome from this meeting.&lt;/p&gt;
-
-&lt;p&gt;If this meeting proves valuable, consider making it recurring and using it as a basis for small to medium-sized tasks that can be pulled in each sprint. When I’ve done similar exercises at previous companies, the first data-access related meeting has led to a host of issues being identified and even resolved in one day. In one instance, a co-worker who needed access to test data (only used internally) asked if there was any way he could periodically get data for one specific query. My company at the time had a GraphQL API with graphiql exposed in the test environment; I was able to give my co-worker graphiql access, and he was writing queries just with the GraphQL docs as a guide in 5 minutes.&lt;/p&gt;
-
-&lt;p&gt;How much time will good data tooling save? Possibly years. Building internal data tools is no different than building features in that it is an investment in customer success. Buzzfeed, Intuit and Amazon in the examples above all used internal data to drive customer acquisition and retention. Additionally, strong data tooling impacts employee retention as business analysts expect data to be easy to access and analyze, and developers expect that their schedule to be free of fire-drills.&lt;/p&gt;
-
-&lt;p&gt;Investments in improving data tooling pay long-term dividends. Finding time for them this sprint — and not three months into the product backlog — matters as much as building the product.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
-        <link>http://0.0.0.0:4000/2018/08/28/internal-users.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/08/28/internal-users.html</guid>
       </item>
     
   </channel>

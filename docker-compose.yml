@@ -1,7 +1,10 @@
-jekyll:
-    command: serve -w --host 0.0.0.0 --livereload
-    build: .
-    ports:
-        - 80:4000
-    volumes:
-        - .:/site
+version: '3'
+
+services:
+    jekyll:
+        image: jekyll/jekyll:latest
+        command: jekyll serve --watch --force_polling --verbose
+        ports:
+            - 4000:4000
+        volumes:
+            - .:/srv/jekyll
