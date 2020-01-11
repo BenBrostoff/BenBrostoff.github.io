@@ -7,6 +7,47 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Five Seconds Could Change Everything</title>
+        <description>&lt;p&gt;&lt;em&gt;This post also doubles as my 2019 lessons post. To check out my 2018 lessons post (this practice is now two years old), see &lt;a href=&quot;http://benbrostoff.github.io/2018/11/25/ev-is-everything.html&quot;&gt;EV is Everything&lt;/a&gt;. I seem to like the word everything&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have a buddy who always gets on my back when I order the same beer as him. I’ve now heard his rationale probably dozens of times - ordering the same thing as someone else is always a failure to take the five seconds to think about what you actually want. Have you looked at the menu? Have you evaluated the possibilities?&lt;/p&gt;
+
+&lt;p&gt;I know my own rationale for copying beer orders. I use the orderer as a proxy for good taste, and in doing so eliminate having to think about what good taste is. In the past I used to believe that relying on proxies like this was a great way to save time. I now believe decision quality is jeopardized by taking these shortcuts.&lt;/p&gt;
+
+&lt;p&gt;The beer example is inconsequential, so I want to relate this idea to every decision. Many of these decisions are &lt;em&gt;how to respond in a conversation with one or multiple people&lt;/em&gt;.  The &lt;em&gt;how&lt;/em&gt; can be not responding; it can be asking a question; it can be disagreeing, agreeing, proposing an alternative, whatever. These responses can change the direction of the conversation and any resulting action from it.&lt;/p&gt;
+
+&lt;p&gt;In my day-to-day, most conversations of consequence involve engineering decisions (abstract into a general service this sprint or do inline and kick off into the future?), stock market or DFS actions (buy or sell stock or player?) or personal planning (go rock climbing or run?). Because I hold a stake in the final decision for each of these, my responses influence the future. Knowing this is extremely motivating, but that’s the subject for another post.&lt;/p&gt;
+
+&lt;p&gt;Conversations involve a lot of words, so there’s often dozens of micro-decisions to be made every few seconds. Especially in the case of information-heavy conversations, there are lots of decisions about &lt;em&gt;which questions to ask&lt;/em&gt;. The internet is a thing, so many questions are a waste of time when they could be googled (ex. “How has the stock traded the last few months?”). Similarly, information-heavy conversations may blend fact and opinion, so I believe strongly opinions must be questioned when appropriate:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Is the stock &lt;em&gt;actually&lt;/em&gt; trading at a real discount to book? Is there a case to be made that book value is overstated?&lt;/li&gt;
+  &lt;li&gt;Why does this local service need to be changed to a remote service? You say that there is a generalized use case for it based on what the business wants to do, but how sure are you of that? Give some examples.&lt;/li&gt;
+  &lt;li&gt;If we go rock climbing at 4 instead of noon, how crowded do you estimate the bouldering walls will be? How much value do we get if we go at a slightly earlier time?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These questions I think can be difficult to ask because they force people to analyze their own assumptions, which suggests you as the questioner do not trust the questionee. That suggestion is real. Many people who ask these types of questions are considered by most people to be hardasses and potentially difficult to work with. The credit officer I worked with in my first banking job was famous or notorious depending on how you frame it for these types of asks. There is a price to be paid for asking these questions.&lt;/p&gt;
+
+&lt;p&gt;There is a much larger price to be paid for &lt;em&gt;not asking these questions&lt;/em&gt;. Unlike a slightly uncomfortable interaction’s impact on a human relationship, code in production, a buy or sell in the market and waiting in line are impossible to reverse. Yet, it’s easier to not ask them because of the social niceties of the world we live in. Some management norms even argue asking too many questions is a sign of a bad manager that doesn’t trust their people.&lt;/p&gt;
+
+&lt;p&gt;Tradeoffs like this one must be weighed in conversational responses and really any decision, which is why I’m advocating for adding five seconds to what you think would be a normal response time given a complex problem. A seemingly easy problem may be complex given the right analysis, and vice versa.&lt;/p&gt;
+
+&lt;p&gt;The five-second rule feels even more relevant as weighty decisions move to Slack and text message from e-mail (where in my opinion it’s easier to take your time replying). Slack especially is a problem here as you &lt;em&gt;can see other people typing&lt;/em&gt;, which no doubt impacts how conversations go down and your own response times in conversation. Social expectations (ex. in Slack in a real-time conversation, I should respond in &amp;lt;30 seconds) should &lt;em&gt;not&lt;/em&gt; impact how you get to an optimal decision.&lt;/p&gt;
+
+&lt;p&gt;The five seconds here is somewhat arbitrary. I’m finding it’s just the right amount of time to either confirm a decision or stir a longer period of considered thought. If nothing else, five seconds reminds me of the consequences of not asking an important question or consenting to do something that may have huge ramifications on the future (that future could be one hour, one day or a lifetime).&lt;/p&gt;
+
+&lt;p&gt;The five second rule in 2020 is a request to myself to not let the instant response culture dictate how I respond. In the words of Stephen Covey:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“In the space between stimulus (what happens) and how we respond, lies our freedom to choose.”&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sat, 11 Jan 2020 00:00:00 -0600</pubDate>
+        <link>http://0.0.0.0:4000/2020/01/11/five-minutes-could-change-everything.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2020/01/11/five-minutes-could-change-everything.html</guid>
+      </item>
+    
+      <item>
         <title>The Right Set of Primitives</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;There are no silver bullets&lt;/p&gt;
@@ -87,7 +128,7 @@
 
 &lt;p&gt;Something that seems trivial turns out to be nearly impossible. Mile 5 of a 20 mile run hurts like heck. A third party library massively changed its API. That programming language feature you were confident would resolve your issue doesn’t behave the way the docs said. Unexpected events are going to happen, and while you can’t control these events, you can control your response to them.&lt;/p&gt;
 
-&lt;p&gt;“In the space between stimulus (whap happens) and response, lies our freedom to choose,” &lt;a href=&quot;https://www.goodreads.com/quotes/459654-in-the-space-between-stimulus-what-happens-and-how-we&quot;&gt;writes Stephen Covey&lt;/a&gt;. Taking the time to craft your response when an unexpected event occurs is the opportunity to frame that event as opposed to letting that event frame you. I can’t stress how important I think this idea is - a bad reaction to new information can kill a project in its tracks. I look back on a few of the side projects I’ve stopped working on because I found some library or business that was doing the same thing. In retrospect, I understand that markets can have a large number of competing participants (check out the 10 different rent-a-cars near any major airport). It’s human nature to react negatively to information that isn’t congruent with our expectations. Taking time to respond to new information in addition to expecting the unexpected are strong defenses against negativity.&lt;/p&gt;
+&lt;p&gt;“In the space between stimulus (what happens) and response, lies our freedom to choose,” &lt;a href=&quot;https://www.goodreads.com/quotes/459654-in-the-space-between-stimulus-what-happens-and-how-we&quot;&gt;writes Stephen Covey&lt;/a&gt;. Taking the time to craft your response when an unexpected event occurs is the opportunity to frame that event as opposed to letting that event frame you. I can’t stress how important I think this idea is - a bad reaction to new information can kill a project in its tracks. I look back on a few of the side projects I’ve stopped working on because I found some library or business that was doing the same thing. In retrospect, I understand that markets can have a large number of competing participants (check out the 10 different rent-a-cars near any major airport). It’s human nature to react negatively to information that isn’t congruent with our expectations. Taking time to respond to new information in addition to expecting the unexpected are strong defenses against negativity.&lt;/p&gt;
 
 &lt;p&gt;Moreover, I believe that choosing to feel something can make you feel that way even if the feeling is artificially manufactured. What I mean by this is that when someone asks us to label how we feel, the label we select is based on how we physically feel at the moment. But what if you said the exact opposite of how you actually felt? Is it possible the re-labeling could become reality? This seems absurd on the face of it, but my experience has been that re-labeling works and causes an actual physical response.&lt;/p&gt;
 
@@ -470,57 +511,6 @@ All of these tasks to some degree require familiarity with the AWS UI and how to
         <pubDate>Sat, 12 Jan 2019 00:00:00 -0600</pubDate>
         <link>http://0.0.0.0:4000/2019/01/12/exploring-typescript-generics.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/01/12/exploring-typescript-generics.html</guid>
-      </item>
-    
-      <item>
-        <title>Stop Resulting</title>
-        <description>&lt;p&gt;In 2018, the best lesson I learned was to stop creating narratives based on results.&lt;/p&gt;
-
-&lt;p&gt;Creating a narrative based on results is what former professional poker player and World Series of Poker Champion Annie Duke calls “resulting” in her book &lt;a href=&quot;https://www.amazon.com/Thinking-Bets-Making-Smarter-Decisions-ebook/dp/B074DG9LQF&quot;&gt;Thinking In Bets&lt;/a&gt;. One example Duke returns to throughout the book is some poker players’ tendency to use the results of a hand to evaluate the decisions that took place during it.&lt;/p&gt;
-
-&lt;p&gt;Players that fall into the trap of resulting often want to preserve a narrative that emphasizes their own (assumed) above-average skill. These players believe decisions made if they won a big hand were skill and not luck-based. Conversely, to preserve this narrative, these same players assume their losses were luck and not skill-based.&lt;/p&gt;
-
-&lt;p&gt;In reality, luck plays a role in the outcome of any individual poker hand. As Duke notes in the book, if a player is 80% favored to win a hand before more cards are placed on the table, the same player losing the hand once all cards are out is not wrong, but part of the 20% chance another player wins.&lt;/p&gt;
-
-&lt;p&gt;The outcome of a hand like that isn’t part of a narrative, but part of a statistical distribution. The player who lost the hand needs to place their decision to play before cards came out in the context of the 80%, and the one who won should recognize they only had a 20% chance of victory in the pre-flop situation.&lt;/p&gt;
-
-&lt;p&gt;Resulters ignore or manipulate this context in order to draw a lesson from an outcome that fits a narrative. Resulting is clearly detrimental to learning because it fails to consider significant portions of the why behind decisions — views of uncertainty at the time the decision was made, and whether those views were accurate.&lt;/p&gt;
-
-&lt;p&gt;My opinion — based on my own life — is that most junior and mid-level jobs prepare people to be resulters. The jobs I had early out of college involved implementing well defined specs in code (ex. hide the button when the user isn’t authorized) or making template-based Excel models (ex. reduce the cash flow 20% in the stress test). Quality of work was easy to measure — the code or the model did what was expected.&lt;/p&gt;
-
-&lt;p&gt;The outcomes in the businesses I worked at were also easy to measure (whether I was looking at the right outcomes is for another blog post). Looking at user traffic or deals won or capital raised at what valuation was the scoreboard to me. So, my logical conclusion most times until this year was:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If I execute well, my company will have a higher probability of success&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Now, this may come off as controversial, but for the majority of jobs at the majority of companies, I believe this statement to be wrong. Most people at companies execute ideas created by others and execute them fairly well. Based on the ever-improving quality of tools in finance and web development — the two industries I’m most familiar with — good execution is becoming easier and easier.&lt;/p&gt;
-
-&lt;p&gt;When was the last time you saw a start-up that did not have a flashy looking product or an impressive demo (signs of great execution)? Yet the statistics are clear — most start-ups fail. Clearly, execution isn’t the whole story, or success would be more common. It may not even be positively correlated with success, as evidenced by start-ups where unpolished prototypes representing a pivot saved the day, supplanting polished existing products.&lt;/p&gt;
-
-&lt;p&gt;I started my own software consulting business this year and gained an appreciation for the impact of confusing process and outcomes. My first introduction to this idea was getting clients. Working through a combination of LinkedIn, AngelList, HN’s Who’s Hiring, networking events and friends and family, I found some introductory calls would go swimmingly and others would be a complete failure.&lt;/p&gt;
-
-&lt;p&gt;My actions before the calls were the same — same research process, same introduction, mostly same pitch (with some tweaks over time as I learned more).&lt;/p&gt;
-
-&lt;p&gt;I initially equated the bad outcomes to lack of skill and the good ones to skill, but over time it became clear that companies have varying degrees of acceptance to contracting. Some companies I encountered only had developers that were contractors; others only had full-time developers. There was no easy way to gain this information without doing the call in the first place.&lt;/p&gt;
-
-&lt;p&gt;I now accept based on the data I’ve gathered that the percentage of companies willing to hire contractors for the services I provide is probably below 25%. This is not to say I haven’t tanked calls and performed well on others; it’s just that I hear the “we generally don’t hire contractors” line or some variation of it 75% of the time. Some of these companies can still be convinced, but the odds of success are far lower than a company with previous positive experiences with contractors.&lt;/p&gt;
-
-&lt;p&gt;Another example — early in my search for clients, I found a majority of companies asking for help with devops, specifically Kubernetes. I had to pass on these opportunities as my Kubernetes experience is minimal. I became concerned that the only consulting opportunities might involve Kubernetes, despite the fact that the sample size at that point was probably five 30 minute discussions.&lt;/p&gt;
-
-&lt;p&gt;I can say now with a full year of calls under my belt that help with Kubernetes or devops tasks represents a small proportion of the consulting asks I get. The spike in asks at the beginning was the result of a small sample size. Deriving information from this sample was ill-advised and a classic example of &lt;a href=&quot;https://medium.com/@bmb21/stop-tape-watching-f188df01b9b7&quot;&gt;watching the tape&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Rejections by companies or opportunities I decline because I can’t help I used to see as a personal failure, and sometimes still do. But I think this is an insidious form of resulting that will hurt my business long-term, just as assuming knowledge of one JavaScript framework will be worth just as much today as it is in three years. Deep diving into whatever technology is popular or continually using the same tools can both be harmful when driven by knee-jerk interpretation of results. Execution without constant evaluation of what is being executed is, as discussed in Naval Ravikant’s recent podcast with Kapil Gupta, &lt;a href=&quot;https://startupboy.com/2018/12/25/the-truth-about-hard-work/&quot;&gt;hard work for hard work’s sake&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Changes in priorities and plans are evidence that leaders of a business are evaluating the probabilities of success for different strategies, be it correctly or incorrectly. Importantly, this view is different from what I used to believe. It used to hugely frustrate me when I worked on some complicated interface for months only for it be thrown away. I would attribute the code churn to bad communication between sales and engineering — an execution failure. Perhaps this explanation is accurate some of the time. Plans also change because new information forces strategy changes.&lt;/p&gt;
-
-&lt;p&gt;Resulters blame execution and bad decisions for why certain strategies don’t pan out. They fail to recognize that their evaluation is based on outcomes. The execution was good if the sales person made the sale; the decision to play the hand was bad if the player lost the hand.&lt;/p&gt;
-
-&lt;p&gt;Figuring out what needs to be done I now believe is a process that requires viewing process and outcomes separately. The risk of tying good and bad outcomes to skill through a narrative is rejecting useful strategies and embracing harmful ones. In 2019, I want to eliminate this risk by separating process and outcomes.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 27 Dec 2018 00:00:00 -0600</pubDate>
-        <link>http://0.0.0.0:4000/2018/12/27/biggest-lesson-2018.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2018/12/27/biggest-lesson-2018.html</guid>
       </item>
     
   </channel>
