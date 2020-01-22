@@ -7,6 +7,33 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>The (Different Kind of) Information Advantage</title>
+        <description>&lt;p&gt;I’m in the middle of &lt;a href=&quot;https://www.amazon.com/dp/B07H1ZYWTM&quot;&gt;Range&lt;/a&gt; right now - a book about the value of generalists - and I am more and more starting to see all around me that there is a delicate balance between good, classic Adam Smith specialization and overspecialization.&lt;/p&gt;
+
+&lt;p&gt;Adam Smith says that specialization of labor is good because thousands of workers divided into specialized tasks can produce things faster than thousands of workers all responsible for all the tasks to produce one widget. This makes sense for things like widget production, where one task often does not impact another task and knowledge in one task generally does not impact another task.&lt;/p&gt;
+
+&lt;p&gt;In economies like the United States where most businesses are service-based businesses, there are not many widget-producers left. An increasing amount of the S&amp;amp;P 500 is dominated by software businesses. The people who write the code need to know a whole lot about the product, and the people who decide product direction need to know at least a little bit about the code.&lt;/p&gt;
+
+&lt;p&gt;I have heard arguments that the second part of the last sentence isn’t true. I have heard scrum masters should necessarily be non-technical; that knowledge of the codebase creates biased constraints about how long something will take. These are good arguments I in part agree with. Good leaders do not get tied to architecture and are willing to scrap everything if scrapping everything and rebuilding offers a higher return than the alternative.&lt;/p&gt;
+
+&lt;p&gt;Yet, estimates for how long something will take (one of the inputs necessary to calculate total return, because almost all return estimates are annualized) need to come from somewhere. They come from engineers or people who ask engineers for inputs. If these estimates are non-starters, the product usually gets adjusted so it can be built faster.&lt;/p&gt;
+
+&lt;p&gt;What does this have to do with specialization? In a completely specialized world, the engineers don’t understand the product and the product specialists don’t understand engineering. A strange hybrid position (scrum master? product manager? project manager?) tries to bridge the two and the result is that unless the hybrid specialists are executing perfectly, estimates veer wildly from reality. The business cannot execute on projects over its hurdle rate because it can’t calculate ROI. The company fails.&lt;/p&gt;
+
+&lt;p&gt;In a less specialized world, everyone is considered responsible for understanding a little bit about the entire business. The CEO has strong familiarity with the software development lifecycle; the software engineer knows estimates for next year’s EBITDA and what the main business drivers are. Each feels empowered to weigh in on areas outside what their core competencies are. Each is quickly building strong skills in things other than the thing they were hired for. Estimates are good because everyone’s bullshit detector is a little stronger. It’s harder to fool someone who knows a little about everything than everything about one thing.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, this is one reason why I think people who start companies usually start more companies. The founder is not able to opt out of learning things outside their core competency. The Buffett-Munger compounding knowledge cycle kicks in and founders become more and more capable of starting more companies.&lt;/p&gt;
+
+&lt;p&gt;Additionally - and &lt;em&gt;Range&lt;/em&gt; really hits on this theme a ton - industry outsiders gaining knowledge on an industry for the first time are likely to have unique mental models for thinking about said industry. If these models provide valuable perspectives and are unique, it’s likely that person can offer value-add ideas that the market isn’t pricing correctly.&lt;/p&gt;
+
+&lt;p&gt;Offering opportunities for specialists to become generalists I think is an easy way for companies to add shareholder value. By helping generalists grow, companies 1) improve ROI accuracy by getting estimates that reflect people with growing skills in a range of topics and 2) increase the likelihood of finding business advantages the competition hasn’t valued correctly.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 21 Jan 2020 00:00:00 -0600</pubDate>
+        <link>http://0.0.0.0:4000/2020/01/21/the-different-kind-of-information-advantage.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2020/01/21/the-different-kind-of-information-advantage.html</guid>
+      </item>
+    
+      <item>
         <title>Five Seconds Could Change Everything</title>
         <description>&lt;p&gt;&lt;em&gt;This post also doubles as my 2019 lessons post. To check out my 2018 lessons post (this practice is now two years old), see &lt;a href=&quot;http://benbrostoff.github.io/2018/11/25/ev-is-everything.html&quot;&gt;EV is Everything&lt;/a&gt;. I seem to like the word everything&lt;/em&gt;.&lt;/p&gt;
 
@@ -427,90 +454,6 @@ All of these tasks to some degree require familiarity with the AWS UI and how to
         <pubDate>Mon, 11 Mar 2019 00:00:00 -0500</pubDate>
         <link>http://0.0.0.0:4000/2019/03/11/aws-for-shareholders.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/03/11/aws-for-shareholders.html</guid>
-      </item>
-    
-      <item>
-        <title>Exploring TypeScript Generics</title>
-        <description>&lt;p&gt;I’ve been using TypeScript on several projects and wanted to jot down some quick thoughts on generics. To be clear, generics are not a new programming language construct and existed in languages liked C# and Java decades before TypeScript. That said, I find generics interesting in the context of TypeScript because I see and use them so often.&lt;/p&gt;
-
-&lt;p&gt;First, what are generics? I think of generics as a way to represent types without explicitly defining a type. A generic type is generic in that it’s like a function parameter- able to represent anything. Also like a parameter in a function, its value can be passed as an argument (via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;SomeType&amp;gt;&lt;/code&gt;) and referenced throughout the body of the function. This quality is one of many reasons generics are more powerful than simply using the &lt;code class=&quot;highlighter-rouge&quot;&gt;any&lt;/code&gt; type. &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/generics.html&quot;&gt;The official TypeScript docs on generics&lt;/a&gt; are an excellent resource on when to use generics, and I highly recommend them.&lt;/p&gt;
-
-&lt;p&gt;Below are some use cases for generics I’ve found helpful.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Promises&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In TypeScript, promises can be initialized such that they “lock” a generic into a type:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/promise.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Microsoft/TypeScript/blob/master/lib/lib.es2015.promise.d.ts#L33&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise&lt;/code&gt; source&lt;/a&gt; makes the warning above possible. IDEs use the source to determine that the callback in the promise constructor must return something of type &lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;PromiseLike&amp;lt;T&amp;gt;&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt; in this case is number. Note that PromiseLike here is a &lt;a href=&quot;https://github.com/Microsoft/TypeScript/blob/master/lib/lib.es5.d.ts#L1376-L1384&quot;&gt;separate type&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the case of promises, I find generics useful because I can gain an understanding of what an async function resolves to without having to look at source code. Consider the following non-TypeScript example:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/fa6a4b370cfe1292d3e9db98b96860c6.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Now check out the TypeScript equivalent:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/a77c068e8e8d41191d434077b95cff8e.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Only in the second example can the developer know with some confidence that the promise resolves to a &lt;code class=&quot;highlighter-rouge&quot;&gt;UserProfile&lt;/code&gt; (well, or &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;PromiseLike&amp;lt;UserProfile&amp;gt;&lt;/code&gt;). Without TypeScript, it’s necessary to look at the function definition and the return value. Even then, the name &lt;code class=&quot;highlighter-rouge&quot;&gt;lookupProfile&lt;/code&gt; may be inaccurate depending on how it was implemented; TypeScript at least will fail to compile if the type returned is not a &lt;code class=&quot;highlighter-rouge&quot;&gt;UserProfile&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Importantly, code changes in &lt;code class=&quot;highlighter-rouge&quot;&gt;lookupProfile&lt;/code&gt; are nicely handled by TypeScript generics. Let’s say the function can return an admin profile or a user profile - you can simply adjust the type to &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise&amp;lt;UserProfile | AdminProfile&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;React Components&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;React.SFC&lt;/code&gt; - React’s stateless functional component - has a type definition like the below:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/dd9ae512d7d7eb26368e8f88a750ceda.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;In the above, the type parameter is also passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;propTypes&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;defaultProps&lt;/code&gt; through &lt;code class=&quot;highlighter-rouge&quot;&gt;ValidationMap&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Partial&lt;/code&gt;, respectively, which also take generic arguments.&lt;/p&gt;
-
-&lt;p&gt;Writing components without TypeScript might look like this:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/199b5d3097ef775243743a5392c51760.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;And now with TypeScript:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/9af73129bd46ac462f3f74987dbffaeb.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;While using &lt;code class=&quot;highlighter-rouge&quot;&gt;PropTypes&lt;/code&gt; is a perfectly valid option here and will offer some of the same benefits as TypeScript, you can still run a React application with components that are missing required props; it will just crash at runtime.&lt;/p&gt;
-
-&lt;p&gt;With TypeScript, this error will happen at compile time, saving time and possibly a production bug that would never have been caught until users found it. Better yet, it offers a useful error message to developers who violate the component spec - let’s say in the case of a typo:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Type ‘{ message1: number; }’ is not assignable to type ‘IntrinsicAttributes &amp;amp; SomeProps &amp;amp; { children?: ReactNode; }’.
-  Property ‘message1’ does not exist on type ‘IntrinsicAttributes &amp;amp; SomeProps &amp;amp; { children?: ReactNode; }’.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Again, &lt;em&gt;this error is not raised in the non-TypeScript case&lt;/em&gt;. The React component still renders and the div just has no text.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Apollo&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The Apollo client uses generics frequently throughout the result. I only highlight &lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt; and the HOC &lt;code class=&quot;highlighter-rouge&quot;&gt;graphql&lt;/code&gt; in this discussion, but rest assured generics are heavily used in the Apollo codebase.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt; (&lt;a href=&quot;https://github.com/apollographql/apollo-client/blob/master/packages/apollo-client/src/core/types.ts#L19-L25&quot;&gt;source here&lt;/a&gt;, returned from a query or mutation) takes a generic that describes data in a graphql response. The generic argument gets passed to the data property on the Apollo result. The advantages of this type are similar to the advantages of TypeScript promises (it actually acts as the &lt;a href=&quot;https://github.com/apollographql/apollo-client/blob/master/packages/apollo-client/src/ApolloClient.ts#L274&quot;&gt;generic argument&lt;/a&gt; a promise accepts).&lt;/p&gt;
-
-&lt;p&gt;I’ve used Apollo without TypeScript and remember being frustrated with seeing different components extract different parts of &lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt; - some components would utilize &lt;code class=&quot;highlighter-rouge&quot;&gt;loading&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;networkStatus&lt;/code&gt;, and / or &lt;code class=&quot;highlighter-rouge&quot;&gt;errors&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; especially was a difficult property to work with because knowing its shape - at least for me - generally required logging a response.&lt;/p&gt;
-
-&lt;p&gt;TypeScript makes this logging unnecessary (well, less necessary - to be clear it’s impossible to know what the server will send back at compile time). Apollo provides a &lt;a href=&quot;https://codesandbox.io/s/github/apollographql/apollo-link-rest/tree/master/examples/typescript&quot;&gt;code sandbox&lt;/a&gt; here with a great example, part of which is copied in a gist below. Note that this example doesn’t actually use ApolloQueryResult and instead uses a similar prop from react-apollo that &lt;a href=&quot;https://github.com/apollographql/react-apollo/blob/apollo-client-2.0/src/types.ts#L66-L69&quot;&gt;gets added from &lt;code class=&quot;highlighter-rouge&quot;&gt;ChildProps&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/4e544db73630b6e488b58bca8272c930.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;graphql&lt;/code&gt; higher order component &lt;a href=&quot;https://github.com/apollographql/react-apollo/blob/master/src/graphql.tsx#L10-L31&quot;&gt;accepts two generic arguments&lt;/a&gt;, one of which describes the data from &lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt;, and the other which describes the props passed to the component being wrapped by the higher order function.The graphql HOC takes the advantages described with &lt;code class=&quot;highlighter-rouge&quot;&gt;ApolloQueryResult&lt;/code&gt; and React component and combines them. It’s now obvious what the graphql server should be returning as well as what props the wrapped component expects.&lt;/p&gt;
-
-&lt;p&gt;Side note - one interesting thing I found out about &lt;code class=&quot;highlighter-rouge&quot;&gt;ChildProps&lt;/code&gt; while researching this post is that it takes in two generics and from its constructor returns an &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/advanced-types.html&quot;&gt;intersection&lt;/a&gt; of types. This is a use case of generics that is extremely powerful; creating types that can intersect, unionize or do anything with multiple types to create new types.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;My brother and I have a multi-year debate going on about the value of code comments. I am a comment minimalist for many reasons, but the existence of type systems is the main point I fall back on. Compile time checks and good error messages in my opinion are a much better explanation of code than long comments.&lt;/p&gt;
-
-&lt;p&gt;Generics offer the reusablity, type assertions and ease of understanding that comments cannot replicate. Most importantly, comments cannot prevent a class of bugs that could have been prevented at compile time.&lt;/p&gt;
-
-&lt;p&gt;Generics make creation and reusability of types easy. The ability to create types that produce other types saves you a lot of typing - pardon the pun.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 12 Jan 2019 00:00:00 -0600</pubDate>
-        <link>http://0.0.0.0:4000/2019/01/12/exploring-typescript-generics.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2019/01/12/exploring-typescript-generics.html</guid>
       </item>
     
   </channel>
