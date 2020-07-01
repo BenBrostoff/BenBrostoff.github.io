@@ -8,7 +8,7 @@ I always appreciate when people share their favorite books with me. [Ryan Holida
 
 I also have a spreadsheet with [every book I've read since 2013 and plan to read](https://docs.google.com/spreadsheets/d/1ZHHhcz9Tcw3FnPvInVW6WmXX42qctmBNi-pYCedVH50/edit?usp=sharing).
 
-Finally, my current side project of choice is Intellectual Personal Assistant, which is available [in the iTunes App Store](https://itunes.apple.com/us/app/ipa-intellectual-personal-assistant/id1231802988?mt=8) and [through Google Play ](https://play.google.com/store/apps/details?id=com.intellectualpersonalassistantbb&hl=en). I use IPA to manage my own reading, documentary and podcast lists. Try it out! Okay, blatant self-promotional marketing over.
+My favorites:
 
 * [*The Art of Learning*, Josh Waitzkin](http://www.amazon.com/The-Art-Learning-Journey-Performance/dp/0743277465) - No book has shook my reality more and encouraged me to make changes in my own life. Waitzkin is the rare dual-sport athlete who, after winning nearly every conceivable junior chess award and rising to International Master, retired and became world champion in an entirely different sport which he had no previous experience in (Tai Chi Push Hands). This book is not so much <i>how</i> as it is an exploration of <i>why</i> reaching optimal states and deep learning matter. A wonderful nugget from this one: Jim Harbaugh is a huge Waitzkin fan and slips chess <a href="http://www.49ers.com/news/article-2/Morning-Tailgate-Jim-Harbaugh-Quiets-Play-Clock-Concerns/786e1113-b60f-4c38-aa53-d8e07101f789" target="_blank"> every once in a while</a> into NFL banter.
 
