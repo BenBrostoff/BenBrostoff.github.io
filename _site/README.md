@@ -3,6 +3,7 @@ Forked from the excellent @muan repo [scribble](https://github.com/muan/scribble
 Running locally:
 
 ```
+# You should let docker create Gemfile.lock
 docker-compose up -d
 ```
 
