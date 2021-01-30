@@ -7,6 +7,61 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Chat Can Be The Mind Killer</title>
+        <description>&lt;p&gt;Web chat platforms like Slack are the core of remote work and determine how good your remote experience is.&lt;/p&gt;
+
+&lt;p&gt;When chat is good, it’s serving the following functions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Async communication where people are getting useful responses in a timely fashion&lt;/li&gt;
+  &lt;li&gt;Responders do not feel pressure to respond instantly and understand expectations around response times&lt;/li&gt;
+  &lt;li&gt;Chat happens in public channels and searching keywords reveals useful conversations (ex. what an acronym stands for, context for running specific bash commands, why a decision was made the way it was, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When chat is bad, my experience is it’s failing in the following ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chat participants feel pressure to be always available and significant portions of time are spent reading messages and writing responses&lt;/li&gt;
+  &lt;li&gt;Communication occurs in private channels and DMs, meaning information is duplicated and worse yet is not searchable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Chat has a higher likelihood of becoming bad when you wear multiple hats in a community. The more things you do, the wider your circle is, and the more conversations you’re going to be involved in. That ups the probability of other chatters not having the same expectations as you and you being part of more DMs and private channels.&lt;/p&gt;
+
+&lt;p&gt;To an extent, these problems are unavoidable, and I’ve yet to &lt;em&gt;not&lt;/em&gt; encounter them at any company I’ve worked at. Companies are complicated and when they hire more people, chat culture standards change. If you’ve been at a company long enough, you probably know hundreds of people and are in dozens or possibly 100+ channels and DMs. I think on certain days I’m receiving north of 1 message per minute during work hours. &lt;em&gt;While this may seem semi-reasonable, remember that is 60+ messages per hour and on a 9-5 work day amounts to  nearly 500 messages per day&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Getting 500 emails per day would never be acceptable to anyone. But because we live in a culture where chat is a staple of remote work and supposed to replace human conversation, people are expected to manage this volume.&lt;/p&gt;
+
+&lt;p&gt;Managing this volume takes time and detracts from other activities which many times are higher value add than consuming or producing chat messages. From a software engineer perspective, writing code or documentation is almost always higher value than writing into chat. Similarly, reading code or docs is almost always higher value than reading chat. Code and docs (could be docs for code or business requirements or anything someone took a few hours to prepare that contains valuable info) change far less frequently than conversations. You can invest time in them with a strong probability of returns in the future.&lt;/p&gt;
+
+&lt;p&gt;As an extreme example, a core piece of business logic that lives at the center of a codebase is going to be mission critical for engineers to understand no matter the day of the week (or even year). Understanding this code will make it easier to change if and when the time comes the business goes in a new direction. Here, time trying to understand the code could lead to years of returns in productivity.&lt;/p&gt;
+
+&lt;p&gt;In contrast, most people can probably safely be uninvolved in a realtime conversation about whether a button should be moved &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4px&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8px&lt;/code&gt; downwards. Additionally, when decision-makers agree on the spacing, the decision will be in code for everyone to see forever. In this case, any time involved in the pixel conversation - especially if you’re a passive consumer of the conversation and not involved in the decision - has no return. CSS changes and everyone moves on. As an aside, prior to Slack, passive consumers would not even exist, because the designer, PM and responsible engineer would work together in a meeting room where uninvolved parties wouldn’t be invited.&lt;/p&gt;
+
+&lt;p&gt;I’ve been trying to remind myself that an hour spent on code / docs is possible 2x - 100x+ the value of time in chat. Yes, I made these numbers up, but I don’t think they’re too far off. Return on time spent in chat if I’m being honest is zero if the conversations don’t have useful information or work to reach an action item.&lt;/p&gt;
+
+&lt;p&gt;Even if it’s not possible to get a strong ratio of deeper work hours to chat hours, I think there is real value to reading chat in batches instead of following real-time. If I’m reading &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X is typing&lt;/code&gt; and I don’t need to see a response immediately, it’s a sign I am wasting my own time. My opinion is conversations read better after they have happened and not while they’re happening.&lt;/p&gt;
+
+&lt;p&gt;Following a back and forth live is like watching a TV series with frequent commercials and week gaps in releases. You spend more time on the activity and probably have worse understanding of the plot because of the frequent commercials and gaps in episode releases. Async reading of conversations in this analogy is binging a show on Netflix - overall a more enjoyable experience and one that leaves you with a better understanding of the content.&lt;/p&gt;
+
+&lt;p&gt;I know I’ve largely failed trying to make some of my observations in this article actionable. Even knowing how unproductive chat can be, it’s hard to step away from conversations that seem mission critical at the time.&lt;/p&gt;
+
+&lt;p&gt;That’s why I want to try to have a system I follow so I don’t have to try - I can just follow the system. I think it would look something like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Have a minimum requirement each day for deep work hours (4+). Signal to others I will be delayed in responding during these hours.&lt;/li&gt;
+  &lt;li&gt;Allocate time (maybe to start 30 minutes?) to batching reading of chat messages from different channels. Read first and then determine how to respond. If possible, avoid responding instantly, as that will take time away from reading other channels and consuming the information because responding starts another conversation.&lt;/li&gt;
+  &lt;li&gt;Chat in public channels and try to move DMs and private channel conversation to public where possible. This action will improve transparency and make future issues more solvable since answers can now be searched&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Going forward, I’m going to try to do these three things and see if they make me more productive.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 30 Jan 2021 00:00:00 -0600</pubDate>
+        <link>http://0.0.0.0:4000/2021/01/30/chat-can-be-the-mind-killer.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2021/01/30/chat-can-be-the-mind-killer.html</guid>
+      </item>
+    
+      <item>
         <title>Return on Time</title>
         <description>&lt;p&gt;I’ve been using a lot of my creative output outside work to focus on &lt;a href=&quot;https://podcasts.apple.com/us/podcast/stock-talking/id1508054190&quot;&gt;Stock Talking&lt;/a&gt;, so this blog has seen less posts recently than previous years. I did want to do a short post on a concept I’ve been thinking about a lot recently, so here goes.&lt;/p&gt;
 
@@ -319,45 +374,6 @@
         <pubDate>Sun, 11 Aug 2019 00:00:00 -0500</pubDate>
         <link>http://0.0.0.0:4000/2019/08/11/react-act-as-valuable-testing-tool.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/08/11/react-act-as-valuable-testing-tool.html</guid>
-      </item>
-    
-      <item>
-        <title>ESG Investing Skepticism</title>
-        <description>&lt;p&gt;&lt;em&gt;Note: I want to credit &lt;a href=&quot;https://www.aqr.com/Insights/Perspectives/Virtue-is-its-Own-Reward-Or-One-Mans-Ceiling-is-Another-Mans-Floor&quot;&gt;Cliff Asness&lt;/a&gt; and the folks over at &lt;a href=&quot;https://diligent-dollar.com/2018/07/18/why-do-sin-stocks-outperform/&quot;&gt;Diligent Dollar&lt;/a&gt; for many of the ideas in this post.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I’ve been reading about Environmental, Social and Corporate Governance (ESG) investing recently and I think the topic has such widespread consensus support it’s worth taking a more skeptical approach. First - a quick disclaimer: I am still a supporter of ESG investing and as a rule of thumb will not invest in companies that I’m not morally aligned with. That said, I don’t think ESG investing is the most effective mechanism to promote companies with positive missions, and I think in some cases it can have the opposite effect of what investors intend.&lt;/p&gt;
-
-&lt;p&gt;The reason for my ESG skepticism is that changing asset prices – what ESG does – is very different than changing company cash flows. The impact of changing asset prices based on criterion other than cash flow has unknowable effects. ESG allocates capital based on the murky notion of environmental or social responsibility, which is impossible to measure. For instance, is it responsible to sell carbon credits to polluting companies? Is it responsible to invest in nascent technologies that have unproven economics but could have some positive environmental impact? Measuring ESG goodness is hard.&lt;/p&gt;
-
-&lt;p&gt;A quick overview of how ESG investing changes asset prices. Investors who support ESG-causes invest in ESG equities and therefore increase the price of these stocks. Conversely, they either don’t buy the stock of or even short anti-ESG equities, stagnating or driving down these equity prices. The same thing could also happen with bonds, warrants or other financial instruments companies use to raise capital.&lt;/p&gt;
-
-&lt;p&gt;Importantly, changing these asset prices does impact companies’ ability to raise capital. Higher stock prices mean companies can raise more equity for the same amount of shares. Higher stock prices thus decrease a company’s cost of equity, which along with cost of debt is used to determine its cost of capital.&lt;/p&gt;
-
-&lt;p&gt;If you believe corporate finance theory plays out in the real world, companies will only invest in projects that have a higher return than their cost of capital. Not doing this means they lose money on projects. Take a look at the little example below:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/brostoff-blog/cash-flows-example.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/12pxr7ZRNVKK2wZ04EEAfGFL90_EZho_nFXWdFFcsJSY/edit?usp=sharing&quot;&gt;Spreadsheet link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Assuming cash flow is re-invested each year, cost of funds going from 10% to 20% makes a 5 year project that returns 25% go to -25%.&lt;/p&gt;
-
-&lt;p&gt;ESG investing lowers the cost of capital for ESG companies and increases it for anti-ESG ones. As a result, more projects now look attractive for “good” companies and less projects are worth investing in for “bad” companies.&lt;/p&gt;
-
-&lt;p&gt;So what could happen as a result of the changed cost of capital across the board? ESG companies will take more risk since their hurdle rate is lower. In a best case scenario, the added risk plays out well and these companies see their returns exceed the low cost of capital. In the worst case scenario, these risk-on projects bear no fruit and companies waste the capital they raised. Investors lose trust and the ESG halo effect disappears. As an aside, depending on who you talk to this scenario has already played out - check out discussions about &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Green_Bubble&quot;&gt;The Green Bubble&lt;/a&gt; and implosions of scores of green-energy companies.&lt;/p&gt;
-
-&lt;p&gt;On the other side, anti-ESG companies will invest in fewer projects given a higher cost of capital. Cash from earnings as a result will have fewer places to go. It’s even possible it will have no projects to go to, in which case management can keep it on balance sheet or return it to shareholders via dividends or buybacks. Again, depending on who you talk to, this has already happened with public tobacco companies. These companies generally have significantly-higher-than-average dividends and free cash flow yields. Several of them have even &lt;a href=&quot;https://diligent-dollar.com/2018/07/18/why-do-sin-stocks-outperform/&quot;&gt;significantly outperformed&lt;/a&gt; relative to market averages.&lt;/p&gt;
-
-&lt;p&gt;One more note on anti-ESG companies - as long as there are investors who don’t mind investing in anti-ESG companies, depressing their stock prices always opens the door to such investors buying assets for pennies on the dollar and taking them private. These investors then can take the cash flow from the assets and use them for whatever causes they want. Said another way, artificially depressing anti-ESG asset prices opens the door for investors to come in and make outsized profits.&lt;/p&gt;
-
-&lt;p&gt;So do I have a better proposal for promoting ESG causes than ESG investing? It’s easier said than done, but I think targeting cash flow directly is the best way to reward ESG companies and punish anti-ESG companies in the long run. At a consumer and investor level, this is as simple as deciding to not buy goods or services from anti-ESG and buy as much as possible from pro-ESG. If you’re a supplier, consultant or someone who sells to companies,  it’s discounting your ESG customers. These behaviors are guaranteed to impact the bottom lines of companies as opposed to changing their cost of capital. Better yet, they change the return rate on existing and new projects in a way not tied to the market (cost of equity and debt are both linked to market forces).&lt;/p&gt;
-
-&lt;p&gt;Think of it this way - if a project returns -1% instead of 5%, no cost of funds will justify it. The way to get bad companies to face this -1% is to stop buying their products and make them face higher costs for their inputs. Conversely, if a project returns 10% instead of 5%, suddenly a cost of funds of up to 9% and change is acceptable. ESG companies now can access all types of new capital since their expected return from available projects is higher.&lt;/p&gt;
-
-&lt;p&gt;In conclusion, I’m less supportive at this point of writing blank checks to ESG-companies than I am of buying products that were made in a socially and environmentally responsible manner. ESG investing is a very blunt instrument for changing how companies do business compared to the sharp instrument of changes in customer and supplier behavior.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 20 Apr 2019 00:00:00 -0500</pubDate>
-        <link>http://0.0.0.0:4000/2019/04/20/esg-investing.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2019/04/20/esg-investing.html</guid>
       </item>
     
   </channel>
