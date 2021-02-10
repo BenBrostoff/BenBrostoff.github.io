@@ -7,6 +7,31 @@
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Shots on Goal Means Higher Value</title>
+        <description>&lt;p&gt;How many business stories are variations of “We tried X and it didn’t work, but a small part of X was promising, so we pivoted to Y, and then…”?&lt;/p&gt;
+
+&lt;p&gt;Another common one - “We approached &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;someLargeNumber&lt;/code&gt; of investors and were rejected by every single one until &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;someUniqueInvestorWithContrarianViewpoint&lt;/code&gt; took a chance on us.”&lt;/p&gt;
+
+&lt;p&gt;Anecdotally, both of these I think are common. I think the reason why is that more shots on goal mean higher probability of finding a price (value) where buyer and seller can transact.&lt;/p&gt;
+
+&lt;p&gt;In the product case, the seller offers different products / services and observes what the buyer is willing to pay for. The product offering and refinement process continues until the seller feels confident they can provide products / services at sustainable margins where a reliable pool of buyers exist.&lt;/p&gt;
+
+&lt;p&gt;In the investing case, the seller communicates with different buyers until someone is willing to transact. &lt;a href=&quot;https://henrysward.medium.com/finally-a-private-stock-exchange-cartax-3c658f30ac97&quot;&gt;Henry Ward of CartaX had a great blog (in my opinion) on this concept&lt;/a&gt;. The idea in this post is that if prices can adjust flexibly as the number of buyers increase, prices will be significantly higher than if constrained:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;That is why tender offers are good for investors and bad for employees. In most markets more investor demand means higher prices. But in private markets, investors fix a price and buy as much stock as they can at the same price. That’s why venture capitalists fight to “get into a round.” No matter how much demand exists, once the price is set by the lead, the price doesn’t change… If we had done an employee tender alongside our Series F, employees would have sold at half of what they were able to sell on CartaX. &lt;strong&gt;But because we did proper price discovery after our primary financing, employees were able to sell secondary shares at a 2.5x premium&lt;/strong&gt;. Maybe we can call that the CartaX Lift.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;2.5x&lt;/strong&gt;. That is a wild premium. My hurdle rate is 10%, so this is close to 20+ years of returns for me. Said another way, letting prices float with the size of the market made a 20+ year difference to the seller.&lt;/p&gt;
+
+&lt;p&gt;Showing things to more people and building more things makes a multi-decade difference.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Feb 2021 00:00:00 -0600</pubDate>
+        <link>http://0.0.0.0:4000/2021/02/10/shots-on-goal.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2021/02/10/shots-on-goal.html</guid>
+      </item>
+    
+      <item>
         <title>Chat Can Be The Mind Killer</title>
         <description>&lt;p&gt;Web chat platforms like Slack are the core of remote work and determine how good your remote experience is.&lt;/p&gt;
 
@@ -333,47 +358,6 @@
         <pubDate>Sun, 15 Sep 2019 00:00:00 -0500</pubDate>
         <link>http://0.0.0.0:4000/2019/09/15/the-group-effect.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/09/15/the-group-effect.html</guid>
-      </item>
-    
-      <item>
-        <title>React's act</title>
-        <description>&lt;p&gt;One challenge of writing React tests is knowing where you are in the component lifecycle. Is the component mounted? In the middle of a state update? Has it received props? Answering these questions determines what the tester should assert. Through a colleague at work, I recently found React &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;16.9&lt;/code&gt; includes an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt; function that can take an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;async&lt;/code&gt; callback.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt; itself, however - which stands for the &lt;a href=&quot;http://wiki.c2.com/?ArrangeActAssert&quot;&gt;Arrange-Act-Assert testing pattern&lt;/a&gt; existed far before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;16.9&lt;/code&gt;, and allows you to guarantee all state updates have completed before making assertions on a component. &lt;a href=&quot;https://reactjs.org/docs/testing-recipes.html&quot;&gt;From the docs&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;When writing UI tests, tasks like rendering, user events, or data fetching can be considered as “units” of interaction with a user interface. React provides a helper called act() that makes sure all updates related to these “units” have been processed and applied to the DOM before you make any assertions…&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I recommend the aforementioned &lt;a href=&quot;https://reactjs.org/docs/testing-recipes.html&quot;&gt;testing recipes&lt;/a&gt; page for a full walkthrough of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt; examples as well as &lt;a href=&quot;https://github.com/threepointone/react-act-examples/blob/master/sync.md&quot;&gt;Sunil Pai’s examples&lt;/a&gt; - Sunil originally authored the &lt;a href=&quot;https://github.com/facebook/react/pull/14853/files&quot;&gt;PR&lt;/a&gt; that acted &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;async&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt;. For this blog post, I want to walk through a simple example that will show the potential value of this testing utility.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note - all examples below can be found in this &lt;a href=&quot;https://codesandbox.io/s/1-react-act-use-4ke1t?fontsize=14&amp;amp;previewwindow=tests&quot;&gt;CodeSandbox&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Let’s start with a sync &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt;. Consider a component with just a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; call that sets a value on the component:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/34a93255596772fa1942757359ff371d.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The difference between using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt; and not using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt; is the test waiting on the callback inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt;:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/934bb121200a78227578967b1a85494d.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;async&lt;/code&gt; act - again, newly released in React &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;16.9&lt;/code&gt; - allows you to wait on promises to resolve and state updates to complete.&lt;/p&gt;
-
-&lt;p&gt;Here’s what an async component might look like…&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/c652ac47b58bc3402d80887459f9ba26.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;…and the differences between sync and async &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt;.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/BenBrostoff/1b13a6b1da5b3294864bd257f924480e.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Importantly, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enzyme&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react-testing-library&lt;/code&gt; are already pulling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt; into their API and have means of accessing it (or should have in the future), so if you’re using either library, the above boilerplate isn’t necessary. That said, I found it useful to go through this exercise to get a sense of how &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt; works.&lt;/p&gt;
-
-&lt;p&gt;I’m extremely excited React offers this utility - it’s extremely useful in fixing things like intermittently failing tests that rely on promises resolving in some fixed amount of time (which hopefully never existed in your test suite anyways). React testing forces you to understand the lifecycle of your components and how they handle state. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;act&lt;/code&gt; is a great way to enhance that understanding.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 11 Aug 2019 00:00:00 -0500</pubDate>
-        <link>http://0.0.0.0:4000/2019/08/11/react-act-as-valuable-testing-tool.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2019/08/11/react-act-as-valuable-testing-tool.html</guid>
       </item>
     
   </channel>
