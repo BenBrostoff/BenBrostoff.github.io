@@ -13,6 +13,8 @@ links:
     url:          /
   - name:         Book Recos
     url:          /books
+  - name:         Privacy
+    url:          /privacy
   - name:         Email
     url:          mailto:ben.brostoff@gmail.com
     external:     true
