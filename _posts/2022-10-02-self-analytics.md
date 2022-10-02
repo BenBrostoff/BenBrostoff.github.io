@@ -14,7 +14,7 @@ A list of various resources I've found helpful:
 - [Obsidian](https://obsidian.md/) for note-taking
 - [The Task Notebook](https://somethingdelightful.com/crgibson/mj174-22696) as a physical templated system for each day
 - [Toggl](https://toggl.com/) for self tracking work
-- [Rescue Time](https://www.rescuetime.com/rtx/overview) for getting a more high fidelity / granular automated audit log of work
+- [RescueTime](https://www.rescuetime.com/rtx/overview) for getting a more high fidelity / granular automated audit log of work
 - [QuickTime's screen recording for observing my own work sessions](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) for reviewing what I did over some time on my computer
 
 I believe strongly in the "what gets measured is what gets managed" principle. High-fidelity tracking of work I think is the only way to create accurate descriptions of why specific tasks took as long as they did. Otherwise, it becomes near impossible to account for meaningful amounts of time without generalizing.
