@@ -19,4 +19,4 @@ A list of various resources I've found helpful:
 
 I believe strongly in the "what gets measured is what gets managed" principle. High-fidelity tracking of work I think is the only way to create accurate descriptions of why specific tasks took as long as they did. Otherwise, it becomes near impossible to account for meaningful amounts of time without generalizing.
 
-It suprises me that most task management and project management software relies on self-reporting time, which puts the burden of measurement and accuracy on a human being. Wouldn't it be great if software did this?
+It surprises me that most task management and project management software relies on self-reporting time, which puts the burden of measurement and accuracy on a human being. Wouldn't it be great if software did this?
